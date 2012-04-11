@@ -1,0 +1,20 @@
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.Form1.resources
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.Properties.Resources.resources
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.exe
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.pdb
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.exe
+C:\Users\DINHDUYTAI\Desktop\QuanLy_KeToan\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.pdb
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.exe
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.pdb
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.exe
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.pdb
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.Properties.Resources.resources
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.FDangNhap.resources
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.exe.config
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\luanvan-totnghiep\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FHangHoa.resources
