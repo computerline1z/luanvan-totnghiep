@@ -196,5 +196,32 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                         }).ToList<HangHoa>();
             return hang;
         }
+        //Thêm 1 mẫu dữ liệu hàng hóa vào csdl
+        public void ThemHangHoa(string mahang,string maloaihang,string mancc,string tenhang,string MaDVTinh,string MoTaHang,float VAT,float ThueNK,decimal DonGia,float GiamGia,string Hinh)
+        {
+           //HangHoa hh=new HangHoa();
+            try
+            {
+                Hang h = new Hang();
+                h.MaHang = mahang;
+                h.MaLoaiHang = maloaihang;
+                h.MaNCC = mancc;
+                h.TenHang = tenhang;
+                h.MaDonViTinh = MaDVTinh;
+                h.MoTaHang = MoTaHang;
+                h.VAT = VAT;
+                h.ThueNhapKhau = ThueNK;
+                h.DonGia = DonGia;
+                h.GiamGia = GiamGia;
+                h.Hinh = Hinh;
+                QLKT.Hangs.InsertOnSubmit(h);
+                QLKT.SubmitChanges();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
