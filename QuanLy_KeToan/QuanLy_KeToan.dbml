@@ -6,7 +6,7 @@
       <Column Name="MaLoaiHang" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="MaNCC" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="TenHang" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MaDonViTinh" Storage="_DonViTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="MoTaHang" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="VAT" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="ThueNhapKhau" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -50,6 +50,12 @@
       <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="NhaCungCap_Hang" Member="Hangs" ThisKey="MaNCC" OtherKey="MaNCC" Type="Hang" />
       <Association Name="LoaiHang_NhaCungCap" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DonViTinh" Member="DonViTinhs">
+    <Type Name="DonViTinh">
+      <Column Name="MaDonViTinh" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenDonViTinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

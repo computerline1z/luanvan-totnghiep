@@ -94,6 +94,14 @@ namespace QuanLy_KeToan
 				return this.GetTable<NhaCungCap>();
 			}
 		}
+		
+		public System.Data.Linq.Table<DonViTinh> DonViTinhs
+		{
+			get
+			{
+				return this.GetTable<DonViTinh>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hang")]
@@ -148,8 +156,8 @@ namespace QuanLy_KeToan
     partial void OnMaNCCChanged();
     partial void OnTenHangChanging(string value);
     partial void OnTenHangChanged();
-    partial void OnDonViTinhChanging(string value);
-    partial void OnDonViTinhChanged();
+    partial void OnMaDonViTinhChanging(string value);
+    partial void OnMaDonViTinhChanged();
     partial void OnMoTaHangChanging(string value);
     partial void OnMoTaHangChanged();
     partial void OnVATChanging(System.Nullable<double> value);
@@ -268,7 +276,7 @@ namespace QuanLy_KeToan
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonViTinh", DbType="NVarChar(10)")]
-		public string DonViTinh
+		public string MaDonViTinh
 		{
 			get
 			{
@@ -278,11 +286,11 @@ namespace QuanLy_KeToan
 			{
 				if ((this._DonViTinh != value))
 				{
-					this.OnDonViTinhChanging(value);
+					this.OnMaDonViTinhChanging(value);
 					this.SendPropertyChanging();
 					this._DonViTinh = value;
-					this.SendPropertyChanged("DonViTinh");
-					this.OnDonViTinhChanged();
+					this.SendPropertyChanged("MaDonViTinh");
+					this.OnMaDonViTinhChanged();
 				}
 			}
 		}
@@ -1234,6 +1242,51 @@ namespace QuanLy_KeToan
 		{
 			this.SendPropertyChanging();
 			entity.NhaCungCap = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DonViTinh")]
+	public partial class DonViTinh
+	{
+		
+		private string _MaDonViTinh;
+		
+		private string _TenDonViTinh;
+		
+		public DonViTinh()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDonViTinh", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaDonViTinh
+		{
+			get
+			{
+				return this._MaDonViTinh;
+			}
+			set
+			{
+				if ((this._MaDonViTinh != value))
+				{
+					this._MaDonViTinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDonViTinh", DbType="VarChar(50)")]
+		public string TenDonViTinh
+		{
+			get
+			{
+				return this._TenDonViTinh;
+			}
+			set
+			{
+				if ((this._TenDonViTinh != value))
+				{
+					this._TenDonViTinh = value;
+				}
+			}
 		}
 	}
 }
