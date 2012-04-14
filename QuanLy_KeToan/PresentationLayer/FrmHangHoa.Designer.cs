@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHangHoa));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarManagerHangHoa = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -124,7 +124,15 @@
             this.NvgLuu = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.NvgHuy = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.NvgThoat = new System.Windows.Forms.ToolStripButton();
+            this.NvgIn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.comboMaLoaiHang = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtTimKiem = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tabItemHH = new DevComponents.DotNetBar.TabItem(this.components);
             this.elementStyle6 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle5 = new DevComponents.DotNetBar.ElementStyle();
@@ -140,8 +148,6 @@
             this.buttonSilver = new DevComponents.DotNetBar.ButtonX();
             this.colorPickerButton = new DevComponents.DotNetBar.ColorPickerButton();
             this.styleManagerHH = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.NvgIn = new System.Windows.Forms.ToolStripButton();
             this.dockSite1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.bar1.SuspendLayout();
@@ -1202,6 +1208,7 @@
             // 
             // gridHangHoa
             // 
+            this.gridHangHoa.AllowUserToAddRows = false;
             this.gridHangHoa.AllowUserToOrderColumns = true;
             this.gridHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1378,7 +1385,13 @@
             this.NvgHuy,
             this.toolStripSeparator5,
             this.NvgThoat,
-            this.NvgIn});
+            this.NvgIn,
+            this.toolStripSeparator6,
+            this.comboMaLoaiHang,
+            this.toolStripLabel2,
+            this.toolStripSeparator7,
+            this.txtTimKiem,
+            this.toolStripLabel1});
             this.bindingHangHoa.Location = new System.Drawing.Point(0, 0);
             this.bindingHangHoa.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingHangHoa.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -1463,6 +1476,7 @@
             this.NvgRefresh.Name = "NvgRefresh";
             this.NvgRefresh.Size = new System.Drawing.Size(66, 22);
             this.NvgRefresh.Text = "Refresh";
+            this.NvgRefresh.Click += new System.EventHandler(this.NvgRefresh_Click);
             // 
             // toolStripSeparator3
             // 
@@ -1518,6 +1532,12 @@
             this.NvgHuy.Name = "NvgHuy";
             this.NvgHuy.Size = new System.Drawing.Size(49, 22);
             this.NvgHuy.Text = "Hủy";
+            this.NvgHuy.Click += new System.EventHandler(this.NvgHuy_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // NvgThoat
             // 
@@ -1526,6 +1546,52 @@
             this.NvgThoat.Name = "NvgThoat";
             this.NvgThoat.Size = new System.Drawing.Size(58, 22);
             this.NvgThoat.Text = "Thoát";
+            this.NvgThoat.Click += new System.EventHandler(this.NvgThoat_Click);
+            // 
+            // NvgIn
+            // 
+            this.NvgIn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.NvgIn.Image = ((System.Drawing.Image)(resources.GetObject("NvgIn.Image")));
+            this.NvgIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NvgIn.Name = "NvgIn";
+            this.NvgIn.Size = new System.Drawing.Size(52, 22);
+            this.NvgIn.Text = "&Print";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // comboMaLoaiHang
+            // 
+            this.comboMaLoaiHang.Name = "comboMaLoaiHang";
+            this.comboMaLoaiHang.Size = new System.Drawing.Size(121, 25);
+            this.comboMaLoaiHang.SelectedIndexChanged += new System.EventHandler(this.comboMaLoaiHang_SelectedIndexChanged);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(97, 22);
+            this.toolStripLabel2.Text = "Mã Loại Hàng";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(100, 25);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(72, 22);
+            this.toolStripLabel1.Text = "Mã Hàng";
             // 
             // tabItemHH
             // 
@@ -1850,20 +1916,6 @@
             this.styleManagerHH.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Blue;
             this.styleManagerHH.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(26))))));
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // NvgIn
-            // 
-            this.NvgIn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.NvgIn.Image = ((System.Drawing.Image)(resources.GetObject("NvgIn.Image")));
-            this.NvgIn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NvgIn.Name = "NvgIn";
-            this.NvgIn.Size = new System.Drawing.Size(52, 22);
-            this.NvgIn.Text = "&Print";
-            // 
             // FrmHangHoa
             // 
             this.ClientSize = new System.Drawing.Size(1354, 692);
@@ -2031,5 +2083,11 @@
         private System.Windows.Forms.ToolStripButton NvgThoat;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton NvgIn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripComboBox comboMaLoaiHang;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripTextBox txtTimKiem;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

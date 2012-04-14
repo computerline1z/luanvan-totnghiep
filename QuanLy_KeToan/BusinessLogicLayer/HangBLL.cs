@@ -284,8 +284,46 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-
-        //Tìm hiểu thêm cách cập nhật thông qua quan hệ
-
+        //Các hàm phục vụ tìm kiếm
+        public List<HangHoa> TimTatCaHangTheoMaLoaiHang(string maloaihang)
+        {
+            var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
+                        where h.MaLoaiHang == maloaihang
+                        select new HangHoa
+                        {
+                            MaHang = h.MaHang,
+                            MaLoaiHang = h.MaLoaiHang,
+                            MaNCC = h.MaNCC,
+                            TenHang = h.TenHang,
+                            MoTaHang = h.MoTaHang,
+                            MaDonViTinh = h.MaDonViTinh,
+                            VAT = (h.VAT != null ?float.Parse(h.VAT.ToString()):0),
+                            ThueNhapKhau = (h.ThueNhapKhau.ToString() != null ? float.Parse(h.ThueNhapKhau.ToString()) : 0),
+                            DonGia =(h.DonGia!=null?System.Convert.ToDecimal(h.DonGia):0),
+                            GiamGia = (h.GiamGia != null ? float.Parse(h.GiamGia.ToString()) : 0),
+                            Hinh = h.Hinh,
+                        }).ToList<HangHoa>();
+            return hang;
+        }
+        public List<HangHoa> TimTatCaHangTheoMaHang(string mahang)
+        {
+            var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
+                        where h.MaHang.Contains(mahang)
+                        select new HangHoa
+                        {
+                            MaHang = h.MaHang,
+                            MaLoaiHang = h.MaLoaiHang,
+                            MaNCC = h.MaNCC,
+                            TenHang = h.TenHang,
+                            MoTaHang = h.MoTaHang,
+                            MaDonViTinh = h.MaDonViTinh,
+                            VAT = (h.VAT != null ? float.Parse(h.VAT.ToString()) : 0),
+                            ThueNhapKhau = (h.ThueNhapKhau.ToString() != null ? float.Parse(h.ThueNhapKhau.ToString()) : 0),
+                            DonGia = (h.DonGia != null ? System.Convert.ToDecimal(h.DonGia) : 0),
+                            GiamGia = (h.GiamGia != null ? float.Parse(h.GiamGia.ToString()) : 0),
+                            Hinh = h.Hinh,
+                        }).ToList<HangHoa>();
+            return hang;
+        }
     }
 }

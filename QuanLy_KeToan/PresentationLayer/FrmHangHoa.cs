@@ -27,6 +27,7 @@ namespace QuanLy_KeToan.PresentationLayer
             LoadDataComboboxNhaCungCap();
             LoadDataComboboxDonVi();
             LoadDataColumnCombobox();
+            LoadDataComboboxLoaiHang();
             LoadDanhSachHang();
             SetConTrolThemSuaEnable(1, true);
             SetControlThemEnable(true);
@@ -39,6 +40,7 @@ namespace QuanLy_KeToan.PresentationLayer
             gridHangHoa.DataSource = bds;
             bindingHangHoa.BindingSource = bds;
             SetControlEnable(false);
+            gridHangHoa.AllowUserToAddRows = false;
         }
         private void LoadTreeView()
         {
@@ -215,6 +217,12 @@ namespace QuanLy_KeToan.PresentationLayer
             cmbDonViTinh.DataSource = HBLL.LayDanhSachTenDonViTinh();
             cmbDonViTinh.DisplayMember="TenDonViTinh";
             cmbDonViTinh.ValueMember="MaDonViTinh";
+        }
+        private void LoadDataComboboxLoaiHang()
+        {
+            comboMaLoaiHang.ComboBox.DataSource = HBLL.LayDanhSachMaLoaiHang();
+            comboMaLoaiHang.ComboBox.DisplayMember = "MaLoaiHang";
+
         }
         private void LoadDataColumnCombobox()
         {
@@ -406,6 +414,7 @@ namespace QuanLy_KeToan.PresentationLayer
         }
         private void NvgThem_Click(object sender, EventArgs e)
         {
+            gridHangHoa.AllowUserToAddRows = true;
             bindingHangHoa.BindingSource.MoveLast();
         }
         //Thao Tác Trực Tiếp Trên Lưới
@@ -425,14 +434,54 @@ namespace QuanLy_KeToan.PresentationLayer
                 float tax=float.Parse(gridHangHoa.CurrentRow.Cells["ColThueNhapKhau"].Value.ToString());
                 decimal dongia = System.Convert.ToDecimal(float.Parse(gridHangHoa.CurrentRow.Cells["ColDonGia"].Value.ToString()));
                 float giamgia = float.Parse(gridHangHoa.CurrentRow.Cells["ColGiamGia"].Value.ToString());
-                string hinh = "dell.jpg";//gridHangHoa.CurrentRow.Cells["ColHinh"].Value.ToString();
-                HBLL.ThemHangHoa(mahang,maloaihang,mancc,tenhang,dvtinh,motahang,vat,tax,dongia,giamgia,hinh);
+                if (gridHangHoa.CurrentRow.Cells["ColHinh"].Value != null)
+                {
+                    filename = gridHangHoa.CurrentRow.Cells["ColHinh"].Value.ToString();
+                }
+                else
+                {
+                    filename = null;
+                }
+                HBLL.ThemHangHoa(mahang,maloaihang,mancc,tenhang,dvtinh,motahang,vat,tax,dongia,giamgia,filename);
                 SetControlThemEnable(true);
                 SetConTrolThemSuaEnable(1, true);
                 LoadDanhSachHang();
             }
             else
                 return;
+        }
+
+        private void NvgThoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void comboMaLoaiHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = HBLL.TimTatCaHangTheoMaLoaiHang(comboMaLoaiHang.Text);
+            gridHangHoa.DataSource = bds;
+            bindingHangHoa.BindingSource = bds;
+            SetControlEnable(false);
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = HBLL.TimTatCaHangTheoMaHang(txtTimKiem.Text);
+            gridHangHoa.DataSource = bds;
+            bindingHangHoa.BindingSource = bds;
+            SetControlEnable(false);
+        }
+
+        private void NvgRefresh_Click(object sender, EventArgs e)
+        {
+            FrmHangHoa_Load(sender, e);
+        }
+
+        private void NvgHuy_Click(object sender, EventArgs e)
+        {
+            LoadDanhSachHang();
         }
     }
 }
