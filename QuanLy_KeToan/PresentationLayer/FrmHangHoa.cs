@@ -24,10 +24,13 @@ namespace QuanLy_KeToan.PresentationLayer
         private void FrmHangHoa_Load(object sender, EventArgs e)
         {
             LoadTreeView();
-            LoadDataComboboxLoaiHang();
             LoadDataComboboxNhaCungCap();
+            LoadDataComboboxDonVi();
             LoadDataColumnCombobox();
             LoadDanhSachHang();
+            SetConTrolThemSuaEnable(1, true);
+            SetControlThemEnable(true);
+            SetControlSuaEnable(true);
         }
         private void LoadDanhSachHang()
         {
@@ -35,6 +38,7 @@ namespace QuanLy_KeToan.PresentationLayer
             bds.DataSource = HBLL.LayDanhSachHangHoa();
             gridHangHoa.DataSource = bds;
             bindingHangHoa.BindingSource = bds;
+            SetControlEnable(false);
         }
         private void LoadTreeView()
         {
@@ -147,7 +151,7 @@ namespace QuanLy_KeToan.PresentationLayer
             }
         }
 #endregion
-        private string filename = "";
+        private string filename = null;
         private void HienThiDuLieuLenControl(int dong)
         {
             txtMaHang.Text = gridHangHoa.Rows[dong].Cells["ColMaHang"].Value.ToString();
@@ -166,7 +170,12 @@ namespace QuanLy_KeToan.PresentationLayer
             cmbMaLoaiHang.DisplayMember = gridHangHoa.Rows[dong].Cells["ColMaNCC"].Value.ToString();
             txtTenHang.Text = gridHangHoa.Rows[dong].Cells["ColTenHang"].Value.ToString();
             txtMoTaHang.Text = gridHangHoa.Rows[dong].Cells["ColMoTaHang"].Value.ToString();
-            cmbDonViTinh.Text = gridHangHoa.Rows[dong].Cells["ColDonViTinh"].Value.ToString();
+            string tendonvitinh = "";
+            foreach(var item in HBLL.LayDanhSachTenDVTinhTheoMaDVTinh(gridHangHoa.Rows[dong].Cells["ColDonViTinh"].Value.ToString()))
+            {
+                tendonvitinh=item.ToString();
+            }
+            cmbDonViTinh.Text = tendonvitinh;
             doubleInputVAT.Value = System.Convert.ToDouble(gridHangHoa.Rows[dong].Cells["ColVAT"].Value.ToString());
             doubleInputThueNhapKhau.Value = System.Convert.ToDouble(gridHangHoa.Rows[dong].Cells["ColThueNhapKhau"].Value.ToString());
             doubleInputDonGia.Value = System.Convert.ToDouble(gridHangHoa.Rows[dong].Cells["ColDonGia"].Value.ToString());
@@ -178,7 +187,7 @@ namespace QuanLy_KeToan.PresentationLayer
             }
             else
             {
-                filename = "";
+                filename = null;
                 picHang.Image = null;
             }
         }
@@ -195,17 +204,17 @@ namespace QuanLy_KeToan.PresentationLayer
                 HienThiDuLieuLenControl(dong);
             }
         }
-        private void LoadDataComboboxLoaiHang()
-        {
-            cmbMaLoaiHang.DataSource = HBLL.LayDanhSachLoaiHangHoa();
-            cmbMaLoaiHang.DisplayMember = "TenLoaiHang";
-            cmbMaLoaiHang.ValueMember = "MaLoaiHang";
-        }
         private void LoadDataComboboxNhaCungCap()
         {
             cmbNCC.DataSource = HBLL.LayDanhSachNCC();
             cmbNCC.DisplayMember = "TenNCC";
             cmbNCC.ValueMember = "MaNCC";
+        }
+        private void LoadDataComboboxDonVi()
+        {
+            cmbDonViTinh.DataSource = HBLL.LayDanhSachTenDonViTinh();
+            cmbDonViTinh.DisplayMember="TenDonViTinh";
+            cmbDonViTinh.ValueMember="MaDonViTinh";
         }
         private void LoadDataColumnCombobox()
         {
@@ -215,6 +224,215 @@ namespace QuanLy_KeToan.PresentationLayer
             ColMaNCC.DisplayMember = "MaNCC";
             ColDonViTinh.DataSource = HBLL.LayDanhSachMaDonViTinh();
             ColDonViTinh.DisplayMember = "MaDonViTinh";
+        }
+        private void SetConTrolHangToNull()
+        {
+            txtMaHang.Clear();
+            cmbMaLoaiHang.Text = "";
+            cmbNCC.Text = "";
+            txtTenHang.Text = "";
+            cmbDonViTinh.Text = "";
+            txtMoTaHang.Clear();
+            doubleInputVAT.Value = 0;
+            doubleInputThueNhapKhau.Value = 0;
+            doubleInputDonGia.Value = 0;
+            doubleInputGiamGia.Value = 0;
+            filename = null;
+            picHang.Image = null;
+        }
+        private void SetControlEnable(bool enable=true)
+        {
+            txtMaHang.Enabled = enable;
+            cmbMaLoaiHang.Enabled=enable;
+            cmbNCC.Enabled=enable;
+            txtTenHang.Enabled=enable;
+            cmbDonViTinh.Enabled = enable;
+            txtMoTaHang.Enabled = enable;
+            doubleInputVAT.Enabled = enable;
+            doubleInputThueNhapKhau.Enabled = enable;
+            doubleInputDonGia.Enabled = enable;
+            doubleInputGiamGia.Enabled = enable;
+            picHang.Enabled = enable;
+        }
+        private void SetControlThemEnable(bool enable=true)
+        {
+            btnThem.Enabled = enable;
+            btnLuuThem.Enabled = !enable;
+            btnHuyThem.Enabled = !enable;
+        }
+        private void SetControlSuaEnable(bool enable = true)
+        {
+            btnSua.Enabled = enable;
+            btnLuuSua.Enabled = !enable;
+            btnHuySua.Enabled = !enable;
+        }
+        private void SetConTrolThemSuaEnable(int th,bool enable = true)
+        {
+            switch(th)
+            {
+                case 1://khởi động chương trình
+                    {
+                        buttonItemThemHang.Enabled = enable;
+                        buttonItemSuaHang.Enabled = enable;
+                        break;
+                    }
+                case 2://các trường hợp khác
+                    {
+                        buttonItemThemHang.Enabled = enable;
+                        buttonItemSuaHang.Enabled = !enable;
+                        break;
+                    }
+            }
+        }
+        private void btnLuuThem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string maloaihang = cmbMaLoaiHang.SelectedValue.ToString();
+                string mancc = cmbNCC.SelectedValue.ToString();
+                string dvtinh = cmbDonViTinh.SelectedValue.ToString();
+                HBLL.ThemHangHoa(txtMaHang.Text, maloaihang, mancc, txtTenHang.Text, dvtinh, txtMoTaHang.Text, float.Parse(doubleInputVAT.Value.ToString()), float.Parse(doubleInputThueNhapKhau.Value.ToString()), System.Convert.ToDecimal(doubleInputDonGia.Value), float.Parse(doubleInputGiamGia.Value.ToString()), filename);
+                SetControlThemEnable(true);
+                SetConTrolThemSuaEnable(1, true);
+                LoadDanhSachHang();
+            }
+            else
+                return;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SetControlEnable(true);
+            SetControlThemEnable(false);
+            SetConTrolThemSuaEnable(2, true);
+            SetConTrolHangToNull();
+        }
+
+        private void cmbNCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbMaLoaiHang.DataSource = HBLL.LayDanhSachLoaiHangHoa(cmbNCC.Text);
+            cmbMaLoaiHang.DisplayMember = "TenLoaiHang";
+            cmbMaLoaiHang.ValueMember = "MaLoaiHang";
+        }
+
+        private void btnXoaHang_Click(object sender, EventArgs e)
+        {
+            // Nếu data gridview không có dòng nào
+            if (gridHangHoa.RowCount == 0)
+               btnXoaHang.Enabled = false;
+            else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                HBLL.XoaHangHoa(gridHangHoa.CurrentRow.Cells["ColMaHang"].Value.ToString());
+                LoadDanhSachHang();
+                SetControlThemEnable(true);
+            }
+        }
+
+        private void btnHuyThem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Hủy thao tác thêm?", "CANCEL",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LoadDanhSachHang();
+                SetControlThemEnable(true);
+                SetConTrolThemSuaEnable(1, true);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void buttonItemThemHang_Click(object sender, EventArgs e)
+        {
+            SetConTrolThemSuaEnable(2, true);
+        }
+
+        private void buttonItemSuaHang_Click(object sender, EventArgs e)
+        {
+            SetConTrolThemSuaEnable(2, false);
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            SetControlEnable(true);
+            SetControlSuaEnable(false);
+            SetConTrolThemSuaEnable(2,false);
+        }
+
+        private void btnLuuSua_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Hang hang = new Hang();
+                string maloaihang = cmbMaLoaiHang.SelectedValue.ToString();
+                hang.MaLoaiHang = maloaihang;
+                string mancc = cmbNCC.SelectedValue.ToString();
+                hang.MaNCC = mancc;
+                string dvtinh = cmbDonViTinh.SelectedValue.ToString();
+                hang.MaDonViTinh = dvtinh;
+                hang.TenHang = txtTenHang.Text;
+                hang.MoTaHang=txtMoTaHang.Text;
+                hang.VAT= float.Parse(doubleInputVAT.Value.ToString());
+                hang.ThueNhapKhau=float.Parse(doubleInputThueNhapKhau.Value.ToString());
+                hang.DonGia=System.Convert.ToDecimal(doubleInputDonGia.Value);
+                hang.GiamGia=float.Parse(doubleInputGiamGia.Value.ToString());
+                hang.Hinh=filename;
+                HBLL.SuaHang(txtMaHang.Text, hang);
+                SetControlSuaEnable(true);
+                SetConTrolThemSuaEnable(1, true);
+                LoadDanhSachHang();
+            }
+            else
+                return;
+        }
+
+        private void btnHuySua_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Hủy thao tác sửa?", "CANCEL",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LoadDanhSachHang();
+                SetControlSuaEnable(true);
+                SetConTrolThemSuaEnable(1, true);
+            }
+            else
+            {
+                return;
+            }
+        }
+        private void NvgThem_Click(object sender, EventArgs e)
+        {
+            bindingHangHoa.BindingSource.MoveLast();
+        }
+        //Thao Tác Trực Tiếp Trên Lưới
+        private void NvgLuu_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                bindingNavigatorPositionItem.Focus();
+                string mahang = gridHangHoa.CurrentRow.Cells["ColMaHang"].Value.ToString();
+                string maloaihang = gridHangHoa.CurrentRow.Cells["ColMaLoaiHang"].Value.ToString();
+                string mancc = gridHangHoa.CurrentRow.Cells["ColMaNCC"].Value.ToString();
+                string tenhang = gridHangHoa.CurrentRow.Cells["ColTenHang"].Value.ToString();
+                string dvtinh = gridHangHoa.CurrentRow.Cells["ColDonViTinh"].Value.ToString();
+                string motahang = gridHangHoa.CurrentRow.Cells["ColMoTaHang"].Value.ToString();
+                float vat=float.Parse(gridHangHoa.CurrentRow.Cells["ColVAT"].Value.ToString());
+                float tax=float.Parse(gridHangHoa.CurrentRow.Cells["ColThueNhapKhau"].Value.ToString());
+                decimal dongia = System.Convert.ToDecimal(float.Parse(gridHangHoa.CurrentRow.Cells["ColDonGia"].Value.ToString()));
+                float giamgia = float.Parse(gridHangHoa.CurrentRow.Cells["ColGiamGia"].Value.ToString());
+                string hinh = "dell.jpg";//gridHangHoa.CurrentRow.Cells["ColHinh"].Value.ToString();
+                HBLL.ThemHangHoa(mahang,maloaihang,mancc,tenhang,dvtinh,motahang,vat,tax,dongia,giamgia,hinh);
+                SetControlThemEnable(true);
+                SetConTrolThemSuaEnable(1, true);
+                LoadDanhSachHang();
+            }
+            else
+                return;
         }
     }
 }

@@ -41,10 +41,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             return tenncc.Distinct();
         }
 
-        //Lấy danh sách mã hàng hóa và tên loại hàng cho Combobox
-        public IQueryable LayDanhSachLoaiHangHoa()
+        //Lấy danh sách mã loại hàng hóa và tên loại hàng theo tên nhà cung cấp cho Combobox
+        public IQueryable LayDanhSachLoaiHangHoa(string tenncc)
         {
             var lh = from loaihang in QLKT.LoaiHangs
+                     from ncc in QLKT.NhaCungCaps
+                     where(( loaihang.MaLoaiHang==ncc.MaLoaiHang)&&(ncc.TenNCC==tenncc))
                      select new
                      {
                          loaihang.MaLoaiHang,
@@ -60,7 +62,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                           select ncc.TenNCC;
             return tenncc;
         } 
-        //Lấy tên loại hàng theo mã loại hàng
+        //Lấy tên loại hàng theo mã loại hàng dùng trong binding control
         public IQueryable LayDanhSachTenLoaiHangTheoMaLoaiHang(string MaLoaiHang)
         {
             var tenlh = from lh in QLKT.LoaiHangs
@@ -93,14 +95,29 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       select new { NCC.MaNCC };
             return ncc.Distinct();
         }
-        //Lấy Mã đơn vị tính cho combobox donvitinh
+        //Lấy Mã đơn vị tính cho combobox column donvitinh
         public IQueryable LayDanhSachMaDonViTinh()
         {
             var dvt = from DVT in QLKT.DonViTinhs
                       select new { DVT.MaDonViTinh};
             return dvt.Distinct();
         }
-        //Lấy Danh Sách tên loại hàng theo nhà cung cấp
+        //Lấy Danh Sách mã đơn vị và tên đơn vị tính cho combobox donvitinh
+        public IQueryable LayDanhSachTenDonViTinh()
+        {
+            var donvi = from DVT in QLKT.DonViTinhs
+                        select new { DVT.MaDonViTinh, DVT.TenDonViTinh ,};
+            return donvi;
+        }
+        //Lấy tên đơn vị tính theo mã đơn vị tính
+        public IQueryable LayDanhSachTenDVTinhTheoMaDVTinh(string MaDVTinh)
+        {
+            var tendv = from dvt in QLKT.DonViTinhs
+                        where dvt.MaDonViTinh == MaDVTinh
+                        select dvt.TenDonViTinh;
+            return tendv;
+        }
+        //Lấy Danh Sách tên loại hàng theo nhà cung cấp cho treeview
         public IQueryable<String> LayDanhSachTenLoaiHangTheoNCC(string tenncc)
         {
             var tenloaihang = from loaihang in QLKT.LoaiHangs
@@ -199,7 +216,6 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         //Thêm 1 mẫu dữ liệu hàng hóa vào csdl
         public void ThemHangHoa(string mahang,string maloaihang,string mancc,string tenhang,string MaDVTinh,string MoTaHang,float VAT,float ThueNK,decimal DonGia,float GiamGia,string Hinh)
         {
-           //HangHoa hh=new HangHoa();
             try
             {
                 Hang h = new Hang();
@@ -216,12 +232,60 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 h.Hinh = Hinh;
                 QLKT.Hangs.InsertOnSubmit(h);
                 QLKT.SubmitChanges();
+                MessageBox.Show("Lưu thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
         }
+        public void XoaHangHoa(string mahanghoa)
+        {
+            try
+            {
+                var delete = from h in QLKT.Hangs
+                             where h.MaHang == mahanghoa
+                             select h;
+                if (delete.Count() > 0)
+                {
+                    QLKT.Hangs.DeleteOnSubmit(delete.First());
+                    QLKT.SubmitChanges();
+                    MessageBox.Show("Xóa thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void SuaHang(string mahang, Hang h)
+        {
+            try
+            {
+                Hang hang = QLKT.Hangs.Single(_h => _h.MaHang ==mahang );
+                hang.MaNCC = h.MaNCC;
+                hang.MaLoaiHang = h.MaLoaiHang;
+                hang.TenHang = h.TenHang;
+                hang.MoTaHang = h.MoTaHang;
+                hang.MaDonViTinh = h.MaDonViTinh;
+                hang.VAT = h.VAT;
+                hang.ThueNhapKhau = h.ThueNhapKhau;
+                hang.GiamGia = h.GiamGia;
+                hang.DonGia = h.DonGia;
+                hang.Hinh = h.Hinh;
+                QLKT.SubmitChanges();
+                MessageBox.Show("Lưu thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        //Tìm hiểu thêm cách cập nhật thông qua quan hệ
+
     }
 }
