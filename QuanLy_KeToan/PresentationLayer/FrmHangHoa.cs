@@ -483,5 +483,15 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             LoadDanhSachHang();
         }
+
+        private void doubleInput2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDockContainerTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
