@@ -32,5 +32,16 @@ namespace QuanLy_KeToan.Properties {
                 return ((string)(this["QLKeToanConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\AppData\\QLKeToan.mdf;In" +
+            "tegrated Security=True;User Instance=True")]
+        public string QLKeToanConnectionString1 {
+            get {
+                return ((string)(this["QLKeToanConnectionString1"]));
+            }
+        }
     }
 }

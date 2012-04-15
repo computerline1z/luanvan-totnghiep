@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHangHoa));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarManagerHangHoa = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -171,6 +171,8 @@
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.tabItemLoaiHH = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.tabItemNCC = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlHH = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanelHH = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.gridHangHoa = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -214,8 +216,6 @@
             this.txtTimKiem = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tabItemHH = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItemNCC = new DevComponents.DotNetBar.TabItem(this.components);
             this.elementStyle6 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle5 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle4 = new DevComponents.DotNetBar.ElementStyle();
@@ -1924,9 +1924,9 @@
             // 
             this.tabQuanLyHH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabQuanLyHH.CanReorderTabs = true;
+            this.tabQuanLyHH.Controls.Add(this.tabControlHH);
             this.tabQuanLyHH.Controls.Add(this.tabControlPanel1);
             this.tabQuanLyHH.Controls.Add(this.tabControlPanel2);
-            this.tabQuanLyHH.Controls.Add(this.tabControlHH);
             this.tabQuanLyHH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabQuanLyHH.Location = new System.Drawing.Point(250, 0);
             this.tabQuanLyHH.Name = "tabQuanLyHH";
@@ -2015,14 +2015,14 @@
             this.ColumnNguoiLap,
             this.ColumnNgaySua,
             this.ColumnNguoiSua});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLoaiHH.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLoaiHH.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridLoaiHH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridLoaiHH.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.gridLoaiHH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -2063,8 +2063,8 @@
             this.CollumnNgayLap.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
             this.CollumnNgayLap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.CollumnNgayLap.DataPropertyName = "NgayLap";
-            dataGridViewCellStyle4.NullValue = null;
-            this.CollumnNgayLap.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.NullValue = null;
+            this.CollumnNgayLap.DefaultCellStyle = dataGridViewCellStyle2;
             this.CollumnNgayLap.HeaderText = "Ngày Lập";
             this.CollumnNgayLap.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             // 
@@ -2382,6 +2382,29 @@
             this.tabItemLoaiHH.Text = "Loại Hàng Hóa";
             this.tabItemLoaiHH.Click += new System.EventHandler(this.tabItemLoaiHH_Click);
             // 
+            // tabControlPanel2
+            // 
+            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
+            this.tabControlPanel2.Name = "tabControlPanel2";
+            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel2.Size = new System.Drawing.Size(1104, 640);
+            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel2.Style.GradientAngle = 90;
+            this.tabControlPanel2.TabIndex = 3;
+            this.tabControlPanel2.TabItem = this.tabItemNCC;
+            // 
+            // tabItemNCC
+            // 
+            this.tabItemNCC.AttachedControl = this.tabControlPanel2;
+            this.tabItemNCC.Name = "tabItemNCC";
+            this.tabItemNCC.Text = "Nhà Cung Cấp";
+            // 
             // tabControlHH
             // 
             this.tabControlHH.Controls.Add(this.groupPanelHH);
@@ -2462,14 +2485,14 @@
             this.ColDonGia,
             this.ColGiamGia,
             this.ColHinh});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridHangHoa.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridHangHoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridHangHoa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.gridHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -2838,29 +2861,6 @@
             this.tabItemHH.Name = "tabItemHH";
             this.tabItemHH.Text = "Hàng Hóa";
             this.tabItemHH.Click += new System.EventHandler(this.tabItemHH_Click);
-            // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(1104, 640);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 3;
-            this.tabControlPanel2.TabItem = this.tabItemNCC;
-            // 
-            // tabItemNCC
-            // 
-            this.tabItemNCC.AttachedControl = this.tabControlPanel2;
-            this.tabItemNCC.Name = "tabItemNCC";
-            this.tabItemNCC.Text = "Nhà Cung Cấp";
             // 
             // elementStyle6
             // 
