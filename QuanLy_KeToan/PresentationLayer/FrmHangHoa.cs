@@ -503,7 +503,10 @@ namespace QuanLy_KeToan.PresentationLayer
                             th = 0;
                         }
                         else
+                        {
+                            truonghop = 0;
                             return;
+                        }
                         break;
                     }
                 case 0://Sửa
@@ -736,5 +739,95 @@ namespace QuanLy_KeToan.PresentationLayer
             bindingLoaiHangHoa.BindingSource = bds;
             gridHangHoa.AllowUserToAddRows = false;
         }
+        private int truonghop = 0;
+        private void toolStripThem_Click(object sender, EventArgs e)
+        {
+            truonghop = 1;
+            gridLoaiHH.AllowUserToAddRows = true;
+            bindingLoaiHangHoa.BindingSource.MoveLast();
+        }
+
+        private void toolStripThoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void toolStripLuu_Click(object sender, EventArgs e)
+        {
+            switch (truonghop)
+            {
+                case 0://sửa loại hàng hóa
+                    {
+
+                        if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            bindingposition.Focus();
+                            LoaiHang loaihang = new LoaiHang();
+                            string maloaihang = gridLoaiHH.CurrentRow.Cells["ColumnMaLH"].Value.ToString();
+                            loaihang.TenLoaiHang = gridLoaiHH.CurrentRow.Cells["ColumnTenLH"].Value.ToString();
+                            loaihang.MoTaLoaiHang = gridLoaiHH.CurrentRow.Cells["ColumnMoTaLH"].Value.ToString();
+                            loaihang.NgayLap = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value.ToString());
+                            loaihang.NguoiLap = (gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value.ToString() : "");
+                            loaihang.NgaySua = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value.ToString());
+                            loaihang.NguoiSua =(gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value.ToString() : "");
+                            LHHBLL.SuaLoaiHang(maloaihang, loaihang);
+                            LoadDanhSachLoaiHang();
+                        }
+                        else
+                            return;
+                        break;
+                    }
+                case 1://thêm loại hàng
+                    {
+                        if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                           MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            bindingposition.Focus();
+                            string maloaihang = gridLoaiHH.CurrentRow.Cells["ColumnMaLH"].Value.ToString();
+                            string tenloaihang = gridLoaiHH.CurrentRow.Cells["ColumnTenLH"].Value.ToString();
+                            string motaloaihang = gridLoaiHH.CurrentRow.Cells["ColumnMoTaLH"].Value.ToString();
+                            DateTime ngaylap = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value.ToString());//(System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value!=null?System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value.ToString()):DateTime.Now.Date));
+                            string nguoilap = (gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value.ToString() : "");
+                            DateTime ngaysua = (System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value.ToString()));//(System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value != null ? System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value.ToString()) : DateTime.Now.Date));
+                            string nguoisua = (gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value.ToString() : "");
+                            LHHBLL.ThemLoaiHang(maloaihang, tenloaihang, motaloaihang, ngaylap, nguoilap, ngaysua, nguoisua);
+                            LoadDanhSachLoaiHang();
+                            truonghop = 0;
+                        }
+                        else
+                        {
+                            truonghop = 0;
+                            return;
+                        }
+
+                        break;
+                    }
+            }
+        }
+
+        private void toolStripRefresh_Click(object sender, EventArgs e)
+        {
+            tabItemLoaiHH_Click(sender, e);
+        }
+
+        private void toolStripHuy_Click(object sender, EventArgs e)
+        {
+            LoadDanhSachLoaiHang();
+        }
+
+        private void toolStripXoa_Click(object sender, EventArgs e)
+        {
+            // Nếu data gridview không có dòng nào
+            if (gridLoaiHH.RowCount == 0)
+                toolStripXoa.Enabled = false;
+            else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LHHBLL.XoaLoaiHang(gridLoaiHH.CurrentRow.Cells["ColumnMaLH"].Value.ToString());
+                LoadDanhSachLoaiHang();
+            }
+        }
+
     }
 }
