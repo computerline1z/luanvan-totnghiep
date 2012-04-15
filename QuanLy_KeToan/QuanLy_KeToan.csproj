@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
     <Compile Include="PresentationLayer\FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categories.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

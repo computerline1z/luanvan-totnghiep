@@ -81,6 +81,13 @@ namespace QuanLy_KeToan.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap categories1 {
+            get {
+                object obj = ResourceManager.GetObject("categories1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
