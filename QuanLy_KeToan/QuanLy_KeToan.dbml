@@ -50,12 +50,25 @@
       <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="NhaCungCap_Hang" Member="Hangs" ThisKey="MaNCC" OtherKey="MaNCC" Type="Hang" />
       <Association Name="LoaiHang_NhaCungCap" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
+      <Association Name="TinhThanh_NhaCungCap" Member="TinhThanh" ThisKey="MaTinh" OtherKey="MaTinh" Type="TinhThanh" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DonViTinh" Member="DonViTinhs">
     <Type Name="DonViTinh">
       <Column Name="MaDonViTinh" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="TenDonViTinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TinhThanh" Member="TinhThanhs">
+    <Type Name="TinhThanh">
+      <Column Name="MaTinh" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTinh" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="MaNuoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TinhThanh_NhaCungCap" Member="NhaCungCaps" ThisKey="MaTinh" OtherKey="MaTinh" Type="NhaCungCap" />
     </Type>
   </Table>
 </Database>

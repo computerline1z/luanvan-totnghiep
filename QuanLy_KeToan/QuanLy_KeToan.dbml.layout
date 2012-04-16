@@ -14,7 +14,7 @@
         <elementListCompartment Id="f6fdf6b0-fdcc-44f4-b4be-52e2fce857bb" absoluteBounds="3.5149999999999997, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.5 : 1.57774983723958); (2.75 : 1.57774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3.5 : 1.57774983723958); (2.75 : 1.57774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiHang/LoaiHang_Hang" />
       <nodes>
         <classShapeMoniker Id="913ae185-29d5-4add-9021-26edd12dfb8a" />
@@ -47,5 +47,18 @@
         <elementListCompartment Id="5e1e5b61-3d7f-4c8e-b74f-a541e0395719" absoluteBounds="0.89000000000000012, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="d03942ac-e34a-4f98-be94-e888e00e5a67" absoluteBounds="0.875, 5.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/TinhThanh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d82e969-6d75-4802-972f-555648f3c445" absoluteBounds="0.89000000000000012, 6.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 7.07375375520833); (4.5 : 7.07375375520833); (4.5 : 6.1170068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/TinhThanh/TinhThanh_NhaCungCap" />
+      <nodes>
+        <classShapeMoniker Id="d03942ac-e34a-4f98-be94-e888e00e5a67" />
+        <classShapeMoniker Id="06a951ee-45fa-4bbe-95d8-63927a3d9c85" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

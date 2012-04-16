@@ -68,11 +68,18 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
     <Compile Include="PresentationLayer\FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmDanhMucChung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmDanhMucChung.Designer.cs">
+      <DependentUpon>FrmDanhMucChung.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FrmHangHoa.cs">
       <SubType>Form</SubType>
@@ -92,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="PresentationLayer\FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmDanhMucChung.resx">
+      <DependentUpon>FrmDanhMucChung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>

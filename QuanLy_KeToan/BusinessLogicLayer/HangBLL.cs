@@ -24,7 +24,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
     {
         QuanLy_KeToanDataContext QLKT = new QuanLy_KeToanDataContext();
         //Kiểu IQueryable trả về kiểu object,nếu mình chỉ ra kiểu trả về luôn như IQueryabl<String> thì nó sẽ 
-            // trả về kiểu String,nếu chỉ để IQueryable thì sau khi gọi hàm phải chuyển kiểu.
+        // trả về kiểu String,nếu chỉ để IQueryable thì sau khi gọi hàm phải chuyển kiểu.
 
         //Lấy Danh Sách Tên Loại Hàng cho TreeView
         public IQueryable LayDanhSachTenLoaiHang()
@@ -46,7 +46,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         {
             var lh = from loaihang in QLKT.LoaiHangs
                      from ncc in QLKT.NhaCungCaps
-                     where(( loaihang.MaLoaiHang==ncc.MaLoaiHang)&&(ncc.TenNCC==tenncc))
+                     where ((loaihang.MaLoaiHang == ncc.MaLoaiHang) && (ncc.TenNCC == tenncc))
                      select new
                      {
                          loaihang.MaLoaiHang,
@@ -58,10 +58,10 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public IQueryable LayDanhSachTenNCCTheoMaNCC(string MaNCC)
         {
             var tenncc = from ncc in QLKT.NhaCungCaps
-                          where ncc.MaNCC == MaNCC
-                          select ncc.TenNCC;
+                         where ncc.MaNCC == MaNCC
+                         select ncc.TenNCC;
             return tenncc;
-        } 
+        }
         //Lấy tên loại hàng theo mã loại hàng dùng trong binding control
         public IQueryable LayDanhSachTenLoaiHangTheoMaLoaiHang(string MaLoaiHang)
         {
@@ -74,11 +74,11 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public IQueryable LayDanhSachNCC()
         {
             var ncc = from NCC in QLKT.NhaCungCaps
-                     select new
-                     {
-                         NCC.MaNCC,
-                         NCC.TenNCC,
-                     };
+                      select new
+                      {
+                          NCC.MaNCC,
+                          NCC.TenNCC,
+                      };
             return ncc.Distinct();
         }
         //Lấy Danh Sách Mã Loại Hàng cho ColMaLoaiHang
@@ -99,14 +99,14 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public IQueryable LayDanhSachMaDonViTinh()
         {
             var dvt = from DVT in QLKT.DonViTinhs
-                      select new { DVT.MaDonViTinh};
+                      select new { DVT.MaDonViTinh };
             return dvt.Distinct();
         }
         //Lấy Danh Sách mã đơn vị và tên đơn vị tính cho combobox donvitinh
         public IQueryable LayDanhSachTenDonViTinh()
         {
             var donvi = from DVT in QLKT.DonViTinhs
-                        select new { DVT.MaDonViTinh, DVT.TenDonViTinh ,};
+                        select new { DVT.MaDonViTinh, DVT.TenDonViTinh, };
             return donvi;
         }
         //Lấy tên đơn vị tính theo mã đơn vị tính
@@ -136,15 +136,15 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                         select new HangHoa
                         {
                             MaHang = h.MaHang,
-                            MaLoaiHang=h.MaLoaiHang,
-                            MaNCC=h.MaNCC,
+                            MaLoaiHang = h.MaLoaiHang,
+                            MaNCC = h.MaNCC,
                             TenHang = h.TenHang,
                             MoTaHang = h.MoTaHang,
                             MaDonViTinh = h.MaDonViTinh,
                             VAT = float.Parse(h.VAT.ToString()),
-                            ThueNhapKhau = (h.ThueNhapKhau.ToString()!=null?float.Parse(h.ThueNhapKhau.ToString()):0),
+                            ThueNhapKhau = (h.ThueNhapKhau.ToString() != null ? float.Parse(h.ThueNhapKhau.ToString()) : 0),
                             DonGia = System.Convert.ToDecimal(h.DonGia),
-                            GiamGia = (h.GiamGia!=null?float.Parse(h.GiamGia.ToString()):0),
+                            GiamGia = (h.GiamGia != null ? float.Parse(h.GiamGia.ToString()) : 0),
                             Hinh = h.Hinh,
                         }).ToList<HangHoa>();
             return hang;
@@ -167,14 +167,14 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         //                });
         //    return hang;
         //}
-        
+
         //Lấy Danh sách mặt hàng theo tên loại hàng
         public List<HangHoa> LayDanhSachHangTheoLoaiHang(string tenloaihang)
         {
             var hang = (from h in QLKT.Hangs
-                       from lh in QLKT.LoaiHangs
-                       where ((h.MaLoaiHang == lh.MaLoaiHang) && (lh.TenLoaiHang == tenloaihang))
-                       select new HangHoa
+                        from lh in QLKT.LoaiHangs
+                        where ((h.MaLoaiHang == lh.MaLoaiHang) && (lh.TenLoaiHang == tenloaihang))
+                        select new HangHoa
                         {
                             MaHang = h.MaHang,
                             MaLoaiHang = h.MaLoaiHang,
@@ -188,16 +188,16 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                             GiamGia = (h.GiamGia != null ? float.Parse(h.GiamGia.ToString()) : 0),
                             Hinh = h.Hinh,
                         }).ToList<HangHoa>();
-            return hang;     
+            return hang;
         }
         //Lấy danh sách mặt hàng theo tên nhà cung cấp và tên loại hàng
         public List<HangHoa> LayDanhSachHangTheoTenNhaCungCap(string tenncc, string tenloaihang)
         {
             var hang = (from h in QLKT.Hangs
-                       from lh in QLKT.LoaiHangs
-                       from ncc in QLKT.NhaCungCaps
-                       where ((ncc.MaLoaiHang == lh.MaLoaiHang) && (h.MaLoaiHang == ncc.MaLoaiHang) && (lh.TenLoaiHang == tenloaihang) && (h.MaNCC == ncc.MaNCC) && (ncc.TenNCC == tenncc))
-                       select new HangHoa
+                        from lh in QLKT.LoaiHangs
+                        from ncc in QLKT.NhaCungCaps
+                        where ((ncc.MaLoaiHang == lh.MaLoaiHang) && (h.MaLoaiHang == ncc.MaLoaiHang) && (lh.TenLoaiHang == tenloaihang) && (h.MaNCC == ncc.MaNCC) && (ncc.TenNCC == tenncc))
+                        select new HangHoa
                         {
                             MaHang = h.MaHang,
                             MaLoaiHang = h.MaLoaiHang,
@@ -214,7 +214,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             return hang;
         }
         //Thêm 1 mẫu dữ liệu hàng hóa vào csdl
-        public void ThemHangHoa(string mahang,string maloaihang,string mancc,string tenhang,string MaDVTinh,string MoTaHang,float VAT,float ThueNK,decimal DonGia,float GiamGia,string Hinh)
+        public void ThemHangHoa(string mahang, string maloaihang, string mancc, string tenhang, string MaDVTinh, string MoTaHang, float VAT, float ThueNK, decimal DonGia, float GiamGia, string Hinh)
         {
             try
             {
@@ -234,7 +234,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 QLKT.SubmitChanges();
                 MessageBox.Show("Lưu thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -264,7 +264,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         {
             try
             {
-                Hang hang = QLKT.Hangs.Single(_h => _h.MaHang ==mahang );
+                Hang hang = QLKT.Hangs.Single(_h => _h.MaHang == mahang);
                 hang.MaNCC = h.MaNCC;
                 hang.MaLoaiHang = h.MaLoaiHang;
                 hang.TenHang = h.TenHang;
@@ -297,9 +297,9 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                             TenHang = h.TenHang,
                             MoTaHang = h.MoTaHang,
                             MaDonViTinh = h.MaDonViTinh,
-                            VAT = (h.VAT != null ?float.Parse(h.VAT.ToString()):0),
+                            VAT = (h.VAT != null ? float.Parse(h.VAT.ToString()) : 0),
                             ThueNhapKhau = (h.ThueNhapKhau.ToString() != null ? float.Parse(h.ThueNhapKhau.ToString()) : 0),
-                            DonGia =(h.DonGia!=null?System.Convert.ToDecimal(h.DonGia):0),
+                            DonGia = (h.DonGia != null ? System.Convert.ToDecimal(h.DonGia) : 0),
                             GiamGia = (h.GiamGia != null ? float.Parse(h.GiamGia.ToString()) : 0),
                             Hinh = h.Hinh,
                         }).ToList<HangHoa>();
@@ -330,7 +330,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public List<HangHoa> TimTatCaHangChinhXacTheoMaHang(string mahang)
         {
             var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
-                        where h.MaHang==mahang
+                        where h.MaHang == mahang
                         select new HangHoa
                         {
                             MaHang = h.MaHang,
@@ -372,7 +372,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public List<HangHoa> TimTatCaHangChinhXacTheoDVTinh(string dvtinh)
         {
             var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
-                        where h.MaDonViTinh==dvtinh
+                        where h.MaDonViTinh == dvtinh
                         select new HangHoa
                         {
                             MaHang = h.MaHang,
@@ -390,10 +390,10 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             return hang;
         }
         //Tìm theo giá sản phẩm
-        public List<HangHoa> TimTatCaHangTheoGiaSanPham(decimal giatu,decimal dengia)
+        public List<HangHoa> TimTatCaHangTheoGiaSanPham(decimal giatu, decimal dengia)
         {
             var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
-                        where h.DonGia>=giatu && h.DonGia<=dengia
+                        where h.DonGia >= giatu && h.DonGia <= dengia
                         select new HangHoa
                         {
                             MaHang = h.MaHang,
@@ -414,7 +414,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public List<HangHoa> TimChinhXacGiaSanPham(decimal gia)
         {
             var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
-                        where h.DonGia ==gia
+                        where h.DonGia == gia
                         select new HangHoa
                         {
                             MaHang = h.MaHang,
@@ -435,7 +435,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public List<HangHoa> TimTheoVAT(float VAT)
         {
             var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
-                        where h.VAT==VAT
+                        where h.VAT == VAT
                         select new HangHoa
                         {
                             MaHang = h.MaHang,
@@ -456,7 +456,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public List<HangHoa> TimTheoGiamGia(float GiamGia)
         {
             var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
-                        where h.GiamGia==GiamGia
+                        where h.GiamGia == GiamGia
                         select new HangHoa
                         {
                             MaHang = h.MaHang,
@@ -477,7 +477,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public List<HangHoa> TimTheoThueNhapKhau(float ThueNhapKhau)
         {
             var hang = (from h in QLKT.Hangs  //Hoặc from h in QLKT.GetTable<Hang>() 
-                        where h.ThueNhapKhau==ThueNhapKhau
+                        where h.ThueNhapKhau == ThueNhapKhau
                         select new HangHoa
                         {
                             MaHang = h.MaHang,

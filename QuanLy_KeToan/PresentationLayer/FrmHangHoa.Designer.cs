@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHangHoa));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarManagerHangHoa = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -208,14 +208,12 @@
             this.toolStripThoat = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripcmbMaLoaiHang = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStriptxtTenLoaiHang = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.tabItemLoaiHH = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItemNCC = new DevComponents.DotNetBar.TabItem(this.components);
             this.elementStyle6 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle5 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle4 = new DevComponents.DotNetBar.ElementStyle();
@@ -1924,9 +1922,8 @@
             // 
             this.tabQuanLyHH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabQuanLyHH.CanReorderTabs = true;
-            this.tabQuanLyHH.Controls.Add(this.tabControlPanel1);
-            this.tabQuanLyHH.Controls.Add(this.tabControlPanel2);
             this.tabQuanLyHH.Controls.Add(this.tabControlHH);
+            this.tabQuanLyHH.Controls.Add(this.tabControlPanel1);
             this.tabQuanLyHH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabQuanLyHH.Location = new System.Drawing.Point(250, 0);
             this.tabQuanLyHH.Name = "tabQuanLyHH";
@@ -1937,7 +1934,6 @@
             this.tabQuanLyHH.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tabQuanLyHH.Tabs.Add(this.tabItemHH);
             this.tabQuanLyHH.Tabs.Add(this.tabItemLoaiHH);
-            this.tabQuanLyHH.Tabs.Add(this.tabItemNCC);
             // 
             // tabControlHH
             // 
@@ -2006,6 +2002,7 @@
             // 
             this.gridHangHoa.AllowUserToAddRows = false;
             this.gridHangHoa.AllowUserToOrderColumns = true;
+            this.gridHangHoa.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.gridHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColMaHang,
@@ -2019,14 +2016,14 @@
             this.ColDonGia,
             this.ColGiamGia,
             this.ColHinh});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridHangHoa.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridHangHoa.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridHangHoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridHangHoa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.gridHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -2463,6 +2460,7 @@
             // 
             this.gridLoaiHH.AllowUserToAddRows = false;
             this.gridLoaiHH.AllowUserToOrderColumns = true;
+            this.gridLoaiHH.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.gridLoaiHH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLoaiHH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnMaLH,
@@ -2472,14 +2470,14 @@
             this.ColumnNguoiLap,
             this.ColumnNgaySua,
             this.ColumnNguoiSua});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLoaiHH.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLoaiHH.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridLoaiHH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridLoaiHH.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.gridLoaiHH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -2520,8 +2518,8 @@
             this.ColumnNgayLap.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
             this.ColumnNgayLap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ColumnNgayLap.DataPropertyName = "NgayLap";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ColumnNgayLap.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.NullValue = null;
+            this.ColumnNgayLap.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnNgayLap.HeaderText = "Ngày Lập";
             this.ColumnNgayLap.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             // 
@@ -2633,10 +2631,10 @@
             this.toolStripThoat,
             this.toolStripButton11,
             this.toolStripSeparator16,
-            this.toolStripComboBox1,
+            this.toolStripcmbMaLoaiHang,
             this.toolStripLabel4,
             this.toolStripSeparator17,
-            this.toolStripTextBox2,
+            this.toolStriptxtTenLoaiHang,
             this.toolStripLabel5});
             this.bindingLoaiHangHoa.Location = new System.Drawing.Point(0, 0);
             this.bindingLoaiHangHoa.MoveFirstItem = this.toolStripButton1;
@@ -2808,10 +2806,11 @@
             this.toolStripSeparator16.Name = "toolStripSeparator16";
             this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripComboBox1
+            // toolStripcmbMaLoaiHang
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.toolStripcmbMaLoaiHang.Name = "toolStripcmbMaLoaiHang";
+            this.toolStripcmbMaLoaiHang.Size = new System.Drawing.Size(121, 25);
+            this.toolStripcmbMaLoaiHang.SelectedIndexChanged += new System.EventHandler(this.toolStripcmbMaLoaiHang_SelectedIndexChanged);
             // 
             // toolStripLabel4
             // 
@@ -2825,10 +2824,11 @@
             this.toolStripSeparator17.Name = "toolStripSeparator17";
             this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripTextBox2
+            // toolStriptxtTenLoaiHang
             // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
+            this.toolStriptxtTenLoaiHang.Name = "toolStriptxtTenLoaiHang";
+            this.toolStriptxtTenLoaiHang.Size = new System.Drawing.Size(100, 25);
+            this.toolStriptxtTenLoaiHang.TextChanged += new System.EventHandler(this.toolStriptxtTenLoaiHang_TextChanged);
             // 
             // toolStripLabel5
             // 
@@ -2843,29 +2843,6 @@
             this.tabItemLoaiHH.Name = "tabItemLoaiHH";
             this.tabItemLoaiHH.Text = "Loại Hàng Hóa";
             this.tabItemLoaiHH.Click += new System.EventHandler(this.tabItemLoaiHH_Click);
-            // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(1104, 640);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 3;
-            this.tabControlPanel2.TabItem = this.tabItemNCC;
-            // 
-            // tabItemNCC
-            // 
-            this.tabItemNCC.AttachedControl = this.tabControlPanel2;
-            this.tabItemNCC.Name = "tabItemNCC";
-            this.tabItemNCC.Text = "Nhà Cung Cấp";
             // 
             // elementStyle6
             // 
@@ -3442,14 +3419,12 @@
         private System.Windows.Forms.ToolStripButton toolStripThoat;
         private System.Windows.Forms.ToolStripButton toolStripButton11;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox toolStripcmbMaLoaiHang;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripTextBox toolStriptxtTenLoaiHang;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private DevComponents.DotNetBar.TabItem tabItemLoaiHH;
-        private DevComponents.DotNetBar.TabControlPanel tabControlPanel2;
-        private DevComponents.DotNetBar.TabItem tabItemNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaLH;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTenLH;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMoTaLH;

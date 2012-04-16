@@ -25,18 +25,18 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             var hang = (from lh in QLKT.LoaiHangs  //Hoặc from h in QLKT.GetTable<Hang>() 
                         select new LoaiHangHoa
                         {
-                           MaLoaiHang=lh.MaLoaiHang,
-                           TenLoaiHang=lh.TenLoaiHang,
-                           MoTaLoaiHang=lh.MoTaLoaiHang,
-                           NgayLap=Convert.ToDateTime(lh.NgayLap),
-                           NguoiLap=lh.NguoiLap,
-                           NgaySua=Convert.ToDateTime(lh.NgaySua),
-                           NguoiSua=lh.NguoiSua
+                            MaLoaiHang = lh.MaLoaiHang,
+                            TenLoaiHang = lh.TenLoaiHang,
+                            MoTaLoaiHang = lh.MoTaLoaiHang,
+                            NgayLap = Convert.ToDateTime(lh.NgayLap),
+                            NguoiLap = lh.NguoiLap,
+                            NgaySua = Convert.ToDateTime(lh.NgaySua),
+                            NguoiSua = lh.NguoiSua
                         }).ToList<LoaiHangHoa>();
             return hang;
         }
         //Thêm Loại Hàng Hóa
-        public void ThemLoaiHang(string maloaihang, string tenloaihang, string motaloaihang,DateTime ngaylap, string nguoilap, DateTime ngaysua,string nguoisua)
+        public void ThemLoaiHang(string maloaihang, string tenloaihang, string motaloaihang, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
         {
             try
             {
@@ -108,6 +108,39 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+        //Cac hàm phục vụ cho việc tìm kiếm
+        public List<LoaiHangHoa> LayDanhSachLoaiHangTheoMaLH(string maloaihang)
+        {
+            var loaihang = (from lh in QLKT.LoaiHangs
+                            where lh.MaLoaiHang == maloaihang
+                            select new LoaiHangHoa
+                            {
+                                MaLoaiHang = lh.MaLoaiHang,
+                                TenLoaiHang = lh.TenLoaiHang,
+                                MoTaLoaiHang = lh.MoTaLoaiHang,
+                                NgayLap = Convert.ToDateTime(lh.NgayLap),
+                                NguoiLap = lh.NguoiLap,
+                                NgaySua = Convert.ToDateTime(lh.NgaySua),
+                                NguoiSua = lh.NguoiSua
+                            }).ToList<LoaiHangHoa>();
+            return loaihang;
+        }
+        public List<LoaiHangHoa> LayDanhSachLoaiHangTheoTenLH(string tenloaihang)
+        {
+            var loaihang = (from lh in QLKT.LoaiHangs
+                            where lh.TenLoaiHang.Contains(tenloaihang)
+                            select new LoaiHangHoa
+                            {
+                                MaLoaiHang = lh.MaLoaiHang,
+                                TenLoaiHang = lh.TenLoaiHang,
+                                MoTaLoaiHang = lh.MoTaLoaiHang,
+                                NgayLap = Convert.ToDateTime(lh.NgayLap),
+                                NguoiLap = lh.NguoiLap,
+                                NgaySua = Convert.ToDateTime(lh.NgaySua),
+                                NguoiSua = lh.NguoiSua
+                            }).ToList<LoaiHangHoa>();
+            return loaihang;
         }
     }
 }

@@ -232,6 +232,8 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             comboMaLoaiHang.ComboBox.DataSource = HBLL.LayDanhSachMaLoaiHang();
             comboMaLoaiHang.ComboBox.DisplayMember = "MaLoaiHang";
+            toolStripcmbMaLoaiHang.ComboBox.DataSource = HBLL.LayDanhSachMaLoaiHang();
+            toolStripcmbMaLoaiHang.ComboBox.DisplayMember = "MaLoaiHang";
 
         }
         private void LoadDataColumnCombobox()
@@ -770,7 +772,7 @@ namespace QuanLy_KeToan.PresentationLayer
                             loaihang.NgayLap = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value.ToString());
                             loaihang.NguoiLap = (gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value.ToString() : "");
                             loaihang.NgaySua = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value.ToString());
-                            loaihang.NguoiSua =(gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value.ToString() : "");
+                            loaihang.NguoiSua = (gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value.ToString() : "");
                             LHHBLL.SuaLoaiHang(maloaihang, loaihang);
                             LoadDanhSachLoaiHang();
                         }
@@ -787,9 +789,27 @@ namespace QuanLy_KeToan.PresentationLayer
                             string maloaihang = gridLoaiHH.CurrentRow.Cells["ColumnMaLH"].Value.ToString();
                             string tenloaihang = gridLoaiHH.CurrentRow.Cells["ColumnTenLH"].Value.ToString();
                             string motaloaihang = gridLoaiHH.CurrentRow.Cells["ColumnMoTaLH"].Value.ToString();
-                            DateTime ngaylap = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value.ToString());//(System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value!=null?System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value.ToString()):DateTime.Now.Date));
+                            DateTime ngaylap;
+                            DateTime temp = DateTime.Parse("1/1/0001 12:00:00 AM");
+                            if (System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value) != temp)
+                            {
+                                MessageBox.Show(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value.ToString());
+                                ngaylap = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value);
+                            }
+                            else
+                            {
+                                ngaylap = DateTime.Now.Date;
+                            }
+                            DateTime ngaysua;
+                            if (System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value) != temp)
+                            {
+                                ngaysua = System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value);
+                            }
+                            else
+                            {
+                                ngaysua = DateTime.Now.Date;
+                            }
                             string nguoilap = (gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiLap"].Value.ToString() : "");
-                            DateTime ngaysua = (System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value.ToString()));//(System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgayLap"].Value != null ? System.Convert.ToDateTime(gridLoaiHH.CurrentRow.Cells["ColumnNgaySua"].Value.ToString()) : DateTime.Now.Date));
                             string nguoisua = (gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value != null ? gridLoaiHH.CurrentRow.Cells["ColumnNguoiSua"].Value.ToString() : "");
                             LHHBLL.ThemLoaiHang(maloaihang, tenloaihang, motaloaihang, ngaylap, nguoilap, ngaysua, nguoisua);
                             LoadDanhSachLoaiHang();
@@ -827,6 +847,24 @@ namespace QuanLy_KeToan.PresentationLayer
                 LHHBLL.XoaLoaiHang(gridLoaiHH.CurrentRow.Cells["ColumnMaLH"].Value.ToString());
                 LoadDanhSachLoaiHang();
             }
+        }
+
+        private void toolStripcmbMaLoaiHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = LHHBLL.LayDanhSachLoaiHangTheoMaLH(toolStripcmbMaLoaiHang.Text);
+            gridLoaiHH.DataSource = bds;
+            bindingLoaiHangHoa.BindingSource = bds;
+            gridLoaiHH.AllowUserToAddRows = false;
+        }
+
+        private void toolStriptxtTenLoaiHang_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = LHHBLL.LayDanhSachLoaiHangTheoTenLH(toolStriptxtTenLoaiHang.Text);
+            gridLoaiHH.DataSource = bds;
+            bindingLoaiHangHoa.BindingSource = bds;
+            gridLoaiHH.AllowUserToAddRows = false;
         }
 
     }
