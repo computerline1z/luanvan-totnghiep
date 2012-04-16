@@ -94,7 +94,7 @@
             this.tabItemTinhThanh = new DevComponents.DotNetBar.TabItem(this.components);
             this.styleManagerQuanLyChung = new DevComponents.DotNetBar.StyleManager(this.components);
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.gridTinhThanh = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,19 +119,19 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteTinhThanh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.XoaTinhThanh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.LuuTinhThanh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.HuyTinhThanh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.ThoatTinhThanh = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.cmbMaTinh = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.txtTenTinh = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.expandablePanelCauHinh.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -144,7 +144,7 @@
             this.bindingNCC.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.groupPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTinhThanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingTinhThanh)).BeginInit();
             this.bindingTinhThanh.SuspendLayout();
             this.SuspendLayout();
@@ -157,11 +157,9 @@
             this.expandablePanelCauHinh.Controls.Add(this.groupPanel2);
             this.expandablePanelCauHinh.Controls.Add(this.groupPanel1);
             this.expandablePanelCauHinh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.expandablePanelCauHinh.Expanded = false;
-            this.expandablePanelCauHinh.ExpandedBounds = new System.Drawing.Rectangle(0, 612, 1354, 80);
-            this.expandablePanelCauHinh.Location = new System.Drawing.Point(0, 666);
+            this.expandablePanelCauHinh.Location = new System.Drawing.Point(0, 612);
             this.expandablePanelCauHinh.Name = "expandablePanelCauHinh";
-            this.expandablePanelCauHinh.Size = new System.Drawing.Size(1354, 26);
+            this.expandablePanelCauHinh.Size = new System.Drawing.Size(1354, 80);
             this.expandablePanelCauHinh.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanelCauHinh.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanelCauHinh.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -186,7 +184,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupPanel2.Location = new System.Drawing.Point(0, 26);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(436, 0);
+            this.groupPanel2.Size = new System.Drawing.Size(436, 54);
             // 
             // 
             // 
@@ -233,7 +231,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupPanel1.Location = new System.Drawing.Point(1004, 26);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(350, 0);
+            this.groupPanel1.Size = new System.Drawing.Size(350, 54);
             // 
             // 
             // 
@@ -334,16 +332,16 @@
             this.tabControlDanhMucDungChung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControlDanhMucDungChung.CanReorderTabs = true;
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel2);
+            this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel3);
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel1);
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel5);
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel4);
-            this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel3);
             this.tabControlDanhMucDungChung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlDanhMucDungChung.Location = new System.Drawing.Point(0, 0);
             this.tabControlDanhMucDungChung.Name = "tabControlDanhMucDungChung";
             this.tabControlDanhMucDungChung.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.tabControlDanhMucDungChung.SelectedTabIndex = 0;
-            this.tabControlDanhMucDungChung.Size = new System.Drawing.Size(1354, 666);
+            this.tabControlDanhMucDungChung.Size = new System.Drawing.Size(1354, 612);
             this.tabControlDanhMucDungChung.TabIndex = 11;
             this.tabControlDanhMucDungChung.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tabControlDanhMucDungChung.Tabs.Add(this.tabItemNhaCungCap);
@@ -846,7 +844,7 @@
             this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(1354, 640);
+            this.tabControlPanel2.Size = new System.Drawing.Size(1354, 586);
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -872,12 +870,12 @@
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.dataGridViewX1);
+            this.groupPanel3.Controls.Add(this.gridTinhThanh);
             this.groupPanel3.Controls.Add(this.bindingTinhThanh);
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel3.Location = new System.Drawing.Point(1, 1);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(1352, 638);
+            this.groupPanel3.Size = new System.Drawing.Size(1352, 584);
             // 
             // 
             // 
@@ -913,13 +911,13 @@
             this.groupPanel3.TitleImage = global::QuanLy_KeToan.Properties.Resources.province;
             this.groupPanel3.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
             // 
-            // dataGridViewX1
+            // gridTinhThanh
             // 
-            this.dataGridViewX1.AllowUserToAddRows = false;
-            this.dataGridViewX1.AllowUserToOrderColumns = true;
-            this.dataGridViewX1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridTinhThanh.AllowUserToAddRows = false;
+            this.gridTinhThanh.AllowUserToOrderColumns = true;
+            this.gridTinhThanh.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.gridTinhThanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTinhThanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewComboBoxColumn1,
             this.dataGridViewTextBoxColumn2,
@@ -935,15 +933,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewX1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewX1.Size = new System.Drawing.Size(1346, 479);
-            this.dataGridViewX1.TabIndex = 3;
+            this.gridTinhThanh.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridTinhThanh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridTinhThanh.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.gridTinhThanh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.gridTinhThanh.Location = new System.Drawing.Point(0, 25);
+            this.gridTinhThanh.Name = "gridTinhThanh";
+            this.gridTinhThanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.gridTinhThanh.Size = new System.Drawing.Size(1346, 425);
+            this.gridTinhThanh.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1031,19 +1029,19 @@
             this.toolStripSeparator6,
             this.DeleteTinhThanh,
             this.toolStripSeparator7,
-            this.toolStripButton12,
+            this.XoaTinhThanh,
             this.toolStripSeparator8,
-            this.toolStripButton13,
+            this.LuuTinhThanh,
             this.toolStripSeparator9,
-            this.toolStripButton14,
+            this.HuyTinhThanh,
             this.toolStripSeparator10,
-            this.toolStripButton15,
+            this.ThoatTinhThanh,
             this.toolStripButton17,
             this.toolStripSeparator11,
-            this.toolStripComboBox1,
+            this.cmbMaTinh,
             this.toolStripLabel2,
             this.toolStripSeparator12,
-            this.toolStripTextBox2,
+            this.txtTenTinh,
             this.toolStripLabel3});
             this.bindingTinhThanh.Location = new System.Drawing.Point(0, 0);
             this.bindingTinhThanh.MoveFirstItem = this.toolStripButton1;
@@ -1161,52 +1159,52 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton12
+            // XoaTinhThanh
             // 
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(46, 22);
-            this.toolStripButton12.Text = "Sửa";
+            this.XoaTinhThanh.Image = ((System.Drawing.Image)(resources.GetObject("XoaTinhThanh.Image")));
+            this.XoaTinhThanh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.XoaTinhThanh.Name = "XoaTinhThanh";
+            this.XoaTinhThanh.Size = new System.Drawing.Size(46, 22);
+            this.XoaTinhThanh.Text = "Sửa";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton13
+            // LuuTinhThanh
             // 
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(47, 22);
-            this.toolStripButton13.Text = "Lưu";
+            this.LuuTinhThanh.Image = ((System.Drawing.Image)(resources.GetObject("LuuTinhThanh.Image")));
+            this.LuuTinhThanh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LuuTinhThanh.Name = "LuuTinhThanh";
+            this.LuuTinhThanh.Size = new System.Drawing.Size(47, 22);
+            this.LuuTinhThanh.Text = "Lưu";
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton14
+            // HuyTinhThanh
             // 
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(49, 22);
-            this.toolStripButton14.Text = "Hủy";
+            this.HuyTinhThanh.Image = ((System.Drawing.Image)(resources.GetObject("HuyTinhThanh.Image")));
+            this.HuyTinhThanh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.HuyTinhThanh.Name = "HuyTinhThanh";
+            this.HuyTinhThanh.Size = new System.Drawing.Size(49, 22);
+            this.HuyTinhThanh.Text = "Hủy";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
             this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton15
+            // ThoatTinhThanh
             // 
-            this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
-            this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Size = new System.Drawing.Size(58, 22);
-            this.toolStripButton15.Text = "Thoát";
+            this.ThoatTinhThanh.Image = ((System.Drawing.Image)(resources.GetObject("ThoatTinhThanh.Image")));
+            this.ThoatTinhThanh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ThoatTinhThanh.Name = "ThoatTinhThanh";
+            this.ThoatTinhThanh.Size = new System.Drawing.Size(58, 22);
+            this.ThoatTinhThanh.Text = "Thoát";
             // 
             // toolStripButton17
             // 
@@ -1222,34 +1220,34 @@
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripComboBox1
+            // cmbMaTinh
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.cmbMaTinh.Name = "cmbMaTinh";
+            this.cmbMaTinh.Size = new System.Drawing.Size(121, 25);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel2.Image")));
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(68, 22);
-            this.toolStripLabel2.Text = "Mã NCC";
+            this.toolStripLabel2.Size = new System.Drawing.Size(67, 22);
+            this.toolStripLabel2.Text = "Mã Tỉnh";
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripTextBox2
+            // txtTenTinh
             // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
+            this.txtTenTinh.Name = "txtTenTinh";
+            this.txtTenTinh.Size = new System.Drawing.Size(100, 25);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel3.Image")));
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(71, 22);
-            this.toolStripLabel3.Text = "Tên NCC";
+            this.toolStripLabel3.Size = new System.Drawing.Size(70, 22);
+            this.toolStripLabel3.Text = "Tên Tỉnh";
             // 
             // FrmDanhMucChung
             // 
@@ -1276,7 +1274,7 @@
             this.tabControlPanel2.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTinhThanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingTinhThanh)).EndInit();
             this.bindingTinhThanh.ResumeLayout(false);
             this.bindingTinhThanh.PerformLayout();
@@ -1346,7 +1344,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSoFax;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX gridTinhThanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1371,19 +1369,19 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton DeleteTinhThanh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripButton XoaTinhThanh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripButton LuuTinhThanh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.ToolStripButton HuyTinhThanh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-        private System.Windows.Forms.ToolStripButton toolStripButton15;
+        private System.Windows.Forms.ToolStripButton ThoatTinhThanh;
         private System.Windows.Forms.ToolStripButton toolStripButton17;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox cmbMaTinh;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripTextBox txtTenTinh;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }

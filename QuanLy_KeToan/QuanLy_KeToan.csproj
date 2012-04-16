@@ -69,6 +69,7 @@
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
     <Compile Include="PresentationLayer\FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
