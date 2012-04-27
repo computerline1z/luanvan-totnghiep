@@ -53,6 +53,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=10.0.0.3, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -67,8 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhoChuaBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhoHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\NuocBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
     <Compile Include="PresentationLayer\FDangNhap.cs">
       <SubType>Form</SubType>
@@ -88,12 +92,18 @@
     <Compile Include="PresentationLayer\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyKhoHang.Designer.cs">
+      <DependentUpon>FrmQuanLyKhoHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLy_KeToan.cs">
+    <Compile Include="DataAccessLayer\QuanLy_KeToan.cs">
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
     </Compile>
-    <Compile Include="QuanLy_KeToan.designer.cs">
+    <Compile Include="DataAccessLayer\QuanLy_KeToan.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
@@ -107,6 +117,9 @@
     <EmbeddedResource Include="PresentationLayer\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmQuanLyKhoHang.resx">
+      <DependentUpon>FrmQuanLyKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -118,7 +131,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="QuanLy_KeToan.dbml.layout">
+    <None Include="DataAccessLayer\QuanLy_KeToan.dbml.layout">
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -130,11 +143,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLy_KeToan.dbml">
+    <None Include="DataAccessLayer\QuanLy_KeToan.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QuanLy_KeToan.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Z_Document\TRUY VAN DULIEU.docx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -227,6 +241,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\province.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Z_Document\GhiChu.txt" />
+    <None Include="Resources\khohang.png" />
+    <None Include="Resources\khochua.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

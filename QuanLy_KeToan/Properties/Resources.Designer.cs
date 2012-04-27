@@ -130,6 +130,20 @@ namespace QuanLy_KeToan.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap khochua {
+            get {
+                object obj = ResourceManager.GetObject("khochua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap khohang {
+            get {
+                object obj = ResourceManager.GetObject("khohang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ks_color {
             get {
                 object obj = ResourceManager.GetObject("ks_color", resourceCulture);

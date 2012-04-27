@@ -1,0 +1,95 @@
+﻿Cách sử dụng ParentForm và ChildForm:
+		private FrmHangHoa frmhang;
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            if (frmhang == null || frmhang.IsDisposed)
+                frmhang = new FrmHangHoa();
+            frmhang.MdiParent = this;
+            this.LayoutMdi(MdiLayout.Cascade);
+            frmhang.ShowIcon = false;
+            frmhang.WindowState = FormWindowState.Maximized;
+            frmhang.Show();
+        }
+		Nếu muốn mở ChildForm lên mà không thao tác được gì trên ParentForm,khi tắt ChildForm mới dùng dc ParentForm thì:
+		bò dòng :frmhang.MdiParent = this và thay frmhang.Show() thành frmhang.ShowDialogue()
+
+
+Tính toán trong LinQ
+
+		Average
+
+			var query1 = from income in data.Incomes
+						 group income by income.name into result
+						 select new
+						 {
+							 Name = result.Key,
+							 Average = result.Average(i => i.income)
+						 };  
+
+			foreach (var q in query1)
+			{
+				Debug.WriteLine(string.Format("Name: {0} , Average income: {1}", q.Name, q.Average));
+			}
+
+		Sum
+
+			var query2 = from income in data.Incomes
+						 group income by income.name into result
+						 select new
+						 {
+							 Name = result.Key,
+							 Sum = result.Sum(i => i.income)
+						 };  
+
+			foreach (var q in query2)
+			{
+				Debug.WriteLine(string.Format("Name: {0} , Sum income: {1}", q.Name, q.Sum));
+			}
+
+		Count
+
+			var query3 = from income in data.Incomes
+						 group income by income.name into result
+						 select new
+						 {
+							 Name = result.Key,
+							 Count = result.Count()
+						 };  
+
+			foreach (var q in query3)
+			{
+				Debug.WriteLine(string.Format("Name: {0} , Count: {1}", q.Name, q.Count));
+			}
+
+		Using the DebuggerWriter class by Kris Vandermotten this is the generated SQL:
+
+		SELECT AVG([t0].[Income]) AS [Average], [t0].[Name]
+		FROM [dbo].[Incomes] AS [t0]
+		GROUP BY [t0].[Name]
+		...
+		SELECT SUM([t0].[Income]) AS [Sum], [t0].[Name]
+		FROM [dbo].[Incomes] AS [t0]
+		GROUP BY [t0].[Name]
+		...
+		SELECT COUNT(*) AS [Count], [t0].[Name]
+		FROM [dbo].[Incomes] AS [t0]
+		GROUP BY [t0].[Name]
+
+		
+		Đây là truy vấn:
+
+		var q = from o in nw.Orders
+		select new OrderDetail {
+		OrderID = o.OrderID,
+		CustomerID = o.CustomerID,
+		EmployeeID = o.EmployeeID,
+		ShippedDate = o.ShippedDate
+		}
+
+		- Và chúng ta sẽ chạy nó trong 1 vòng lặp:
+
+		foreach (var detail in q)
+		{
+		sum += detail.OrderID;
+		count++;
+		}

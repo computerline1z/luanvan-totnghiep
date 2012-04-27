@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using QuanLy_KeToan.BusinessLogicLayer;
 using DevComponents.DotNetBar.Rendering;
+using QuanLy_KeToan.DataAccessLayer;
 
 namespace QuanLy_KeToan.PresentationLayer
 {
