@@ -51,6 +51,9 @@ namespace QuanLy_KeToan.DataAccessLayer
     partial void InsertKhoChua(KhoChua instance);
     partial void UpdateKhoChua(KhoChua instance);
     partial void DeleteKhoChua(KhoChua instance);
+    partial void InsertLoaiPhieuNhap(LoaiPhieuNhap instance);
+    partial void UpdateLoaiPhieuNhap(LoaiPhieuNhap instance);
+    partial void DeleteLoaiPhieuNhap(LoaiPhieuNhap instance);
     #endregion
 		
 		public QuanLy_KeToanDataContext() : 
@@ -144,6 +147,14 @@ namespace QuanLy_KeToan.DataAccessLayer
 			get
 			{
 				return this.GetTable<KhoChua>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LoaiPhieuNhap> LoaiPhieuNhaps
+		{
+			get
+			{
+				return this.GetTable<LoaiPhieuNhap>();
 			}
 		}
 	}
@@ -2486,6 +2497,188 @@ namespace QuanLy_KeToan.DataAccessLayer
 						this._MaHang = default(string);
 					}
 					this.SendPropertyChanged("Hang");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LoaiPhieuNhap")]
+	public partial class LoaiPhieuNhap : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaLoaiPhieuNhap;
+		
+		private string _TenLoaiPhieuNhap;
+		
+		private System.Nullable<System.DateTime> _NgayLap;
+		
+		private string _NguoiLap;
+		
+		private System.Nullable<System.DateTime> _NgaySua;
+		
+		private string _NguoiSua;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaLoaiPhieuNhapChanging(string value);
+    partial void OnMaLoaiPhieuNhapChanged();
+    partial void OnTenLoaiPhieuNhapChanging(string value);
+    partial void OnTenLoaiPhieuNhapChanged();
+    partial void OnNgayLapChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayLapChanged();
+    partial void OnNguoiLapChanging(string value);
+    partial void OnNguoiLapChanged();
+    partial void OnNgaySuaChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgaySuaChanged();
+    partial void OnNguoiSuaChanging(string value);
+    partial void OnNguoiSuaChanged();
+    #endregion
+		
+		public LoaiPhieuNhap()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiPhieuNhap", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaLoaiPhieuNhap
+		{
+			get
+			{
+				return this._MaLoaiPhieuNhap;
+			}
+			set
+			{
+				if ((this._MaLoaiPhieuNhap != value))
+				{
+					this.OnMaLoaiPhieuNhapChanging(value);
+					this.SendPropertyChanging();
+					this._MaLoaiPhieuNhap = value;
+					this.SendPropertyChanged("MaLoaiPhieuNhap");
+					this.OnMaLoaiPhieuNhapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoaiPhieuNhap", DbType="NVarChar(50)")]
+		public string TenLoaiPhieuNhap
+		{
+			get
+			{
+				return this._TenLoaiPhieuNhap;
+			}
+			set
+			{
+				if ((this._TenLoaiPhieuNhap != value))
+				{
+					this.OnTenLoaiPhieuNhapChanging(value);
+					this.SendPropertyChanging();
+					this._TenLoaiPhieuNhap = value;
+					this.SendPropertyChanged("TenLoaiPhieuNhap");
+					this.OnTenLoaiPhieuNhapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayLap", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> NgayLap
+		{
+			get
+			{
+				return this._NgayLap;
+			}
+			set
+			{
+				if ((this._NgayLap != value))
+				{
+					this.OnNgayLapChanging(value);
+					this.SendPropertyChanging();
+					this._NgayLap = value;
+					this.SendPropertyChanged("NgayLap");
+					this.OnNgayLapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NguoiLap", DbType="VarChar(50)")]
+		public string NguoiLap
+		{
+			get
+			{
+				return this._NguoiLap;
+			}
+			set
+			{
+				if ((this._NguoiLap != value))
+				{
+					this.OnNguoiLapChanging(value);
+					this.SendPropertyChanging();
+					this._NguoiLap = value;
+					this.SendPropertyChanged("NguoiLap");
+					this.OnNguoiLapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySua", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> NgaySua
+		{
+			get
+			{
+				return this._NgaySua;
+			}
+			set
+			{
+				if ((this._NgaySua != value))
+				{
+					this.OnNgaySuaChanging(value);
+					this.SendPropertyChanging();
+					this._NgaySua = value;
+					this.SendPropertyChanged("NgaySua");
+					this.OnNgaySuaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NguoiSua", DbType="VarChar(50)")]
+		public string NguoiSua
+		{
+			get
+			{
+				return this._NguoiSua;
+			}
+			set
+			{
+				if ((this._NguoiSua != value))
+				{
+					this.OnNguoiSuaChanging(value);
+					this.SendPropertyChanging();
+					this._NguoiSua = value;
+					this.SendPropertyChanged("NguoiSua");
+					this.OnNguoiSuaChanged();
 				}
 			}
 		}

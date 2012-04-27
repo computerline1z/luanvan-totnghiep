@@ -71,6 +71,7 @@
     <Compile Include="BusinessLogicLayer\KhoChuaBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhoHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
     <Compile Include="BusinessLogicLayer\NuocBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
@@ -243,6 +244,9 @@
     <None Include="Resources\province.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Loaiphieunhap.png" />
+    <None Include="Resources\Lophieunhap.png" />
+    <None Include="Resources\receipt.png" />
     <Content Include="Z_Document\GhiChu.txt" />
     <None Include="Resources\khohang.png" />
     <None Include="Resources\khochua.png" />

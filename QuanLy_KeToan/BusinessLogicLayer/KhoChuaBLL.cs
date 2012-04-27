@@ -27,7 +27,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       select new { kh.MaKhoHang, kh.TenKhoHang, };
             return sql;
         }
-        public IQueryable LayDSHangTheoMaLoaiHang()
+        public IQueryable LayDSHangTheoMaLoaiHang()//đáng lẽ lấy hàng theo mã loại hàng,tuy nhiên do combobox column không tự Refresh được.
         {
             var sql = from hang in QLKT.Hangs
                       select new { hang.MaHang,hang.TenHang };
@@ -49,6 +49,96 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                        }).ToList<Kho_Chua>();
             return sql;
         }
+        public List<Kho_Chua> LayDanhSachKhoChuaTheoMaKho(string makho)
+        {
+            var sql = (from khochua in QLKT.KhoChuas
+                       where khochua.MaKhoHang==makho
+                       select new Kho_Chua
+                       {
+                           makhohang = khochua.MaKhoHang,
+                           mahang = khochua.MaHang,
+                           sl = System.Convert.ToInt16(khochua.SL),
+                           ngaylap = Convert.ToDateTime(khochua.NgayLap == null ? DateTime.Today : khochua.NgayLap),
+                           nguoilap = khochua.NguoiLap,
+                           ngaysua = Convert.ToDateTime(khochua.NgaySua == null ? DateTime.Today : khochua.NgaySua),
+                           nguoisua = khochua.NguoiSua,
+                       }).ToList<Kho_Chua>();
+            return sql;
+        }
+        public List<Kho_Chua> LayDanhSachKhoChuaTheoMaHang(string mahang)
+        {
+            var sql = (from khochua in QLKT.KhoChuas
+                       where khochua.MaHang==mahang
+                       select new Kho_Chua
+                       {
+                           makhohang = khochua.MaKhoHang,
+                           mahang = khochua.MaHang,
+                           sl = System.Convert.ToInt16(khochua.SL),
+                           ngaylap = Convert.ToDateTime(khochua.NgayLap == null ? DateTime.Today : khochua.NgayLap),
+                           nguoilap = khochua.NguoiLap,
+                           ngaysua = Convert.ToDateTime(khochua.NgaySua == null ? DateTime.Today : khochua.NgaySua),
+                           nguoisua = khochua.NguoiSua,
+                       }).ToList<Kho_Chua>();
+            return sql;
+        }
+        public List<Kho_Chua> LayDanhSachKhoChuaTheoTenHang(string tenhang)
+        {
+            var sql = (from khochua in QLKT.KhoChuas
+                       from hang in QLKT.Hangs
+                       where khochua.MaHang == hang.MaHang && hang.TenHang.Contains(tenhang)
+                       select new Kho_Chua
+                       {
+                           makhohang = khochua.MaKhoHang,
+                           mahang = khochua.MaHang,
+                           sl = System.Convert.ToInt16(khochua.SL),
+                           ngaylap = Convert.ToDateTime(khochua.NgayLap == null ? DateTime.Today : khochua.NgayLap),
+                           nguoilap = khochua.NguoiLap,
+                           ngaysua = Convert.ToDateTime(khochua.NgaySua == null ? DateTime.Today : khochua.NgaySua),
+                           nguoisua = khochua.NguoiSua,
+                       }).ToList<Kho_Chua>();
+            return sql;
+        }
+        public List<Kho_Chua> LayDanhSachKhoChuaTheoTinhTrang(string tinhtrang)
+        {
+            switch (tinhtrang)
+            {
+                case "=0":
+                    {
+                        var sql = (from khochua in QLKT.KhoChuas
+                               where khochua.SL == 0
+                               select new Kho_Chua
+                               {
+                                   makhohang = khochua.MaKhoHang,
+                                   mahang = khochua.MaHang,
+                                   sl = System.Convert.ToInt16(khochua.SL),
+                                   ngaylap = Convert.ToDateTime(khochua.NgayLap == null ? DateTime.Today : khochua.NgayLap),
+                                   nguoilap = khochua.NguoiLap,
+                                   ngaysua = Convert.ToDateTime(khochua.NgaySua == null ? DateTime.Today : khochua.NgaySua),
+                                   nguoisua = khochua.NguoiSua,
+                               }).ToList<Kho_Chua>();
+                        return sql;
+                    }
+                case ">0":
+                    {
+                       var sql = (from khochua in QLKT.KhoChuas
+                               where khochua.SL > 0
+                               select new Kho_Chua
+                               {
+                                   makhohang = khochua.MaKhoHang,
+                                   mahang = khochua.MaHang,
+                                   sl = System.Convert.ToInt16(khochua.SL),
+                                   ngaylap = Convert.ToDateTime(khochua.NgayLap == null ? DateTime.Today : khochua.NgayLap),
+                                   nguoilap = khochua.NguoiLap,
+                                   ngaysua = Convert.ToDateTime(khochua.NgaySua == null ? DateTime.Today : khochua.NgaySua),
+                                   nguoisua = khochua.NguoiSua,
+                               }).ToList<Kho_Chua>();
+
+                       return sql;
+                    }
+            }
+            return null;
+        }
+
         //Hàm thống kê
         
         public int ThongKeSLHangTrongKho(string makho)

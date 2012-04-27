@@ -147,6 +147,10 @@ namespace QuanLy_KeToan.PresentationLayer
             FrmQuanLyKhoHang_Load(sender, e);
         }
 
+        private void KhoHang_Huy_Click(object sender, EventArgs e)
+        {
+            LayKhoHang();
+        }
         private void cmbTenKhoHang_SelectedIndexChanged(object sender, EventArgs e)
         {
             BindingSource bds = new BindingSource();
@@ -181,6 +185,24 @@ namespace QuanLy_KeToan.PresentationLayer
             ColMH.DataSource = KCBLL.LayDSHangTheoMaLoaiHang();
             ColMH.DisplayMember = "TenHang";
             ColMH.ValueMember = "MaHang";
+            cmbHang.ComboBox.DataSource = KCBLL.LayDSHangTheoMaLoaiHang();
+            cmbHang.ComboBox.DisplayMember = "TenHang";
+            cmbHang.ComboBox.ValueMember = "MaHang";
+        }
+        private void LayDanhSachKhoChua(string makhohang)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaKhoHang(makhohang);
+            bindingKhoChua.BindingSource = bds;
+            gridKhoChua.DataSource = bds;
+            gridKhoChua.AllowUserToAddRows = false;
+            //Phần Thống kê
+            lblTongKho.Text = KCBLL.ThongKeSoLuongKhoHang().ToString();
+            lblMaKhoHT.Text = makhohang;
+            lblTenKhoHT.Text = (gridKhoHang.CurrentRow.Cells["ColTenKhoHang"].Value != null ? gridKhoHang.CurrentRow.Cells["ColTenKhoHang"].Value.ToString() : "");
+            lblTongSL.Text = KCBLL.ThongKeSLHangTrongKho(makhohang).ToString();
+            lblTongSLHang.Text = KCBLL.ThongKeSLMatHangTrongKho(makhohang).ToString();
+            lblTongGiaTri.Text = String.Format("{0:0,0 VNĐ}", KCBLL.ThongKeTongGiaTriHang(makhohang));
         }
         private void gridKhoHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -190,18 +212,7 @@ namespace QuanLy_KeToan.PresentationLayer
                     gridKhoHang.CurrentRow.Cells["ColMaKhoHang"].ReadOnly = false;
                 //Load dữ liệu cho Datagridview Kho chứa.
                 string makhohang = (gridKhoHang.CurrentRow.Cells["ColMaKhoHang"].Value != null ? gridKhoHang.CurrentRow.Cells["ColMaKhoHang"].Value.ToString() : "");
-                BindingSource bds = new BindingSource();
-                bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaKhoHang(makhohang);
-                bindingKhoChua.BindingSource = bds;
-                gridKhoChua.DataSource = bds;
-                gridKhoChua.AllowUserToAddRows = false;
-                //Phần Thống kê
-                lblTongKho.Text = KCBLL.ThongKeSoLuongKhoHang().ToString();
-                lblMaKhoHT.Text = makhohang;
-                lblTenKhoHT.Text = (gridKhoHang.CurrentRow.Cells["ColTenKhoHang"].Value!=null?gridKhoHang.CurrentRow.Cells["ColTenKhoHang"].Value.ToString():"");
-                lblTongSL.Text = KCBLL.ThongKeSLHangTrongKho(makhohang).ToString();
-                lblTongSLHang.Text = KCBLL.ThongKeSLMatHangTrongKho(makhohang).ToString();
-                lblTongGiaTri.Text = String.Format("{0:0,0 VNĐ}",KCBLL.ThongKeTongGiaTriHang(makhohang));
+                LayDanhSachKhoChua(makhohang);
             }
         }
 
@@ -217,13 +228,17 @@ namespace QuanLy_KeToan.PresentationLayer
                 th_khochua = 1;
                 gridKhoChua.AllowUserToAddRows = true;
                 bindingKhoChua.BindingSource.MoveLast();
-                gridKhoChua.ReadOnly = false;
             }
             catch { }
         }
 
         private void gridKhoChua_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (th_khochua == 0)
+            {
+                gridKhoChua.CurrentRow.Cells["ColMKH"].ReadOnly = true;
+                gridKhoChua.CurrentRow.Cells["ColMH"].ReadOnly = true;
+            }
             if (th_khochua == 1)
             {
                 gridKhoChua.CurrentRow.Cells["ColMKH"].ReadOnly = false;
@@ -251,11 +266,7 @@ namespace QuanLy_KeToan.PresentationLayer
                             KC.NgaySua = System.Convert.ToDateTime(gridKhoHang.CurrentRow.Cells["ColNgaySua"].Value.ToString());
                             KC.NguoiSua = (gridKhoHang.CurrentRow.Cells["ColNguoiSua"].Value != null ? gridKhoHang.CurrentRow.Cells["ColNguoiSua"].Value.ToString() : "");
                             KCBLL.SuaKhoChua(makhohang,mahang,KC);
-                            BindingSource bds = new BindingSource();
-                            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaKhoHang(makhohang);
-                            bindingKhoChua.BindingSource = bds;
-                            gridKhoChua.DataSource = bds;
-                            gridKhoChua.AllowUserToAddRows = false;
+                            LayDanhSachKhoChua(makhohang);
                         }
                         else
                             return;
@@ -292,11 +303,7 @@ namespace QuanLy_KeToan.PresentationLayer
                             string nguoilap = (gridKhoChua.CurrentRow.Cells["ColNgL"].Value != null ? gridKhoChua.CurrentRow.Cells["ColNgL"].Value.ToString() : "");
                             string nguoisua = (gridKhoChua.CurrentRow.Cells["ColNgS"].Value != null ? gridKhoChua.CurrentRow.Cells["ColNgS"].Value.ToString() : "");
                             KCBLL.ThemKhoChua(makhohang,mahang,sl,ngaylap,nguoilap,ngaysua,nguoisua);
-                            BindingSource bds = new BindingSource();
-                            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaKhoHang(makhohang);
-                            bindingKhoChua.BindingSource = bds;
-                            gridKhoChua.DataSource = bds;
-                            gridKhoChua.AllowUserToAddRows = false;
+                            LayDanhSachKhoChua(makhohang);
                             th_khochua = 0;
                         }
                         else
@@ -309,5 +316,91 @@ namespace QuanLy_KeToan.PresentationLayer
                     }
             }
         }
+
+        private void KhoChua_Xoa_Click(object sender, EventArgs e)
+        {
+            // Nếu data gridview không có dòng nào
+            if (gridKhoChua.RowCount == 0)
+                KhoChua_Xoa.Enabled = false;
+            else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                KCBLL.XoaKhoChua(gridKhoChua.CurrentRow.Cells["ColMKH"].Value.ToString(),gridKhoChua.CurrentRow.Cells["ColMH"].Value.ToString());
+                LayDanhSachKhoChua(gridKhoChua.CurrentRow.Cells["ColMKH"].Value.ToString());
+            }
+        }
+
+        private void KhoChua_Huy_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Hủy thao tác?", "CANCEL",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LayDanhSachKhoChua(gridKhoHang.CurrentRow.Cells["ColMaKhoHang"].Value.ToString());
+            }
+            else
+                return;
+        }
+
+        private void KhoChua_Refresh_Click(object sender, EventArgs e)
+        {
+            LayDanhSachKhoChua(gridKhoHang.Rows[0].Cells["ColMaKhoHang"].Value.ToString());
+        }
+        private void cmbHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaHang(cmbHang.ComboBox.SelectedValue.ToString());
+            bindingKhoChua.BindingSource = bds;
+            gridKhoChua.DataSource = bds;
+            gridKhoChua.AllowUserToAddRows = false;
+        }
+
+        private void txtTenKhoChua_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoTenHang(txtTenKhoChua.Text);
+            bindingKhoChua.BindingSource = bds;
+            gridKhoChua.DataSource = bds;
+            gridKhoChua.AllowUserToAddRows = false;
+        }
+
+        private void comboTinhTrang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoTinhTrang(comboTinhTrang.Text);
+            bindingKhoChua.BindingSource = bds;
+            gridKhoChua.DataSource = bds;
+            gridKhoChua.AllowUserToAddRows = false;
+        }
+
+        private void cmbKhoChua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LayDanhSachHang();
+            BindingSource bds = new BindingSource();
+            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaKho(cmbKhoChua.ComboBox.SelectedValue.ToString());
+            bindingKhoChua.BindingSource = bds;
+            gridKhoChua.DataSource = bds;
+            gridKhoChua.AllowUserToAddRows = false;
+        }
+
+        //----------------Phần Loại Phiếu Nhập-------------------------------------//
+        LoaiPhieuNhapBLL LPNBLL = new LoaiPhieuNhapBLL();
+        private void LPN_Exit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        private void LayDanhSachLoaiPN()
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = LPNBLL.LayDanhSachLoaiPhieuNhap();
+            gridLoaiPhieuNhap.DataSource = bds;
+            bindingLoaiPhieuNhap.BindingSource = bds;
+            gridLoaiPhieuNhap.AllowUserToAddRows = false;
+        }
+
+        private void tabItemNhapKho_Click(object sender, EventArgs e)
+        {
+            LayDanhSachLoaiPN();
+        }
+
     }
 }
