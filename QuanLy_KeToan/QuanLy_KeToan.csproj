@@ -72,6 +72,7 @@
     <Compile Include="BusinessLogicLayer\KhoHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
     <Compile Include="BusinessLogicLayer\NuocBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />

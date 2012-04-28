@@ -47,9 +47,8 @@ namespace QuanLy_KeToan.PresentationLayer
             LayDanhSachLoaiHang();
             LayTenKhoHang();
             LayKhoHang();
-            //Load dữ liệu lên 2 column trong gridKhochua
-            LayDSKhoHang();
-            LayDanhSachHang();
+        
+            LoadTreeView();
         }
         int th_khohang = 0;
         private void KhoHang_Them_Click(object sender, EventArgs e)
@@ -211,6 +210,9 @@ namespace QuanLy_KeToan.PresentationLayer
                 if(th_khohang==1)
                     gridKhoHang.CurrentRow.Cells["ColMaKhoHang"].ReadOnly = false;
                 //Load dữ liệu cho Datagridview Kho chứa.
+                //Load dữ liệu lên 2 column trong gridKhochua
+                LayDSKhoHang();
+                LayDanhSachHang();
                 string makhohang = (gridKhoHang.CurrentRow.Cells["ColMaKhoHang"].Value != null ? gridKhoHang.CurrentRow.Cells["ColMaKhoHang"].Value.ToString() : "");
                 LayDanhSachKhoChua(makhohang);
             }
@@ -401,6 +403,177 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             LayDanhSachLoaiPN();
         }
+        private int th_lpn = 0;
+        private void LPN_Add_Click(object sender, EventArgs e)
+        {
+            th_lpn = 1;
+            gridLoaiPhieuNhap.AllowUserToAddRows = true;
+            bindingLoaiPhieuNhap.BindingSource.MoveLast();
+        }
 
+        private void LPN_Save_Click(object sender, EventArgs e)
+        {
+           switch (th_lpn)
+           {
+               case 0://Sửa
+                   {
+                       if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                       {
+                           positionLoaiPhieuNhap.Focus();
+                           LoaiPhieuNhap LPN = new LoaiPhieuNhap();
+                           string maloaiphieunhap = gridLoaiPhieuNhap.CurrentRow.Cells["ColMLPN"].Value.ToString();
+                           LPN.TenLoaiPhieuNhap = gridLoaiPhieuNhap.CurrentRow.Cells["ColTLPN"].Value.ToString();
+                           LPN.NgayLap = System.Convert.ToDateTime(gridLoaiPhieuNhap.CurrentRow.Cells["NL"].Value.ToString());
+                           LPN.NguoiLap = (gridLoaiPhieuNhap.CurrentRow.Cells["NgL"].Value != null ? gridLoaiPhieuNhap.CurrentRow.Cells["NgL"].Value.ToString() : "");
+                           LPN.NgaySua = System.Convert.ToDateTime(gridLoaiPhieuNhap.CurrentRow.Cells["NS"].Value.ToString());
+                           LPN.NguoiSua = (gridLoaiPhieuNhap.CurrentRow.Cells["NgS"].Value != null ? gridLoaiPhieuNhap.CurrentRow.Cells["NgS"].Value.ToString() : "");
+                           LPNBLL.SuaLoaiPhieuNhap(maloaiphieunhap, LPN);
+                           LayDanhSachLoaiPN();
+                       }
+                       else
+                           return;
+                       break;
+                   }
+               case 1://Thêm
+                   {
+                       if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                       {
+                           positionLoaiPhieuNhap.Focus();
+                           string maloaiphieunhap = gridLoaiPhieuNhap.CurrentRow.Cells["ColMLPN"].Value.ToString();
+                           string tenloaiphieunhap = gridLoaiPhieuNhap.CurrentRow.Cells["ColTLPN"].Value.ToString();
+                           DateTime ngaylap;
+                           DateTime temp = DateTime.Parse("1/1/0001 12:00:00 AM");
+                           if (System.Convert.ToDateTime(gridLoaiPhieuNhap.CurrentRow.Cells["NL"].Value) != temp)
+                           {
+                               ngaylap = System.Convert.ToDateTime(gridLoaiPhieuNhap.CurrentRow.Cells["NL"].Value);
+                           }
+                           else
+                           {
+                               ngaylap = DateTime.Now.Date;
+                           }
+                           DateTime ngaysua;
+                           if (System.Convert.ToDateTime(gridLoaiPhieuNhap.CurrentRow.Cells["NS"].Value) != temp)
+                           {
+                               ngaysua = System.Convert.ToDateTime(gridLoaiPhieuNhap.CurrentRow.Cells["NS"].Value);
+                           }
+                           else
+                           {
+                               ngaysua = DateTime.Now.Date;
+                           }
+                           string nguoilap = (gridLoaiPhieuNhap.CurrentRow.Cells["NgL"].Value != null ? gridLoaiPhieuNhap.CurrentRow.Cells["NgL"].Value.ToString() : "");
+                           string nguoisua = (gridLoaiPhieuNhap.CurrentRow.Cells["NgS"].Value != null ? gridLoaiPhieuNhap.CurrentRow.Cells["NgS"].Value.ToString() : "");
+                           LPNBLL.ThemLoaiPhieuNhap(maloaiphieunhap, tenloaiphieunhap, ngaylap, nguoilap, ngaysua, nguoisua);
+                           LayDanhSachLoaiPN();
+                           th_lpn = 0;
+                       }
+                       else
+                       {
+                           th_lpn = 0;
+                           return;
+                       }
+
+                       break;
+                   }
+           }
+        }
+
+        private void LPN_Delete_Click(object sender, EventArgs e)
+        {
+            // Nếu data gridview không có dòng nào
+            if (gridLoaiPhieuNhap.RowCount == 0)
+                LPN_Delete.Enabled = false;
+            else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LPNBLL.XoaLoaiPhieuNhap(gridLoaiPhieuNhap.CurrentRow.Cells["ColMLPN"].Value.ToString());
+                LayDanhSachLoaiPN();
+            }
+        }
+
+        private void LPN_Cancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Hủy thao tác?", "CANCEL",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LayDanhSachLoaiPN();
+            }
+            else
+                return;
+        }
+
+        private void LPN_Refresh_Click(object sender, EventArgs e)
+        {
+            tabItemNhapKho_Click(sender, e);
+        }
+        //------------------------Code phần Lô Phiếu Nhập--------------------------------------//
+
+        LoPhieuNhapBLL LNBLL = new LoPhieuNhapBLL();
+        #region "Xử lý TreeView"
+        private void LoadTreeView()
+        {
+            //advTreeLoNhap.DataSource = LNBLL.LayDanhSachMaLoNhap();
+            foreach (var item in LNBLL.LayDanhSachMaLoNhap())
+            {
+                DevComponents.AdvTree.Node childnode = new DevComponents.AdvTree.Node(item.ToString());
+                foreach (DevComponents.AdvTree.Node n in advTreeLoNhap.Nodes[0].Nodes)
+                {
+                    if (n.Name == "nodeLoPhieuNhap")
+                        n.Nodes.Add(childnode);
+                }
+            }
+        }
+        private void AnHienGroup(bool status)
+        {
+            if (status == true)
+            {
+                groupPanelLoaiPhieuNhap.Visible = true;
+                groupPanelLoPhieuNhap.Visible = false;
+            }
+            else
+            {
+                groupPanelLoaiPhieuNhap.Visible = false;
+                groupPanelLoPhieuNhap.Visible = true;
+            }
+        }
+        private void advTreeLoNhap_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        {
+            //MessageBox.Show(e.Node.Index.ToString()+","+ e.Node.Level.ToString());
+            if (e.Node.Level == 0)
+                return; 
+            //Node Loại phiếu Nhập
+            if (e.Node.Parent.Index == 0 && e.Node.Index==0 && e.Node.Level == 1)
+            {
+                AnHienGroup(true);
+                groupPanelLoaiPhieuNhap.BringToFront();
+            }
+            //Node Lô Phiếu Nhập
+            else if (e.Node.Parent.Index == 0 &&e.Node.Index==1 && e.Node.Level == 1)
+            {
+                AnHienGroup(false);
+                groupPanelLoPhieuNhap.BringToFront();
+            }
+        }
+        # endregion
+
+        public void LayDanhSachLoPN()
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = LNBLL.LayDanhSachLoPhieuNhap();
+            bindingLoaiPhieuNhap.BindingSource = bds;
+            gridLoPhieuNhap.DataSource = bds;
+            gridLoPhieuNhap.AllowUserToAddRows = false;
+        }
+
+        private void nodeLoPhieuNhap_NodeClick(object sender, EventArgs e)
+        {
+            LayDanhSachLoPN();
+        }
+
+        private void LoPN_Exit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
