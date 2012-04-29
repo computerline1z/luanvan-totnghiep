@@ -1,0 +1,3 @@
+﻿1.Chưa xử lý được chỗ Load dữ liệu lên lại ở Combobox Colum MaLoaiHang ở GridPhieuNhap thuộc module FrmQuanLyHangHoa
+2.Vướng mắc ở CSDL Phiếu Nhập:2 khóa chính:mã phiếu nhập và mã lô nhập hay chỉ mã phiếu nhập.
+3.Chỉnh sửa Khóa chính ở Table Lô phiếu nhập:thêm khóa chính Mã loại hàng

@@ -62,27 +62,33 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         }
         public void XoaLoaiHang(string maloaihang)
         {
+            
+            var ktra = from h in QLKT.Hangs
+                        where h.MaLoaiHang == maloaihang
+                        select h;
+            if (ktra.Count() > 0)
+            {
+                MessageBox.Show("Bạn không thể xóa loại hàng này-Liên quan đến dữ liệu Hàng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var ktr2=from ln in QLKT.LoPhieuNhaps
+                     where ln.MaLoaiHang==maloaihang
+                     select ln;
+            if (ktr2.Count() > 0)
+            {
+                MessageBox.Show("Bạn không thể xóa loại hàng này-Liên quan đến dữ liệu Lô Nhập Hàng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
-                var ktra = from h in QLKT.Hangs
-                           where h.MaLoaiHang == maloaihang
-                           select h;
-                if (ktra.Count() > 0)
+                var delete = from lh in QLKT.LoaiHangs
+                                where lh.MaLoaiHang == maloaihang
+                                select lh;
+                if (delete.Count() > 0)
                 {
-                    MessageBox.Show("Bạn không thể xóa loại hàng này", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    var delete = from lh in QLKT.LoaiHangs
-                                 where lh.MaLoaiHang == maloaihang
-                                 select lh;
-                    if (delete.Count() > 0)
-                    {
-                        QLKT.LoaiHangs.DeleteOnSubmit(delete.First());
-                        QLKT.SubmitChanges();
-                        MessageBox.Show("Xóa thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    QLKT.LoaiHangs.DeleteOnSubmit(delete.First());
+                    QLKT.SubmitChanges();
+                    MessageBox.Show("Xóa thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
