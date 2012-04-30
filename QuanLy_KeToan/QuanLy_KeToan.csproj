@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\ChiTietPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhoChuaBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhoHangBLL.cs" />
@@ -83,6 +84,12 @@
     </Compile>
     <Compile Include="PresentationLayer\FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>FrmChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FrmDanhMucChung.cs">
       <SubType>Form</SubType>
@@ -114,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="PresentationLayer\FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmChiTietPhieuNhap.resx">
+      <DependentUpon>FrmChiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmDanhMucChung.resx">
       <DependentUpon>FrmDanhMucChung.cs</DependentUpon>
@@ -250,6 +260,8 @@
     <None Include="Resources\Loaiphieunhap.png" />
     <None Include="Resources\Lophieunhap.png" />
     <None Include="Resources\receipt.png" />
+    <None Include="Resources\detail.png" />
+    <None Include="Resources\update.png" />
     <Content Include="Z_Document\ChuaXuLy.txt" />
     <Content Include="Z_Document\GhiChu.txt" />
     <None Include="Resources\khohang.png" />

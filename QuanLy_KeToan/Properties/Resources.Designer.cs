@@ -216,7 +216,7 @@ namespace QuanLy_KeToan.Properties {
         
         internal static System.Drawing.Bitmap search_icon {
             get {
-                object obj = ResourceManager.GetObject("search-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("search_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -224,6 +224,13 @@ namespace QuanLy_KeToan.Properties {
         internal static System.Drawing.Bitmap thoat {
             get {
                 object obj = ResourceManager.GetObject("thoat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap update {
+            get {
+                object obj = ResourceManager.GetObject("update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

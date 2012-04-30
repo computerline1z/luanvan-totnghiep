@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using QuanLy_KeToan.BusinessLogicLayer;
 using QuanLy_KeToan.DataAccessLayer;
+using QuanLy_KeToan.PresentationLayer;
 
 namespace QuanLy_KeToan.PresentationLayer
 {
@@ -862,6 +863,30 @@ namespace QuanLy_KeToan.PresentationLayer
         private void PN_Refresh_Click(object sender, EventArgs e)
         {
             LayDSPhieuNhapTheoLo(xuly_chuoi(advTreeLoNhap.SelectedNode.Text));
+        }
+
+        //private void gridPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.RowIndex > -1)
+        //    {
+        //        string name = gridPhieuNhap.Columns[e.ColumnIndex].Name;
+        //        if (name == "MPN")
+        //        {
+        //            FrmChiTietPhieuNhap CTPN = new FrmChiTietPhieuNhap();
+        //            CTPN.maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
+        //            CTPN.Show();
+        //        }
+        //    }
+        //}
+
+        private void gridPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                FrmChiTietPhieuNhap CTPN = new FrmChiTietPhieuNhap();
+                CTPN.maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
+                CTPN.Show();
+            }
         }
     }
 }
