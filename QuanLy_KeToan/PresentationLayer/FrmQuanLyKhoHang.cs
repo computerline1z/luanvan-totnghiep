@@ -864,28 +864,22 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             LayDSPhieuNhapTheoLo(xuly_chuoi(advTreeLoNhap.SelectedNode.Text));
         }
-
-        //private void gridPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.RowIndex > -1)
-        //    {
-        //        string name = gridPhieuNhap.Columns[e.ColumnIndex].Name;
-        //        if (name == "MPN")
-        //        {
-        //            FrmChiTietPhieuNhap CTPN = new FrmChiTietPhieuNhap();
-        //            CTPN.maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
-        //            CTPN.Show();
-        //        }
-        //    }
-        //}
-
         private void gridPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
             {
-                FrmChiTietPhieuNhap CTPN = new FrmChiTietPhieuNhap();
-                CTPN.maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
-                CTPN.Show();
+                string name = gridPhieuNhap.Columns[e.ColumnIndex].Name;
+                if (name == "MPN")
+                {
+                    if (gridPhieuNhap.CurrentRow.Cells["MPN"].Value != null)
+                    {
+                        FrmChiTietPhieuNhap CTPN = new FrmChiTietPhieuNhap();
+                        CTPN.maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
+                        CTPN.Show();
+                    }
+                    else
+                        return;
+                }
             }
         }
     }

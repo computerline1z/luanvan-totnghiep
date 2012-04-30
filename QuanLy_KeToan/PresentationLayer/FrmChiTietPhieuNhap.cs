@@ -88,7 +88,6 @@ namespace QuanLy_KeToan.PresentationLayer
                 //Code phần cập nhật lại số lượng kho khi thay đổi số lượng.
                 if (name == "ColUpdateSL")
                 {
-                    MessageBox.Show(count.ToString());
                     if (count % 2 == 0)
                     {
                         gridChiTietPhieuNhap.CurrentRow.Cells["ColSL"].ReadOnly = false;
