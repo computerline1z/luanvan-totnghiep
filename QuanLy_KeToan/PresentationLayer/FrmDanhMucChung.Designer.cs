@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDanhMucChung));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.expandablePanelCauHinh = new DevComponents.DotNetBar.ExpandablePanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -370,9 +370,9 @@
             // 
             this.tabControlDanhMucDungChung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControlDanhMucDungChung.CanReorderTabs = true;
-            this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel1);
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel2);
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel4);
+            this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel1);
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel5);
             this.tabControlDanhMucDungChung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlDanhMucDungChung.Location = new System.Drawing.Point(0, 0);
@@ -466,14 +466,14 @@
             this.ColSoDT,
             this.ColSoFax,
             this.ColEmail});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridNCC.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridNCC.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridNCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridNCC.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.gridNCC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -510,8 +510,8 @@
             // ColDiaChiNCC
             // 
             this.ColDiaChiNCC.DataPropertyName = "DCNCC";
-            dataGridViewCellStyle1.NullValue = null;
-            this.ColDiaChiNCC.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.NullValue = null;
+            this.ColDiaChiNCC.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColDiaChiNCC.HeaderText = "Địa Chỉ NCC";
             this.ColDiaChiNCC.Name = "ColDiaChiNCC";
             this.ColDiaChiNCC.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -928,14 +928,14 @@
             this.ColumnNguoiLap,
             this.ColumnNgaySua,
             this.ColumnNguoiSua});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridTinhThanh.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridTinhThanh.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridTinhThanh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridTinhThanh.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.gridTinhThanh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -1009,8 +1009,8 @@
             // ColumnNguoiLap
             // 
             this.ColumnNguoiLap.DataPropertyName = "NguoiLap";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ColumnNguoiLap.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.NullValue = null;
+            this.ColumnNguoiLap.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnNguoiLap.HeaderText = "Người Lập";
             this.ColumnNguoiLap.Name = "ColumnNguoiLap";
             this.ColumnNguoiLap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1346,14 +1346,14 @@
             this.ColNguoiLap,
             this.ColNgaySua,
             this.ColNguoiSua});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridNuoc.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridNuoc.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridNuoc.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.gridNuoc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -1419,8 +1419,8 @@
             // ColNguoiLap
             // 
             this.ColNguoiLap.DataPropertyName = "NguoiLap";
-            dataGridViewCellStyle5.NullValue = null;
-            this.ColNguoiLap.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.NullValue = null;
+            this.ColNguoiLap.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColNguoiLap.HeaderText = "Người Lập";
             this.ColNguoiLap.Name = "ColNguoiLap";
             this.ColNguoiLap.Resizable = System.Windows.Forms.DataGridViewTriState.True;

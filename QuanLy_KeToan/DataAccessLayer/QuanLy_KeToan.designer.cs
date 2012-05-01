@@ -2913,6 +2913,8 @@ namespace QuanLy_KeToan.DataAccessLayer
 		
 		private EntityRef<ChiTietPhieuNhap> _ChiTietPhieuNhaps;
 		
+		private EntityRef<ChiTietPhieuNhap> _ChiTietPhieuNhaps1;
+		
 		private EntityRef<LoaiPhieuNhap> _LoaiPhieuNhap;
 		
 		private EntityRef<NhaCungCap> _NhaCungCap;
@@ -2948,6 +2950,7 @@ namespace QuanLy_KeToan.DataAccessLayer
 		public PhieuNhap()
 		{
 			this._ChiTietPhieuNhaps = default(EntityRef<ChiTietPhieuNhap>);
+			this._ChiTietPhieuNhaps1 = default(EntityRef<ChiTietPhieuNhap>);
 			this._LoaiPhieuNhap = default(EntityRef<LoaiPhieuNhap>);
 			this._NhaCungCap = default(EntityRef<NhaCungCap>);
 			this._LoPhieuNhap = default(EntityRef<LoPhieuNhap>);
@@ -2998,7 +3001,7 @@ namespace QuanLy_KeToan.DataAccessLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoNhap", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoNhap", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string MaLoNhap
 		{
 			get
@@ -3191,6 +3194,35 @@ namespace QuanLy_KeToan.DataAccessLayer
 						value.PhieuNhap = this;
 					}
 					this.SendPropertyChanged("ChiTietPhieuNhaps");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuNhap_ChiTietPhieuNhap1", Storage="_ChiTietPhieuNhaps1", ThisKey="MaLoNhap", OtherKey="MaLoNhap", IsUnique=true, IsForeignKey=false)]
+		public ChiTietPhieuNhap ChiTietPhieuNhaps1
+		{
+			get
+			{
+				return this._ChiTietPhieuNhaps1.Entity;
+			}
+			set
+			{
+				ChiTietPhieuNhap previousValue = this._ChiTietPhieuNhaps1.Entity;
+				if (((previousValue != value) 
+							|| (this._ChiTietPhieuNhaps1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ChiTietPhieuNhaps1.Entity = null;
+						previousValue.PhieuNhap1 = null;
+					}
+					this._ChiTietPhieuNhaps1.Entity = value;
+					if ((value != null))
+					{
+						value.PhieuNhap1 = this;
+					}
+					this.SendPropertyChanged("ChiTietPhieuNhaps1");
 				}
 			}
 		}
@@ -3625,13 +3657,13 @@ namespace QuanLy_KeToan.DataAccessLayer
 		
 		private string _MaPhieuNhap;
 		
+		private string _MaLoNhap;
+		
 		private string _MaHang;
 		
 		private string _MaKhoHang;
 		
-		private System.Nullable<decimal> _SoLuong;
-		
-		private System.Nullable<bool> _TrangThai;
+		private System.Nullable<int> _SoLuong;
 		
 		private System.Nullable<System.DateTime> _NgayLap;
 		
@@ -3641,11 +3673,13 @@ namespace QuanLy_KeToan.DataAccessLayer
 		
 		private string _NguoiSua;
 		
+		private EntityRef<PhieuNhap> _PhieuNhap;
+		
+		private EntityRef<PhieuNhap> _PhieuNhap1;
+		
 		private EntityRef<KhoHang> _KhoHang;
 		
 		private EntityRef<Hang> _Hang;
-		
-		private EntityRef<PhieuNhap> _PhieuNhap;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3653,14 +3687,14 @@ namespace QuanLy_KeToan.DataAccessLayer
     partial void OnCreated();
     partial void OnMaPhieuNhapChanging(string value);
     partial void OnMaPhieuNhapChanged();
+    partial void OnMaLoNhapChanging(string value);
+    partial void OnMaLoNhapChanged();
     partial void OnMaHangChanging(string value);
     partial void OnMaHangChanged();
     partial void OnMaKhoHangChanging(string value);
     partial void OnMaKhoHangChanged();
-    partial void OnSoLuongChanging(System.Nullable<decimal> value);
+    partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
-    partial void OnTrangThaiChanging(System.Nullable<bool> value);
-    partial void OnTrangThaiChanged();
     partial void OnNgayLapChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayLapChanged();
     partial void OnNguoiLapChanging(string value);
@@ -3673,9 +3707,10 @@ namespace QuanLy_KeToan.DataAccessLayer
 		
 		public ChiTietPhieuNhap()
 		{
+			this._PhieuNhap = default(EntityRef<PhieuNhap>);
+			this._PhieuNhap1 = default(EntityRef<PhieuNhap>);
 			this._KhoHang = default(EntityRef<KhoHang>);
 			this._Hang = default(EntityRef<Hang>);
-			this._PhieuNhap = default(EntityRef<PhieuNhap>);
 			OnCreated();
 		}
 		
@@ -3699,6 +3734,30 @@ namespace QuanLy_KeToan.DataAccessLayer
 					this._MaPhieuNhap = value;
 					this.SendPropertyChanged("MaPhieuNhap");
 					this.OnMaPhieuNhapChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoNhap", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaLoNhap
+		{
+			get
+			{
+				return this._MaLoNhap;
+			}
+			set
+			{
+				if ((this._MaLoNhap != value))
+				{
+					if (this._PhieuNhap1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaLoNhapChanging(value);
+					this.SendPropertyChanging();
+					this._MaLoNhap = value;
+					this.SendPropertyChanged("MaLoNhap");
+					this.OnMaLoNhapChanged();
 				}
 			}
 		}
@@ -3751,8 +3810,8 @@ namespace QuanLy_KeToan.DataAccessLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> SoLuong
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
 		{
 			get
 			{
@@ -3767,26 +3826,6 @@ namespace QuanLy_KeToan.DataAccessLayer
 					this._SoLuong = value;
 					this.SendPropertyChanged("SoLuong");
 					this.OnSoLuongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="Bit")]
-		public System.Nullable<bool> TrangThai
-		{
-			get
-			{
-				return this._TrangThai;
-			}
-			set
-			{
-				if ((this._TrangThai != value))
-				{
-					this.OnTrangThaiChanging(value);
-					this.SendPropertyChanging();
-					this._TrangThai = value;
-					this.SendPropertyChanged("TrangThai");
-					this.OnTrangThaiChanged();
 				}
 			}
 		}
@@ -3871,6 +3910,74 @@ namespace QuanLy_KeToan.DataAccessLayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuNhap_ChiTietPhieuNhap", Storage="_PhieuNhap", ThisKey="MaPhieuNhap", OtherKey="MaPhieuNhap", IsForeignKey=true)]
+		public PhieuNhap PhieuNhap
+		{
+			get
+			{
+				return this._PhieuNhap.Entity;
+			}
+			set
+			{
+				PhieuNhap previousValue = this._PhieuNhap.Entity;
+				if (((previousValue != value) 
+							|| (this._PhieuNhap.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PhieuNhap.Entity = null;
+						previousValue.ChiTietPhieuNhaps = null;
+					}
+					this._PhieuNhap.Entity = value;
+					if ((value != null))
+					{
+						value.ChiTietPhieuNhaps = this;
+						this._MaPhieuNhap = value.MaPhieuNhap;
+					}
+					else
+					{
+						this._MaPhieuNhap = default(string);
+					}
+					this.SendPropertyChanged("PhieuNhap");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuNhap_ChiTietPhieuNhap1", Storage="_PhieuNhap1", ThisKey="MaLoNhap", OtherKey="MaLoNhap", IsForeignKey=true)]
+		public PhieuNhap PhieuNhap1
+		{
+			get
+			{
+				return this._PhieuNhap1.Entity;
+			}
+			set
+			{
+				PhieuNhap previousValue = this._PhieuNhap1.Entity;
+				if (((previousValue != value) 
+							|| (this._PhieuNhap1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PhieuNhap1.Entity = null;
+						previousValue.ChiTietPhieuNhaps1 = null;
+					}
+					this._PhieuNhap1.Entity = value;
+					if ((value != null))
+					{
+						value.ChiTietPhieuNhaps1 = this;
+						this._MaLoNhap = value.MaLoNhap;
+					}
+					else
+					{
+						this._MaLoNhap = default(string);
+					}
+					this.SendPropertyChanged("PhieuNhap1");
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhoHang_ChiTietPhieuNhap", Storage="_KhoHang", ThisKey="MaKhoHang", OtherKey="MaKhoHang", IsForeignKey=true)]
 		public KhoHang KhoHang
 		{
@@ -3935,40 +4042,6 @@ namespace QuanLy_KeToan.DataAccessLayer
 						this._MaHang = default(string);
 					}
 					this.SendPropertyChanged("Hang");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuNhap_ChiTietPhieuNhap", Storage="_PhieuNhap", ThisKey="MaPhieuNhap", OtherKey="MaPhieuNhap", IsForeignKey=true)]
-		public PhieuNhap PhieuNhap
-		{
-			get
-			{
-				return this._PhieuNhap.Entity;
-			}
-			set
-			{
-				PhieuNhap previousValue = this._PhieuNhap.Entity;
-				if (((previousValue != value) 
-							|| (this._PhieuNhap.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PhieuNhap.Entity = null;
-						previousValue.ChiTietPhieuNhaps = null;
-					}
-					this._PhieuNhap.Entity = value;
-					if ((value != null))
-					{
-						value.ChiTietPhieuNhaps = this;
-						this._MaPhieuNhap = value.MaPhieuNhap;
-					}
-					else
-					{
-						this._MaPhieuNhap = default(string);
-					}
-					this.SendPropertyChanged("PhieuNhap");
 				}
 			}
 		}

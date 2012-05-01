@@ -44,3 +44,4 @@ C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\bin\Debug\Qua
 C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.pdb
 C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmQuanLyKhoHang.resources
 C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmChiTietPhieuNhap.resources
+C:\Users\DINHDUYTAI\Desktop\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.CopyFrmChiTietPhieuNhap.resources

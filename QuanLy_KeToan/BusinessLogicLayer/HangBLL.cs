@@ -244,6 +244,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         }
         public void XoaHangHoa(string mahanghoa)
         {
+            
             try
             {
                 var delete = from h in QLKT.Hangs

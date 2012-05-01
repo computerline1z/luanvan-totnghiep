@@ -2,3 +2,4 @@
 2.Vướng mắc ở CSDL Phiếu Nhập:2 khóa chính:mã phiếu nhập và mã lô nhập hay chỉ mã phiếu nhập.
 3.Chỉnh sửa Khóa chính ở Table Lô phiếu nhập:thêm khóa chính Mã loại hàng
 4.Vướng mắc khóa chính Table Chi tiết phiếu nhập.
+5.Xử lý lại chỗ thêm,xóa Hàng:liên quan đến các table khác.

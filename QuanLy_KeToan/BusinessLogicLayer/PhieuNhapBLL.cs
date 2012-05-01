@@ -51,10 +51,10 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       }).ToList<Phieu_Nhap>();
             return sql;
         }
-        private bool KiemTraDulieu(string maphieunhap)
+        private bool KiemTraDulieu(string maphieunhap,string malonhap)
         {
             var sql = from pn in QLKT.PhieuNhaps
-                      where pn.MaPhieuNhap == maphieunhap
+                      where pn.MaPhieuNhap == maphieunhap && pn.MaLoNhap==malonhap
                       select pn;
             if (sql.Count() > 0)
                 return true;
@@ -62,7 +62,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         }
         public void ThemPhieuNhap(string maphieunhap, string maloaiphieunhap, string malonhap, string mancc, DateTime ngayphieunhap, string mota, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
         {
-            if (KiemTraDulieu(maphieunhap) == true)
+            if (KiemTraDulieu(maphieunhap,malonhap) == true)
             {
                 MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -90,11 +90,11 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        public void SuaPN(string maphieunhap, PhieuNhap PN)
+        public void SuaPN(string maphieunhap,string malonhap,PhieuNhap PN)
         {
             try
             {
-                PhieuNhap pn = QLKT.PhieuNhaps.Single(_pn => _pn.MaPhieuNhap == maphieunhap);
+                PhieuNhap pn = QLKT.PhieuNhaps.Single(_pn => _pn.MaPhieuNhap == maphieunhap && _pn.MaLoNhap==malonhap);
                 pn.MaLoaiPhieuNhap = PN.MaLoaiPhieuNhap;
                 pn.MaLoNhap = PN.MaLoNhap;
                 pn.MaNCC = PN.MaNCC;
@@ -113,19 +113,19 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        private bool KiemTraMaPhieuNhapChiTietPhieuNhap(string maphieunhap)
+        private bool KiemTraMaPhieuNhapChiTietPhieuNhap(string maphieunhap,string malonhap)
         {
             var sql = from ctpn in QLKT.ChiTietPhieuNhaps
-                      where ctpn.MaPhieuNhap == maphieunhap
+                      where ctpn.MaPhieuNhap == maphieunhap && ctpn.MaLoNhap==malonhap
                       select ctpn;
             if (sql.Count() > 0)
                 return true;
             else
                 return false;
         }
-        public void XoaPN(string maphieunhap)
+        public void XoaPN(string maphieunhap,string malonhap)
         {
-            if (KiemTraMaPhieuNhapChiTietPhieuNhap(maphieunhap) == true)
+            if (KiemTraMaPhieuNhapChiTietPhieuNhap(maphieunhap,malonhap) == true)
             {
                 MessageBox.Show("Không được xóa dữ liệu này-Liên quan đến dữ liệu Chi Tiết Phiếu Nhập", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -133,7 +133,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             try
             {
                 var delete = from pn in QLKT.PhieuNhaps
-                             where pn.MaPhieuNhap == maphieunhap
+                             where pn.MaPhieuNhap == maphieunhap && pn.MaLoNhap==malonhap
                              select pn;
                 if (delete.Count() > 0)
                 {
@@ -158,15 +158,15 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       };
             return sql;
         }
-        public IQueryable LayMaLoNhap()
-        {
-            var sql = from ln in QLKT.LoPhieuNhaps
-                      select new
-                      {
-                          ln.MaLoNhap,
-                      };
-            return sql;
-        }
+        //public IQueryable LayMaLoNhap()
+        //{
+        //    var sql = from ln in QLKT.LoPhieuNhaps
+        //              select new
+        //              {
+        //                  ln.MaLoNhap,
+        //              };
+        //    return sql;
+        //}
         //public IQueryable LayMaNCC( string malonhap)
         //{
         //    var sql = from ncc in QLKT.NhaCungCaps

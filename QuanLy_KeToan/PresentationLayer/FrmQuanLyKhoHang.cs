@@ -696,7 +696,6 @@ namespace QuanLy_KeToan.PresentationLayer
             else if (e.Node.Parent.Level == 1 && e.Node.Level == 2)
             {
                 LayMaLoaiPN();
-                LayMaLoNhap();
                 LayMaNCC();
                 groupPanelPhieuNhap.BringToFront();
                 string malo = xuly_chuoi(e.Node.Text);
@@ -717,12 +716,6 @@ namespace QuanLy_KeToan.PresentationLayer
             MLPN.DataSource = PNBLL.LayMaLoaiPhieuNhap();
             MLPN.DisplayMember = "TenLoaiPhieuNhap";
             MLPN.ValueMember = "MaLoaiPhieuNhap";
-        }
-        private void LayMaLoNhap()
-        {
-            MLN.DataSource = PNBLL.LayMaLoNhap();
-            MLN.DisplayMember = "MaLoNhap";
-            MLN.ValueMember = "MaLoNhap";
         }
         private void LayMaNCC()
         {
@@ -760,7 +753,9 @@ namespace QuanLy_KeToan.PresentationLayer
             else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                PNBLL.XoaPN(gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString());
+                string maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
+                string malonhap = gridPhieuNhap.CurrentRow.Cells["MLN"].Value.ToString();
+                PNBLL.XoaPN(maphieunhap,malonhap);
                 LayDSPhieuNhapTheoLo(xuly_chuoi(advTreeLoNhap.SelectedNode.Text));
             }
         }
@@ -777,8 +772,8 @@ namespace QuanLy_KeToan.PresentationLayer
                             positionPhieuNhap.Focus();
                             PhieuNhap PN = new PhieuNhap();
                             string maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
+                            string malonhap = gridPhieuNhap.CurrentRow.Cells["MLN"].Value.ToString();
                             PN.MaLoaiPhieuNhap = gridPhieuNhap.CurrentRow.Cells["MLPN"].Value.ToString();
-                            PN.MaLoNhap = gridPhieuNhap.CurrentRow.Cells["MLN"].Value.ToString();
                             PN.MaNCC = gridPhieuNhap.CurrentRow.Cells["MNCC"].Value.ToString();
                             PN.NgayPhieuNhap = System.Convert.ToDateTime(gridPhieuNhap.CurrentRow.Cells["NPN"].Value.ToString());
                             PN.MoTa = (gridPhieuNhap.CurrentRow.Cells["MT"].Value != null ? gridPhieuNhap.CurrentRow.Cells["MT"].Value.ToString() : "");
@@ -786,7 +781,7 @@ namespace QuanLy_KeToan.PresentationLayer
                             PN.NguoiLap = (gridPhieuNhap.CurrentRow.Cells["_NgL"].Value != null ? gridPhieuNhap.CurrentRow.Cells["_NgL"].Value.ToString() : "");
                             PN.NgaySua = System.Convert.ToDateTime(gridPhieuNhap.CurrentRow.Cells["_NS"].Value.ToString());
                             PN.NguoiSua = (gridPhieuNhap.CurrentRow.Cells["_NgS"].Value != null ? gridPhieuNhap.CurrentRow.Cells["_NgS"].Value.ToString() : "");
-                            PNBLL.SuaPN(maphieunhap, PN);
+                            PNBLL.SuaPN(maphieunhap,malonhap,PN);
                             LayDSPhieuNhapTheoLo(xuly_chuoi(advTreeLoNhap.SelectedNode.Text));
                         }
                         else
@@ -868,6 +863,11 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             if (e.RowIndex > -1)
             {
+                if (th_pn == 1)
+                {
+                    gridPhieuNhap.CurrentRow.Cells["MPN"].ReadOnly = false;
+                    gridPhieuNhap.CurrentRow.Cells["MLN"].Value = xuly_chuoi(advTreeLoNhap.SelectedNode.Text);
+                }
                 string name = gridPhieuNhap.Columns[e.ColumnIndex].Name;
                 if (name == "MPN")
                 {
@@ -875,6 +875,7 @@ namespace QuanLy_KeToan.PresentationLayer
                     {
                         FrmChiTietPhieuNhap CTPN = new FrmChiTietPhieuNhap();
                         CTPN.maphieunhap = gridPhieuNhap.CurrentRow.Cells["MPN"].Value.ToString();
+                        CTPN.id_patch = xuly_chuoi(advTreeLoNhap.SelectedNode.Text);
                         CTPN.Show();
                     }
                     else

@@ -262,8 +262,25 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
+        private bool KiemTraCTPN(string mahang)
+        {
+            var sql=from ctpn in QLKT.ChiTietPhieuNhaps
+                    where ctpn.MaHang==mahang
+                    select ctpn;
+            if (sql.Count() > 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
         public void XoaKhoChua(string makhohang, string mahang)
         {
+            if (KiemTraCTPN(mahang) == true)
+            {
+                MessageBox.Show("Không xóa được dữ liệu này-Liên quan đến Table chi tiết phiếu nhập", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                     var delete = from khochua in QLKT.KhoChuas
