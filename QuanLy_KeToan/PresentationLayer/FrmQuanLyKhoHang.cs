@@ -48,7 +48,6 @@ namespace QuanLy_KeToan.PresentationLayer
             LayDanhSachLoaiHang();
             LayTenKhoHang();
             LayKhoHang();
-        
             LoadTreeView();
         }
         int th_khohang = 0;
@@ -661,19 +660,6 @@ namespace QuanLy_KeToan.PresentationLayer
                     if (n.Name == "nodeLoPhieuNhap")
                         n.Nodes.Add(childnode);
                 }
-            }
-        }
-        private void AnHienGroup(bool status)
-        {
-            if (status == true)
-            {
-                groupPanelLoaiPhieuNhap.Visible = true;
-                groupPanelLoPhieuNhap.Visible = false;
-            }
-            else
-            {
-                groupPanelLoaiPhieuNhap.Visible = false;
-                groupPanelLoPhieuNhap.Visible = true;
             }
         }
         private void advTreeLoNhap_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)

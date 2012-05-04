@@ -3,3 +3,4 @@
 3.Chỉnh sửa Khóa chính ở Table Lô phiếu nhập:thêm khóa chính Mã loại hàng
 4.Vướng mắc khóa chính Table Chi tiết phiếu nhập.
 5.Xử lý lại chỗ thêm,xóa Hàng:liên quan đến các table khác.
+6.Tách 2 Form trong Form Quản Lý Kho Hàng thành 2 Form con.

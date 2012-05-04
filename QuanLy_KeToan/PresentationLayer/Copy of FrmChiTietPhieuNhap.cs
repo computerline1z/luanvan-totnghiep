@@ -123,10 +123,8 @@ namespace QuanLy_KeToan.PresentationLayer
                 }
             }
         }
-        int th_ctpn = 0;
         private void Add_Click(object sender, EventArgs e)
         {
-            th_ctpn = 1;
             gridChiTietPhieuNhap.AllowUserToAddRows = true;
             bindingCTPN.BindingSource.MoveLast();
             gridChiTietPhieuNhap.Rows[gridChiTietPhieuNhap.RowCount - 1].Cells["ColUpdateSL"].Value = QuanLy_KeToan.Properties.Resources.edit;

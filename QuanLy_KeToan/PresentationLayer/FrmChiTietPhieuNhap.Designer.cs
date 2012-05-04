@@ -33,6 +33,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChiTietPhieuNhap));
             this.groupPanelCTPN = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.gridChiTietPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ColMPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMLN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMH = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ColMKH = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ColSL = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
+            this.ColNL = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this.ColNgL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNS = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this.ColNgS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingCTPN = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -55,15 +64,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Exit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.ColMPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMLN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMH = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ColMKH = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ColSL = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
-            this.ColNL = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this.ColNgL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNS = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this.ColNgS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanelCTPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridChiTietPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingCTPN)).BeginInit();
@@ -146,6 +146,139 @@
             this.gridChiTietPhieuNhap.Size = new System.Drawing.Size(895, 407);
             this.gridChiTietPhieuNhap.TabIndex = 0;
             this.gridChiTietPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridChiTietPhieuNhap_CellClick);
+            // 
+            // ColMPN
+            // 
+            this.ColMPN.DataPropertyName = "MaPhieuNhap";
+            this.ColMPN.HeaderText = "Mã Phiếu Nhập";
+            this.ColMPN.Name = "ColMPN";
+            this.ColMPN.ReadOnly = true;
+            // 
+            // ColMLN
+            // 
+            this.ColMLN.DataPropertyName = "MaLoNhap";
+            this.ColMLN.HeaderText = "Mã Lô Nhập";
+            this.ColMLN.Name = "ColMLN";
+            this.ColMLN.ReadOnly = true;
+            // 
+            // ColMH
+            // 
+            this.ColMH.DataPropertyName = "MaHang";
+            this.ColMH.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ColMH.HeaderText = "Mã Hàng";
+            this.ColMH.Name = "ColMH";
+            this.ColMH.ReadOnly = true;
+            this.ColMH.Width = 200;
+            // 
+            // ColMKH
+            // 
+            this.ColMKH.DataPropertyName = "MaKhoHang";
+            this.ColMKH.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ColMKH.HeaderText = "Mã Kho Hàng";
+            this.ColMKH.Name = "ColMKH";
+            this.ColMKH.Width = 200;
+            // 
+            // ColSL
+            // 
+            // 
+            // 
+            // 
+            this.ColSL.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.ColSL.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.ColSL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColSL.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.ColSL.DataPropertyName = "SoLuong";
+            this.ColSL.HeaderText = "Số Lượng";
+            this.ColSL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.ColSL.MinValue = 0;
+            this.ColSL.Name = "ColSL";
+            this.ColSL.Width = 80;
+            // 
+            // ColNL
+            // 
+            // 
+            // 
+            // 
+            this.ColNL.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.ColNL.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this.ColNL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColNL.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.ColNL.DataPropertyName = "NgayLap";
+            this.ColNL.HeaderText = "Ngày Lập";
+            this.ColNL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // 
+            // 
+            // 
+            this.ColNL.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.ColNL.MonthCalendar.BackgroundStyle.Class = "";
+            this.ColNL.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ColNL.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.ColNL.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColNL.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.ColNL.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.ColNL.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.ColNL.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.ColNL.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColNL.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.ColNL.Name = "ColNL";
+            // 
+            // ColNgL
+            // 
+            this.ColNgL.DataPropertyName = "NguoiLap";
+            this.ColNgL.HeaderText = "Người Lập";
+            this.ColNgL.Name = "ColNgL";
+            // 
+            // ColNS
+            // 
+            // 
+            // 
+            // 
+            this.ColNS.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.ColNS.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this.ColNS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColNS.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.ColNS.DataPropertyName = "NgaySua";
+            this.ColNS.HeaderText = "Ngày Sửa";
+            this.ColNS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // 
+            // 
+            // 
+            this.ColNS.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.ColNS.MonthCalendar.BackgroundStyle.Class = "";
+            this.ColNS.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ColNS.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.ColNS.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColNS.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.ColNS.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.ColNS.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.ColNS.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.ColNS.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColNS.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.ColNS.Name = "ColNS";
+            // 
+            // ColNgS
+            // 
+            this.ColNgS.DataPropertyName = "NguoiSua";
+            this.ColNgS.HeaderText = "Người Sửa";
+            this.ColNgS.Name = "ColNgS";
             // 
             // bindingCTPN
             // 
@@ -335,139 +468,6 @@
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // ColMPN
-            // 
-            this.ColMPN.DataPropertyName = "MaPhieuNhap";
-            this.ColMPN.HeaderText = "Mã Phiếu Nhập";
-            this.ColMPN.Name = "ColMPN";
-            this.ColMPN.ReadOnly = true;
-            // 
-            // ColMLN
-            // 
-            this.ColMLN.DataPropertyName = "MaLoNhap";
-            this.ColMLN.HeaderText = "Mã Lô Nhập";
-            this.ColMLN.Name = "ColMLN";
-            this.ColMLN.ReadOnly = true;
-            // 
-            // ColMH
-            // 
-            this.ColMH.DataPropertyName = "MaHang";
-            this.ColMH.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ColMH.HeaderText = "Mã Hàng";
-            this.ColMH.Name = "ColMH";
-            this.ColMH.ReadOnly = true;
-            this.ColMH.Width = 200;
-            // 
-            // ColMKH
-            // 
-            this.ColMKH.DataPropertyName = "MaKhoHang";
-            this.ColMKH.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ColMKH.HeaderText = "Mã Kho Hàng";
-            this.ColMKH.Name = "ColMKH";
-            this.ColMKH.Width = 200;
-            // 
-            // ColSL
-            // 
-            // 
-            // 
-            // 
-            this.ColSL.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.ColSL.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.ColSL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColSL.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.ColSL.DataPropertyName = "SoLuong";
-            this.ColSL.HeaderText = "Số Lượng";
-            this.ColSL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.ColSL.MinValue = 0;
-            this.ColSL.Name = "ColSL";
-            this.ColSL.Width = 80;
-            // 
-            // ColNL
-            // 
-            // 
-            // 
-            // 
-            this.ColNL.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.ColNL.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this.ColNL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColNL.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.ColNL.DataPropertyName = "NgayLap";
-            this.ColNL.HeaderText = "Ngày Lập";
-            this.ColNL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            // 
-            // 
-            // 
-            this.ColNL.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ColNL.MonthCalendar.BackgroundStyle.Class = "";
-            this.ColNL.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ColNL.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.ColNL.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColNL.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.ColNL.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.ColNL.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ColNL.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.ColNL.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColNL.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.ColNL.Name = "ColNL";
-            // 
-            // ColNgL
-            // 
-            this.ColNgL.DataPropertyName = "NguoiLap";
-            this.ColNgL.HeaderText = "Người Lập";
-            this.ColNgL.Name = "ColNgL";
-            // 
-            // ColNS
-            // 
-            // 
-            // 
-            // 
-            this.ColNS.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.ColNS.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this.ColNS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColNS.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.ColNS.DataPropertyName = "NgaySua";
-            this.ColNS.HeaderText = "Ngày Sửa";
-            this.ColNS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            // 
-            // 
-            // 
-            this.ColNS.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ColNS.MonthCalendar.BackgroundStyle.Class = "";
-            this.ColNS.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ColNS.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.ColNS.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColNS.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.ColNS.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.ColNS.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ColNS.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.ColNS.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColNS.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.ColNS.Name = "ColNS";
-            // 
-            // ColNgS
-            // 
-            this.ColNgS.DataPropertyName = "NguoiSua";
-            this.ColNgS.HeaderText = "Người Sửa";
-            this.ColNgS.Name = "ColNgS";
             // 
             // FrmChiTietPhieuNhap
             // 

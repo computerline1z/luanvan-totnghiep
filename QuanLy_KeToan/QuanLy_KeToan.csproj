@@ -74,10 +74,13 @@
     <Compile Include="BusinessLogicLayer\KhoHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiPhieuXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoPhieuNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoPhieuXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\NhaCungCapBLL.cs" />
     <Compile Include="BusinessLogicLayer\NuocBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhieuNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\PhiexXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
     <Compile Include="PresentationLayer\Copy of FrmChiTietPhieuNhap.cs">
       <SubType>Form</SubType>
@@ -115,6 +118,12 @@
     <Compile Include="PresentationLayer\FrmQuanLyKhoHang.Designer.cs">
       <DependentUpon>FrmQuanLyKhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyXuatKho.Designer.cs">
+      <DependentUpon>FrmQuanLyXuatKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataAccessLayer\QuanLy_KeToan.cs">
@@ -142,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmQuanLyKhoHang.resx">
       <DependentUpon>FrmQuanLyKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmQuanLyXuatKho.resx">
+      <DependentUpon>FrmQuanLyXuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -271,6 +283,9 @@
     <None Include="Resources\receipt.png" />
     <None Include="Resources\detail.png" />
     <None Include="Resources\update.png" />
+    <None Include="Resources\loaiphieuxuat.png" />
+    <None Include="Resources\lophieuxuat.png" />
+    <None Include="Resources\lophieuxuat2.png" />
     <Content Include="Z_Document\ChuaXuLy.txt" />
     <Content Include="Z_Document\GhiChu.txt" />
     <None Include="Resources\khohang.png" />

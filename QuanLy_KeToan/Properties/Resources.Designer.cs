@@ -165,6 +165,13 @@ namespace QuanLy_KeToan.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap loaiphieuxuat {
+            get {
+                object obj = ResourceManager.GetObject("loaiphieuxuat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
@@ -175,6 +182,20 @@ namespace QuanLy_KeToan.Properties {
         internal static System.Drawing.Bitmap Lophieunhap {
             get {
                 object obj = ResourceManager.GetObject("Lophieunhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap lophieuxuat {
+            get {
+                object obj = ResourceManager.GetObject("lophieuxuat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap lophieuxuat2 {
+            get {
+                object obj = ResourceManager.GetObject("lophieuxuat2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

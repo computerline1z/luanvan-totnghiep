@@ -15,7 +15,7 @@ namespace QuanLy_KeToan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PresentationLayer.FrmQuanLyKhoHang());
+            Application.Run(new PresentationLayer.FrmQuanLyXuatKho());
         }
     }
 }
