@@ -25,13 +25,37 @@ namespace QuanLy_KeToan.BusinessLogicLayer
     class NhaCungCapBLL
     {
         QuanLy_KeToanDataContext QLKT = new QuanLy_KeToanDataContext();
-        //Load danh sách mã tỉnh
+        //Load danh sách mã tỉnh cho comboboxMaTinh
         public IQueryable LoadDanhSachMaTinh()
         {
             var t = from tinh in QLKT.TinhThanhs
-                    select new { tinh.MaTinh };
+                    select new { tinh.MaTinh,tinh.TenTinh };
             return t;
         }
+        //Lấy Danh Sách Tên Tỉnh Theo Mã Tỉnh
+        public IQueryable LayDanhSachTenTinhTheoMaTinh(string matinh)
+        {
+            var tentinh = from tt in QLKT.TinhThanhs
+                          where tt.MaTinh == matinh
+                          select tt.TenTinh;
+            return tentinh;
+        }
+        //Lấy Danh Sách Tên Loại Hàng Theo Mã Loại Hàng
+        public IQueryable LayDanhSachTenLoaiHangTheoMaLoaiHang(string maloaihang)
+        {
+            var tenloaihang = from lh in QLKT.LoaiHangs
+                          where lh.MaLoaiHang == maloaihang
+                          select lh.TenLoaiHang;
+            return tenloaihang;
+        }
+        //Lấy Danh Sách Mã Loại Hàng cho ColMaLoaiHang
+        public IQueryable LayDanhSachMaLoaiHang()
+        {
+            var loaihang = from lh in QLKT.LoaiHangs
+                           select new { lh.MaLoaiHang };
+            return loaihang.Distinct();
+        }
+        //Lay Danh Sach Nha Cung Cap
         public List<NhaCungCapHang> LayDanhSachNCC()
         {
             var nhacungcap = (from ncc in QLKT.NhaCungCaps
@@ -48,8 +72,48 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                               }).ToList<NhaCungCapHang>();
             return nhacungcap;
         }
+        //Lấy Danh Sách Nhà Cung Cấp Theo Mã Tỉnh
+        public List<NhaCungCapHang> LayDanhSachNCCTheoMaTinhThanh(string matinh)
+        {
+            var ncc = (from nhacungcap in QLKT.NhaCungCaps
+                      from tinhthanh in QLKT.TinhThanhs
+                      where ((nhacungcap.MaTinh == tinhthanh.MaTinh) && (tinhthanh.MaTinh == matinh))
+                      select new NhaCungCapHang
+                      {
+                          MaNCC = nhacungcap.MaNCC,
+                          MaLoaiHang=nhacungcap.MaLoaiHang,
+                          TenNCC = nhacungcap.TenNCC,
+                          DCNCC = nhacungcap.DCNCC,
+                          MaTinh = nhacungcap.MaTinh,
+                          SoDT = nhacungcap.SoDT,
+                          SoFax = nhacungcap.SoFax,
+                          Email = nhacungcap.Email,
+                      }).ToList<NhaCungCapHang>();
+
+            return ncc;
+        }
+        //Lấy Danh Sách Nhà Cung Cấp Theo Tên Tỉnh
+        public List<NhaCungCapHang> LayDanhSachNCCTheoTenTinhThanh(string tentinh)
+        {
+            var ncc = (from nhacungcap in QLKT.NhaCungCaps
+                       from tinhthanh in QLKT.TinhThanhs
+                       where ((nhacungcap.MaTinh == tinhthanh.MaTinh) && (tinhthanh.TenTinh == tentinh))
+                       select new NhaCungCapHang
+                       {
+                           MaNCC = nhacungcap.MaNCC,
+                           MaLoaiHang = nhacungcap.MaLoaiHang,
+                           TenNCC = nhacungcap.TenNCC,
+                           DCNCC = nhacungcap.DCNCC,
+                           MaTinh = nhacungcap.MaTinh,
+                           SoDT = nhacungcap.SoDT,
+                           SoFax = nhacungcap.SoFax,
+                           Email = nhacungcap.Email,
+                       }).ToList<NhaCungCapHang>();
+
+            return ncc;
+        }
         //Kiểm tra 1 nhà cung cấp cung cấp mã loại hàng hay chưa-phục vụ cho việc Insert,Update
-        private bool KiemtraLoaiHang(string mancc, string maloaihang)
+        private bool KiemtraNhaCC(string mancc, string maloaihang)
         {
             var nhacungcap = from ncc in QLKT.NhaCungCaps
                              where ncc.MaNCC == mancc && ncc.MaLoaiHang == maloaihang
@@ -60,7 +124,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return false;
         }
         //Kiem tra hàng thuộc loại hàng do 1 nhà cung cấp cung cấp-phục vụ cho việc Delete
-        private bool KiemTraHang(string maloaihang, string mancc)
+        private bool KiemTraNhaCungCap(string maloaihang, string mancc)
         {
             var h = from hang in QLKT.Hangs
                     where ((hang.MaLoaiHang == maloaihang) && (hang.MaNCC == mancc))
@@ -73,7 +137,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         //Thêm một nhà cung cấp
         public void ThemNCC(string mancc, string maloaihang, string tenncc, string dcncc, string matinh, string sodt, string sofax, string email)
         {
-            if (KiemtraLoaiHang(mancc, maloaihang) == true)
+            if (KiemtraNhaCC(mancc, maloaihang) == true)
             {
                 MessageBox.Show("Đã tồn tại dữ liệu này trong csdl", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -106,7 +170,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             {
                 NhaCungCap ncc = QLKT.NhaCungCaps.Single(nhacungcap => nhacungcap.MaLoaiHang == maloaihang && nhacungcap.MaNCC == mancc);
                 ncc.TenNCC = NCC.TenNCC;
-                ncc.DCNCC = ncc.DCNCC;
+                ncc.DCNCC = NCC.DCNCC;
                 ncc.MaTinh = NCC.MaTinh;
                 ncc.SoDT = NCC.SoDT;
                 ncc.SoFax = NCC.SoFax;
@@ -123,7 +187,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         //Xóa nhà cung cấp
         public void XoaNCC(string mancc, string maloaihang)
         {
-            if (KiemTraHang(maloaihang, mancc) == true)
+            if (KiemTraNhaCungCap(maloaihang, mancc) == true)
             {
                 MessageBox.Show("Không thể xóa dòng dữ liệu này-Liên quan đến dữ liệu hàng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -146,6 +210,23 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             }
         }
         //Các Hàm phục vụ cho việc tìm kiếm
+        public List<NhaCungCapHang> TimTatCaNhaCungCapTheoMaLoaiHang(string maloaihang)
+        {
+            var nhacungcap = (from ncc in QLKT.NhaCungCaps  //Hoặc from h in QLKT.GetTable<Hang>() 
+                        where ncc.MaLoaiHang == maloaihang
+                        select new NhaCungCapHang
+                        {
+                            MaNCC = ncc.MaNCC,
+                            MaLoaiHang = ncc.MaLoaiHang,
+                            TenNCC = ncc.TenNCC,
+                            DCNCC = ncc.DCNCC,
+                            MaTinh = ncc.MaTinh,
+                            SoDT = ncc.SoDT,
+                            SoFax = ncc.SoFax,
+                            Email = ncc.Email,
+                        }).ToList<NhaCungCapHang>();
+            return nhacungcap;
+        }
         public IQueryable LayDanhSachMNCC()
         {
             var ncc = from nhacungcap in QLKT.NhaCungCaps

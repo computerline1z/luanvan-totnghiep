@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDanhMucChung));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,48 +42,6 @@
             this.buttonSilver = new DevComponents.DotNetBar.ButtonX();
             this.colorPickerButton = new DevComponents.DotNetBar.ColorPickerButton();
             this.tabControlDanhMucDungChung = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.grbPanelNCC = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.gridNCC = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.ColMaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaLoaiHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ColTenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDiaChiNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaTinh = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ColSoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSoFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingNCC = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
-            this.position = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
-            this.refresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
-            this.Them = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
-            this.Xoa = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
-            this.Sua = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.Luu = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
-            this.Huy = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
-            this.Thoat = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator26 = new System.Windows.Forms.ToolStripSeparator();
-            this.comboboxMNCC = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator27 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtTenNCC = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
-            this.tabItemNhaCungCap = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanelTinhThanh = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -169,11 +125,6 @@
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlDanhMucDungChung)).BeginInit();
             this.tabControlDanhMucDungChung.SuspendLayout();
-            this.tabControlPanel1.SuspendLayout();
-            this.grbPanelNCC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridNCC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNCC)).BeginInit();
-            this.bindingNCC.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.groupPanelTinhThanh.SuspendLayout();
@@ -371,9 +322,8 @@
             this.tabControlDanhMucDungChung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControlDanhMucDungChung.CanReorderTabs = true;
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel2);
-            this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel4);
-            this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel1);
             this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel5);
+            this.tabControlDanhMucDungChung.Controls.Add(this.tabControlPanel4);
             this.tabControlDanhMucDungChung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlDanhMucDungChung.Location = new System.Drawing.Point(0, 0);
             this.tabControlDanhMucDungChung.Name = "tabControlDanhMucDungChung";
@@ -382,428 +332,10 @@
             this.tabControlDanhMucDungChung.Size = new System.Drawing.Size(1354, 666);
             this.tabControlDanhMucDungChung.TabIndex = 11;
             this.tabControlDanhMucDungChung.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.tabControlDanhMucDungChung.Tabs.Add(this.tabItemNhaCungCap);
             this.tabControlDanhMucDungChung.Tabs.Add(this.tabItemTinhThanh);
             this.tabControlDanhMucDungChung.Tabs.Add(this.tabItemDVTinh);
             this.tabControlDanhMucDungChung.Tabs.Add(this.tabItemTyGiaNgoaiTe);
             this.tabControlDanhMucDungChung.Text = "tabControl1";
-            // 
-            // tabControlPanel1
-            // 
-            this.tabControlPanel1.Controls.Add(this.grbPanelNCC);
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(1354, 640);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.tabItemNhaCungCap;
-            // 
-            // grbPanelNCC
-            // 
-            this.grbPanelNCC.CanvasColor = System.Drawing.SystemColors.Control;
-            this.grbPanelNCC.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.grbPanelNCC.Controls.Add(this.gridNCC);
-            this.grbPanelNCC.Controls.Add(this.bindingNCC);
-            this.grbPanelNCC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbPanelNCC.Location = new System.Drawing.Point(1, 1);
-            this.grbPanelNCC.Name = "grbPanelNCC";
-            this.grbPanelNCC.Size = new System.Drawing.Size(1352, 638);
-            // 
-            // 
-            // 
-            this.grbPanelNCC.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.grbPanelNCC.Style.BackColorGradientAngle = 90;
-            this.grbPanelNCC.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.grbPanelNCC.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbPanelNCC.Style.BorderBottomWidth = 1;
-            this.grbPanelNCC.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.grbPanelNCC.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbPanelNCC.Style.BorderLeftWidth = 1;
-            this.grbPanelNCC.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbPanelNCC.Style.BorderRightWidth = 1;
-            this.grbPanelNCC.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbPanelNCC.Style.BorderTopWidth = 1;
-            this.grbPanelNCC.Style.Class = "";
-            this.grbPanelNCC.Style.CornerDiameter = 4;
-            this.grbPanelNCC.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.grbPanelNCC.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.grbPanelNCC.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.grbPanelNCC.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.grbPanelNCC.StyleMouseDown.Class = "";
-            this.grbPanelNCC.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grbPanelNCC.StyleMouseOver.Class = "";
-            this.grbPanelNCC.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grbPanelNCC.TabIndex = 3;
-            this.grbPanelNCC.TitleImage = ((System.Drawing.Image)(resources.GetObject("grbPanelNCC.TitleImage")));
-            this.grbPanelNCC.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
-            // 
-            // gridNCC
-            // 
-            this.gridNCC.AllowUserToAddRows = false;
-            this.gridNCC.AllowUserToOrderColumns = true;
-            this.gridNCC.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.gridNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridNCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColMaNCC,
-            this.ColMaLoaiHang,
-            this.ColTenNCC,
-            this.ColDiaChiNCC,
-            this.ColMaTinh,
-            this.ColSoDT,
-            this.ColSoFax,
-            this.ColEmail});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridNCC.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gridNCC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridNCC.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.gridNCC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.gridNCC.Location = new System.Drawing.Point(0, 25);
-            this.gridNCC.Name = "gridNCC";
-            this.gridNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.gridNCC.Size = new System.Drawing.Size(1346, 571);
-            this.gridNCC.TabIndex = 3;
-            this.gridNCC.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridNCC_RowEnter);
-            // 
-            // ColMaNCC
-            // 
-            this.ColMaNCC.DataPropertyName = "MaNCC";
-            this.ColMaNCC.HeaderText = "Mã NCC";
-            this.ColMaNCC.Name = "ColMaNCC";
-            this.ColMaNCC.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMaNCC.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColMaLoaiHang
-            // 
-            this.ColMaLoaiHang.DataPropertyName = "MaLoaiHang";
-            this.ColMaLoaiHang.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ColMaLoaiHang.HeaderText = "Mã Loại Hàng";
-            this.ColMaLoaiHang.Name = "ColMaLoaiHang";
-            this.ColMaLoaiHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColTenNCC
-            // 
-            this.ColTenNCC.DataPropertyName = "TenNCC";
-            this.ColTenNCC.HeaderText = "Tên NCC";
-            this.ColTenNCC.Name = "ColTenNCC";
-            this.ColTenNCC.Width = 400;
-            // 
-            // ColDiaChiNCC
-            // 
-            this.ColDiaChiNCC.DataPropertyName = "DCNCC";
-            dataGridViewCellStyle5.NullValue = null;
-            this.ColDiaChiNCC.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ColDiaChiNCC.HeaderText = "Địa Chỉ NCC";
-            this.ColDiaChiNCC.Name = "ColDiaChiNCC";
-            this.ColDiaChiNCC.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColDiaChiNCC.Width = 400;
-            // 
-            // ColMaTinh
-            // 
-            this.ColMaTinh.DataPropertyName = "MaTinh";
-            this.ColMaTinh.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ColMaTinh.HeaderText = "Mã Tỉnh";
-            this.ColMaTinh.Name = "ColMaTinh";
-            this.ColMaTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMaTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ColSoDT
-            // 
-            this.ColSoDT.DataPropertyName = "SoDT";
-            this.ColSoDT.HeaderText = "Số ĐT";
-            this.ColSoDT.Name = "ColSoDT";
-            this.ColSoDT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColSoFax
-            // 
-            this.ColSoFax.DataPropertyName = "SoFax";
-            this.ColSoFax.HeaderText = "Số Fax";
-            this.ColSoFax.Name = "ColSoFax";
-            this.ColSoFax.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColSoFax.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColEmail
-            // 
-            this.ColEmail.DataPropertyName = "Email";
-            this.ColEmail.HeaderText = "Email";
-            this.ColEmail.Name = "ColEmail";
-            // 
-            // bindingNCC
-            // 
-            this.bindingNCC.AddNewItem = null;
-            this.bindingNCC.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.bindingNCC.CountItem = this.toolStripLabel6;
-            this.bindingNCC.CountItemFormat = "của  {0}";
-            this.bindingNCC.DeleteItem = null;
-            this.bindingNCC.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripSeparator18,
-            this.position,
-            this.toolStripLabel6,
-            this.toolStripSeparator19,
-            this.toolStripButton7,
-            this.toolStripButton8,
-            this.toolStripSeparator20,
-            this.refresh,
-            this.toolStripSeparator21,
-            this.Them,
-            this.toolStripSeparator22,
-            this.Xoa,
-            this.toolStripSeparator23,
-            this.Sua,
-            this.toolStripSeparator1,
-            this.Luu,
-            this.toolStripSeparator24,
-            this.Huy,
-            this.toolStripSeparator25,
-            this.Thoat,
-            this.toolStripButton16,
-            this.toolStripSeparator26,
-            this.comboboxMNCC,
-            this.toolStripLabel7,
-            this.toolStripSeparator27,
-            this.txtTenNCC,
-            this.toolStripLabel8});
-            this.bindingNCC.Location = new System.Drawing.Point(0, 0);
-            this.bindingNCC.MoveFirstItem = this.toolStripButton5;
-            this.bindingNCC.MoveLastItem = this.toolStripButton8;
-            this.bindingNCC.MoveNextItem = this.toolStripButton7;
-            this.bindingNCC.MovePreviousItem = this.toolStripButton6;
-            this.bindingNCC.Name = "bindingNCC";
-            this.bindingNCC.PositionItem = null;
-            this.bindingNCC.Size = new System.Drawing.Size(1346, 25);
-            this.bindingNCC.TabIndex = 0;
-            // 
-            // toolStripLabel6
-            // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(46, 22);
-            this.toolStripLabel6.Text = "của  {0}";
-            this.toolStripLabel6.ToolTipText = "Total number of items";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "Move first";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "Move previous";
-            // 
-            // toolStripSeparator18
-            // 
-            this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
-            // 
-            // position
-            // 
-            this.position.AccessibleName = "Position";
-            this.position.AutoSize = false;
-            this.position.Name = "position";
-            this.position.Size = new System.Drawing.Size(50, 23);
-            this.position.Text = "0";
-            this.position.ToolTipText = "Current position";
-            // 
-            // toolStripSeparator19
-            // 
-            this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Text = "Move next";
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton8.Text = "Move last";
-            // 
-            // toolStripSeparator20
-            // 
-            this.toolStripSeparator20.Name = "toolStripSeparator20";
-            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 25);
-            // 
-            // refresh
-            // 
-            this.refresh.Image = ((System.Drawing.Image)(resources.GetObject("refresh.Image")));
-            this.refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(66, 22);
-            this.refresh.Text = "Refresh";
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
-            // 
-            // toolStripSeparator21
-            // 
-            this.toolStripSeparator21.Name = "toolStripSeparator21";
-            this.toolStripSeparator21.Size = new System.Drawing.Size(6, 25);
-            // 
-            // Them
-            // 
-            this.Them.Image = ((System.Drawing.Image)(resources.GetObject("Them.Image")));
-            this.Them.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Them.Name = "Them";
-            this.Them.Size = new System.Drawing.Size(58, 22);
-            this.Them.Text = "Thêm";
-            this.Them.Click += new System.EventHandler(this.Them_Click);
-            // 
-            // toolStripSeparator22
-            // 
-            this.toolStripSeparator22.Name = "toolStripSeparator22";
-            this.toolStripSeparator22.Size = new System.Drawing.Size(6, 25);
-            // 
-            // Xoa
-            // 
-            this.Xoa.Image = ((System.Drawing.Image)(resources.GetObject("Xoa.Image")));
-            this.Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Xoa.Name = "Xoa";
-            this.Xoa.Size = new System.Drawing.Size(47, 22);
-            this.Xoa.Text = "Xóa";
-            this.Xoa.Click += new System.EventHandler(this.Xoa_Click);
-            // 
-            // toolStripSeparator23
-            // 
-            this.toolStripSeparator23.Name = "toolStripSeparator23";
-            this.toolStripSeparator23.Size = new System.Drawing.Size(6, 25);
-            // 
-            // Sua
-            // 
-            this.Sua.Image = ((System.Drawing.Image)(resources.GetObject("Sua.Image")));
-            this.Sua.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Sua.Name = "Sua";
-            this.Sua.Size = new System.Drawing.Size(46, 22);
-            this.Sua.Text = "Sửa";
-            this.Sua.Click += new System.EventHandler(this.Sua_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // Luu
-            // 
-            this.Luu.Image = ((System.Drawing.Image)(resources.GetObject("Luu.Image")));
-            this.Luu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Luu.Name = "Luu";
-            this.Luu.Size = new System.Drawing.Size(47, 22);
-            this.Luu.Text = "Lưu";
-            this.Luu.Click += new System.EventHandler(this.Luu_Click);
-            // 
-            // toolStripSeparator24
-            // 
-            this.toolStripSeparator24.Name = "toolStripSeparator24";
-            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 25);
-            // 
-            // Huy
-            // 
-            this.Huy.Image = ((System.Drawing.Image)(resources.GetObject("Huy.Image")));
-            this.Huy.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Huy.Name = "Huy";
-            this.Huy.Size = new System.Drawing.Size(49, 22);
-            this.Huy.Text = "Hủy";
-            this.Huy.Click += new System.EventHandler(this.Huy_Click);
-            // 
-            // toolStripSeparator25
-            // 
-            this.toolStripSeparator25.Name = "toolStripSeparator25";
-            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 25);
-            // 
-            // Thoat
-            // 
-            this.Thoat.Image = ((System.Drawing.Image)(resources.GetObject("Thoat.Image")));
-            this.Thoat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Thoat.Name = "Thoat";
-            this.Thoat.Size = new System.Drawing.Size(58, 22);
-            this.Thoat.Text = "Thoát";
-            this.Thoat.Click += new System.EventHandler(this.Thoat_Click);
-            // 
-            // toolStripButton16
-            // 
-            this.toolStripButton16.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
-            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Size = new System.Drawing.Size(52, 22);
-            this.toolStripButton16.Text = "&Print";
-            // 
-            // toolStripSeparator26
-            // 
-            this.toolStripSeparator26.Name = "toolStripSeparator26";
-            this.toolStripSeparator26.Size = new System.Drawing.Size(6, 25);
-            // 
-            // comboboxMNCC
-            // 
-            this.comboboxMNCC.Name = "comboboxMNCC";
-            this.comboboxMNCC.Size = new System.Drawing.Size(121, 25);
-            this.comboboxMNCC.SelectedIndexChanged += new System.EventHandler(this.comboboxMNCC_SelectedIndexChanged);
-            // 
-            // toolStripLabel7
-            // 
-            this.toolStripLabel7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel7.Image")));
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(68, 22);
-            this.toolStripLabel7.Text = "Mã NCC";
-            // 
-            // toolStripSeparator27
-            // 
-            this.toolStripSeparator27.Name = "toolStripSeparator27";
-            this.toolStripSeparator27.Size = new System.Drawing.Size(6, 25);
-            // 
-            // txtTenNCC
-            // 
-            this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(100, 25);
-            this.txtTenNCC.TextChanged += new System.EventHandler(this.txtTenNCC_TextChanged);
-            // 
-            // toolStripLabel8
-            // 
-            this.toolStripLabel8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel8.Image")));
-            this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(71, 22);
-            this.toolStripLabel8.Text = "Tên NCC";
-            // 
-            // tabItemNhaCungCap
-            // 
-            this.tabItemNhaCungCap.AttachedControl = this.tabControlPanel1;
-            this.tabItemNhaCungCap.Name = "tabItemNhaCungCap";
-            this.tabItemNhaCungCap.Text = "Nhà Cung Cấp";
             // 
             // tabControlPanel2
             // 
@@ -1582,7 +1114,6 @@
             this.RefreshNuoc.Name = "RefreshNuoc";
             this.RefreshNuoc.Size = new System.Drawing.Size(66, 22);
             this.RefreshNuoc.Text = "Refresh";
-            this.RefreshNuoc.Click += new System.EventHandler(this.RefreshNuoc_Click);
             // 
             // toolStripSeparator5
             // 
@@ -1718,7 +1249,6 @@
             this.tabItemTinhThanh.AttachedControl = this.tabControlPanel2;
             this.tabItemTinhThanh.Name = "tabItemTinhThanh";
             this.tabItemTinhThanh.Text = "Nước/Tỉnh Thành";
-            this.tabItemTinhThanh.Click += new System.EventHandler(this.tabItemTinhThanh_Click);
             // 
             // tabControlPanel4
             // 
@@ -1787,13 +1317,6 @@
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlDanhMucDungChung)).EndInit();
             this.tabControlDanhMucDungChung.ResumeLayout(false);
-            this.tabControlPanel1.ResumeLayout(false);
-            this.grbPanelNCC.ResumeLayout(false);
-            this.grbPanelNCC.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridNCC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNCC)).EndInit();
-            this.bindingNCC.ResumeLayout(false);
-            this.bindingNCC.PerformLayout();
             this.tabControlPanel2.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanelTinhThanh.ResumeLayout(false);
@@ -1828,55 +1351,13 @@
         private DevComponents.DotNetBar.ButtonX buttonSilver;
         private DevComponents.DotNetBar.ColorPickerButton colorPickerButton;
         private DevComponents.DotNetBar.TabControl tabControlDanhMucDungChung;
-        private DevComponents.DotNetBar.TabControlPanel tabControlPanel1;
-        private DevComponents.DotNetBar.TabItem tabItemNhaCungCap;
         private DevComponents.DotNetBar.TabControlPanel tabControlPanel2;
         private DevComponents.DotNetBar.TabItem tabItemTinhThanh;
         private DevComponents.DotNetBar.TabControlPanel tabControlPanel4;
         private DevComponents.DotNetBar.TabItem tabItemDVTinh;
         private DevComponents.DotNetBar.TabControlPanel tabControlPanel5;
         private DevComponents.DotNetBar.TabItem tabItemTyGiaNgoaiTe;
-        private DevComponents.DotNetBar.Controls.GroupPanel grbPanelNCC;
-        private DevComponents.DotNetBar.Controls.DataGridViewX gridNCC;
-        private System.Windows.Forms.BindingNavigator bindingNCC;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel6;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
-        private System.Windows.Forms.ToolStripTextBox position;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
-        private System.Windows.Forms.ToolStripButton refresh;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator21;
-        private System.Windows.Forms.ToolStripButton Them;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator22;
-        private System.Windows.Forms.ToolStripButton Xoa;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator23;
-        private System.Windows.Forms.ToolStripButton Luu;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
-        private System.Windows.Forms.ToolStripButton Huy;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator25;
-        private System.Windows.Forms.ToolStripButton Thoat;
-        private System.Windows.Forms.ToolStripButton toolStripButton16;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator26;
-        private System.Windows.Forms.ToolStripComboBox comboboxMNCC;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel7;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator27;
-        private System.Windows.Forms.ToolStripTextBox txtTenNCC;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private DevComponents.DotNetBar.StyleManager styleManagerQuanLyChung;
-        private System.Windows.Forms.ToolStripButton Sua;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaNCC;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ColMaLoaiHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTenNCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDiaChiNCC;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ColMaTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSoDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSoFax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.DataGridViewX gridNuoc;
         private System.Windows.Forms.BindingNavigator bindingNuoc;

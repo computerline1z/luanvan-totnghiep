@@ -70,9 +70,12 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\ChiTietPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhoChuaBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhoHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiHoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoPhieuNhapBLL.cs" />
@@ -112,6 +115,24 @@
     <Compile Include="PresentationLayer\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\FrmHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmHoaDonBan.designer.cs">
+      <DependentUpon>FrmHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmKhachHang.designer.cs">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmNhaCungCap.Designer.cs">
+      <DependentUpon>FrmNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FrmQuanLyKhoHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +169,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmHoaDonBan.resx">
+      <DependentUpon>FrmHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmKhachHang.resx">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmNhaCungCap.resx">
+      <DependentUpon>FrmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmQuanLyKhoHang.resx">
       <DependentUpon>FrmQuanLyKhoHang.cs</DependentUpon>
@@ -286,6 +316,7 @@
     <None Include="Resources\loaiphieuxuat.png" />
     <None Include="Resources\lophieuxuat.png" />
     <None Include="Resources\lophieuxuat2.png" />
+    <None Include="Resources\ctv.png" />
     <Content Include="Z_Document\ChuaXuLy.txt" />
     <Content Include="Z_Document\GhiChu.txt" />
     <None Include="Resources\khohang.png" />

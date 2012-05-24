@@ -95,6 +95,13 @@ namespace QuanLy_KeToan.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ctv {
+            get {
+                object obj = ResourceManager.GetObject("ctv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);

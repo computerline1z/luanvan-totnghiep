@@ -23,9 +23,14 @@ namespace QuanLy_KeToan.PresentationLayer
         private int th=0;
         private bool _MColorSelected;
         private eOffice2007ColorScheme _MBaseColorScheme = eOffice2007ColorScheme.Blue;
+        int loadtreeview = 0;
         private void FrmHangHoa_Load(object sender, EventArgs e)
         {
-            LoadTreeView();
+            if (loadtreeview == 0)
+            {
+                LoadTreeView();
+            }
+            loadtreeview++;
             LoadDataComboboxNhaCungCap();
             LoadDataComboboxDonVi();
             LoadDataColumnCombobox();

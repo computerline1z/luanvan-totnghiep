@@ -66,7 +66,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Exit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.Update = new System.Windows.Forms.ToolStripButton();
             this.groupPanelCTPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridChiTietPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingCTPN)).BeginInit();
@@ -325,8 +324,7 @@
             this.Cancel,
             this.toolStripSeparator5,
             this.Exit,
-            this.toolStripSeparator6,
-            this.Update});
+            this.toolStripSeparator6});
             this.bindingCTPN.Location = new System.Drawing.Point(0, 0);
             this.bindingCTPN.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingCTPN.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -483,15 +481,6 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
-            // Update
-            // 
-            this.Update.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.Update.Image = global::QuanLy_KeToan.Properties.Resources.update;
-            this.Update.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(133, 22);
-            this.Update.Text = "Cập Nhật Kho Chứa";
-            // 
             // CopyFrmChiTietPhieuNhap
             // 
             this.ClientSize = new System.Drawing.Size(901, 486);
@@ -537,7 +526,6 @@
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton Update;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMPN;
         private System.Windows.Forms.DataGridViewComboBoxColumn ColMH;
         private System.Windows.Forms.DataGridViewComboBoxColumn ColMKH;

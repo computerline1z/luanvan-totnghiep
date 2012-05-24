@@ -49,6 +49,7 @@ namespace QuanLy_KeToan.PresentationLayer
             LayTenKhoHang();
             LayKhoHang();
             LoadTreeView();
+            LayDanhSachLoaiPN();
         }
         int th_khohang = 0;
         private void KhoHang_Them_Click(object sender, EventArgs e)
@@ -398,10 +399,14 @@ namespace QuanLy_KeToan.PresentationLayer
             bindingLoaiPhieuNhap.BindingSource = bds;
             gridLoaiPhieuNhap.AllowUserToAddRows = false;
         }
-
         private void tabItemNhapKho_Click(object sender, EventArgs e)
         {
             LayDanhSachLoaiPN();
+        }
+
+        private void LPN_Refresh_Click(object sender, EventArgs e)
+        {
+            tabItemNhapKho_Click(sender, e);
         }
         private int th_lpn = 0;
         private void LPN_Add_Click(object sender, EventArgs e)
@@ -501,11 +506,6 @@ namespace QuanLy_KeToan.PresentationLayer
             }
             else
                 return;
-        }
-
-        private void LPN_Refresh_Click(object sender, EventArgs e)
-        {
-            tabItemNhapKho_Click(sender, e);
         }
         //------------------------Code phần Lô Phiếu Nhập--------------------------------------//
 

@@ -252,7 +252,64 @@
       <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="KhachHang_PhieuXuat" Member="PhieuXuats" ThisKey="MaKhachHang" OtherKey="MaKhachHang" Type="PhieuXuat" />
+      <Association Name="KhachHang_HoaDonBan" Member="HoaDonBans" ThisKey="MaKhachHang" OtherKey="MaKhachHang" Type="HoaDonBan" />
       <Association Name="TinhThanh_KhachHang" Member="TinhThanh" ThisKey="MaTinhThanh" OtherKey="MaTinh" Type="TinhThanh" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HoaDonBan" Member="HoaDonBans">
+    <Type Name="HoaDonBan">
+      <Column Name="MaHDBan" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaLoaiHDBan" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaLoHDBan" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaKhachHang" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MaTienTe" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayHDBan" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LoaiHDBan_HoaDonBan" Member="LoaiHDBan" ThisKey="MaLoaiHDBan" OtherKey="MaLoaiHDBan" Type="LoaiHDBan" IsForeignKey="true" />
+      <Association Name="KhachHang_HoaDonBan" Member="KhachHang" ThisKey="MaKhachHang" OtherKey="MaKhachHang" Type="KhachHang" IsForeignKey="true" />
+      <Association Name="TyGiaNgoaiTe_HoaDonBan" Member="TyGiaNgoaiTe" ThisKey="MaTienTe" OtherKey="MaTienTe" Type="TyGiaNgoaiTe" IsForeignKey="true" />
+      <Association Name="LoHDBan_HoaDonBan" Member="LoHDBan" ThisKey="MaLoHDBan" OtherKey="MaLoHDBan" Type="LoHDBan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiHDBan" Member="LoaiHDBans">
+    <Type Name="LoaiHDBan">
+      <Column Name="MaLoaiHDBan" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoaiHDBan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LoaiHDBan_HoaDonBan" Member="HoaDonBans" ThisKey="MaLoaiHDBan" OtherKey="MaLoaiHDBan" Type="HoaDonBan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TyGiaNgoaiTe" Member="TyGiaNgoaiTes">
+    <Type Name="TyGiaNgoaiTe">
+      <Column Name="MaTienTe" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TyGia" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TyGiaNgoaiTe_HoaDonBan" Member="HoaDonBans" ThisKey="MaTienTe" OtherKey="MaTienTe" Type="HoaDonBan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoHDBan" Member="LoHDBans">
+    <Type Name="LoHDBan">
+      <Column Name="MaLoHDBan" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayLoHDBan" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LoHDBan_HoaDonBan" Member="HoaDonBans" ThisKey="MaLoHDBan" OtherKey="MaLoHDBan" Type="HoaDonBan" />
     </Type>
   </Table>
 </Database>
