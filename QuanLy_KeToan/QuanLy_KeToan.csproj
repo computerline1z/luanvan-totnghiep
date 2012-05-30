@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\ChiTietPhieuNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChiTietPhieuXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
     <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
@@ -85,6 +86,12 @@
     <Compile Include="BusinessLogicLayer\PhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhiexXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
+    <Compile Include="PresentationLayer\FrmChiTietPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietPhieuXuat.Designer.cs">
+      <DependentUpon>FrmChiTietPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Copy of FrmChiTietPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +146,12 @@
     <Compile Include="PresentationLayer\FrmQuanLyKhoHang.Designer.cs">
       <DependentUpon>FrmQuanLyKhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyNhapKho.Designer.cs">
+      <DependentUpon>FrmQuanLyNhapKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FrmQuanLyXuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +168,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PresentationLayer\FrmChiTietPhieuXuat.resx">
+      <DependentUpon>FrmChiTietPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Copy of FrmChiTietPhieuNhap.resx">
       <DependentUpon>Copy of FrmChiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmQuanLyKhoHang.resx">
       <DependentUpon>FrmQuanLyKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmQuanLyNhapKho.resx">
+      <DependentUpon>FrmQuanLyNhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmQuanLyXuatKho.resx">
       <DependentUpon>FrmQuanLyXuatKho.cs</DependentUpon>

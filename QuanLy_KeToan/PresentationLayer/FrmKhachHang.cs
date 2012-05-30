@@ -329,8 +329,6 @@ namespace QuanLy_KeToan.PresentationLayer
             grvKhachHang.AllowUserToAddRows = true;
             bindingKhachHang.BindingSource.MoveLast();
         }
-
-        private int truonghop = 0;
         //Thao Tác Trực Tiếp Trên Lưới
         private void NvgLuu_Click(object sender, EventArgs e)
         {
@@ -359,7 +357,7 @@ namespace QuanLy_KeToan.PresentationLayer
                         }
                         else
                         {
-                            truonghop = 0;
+                            th = 0;
                             return;
                         }
                         break;

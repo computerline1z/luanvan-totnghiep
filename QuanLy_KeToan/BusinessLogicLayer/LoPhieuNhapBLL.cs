@@ -41,7 +41,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                        {
                            malonhap = lpn.MaLoNhap,
                            maloaihang=lpn.MaLoaiHang,
-                           ngaylonhap = Convert.ToDateTime(lpn.NgayLoNhap == null ? DateTime.Today : lpn.NgayLoNhap),
+                           ngaylonhap = Convert.ToDateTime(lpn.NgayLoNhap),
                            mota = lpn.MoTa,
                            ngaylap = Convert.ToDateTime(lpn.NgayLap == null ? DateTime.Today : lpn.NgayLap),
                            nguoilap = lpn.NguoiLap,

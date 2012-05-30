@@ -102,9 +102,6 @@ namespace QuanLy_KeToan.PresentationLayer
                 //SetControlThemEnable(true);
             }
         }
-
-
-        private int truonghop=0;
         private void NvgLuu_Click(object sender, EventArgs e)
         {
             switch (th)
@@ -123,7 +120,6 @@ namespace QuanLy_KeToan.PresentationLayer
                             string ngayhdban = grivHDBan.CurrentRow.Cells["ColNgayHDBan"].Value.ToString();
                             string mota = grivHDBan.CurrentRow.Cells["ColMoTa"].Value.ToString();
                             string trangthai = grivHDBan.CurrentRow.Cells["ColTrangThai"].Value.ToString();
-
                             HDBanBLL.ThemHDBan(mahoadonban, maloaihoadonban, malohoadonban, makhachhang, matiente, ngayhdban, mota, trangthai);
                             //SetControlThemEnable(true);
                             //SetConTrolThemSuaEnable(1, true);
@@ -132,7 +128,7 @@ namespace QuanLy_KeToan.PresentationLayer
                         }
                         else
                         {
-                            truonghop = 0;
+                            th = 0;
                             return;
                         }
                         break;
@@ -260,7 +256,7 @@ namespace QuanLy_KeToan.PresentationLayer
                         }
                         else
                         {
-                            truonghop = 0;
+                            th = 0;
                             return;
                         }
                         break;

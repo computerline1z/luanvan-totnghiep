@@ -93,19 +93,12 @@ namespace QuanLy_KeToan.PresentationLayer
 
         NhaCungCapBLL NCCBLL = new NhaCungCapBLL();
         LoaiHangBLL LHBLL = new LoaiHangBLL();
-        private int read = 0;
-        private int th = 0;
         private void FrmDanhMucChung_Load(object sender, EventArgs e)
         {
             LayNuoc();
             LayDanhSachNuoc();
             LoadColumnTinh();
             LoadDSTinh();
-        }
-        private void Sua_Click(object sender, EventArgs e)
-        {
-            read = 0;
-            th = 0;
         }
         //---------------------------Code Nước-Tỉnh Thành
 

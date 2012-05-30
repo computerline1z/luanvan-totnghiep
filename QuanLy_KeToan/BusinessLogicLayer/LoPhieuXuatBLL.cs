@@ -25,7 +25,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public IQueryable LayDanhSachMaLoXuat()
         {
             var sql = from loxuat in QLKT.LoPhieuXuats
-                      select new { loxuat.MaLoXuat, loxuat.MaLoaiHang, loxuat.NgayLoXuat.Value.Date, loxuat.MoTa, };
+                      select new { loxuat.MaLoXuat, loxuat.MaLoaiHang,loxuat.NgayLoXuat.Value.Date, loxuat.MoTa, };
             return sql;
         }
         public IQueryable LayMaLoaiHang()
@@ -36,20 +36,21 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         }
         public List<Lo_Phieu_Xuat> LayDanhSachLoPhieuXuat()
         {
-            var sql = (from lpx in QLKT.LoPhieuXuats
-                       select new Lo_Phieu_Xuat
-                       {
-                           maloxuat = lpx.MaLoXuat,
-                           maloaihang = lpx.MaLoaiHang,
-                           ngayloxuat = Convert.ToDateTime(lpx.NgayLoXuat == null ? DateTime.Today : lpx.NgayLoXuat),
-                           mota = lpx.MoTa,
-                           ngaylap = Convert.ToDateTime(lpx.NgayLap == null ? DateTime.Today : lpx.NgayLap),
-                           nguoilap = lpx.NguoiLap,
-                           ngaysua = Convert.ToDateTime(lpx.NgaySua == null ? DateTime.Today : lpx.NgaySua),
-                           nguoisua = lpx.NguoiSua,
-                       }).ToList<Lo_Phieu_Xuat>();
+                var sql = (from lpx in QLKT.LoPhieuXuats
+                           select new Lo_Phieu_Xuat
+                           {
+                               maloxuat = lpx.MaLoXuat,
+                               maloaihang = lpx.MaLoaiHang,
+                               ngayloxuat = System.Convert.ToDateTime(lpx.NgayLoXuat),
+                               mota = lpx.MoTa,
+                               ngaylap = Convert.ToDateTime(lpx.NgayLap == null ? DateTime.Today : lpx.NgayLap),
+                               nguoilap = lpx.NguoiLap,
+                               ngaysua = Convert.ToDateTime(lpx.NgaySua == null ? DateTime.Today : lpx.NgaySua),
+                               nguoisua = lpx.NguoiSua,
+                           }).ToList<Lo_Phieu_Xuat>();
             return sql;
         }
+            
         private bool KiemTraDulieu(string maloxuat)
         {
             var sql = from lpx in QLKT.LoPhieuXuats

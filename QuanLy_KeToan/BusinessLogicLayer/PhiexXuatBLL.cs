@@ -12,7 +12,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public string maphieuxuat { get; set; }
         public string maloaiphieuxuat { get; set; }
         public string maloxuat { get; set; }
-        public string makh { get; set; }
+        public string makhachhang { get; set; }
         public DateTime ngayphieuxuat { get; set; }
         public string mota { get; set; }
         public DateTime ngaylap { get; set; }
@@ -32,7 +32,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                            maphieuxuat = px.MaPhieuXuat,
                            maloaiphieuxuat = px.MaLoaiPhieuXuat,
                            maloxuat = px.MaLoXuat,
-                           makh = px.MaKhachHang,
+                           makhachhang = px.MaKhachHang,
                            ngayphieuxuat = Convert.ToDateTime(px.NgayPhieuXuat == null ? DateTime.Today : px.NgayPhieuXuat),
                            mota = px.MoTa,
                            ngaylap = Convert.ToDateTime(px.NgayLap == null ? DateTime.Today : px.NgayLap),
@@ -88,7 +88,6 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             {
                 PhieuXuat px = QLKT.PhieuXuats.Single(_px => _px.MaPhieuXuat == maphieuxuat && _px.MaLoXuat == maloxuat);
                 px.MaLoaiPhieuXuat = PX.MaLoaiPhieuXuat;
-                px.MaLoXuat = PX.MaLoXuat;
                 px.MaKhachHang = PX.MaKhachHang;
                 px.NgayPhieuXuat = PX.NgayPhieuXuat;
                 px.MoTa = PX.MoTa;

@@ -17,45 +17,6 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             InitializeComponent();
         }
-        private void LoadTreeView()
-        {
-            foreach (var item in LXBLL.LayDanhSachMaLoXuat())
-            {
-                DevComponents.AdvTree.Node childnode = new DevComponents.AdvTree.Node(item.ToString());
-                foreach (DevComponents.AdvTree.Node n in advTreeLoXuat.Nodes[0].Nodes)
-                {
-                    if (n.Name == "nodeLoPhieuXuat")
-                        n.Nodes.Add(childnode);
-                }
-            }
-        }
-        private void advTreeXuatKho_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
-        {
-            //MessageBox.Show(e.Node.Index.ToString()+","+ e.Node.Level.ToString());
-            if (e.Node.Level == 0)
-                return;
-            //Node Loại phiếu Xuất
-            if (e.Node.Parent.Index == 0 && e.Node.Index == 0 && e.Node.Level == 1)
-            {
-                groupPanelLoaiPhieuXuat.BringToFront();
-            }
-            //Node Lô Phiếu Xuất
-            else if (e.Node.Parent.Index == 0 && e.Node.Index == 1 && e.Node.Level == 1)
-            {
-                groupPanelLoPhieuXuat.BringToFront();
-                LayMaLoaiHang();
-                LayDanhSachLoPX();
-            }
-            //Phiếu Xuất
-            else if (e.Node.Parent.Level == 1 && e.Node.Level == 2)
-            {
-                //LayMaLoaiPN();
-                //LayMaNCC();
-                groupPanelPhieuXuat.BringToFront();
-                //string malo = xuly_chuoi(e.Node.Text);
-                //LayDSPhieuNhapTheoLo(malo);
-            }
-        }
         //----------------Form Load---------------------------------//
         private void FrmQuanLyXuatKho_Load(object sender, EventArgs e)
         {
@@ -119,32 +80,40 @@ namespace QuanLy_KeToan.PresentationLayer
                               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             positionLoaiPhieuXuat.Focus();
-                            string maloaiphieuxuat = gridLoaiPhieuXuat.CurrentRow.Cells["ColMLPX"].Value.ToString();
-                            string tenloaiphieuxuat = gridLoaiPhieuXuat.CurrentRow.Cells["ColTLPX"].Value.ToString();
-                            DateTime ngaylap;
-                            DateTime temp = DateTime.Parse("1/1/0001 12:00:00 AM");
-                            if (System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NL"].Value) != temp)
+                            if (gridLoaiPhieuXuat.CurrentRow.Cells["ColMLPX"].Value == null)
                             {
-                                ngaylap = System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NL"].Value);
+                                MessageBox.Show("Nhập thiếu thông tin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
                             }
                             else
                             {
-                                ngaylap = DateTime.Now.Date;
+                                string maloaiphieuxuat = gridLoaiPhieuXuat.CurrentRow.Cells["ColMLPX"].Value.ToString();
+                                string tenloaiphieuxuat = gridLoaiPhieuXuat.CurrentRow.Cells["ColTLPX"].Value.ToString();
+                                DateTime ngaylap;
+                                DateTime temp = DateTime.Parse("1/1/0001 12:00:00 AM");
+                                if (System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NL"].Value) != temp)
+                                {
+                                    ngaylap = System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NL"].Value);
+                                }
+                                else
+                                {
+                                    ngaylap = DateTime.Now.Date;
+                                }
+                                DateTime ngaysua;
+                                if (System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NS"].Value) != temp)
+                                {
+                                    ngaysua = System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NS"].Value);
+                                }
+                                else
+                                {
+                                    ngaysua = DateTime.Now.Date;
+                                }
+                                string nguoilap = (gridLoaiPhieuXuat.CurrentRow.Cells["NgL"].Value != null ? gridLoaiPhieuXuat.CurrentRow.Cells["NgL"].Value.ToString() : "");
+                                string nguoisua = (gridLoaiPhieuXuat.CurrentRow.Cells["NgS"].Value != null ? gridLoaiPhieuXuat.CurrentRow.Cells["NgS"].Value.ToString() : "");
+                                LPXBLL.ThemLoaiPhieuXuat(maloaiphieuxuat, tenloaiphieuxuat, ngaylap, nguoilap, ngaysua, nguoisua);
+                                LayDanhSachLoaiPX();
+                                th_lpx = 0;
                             }
-                            DateTime ngaysua;
-                            if (System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NS"].Value) != temp)
-                            {
-                                ngaysua = System.Convert.ToDateTime(gridLoaiPhieuXuat.CurrentRow.Cells["NS"].Value);
-                            }
-                            else
-                            {
-                                ngaysua = DateTime.Now.Date;
-                            }
-                            string nguoilap = (gridLoaiPhieuXuat.CurrentRow.Cells["NgL"].Value != null ? gridLoaiPhieuXuat.CurrentRow.Cells["NgL"].Value.ToString() : "");
-                            string nguoisua = (gridLoaiPhieuXuat.CurrentRow.Cells["NgS"].Value != null ? gridLoaiPhieuXuat.CurrentRow.Cells["NgS"].Value.ToString() : "");
-                            LPXBLL.ThemLoaiPhieuXuat(maloaiphieuxuat, tenloaiphieuxuat, ngaylap, nguoilap, ngaysua, nguoisua);
-                            LayDanhSachLoaiPX();
-                            th_lpx = 0;
                         }
                         else
                         {
@@ -206,11 +175,7 @@ namespace QuanLy_KeToan.PresentationLayer
             gridLoPhieuXuat.AllowUserToAddRows = false;
         }
         int th_lophieuxuat = 0;
-        private void LoPX_Exit_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
+        
         private void LoPX_Add_Click_1(object sender, EventArgs e)
         {
             th_lophieuxuat = 1;
@@ -327,5 +292,244 @@ namespace QuanLy_KeToan.PresentationLayer
                     }
             }
         }
+        //-----------------------PHIÊÚ XUẤT --------------------------------------//
+        PhieuXuatBLL PXBLL = new PhieuXuatBLL();  
+
+        #region "Xử lý TreeView"
+        private void LoadTreeView()
+        {
+            //advTreeLoXuat.DataSource = LNBLL.LayDanhSachMaLoXuat();
+            foreach (var item in LXBLL.LayDanhSachMaLoXuat())
+            {
+                DevComponents.AdvTree.Node childnode = new DevComponents.AdvTree.Node(item.ToString());
+                foreach (DevComponents.AdvTree.Node n in advTreeLoXuat.Nodes[0].Nodes)
+                {
+                    if (n.Name == "nodeLoPhieuXuat")
+                        n.Nodes.Add(childnode);
+                }
+            }
+        }
+      
+        private string xuly_chuoi(string chuoi)
+        {
+            int vt = chuoi.IndexOf("=");
+            int vt1 = chuoi.IndexOf(",");
+            string s1 = chuoi.Substring(vt + 1, vt1 - vt - 1).Trim();
+            return s1;
+        }
+        # endregion
+
+        private void LayMaLoaiPX()
+        {
+            MLPX.DataSource = PXBLL.LayMaLoaiPhieuXuat();
+            MLPX.DisplayMember = "TenLoaiPhieuXuat";
+            MLPX.ValueMember = "MaLoaiPhieuXuat";
+        }
+        private void LayMaKH()
+        {
+            MKH.DataSource = PXBLL.LayMaKhachHang();
+            MKH.DisplayMember = "TenKhachHang";
+            MKH.ValueMember = "MaKhachHang";
+          
+        }
+        private void LayDSPhieuXuatTheoLo(string malo)
+        {
+            BindingSource bds = new BindingSource();
+            bds.DataSource = PXBLL.LayDSPhieuXuat(malo);
+            bindingPhieuXuat.BindingSource = bds;
+            gridPhieuXuat.DataSource = bds;
+            gridPhieuXuat.AllowUserToAddRows = false;
+        }
+        int th_pn = 0;
+        private void PX_Save_Click(object sender, EventArgs e)
+        {
+            switch (th_pn)
+            {
+                case 0://Sửa
+                    {
+                        if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            positionPhieuXuat.Focus();
+                            if (gridPhieuXuat.CurrentRow.Cells["MPX"].Value == null || gridPhieuXuat.CurrentRow.Cells["MKH"].Value == null || gridPhieuXuat.CurrentRow.Cells["NPX"].Value == null)
+                            {
+                                MessageBox.Show("Nhập thiếu thông tin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                            PhieuXuat PX = new PhieuXuat();
+                            string maphieuxuat = gridPhieuXuat.CurrentRow.Cells["MPX"].Value.ToString();
+                            string maloxuat = gridPhieuXuat.CurrentRow.Cells["MLX"].Value.ToString();
+                            PX.MaLoaiPhieuXuat = gridPhieuXuat.CurrentRow.Cells["MLPX"].Value.ToString();
+                            PX.MaKhachHang = gridPhieuXuat.CurrentRow.Cells["MKH"].Value.ToString();
+                            PX.NgayPhieuXuat = System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["NPX"].Value.ToString());
+                            PX.MoTa = (gridPhieuXuat.CurrentRow.Cells["MT"].Value != null ? gridPhieuXuat.CurrentRow.Cells["MT"].Value.ToString() : "");
+                            PX.NgayLap = System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["_NL"].Value.ToString());
+                            PX.NguoiLap = (gridPhieuXuat.CurrentRow.Cells["_NgL"].Value != null ? gridPhieuXuat.CurrentRow.Cells["_NgL"].Value.ToString() : "");
+                            PX.NgaySua = System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["_NS"].Value.ToString());
+                            PX.NguoiSua = (gridPhieuXuat.CurrentRow.Cells["_NgS"].Value != null ? gridPhieuXuat.CurrentRow.Cells["_NgS"].Value.ToString() : "");
+                            PXBLL.SuaPX(maphieuxuat, maloxuat, PX);
+                            LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+                        }
+                        else
+                            return;
+                        break;
+                    }
+                case 1://Thêm
+                    {
+                        if (MessageBox.Show("Bạn có muốn lưu dòng này không?", "SAVE",
+                              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            positionPhieuXuat.Focus();
+                            if (gridPhieuXuat.CurrentRow.Cells["MPX"].Value == null || gridPhieuXuat.CurrentRow.Cells["MKH"].Value == null || gridPhieuXuat.CurrentRow.Cells["NPX"].Value == null)
+                            {
+                                MessageBox.Show("Nhập thiếu thông tin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                            string maphieuxuat = gridPhieuXuat.CurrentRow.Cells["MPX"].Value.ToString();
+                            string maloaiphieunhap = gridPhieuXuat.CurrentRow.Cells["MLPX"].Value.ToString();
+                            string maloxuat = gridPhieuXuat.CurrentRow.Cells["MLX"].Value.ToString();
+                            //MessageBox.Show(gridPhieuXuat.CurrentRow.Cells["MKH"].Value.ToString());
+                            string mkh = gridPhieuXuat.CurrentRow.Cells["MKH"].Value.ToString();
+                            DateTime temp = DateTime.Parse("1/1/0001 12:00:00 AM");
+                            DateTime ngayphieuxuat;
+                            if (System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["NPX"].Value) != temp)
+                            {
+                                ngayphieuxuat = System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["NPX"].Value);
+                            }
+                            else
+                            {
+                                ngayphieuxuat = DateTime.Now.Date;
+                            }
+                            string mota = (gridPhieuXuat.CurrentRow.Cells["MT"].Value != null ? gridPhieuXuat.CurrentRow.Cells["MT"].Value.ToString() : "");
+                            DateTime ngaylap;
+                            if (System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["_NL"].Value) != temp)
+                            {
+                                ngaylap = System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["_NL"].Value);
+                            }
+                            else
+                            {
+                                ngaylap = DateTime.Now.Date;
+                            }
+                            DateTime ngaysua;
+                            if (System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["_NS"].Value) != temp)
+                            {
+                                ngaysua = System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["_NS"].Value);
+                            }
+                            else
+                            {
+                                ngaysua = DateTime.Now.Date;
+                            }
+                            string nguoilap = (gridPhieuXuat.CurrentRow.Cells["_NgL"].Value != null ? gridPhieuXuat.CurrentRow.Cells["_NgL"].Value.ToString() : "");
+                            string nguoisua = (gridPhieuXuat.CurrentRow.Cells["_NgS"].Value != null ? gridPhieuXuat.CurrentRow.Cells["_NgS"].Value.ToString() : "");
+                            PXBLL.ThemPhieuXuat(maphieuxuat, maloaiphieunhap, maloxuat, mkh, ngayphieuxuat, mota, ngaylap, nguoilap, ngaysua, nguoisua);
+                            LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+                            th_pn = 0;
+                        }
+                        else
+                        {
+                            th_pn = 0;
+                            return;
+                        }
+
+                        break;
+                    }
+            }
+        }
+
+        private void PX_Cancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Hủy thao tác?", "CANCEL",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+            }
+            else
+                return;
+        }
+
+        private void PX_Refresh_Click(object sender, EventArgs e)
+        {
+            LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+        }
+
+        private void gridPhieuXuat_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                if (th_pn == 1)
+                {
+                    gridPhieuXuat.CurrentRow.Cells["MPX"].ReadOnly = false;
+                    gridPhieuXuat.CurrentRow.Cells["MLX"].Value = xuly_chuoi(advTreeLoXuat.SelectedNode.Text);
+                }
+                string name = gridPhieuXuat.Columns[e.ColumnIndex].Name;
+                if (name == "MPX")
+                {
+                    if (gridPhieuXuat.CurrentRow.Cells["MPX"].Value != null)
+                    {
+                        FrmChiTietPhieuXuat CTPX = new FrmChiTietPhieuXuat();
+                        CTPX.maphieuxuat = gridPhieuXuat.CurrentRow.Cells["MPX"].Value.ToString();
+                        CTPX.id_patch = xuly_chuoi(advTreeLoXuat.SelectedNode.Text);
+                        CTPX.Show();
+                    }
+                    else
+                        return;
+                }
+            }
+        }
+
+        private void advTreeLoXuat_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        {
+            //MessageBox.Show(e.Node.Index.ToString()+","+ e.Node.Level.ToString());
+            if (e.Node.Level == 0)
+                return;
+            //Node Loại phiếu Xuất
+            if (e.Node.Parent.Index == 0 && e.Node.Index == 0 && e.Node.Level == 1)
+            {
+                groupPanelLoaiPhieuXuat.BringToFront();
+            }
+            //Node Lô Phiếu Xuất
+            else if (e.Node.Parent.Index == 0 && e.Node.Index == 1 && e.Node.Level == 1)
+            {
+                groupPanelLoPhieuXuat.BringToFront();
+                LayMaLoaiHang();
+                LayDanhSachLoPX();
+            }
+            else if (e.Node.Parent.Level == 1 && e.Node.Level == 2)
+            {
+                LayMaLoaiPX();
+                LayMaKH();
+                groupPanelPhieuXuat.BringToFront();
+                string malo = xuly_chuoi(e.Node.Text);
+                LayDSPhieuXuatTheoLo(malo);
+            }
+        }
+
+        private void PX_Exit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void PX_Add_Click(object sender, EventArgs e)
+        {
+            th_pn = 1;
+            gridPhieuXuat.AllowUserToAddRows = true;
+            bindingPhieuXuat.BindingSource.MoveLast();
+        }
+
+        private void PX_Delete_Click(object sender, EventArgs e)
+        {
+            // Nếu data gridview không có dòng nào
+            if (gridPhieuXuat.RowCount == 0)
+                PX_Delete.Enabled = false;
+            else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string maphieuxuat = gridPhieuXuat.CurrentRow.Cells["MPX"].Value.ToString();
+                string maloxuat = gridPhieuXuat.CurrentRow.Cells["MLX"].Value.ToString();
+                PXBLL.XoaPX(maphieuxuat, maloxuat);
+                LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+            }
+        }
+
     }
 }

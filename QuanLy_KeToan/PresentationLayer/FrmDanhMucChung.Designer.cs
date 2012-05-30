@@ -116,10 +116,10 @@
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.txtTenNuoc = new System.Windows.Forms.ToolStripTextBox();
             this.tabItemTinhThanh = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItemDVTinh = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
             this.tabItemTyGiaNgoaiTe = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
+            this.tabItemDVTinh = new DevComponents.DotNetBar.TabItem(this.components);
             this.styleManagerQuanLyChung = new DevComponents.DotNetBar.StyleManager(this.components);
             this.expandablePanelCauHinh.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -1250,29 +1250,6 @@
             this.tabItemTinhThanh.Name = "tabItemTinhThanh";
             this.tabItemTinhThanh.Text = "Nước/Tỉnh Thành";
             // 
-            // tabControlPanel4
-            // 
-            this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel4.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel4.Name = "tabControlPanel4";
-            this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel4.Size = new System.Drawing.Size(1354, 640);
-            this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel4.Style.GradientAngle = 90;
-            this.tabControlPanel4.TabIndex = 4;
-            this.tabControlPanel4.TabItem = this.tabItemDVTinh;
-            // 
-            // tabItemDVTinh
-            // 
-            this.tabItemDVTinh.AttachedControl = this.tabControlPanel4;
-            this.tabItemDVTinh.Name = "tabItemDVTinh";
-            this.tabItemDVTinh.Text = "Đơn Vị Tính";
-            // 
             // tabControlPanel5
             // 
             this.tabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1295,6 +1272,29 @@
             this.tabItemTyGiaNgoaiTe.AttachedControl = this.tabControlPanel5;
             this.tabItemTyGiaNgoaiTe.Name = "tabItemTyGiaNgoaiTe";
             this.tabItemTyGiaNgoaiTe.Text = "Tỷ Giá Ngoại Tệ";
+            // 
+            // tabControlPanel4
+            // 
+            this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel4.Location = new System.Drawing.Point(0, 26);
+            this.tabControlPanel4.Name = "tabControlPanel4";
+            this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel4.Size = new System.Drawing.Size(1354, 640);
+            this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.tabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel4.Style.GradientAngle = 90;
+            this.tabControlPanel4.TabIndex = 4;
+            this.tabControlPanel4.TabItem = this.tabItemDVTinh;
+            // 
+            // tabItemDVTinh
+            // 
+            this.tabItemDVTinh.AttachedControl = this.tabControlPanel4;
+            this.tabItemDVTinh.Name = "tabItemDVTinh";
+            this.tabItemDVTinh.Text = "Đơn Vị Tính";
             // 
             // styleManagerQuanLyChung
             // 

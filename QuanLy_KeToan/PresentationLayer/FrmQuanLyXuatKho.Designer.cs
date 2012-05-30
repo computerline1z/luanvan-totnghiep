@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyXuatKho));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.navigationPaneThaoTac = new DevComponents.DotNetBar.NavigationPane();
             this.navigationPanePanel1 = new DevComponents.DotNetBar.NavigationPanePanel();
             this.advTreeLoXuat = new DevComponents.AdvTree.AdvTree();
@@ -43,38 +43,38 @@
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.btnThaotac = new DevComponents.DotNetBar.ButtonItem();
             this.groupPanelPhieuXuat = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.gridPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MLN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MLPN = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MNCC = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.NPN = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this.gridPhieuXuat = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MLX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MLPX = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MKH = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NPX = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
             this.MT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._NL = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
             this._NgL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._NS = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
             this._NgS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingPhieuNhap = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingPhieuXuat = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem4 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem4 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem4 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.positionPhieuNhap = new System.Windows.Forms.ToolStripTextBox();
+            this.positionPhieuXuat = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem4 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem4 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Refresh = new System.Windows.Forms.ToolStripButton();
+            this.PX_Refresh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Add = new System.Windows.Forms.ToolStripButton();
+            this.PX_Add = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Delete = new System.Windows.Forms.ToolStripButton();
+            this.PX_Delete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator26 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Save = new System.Windows.Forms.ToolStripButton();
+            this.PX_Save = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator27 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Cancel = new System.Windows.Forms.ToolStripButton();
+            this.PX_Cancel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Exit = new System.Windows.Forms.ToolStripButton();
+            this.PX_Exit = new System.Windows.Forms.ToolStripButton();
             this.groupPanelLoaiPhieuXuat = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.gridLoaiPhieuXuat = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.ColMLPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,9 +146,9 @@
             this.navigationPanePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advTreeLoXuat)).BeginInit();
             this.groupPanelPhieuXuat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuNhap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuNhap)).BeginInit();
-            this.bindingPhieuNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuXuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuXuat)).BeginInit();
+            this.bindingPhieuXuat.SuspendLayout();
             this.groupPanelLoaiPhieuXuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLoaiPhieuXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiPhieuXuat)).BeginInit();
@@ -238,7 +238,7 @@
             this.advTreeLoXuat.Styles.Add(this.elementStyle1);
             this.advTreeLoXuat.Styles.Add(this.elementStyle2);
             this.advTreeLoXuat.TabIndex = 0;
-            this.advTreeLoXuat.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTreeXuatKho_AfterNodeSelect);
+            this.advTreeLoXuat.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTreeLoXuat_AfterNodeSelect);
             // 
             // root_node
             // 
@@ -314,8 +314,8 @@
             this.groupPanelPhieuXuat.BackColor = System.Drawing.Color.Transparent;
             this.groupPanelPhieuXuat.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanelPhieuXuat.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanelPhieuXuat.Controls.Add(this.gridPhieuNhap);
-            this.groupPanelPhieuXuat.Controls.Add(this.bindingPhieuNhap);
+            this.groupPanelPhieuXuat.Controls.Add(this.gridPhieuXuat);
+            this.groupPanelPhieuXuat.Controls.Add(this.bindingPhieuXuat);
             this.groupPanelPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanelPhieuXuat.Location = new System.Drawing.Point(0, 0);
             this.groupPanelPhieuXuat.Name = "groupPanelPhieuXuat";
@@ -352,111 +352,112 @@
             this.groupPanelPhieuXuat.StyleMouseOver.Class = "";
             this.groupPanelPhieuXuat.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanelPhieuXuat.TabIndex = 4;
-            this.groupPanelPhieuXuat.Text = "Phiếu Nhập";
+            this.groupPanelPhieuXuat.Text = "Phiếu Xuất";
             this.groupPanelPhieuXuat.TitleImage = global::QuanLy_KeToan.Properties.Resources.receipt;
             this.groupPanelPhieuXuat.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
             // 
-            // gridPhieuNhap
+            // gridPhieuXuat
             // 
-            this.gridPhieuNhap.AllowUserToAddRows = false;
-            this.gridPhieuNhap.AllowUserToOrderColumns = true;
-            this.gridPhieuNhap.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.gridPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MPN,
-            this.MLN,
-            this.MLPN,
-            this.MNCC,
-            this.NPN,
+            this.gridPhieuXuat.AllowUserToAddRows = false;
+            this.gridPhieuXuat.AllowUserToOrderColumns = true;
+            this.gridPhieuXuat.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.gridPhieuXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPhieuXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MPX,
+            this.MLX,
+            this.MLPX,
+            this.MKH,
+            this.NPX,
             this.MT,
             this._NL,
             this._NgL,
             this._NS,
             this._NgS});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPhieuNhap.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.gridPhieuNhap.Location = new System.Drawing.Point(0, 25);
-            this.gridPhieuNhap.Name = "gridPhieuNhap";
-            this.gridPhieuNhap.Size = new System.Drawing.Size(1348, 620);
-            this.gridPhieuNhap.TabIndex = 0;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPhieuXuat.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridPhieuXuat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.gridPhieuXuat.Location = new System.Drawing.Point(0, 25);
+            this.gridPhieuXuat.Name = "gridPhieuXuat";
+            this.gridPhieuXuat.Size = new System.Drawing.Size(1348, 620);
+            this.gridPhieuXuat.TabIndex = 0;
+            this.gridPhieuXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPhieuXuat_CellClick);
             // 
-            // MPN
+            // MPX
             // 
-            this.MPN.DataPropertyName = "MaPhieuNhap";
-            this.MPN.HeaderText = "Mã Phiếu Nhập";
-            this.MPN.Name = "MPN";
-            this.MPN.ReadOnly = true;
+            this.MPX.DataPropertyName = "MaPhieuXuat";
+            this.MPX.HeaderText = "Mã Phiếu Xuất";
+            this.MPX.Name = "MPX";
+            this.MPX.ReadOnly = true;
             // 
-            // MLN
+            // MLX
             // 
-            this.MLN.DataPropertyName = "MaLoNhap";
-            this.MLN.HeaderText = "Mã Lô Nhập";
-            this.MLN.Name = "MLN";
-            this.MLN.ReadOnly = true;
-            this.MLN.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MLX.DataPropertyName = "MaLoXuat";
+            this.MLX.HeaderText = "Mã Lô Xuất";
+            this.MLX.Name = "MLX";
+            this.MLX.ReadOnly = true;
+            this.MLX.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // MLPN
+            // MLPX
             // 
-            this.MLPN.DataPropertyName = "MaLoaiPhieuNhap";
-            this.MLPN.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.MLPN.HeaderText = "Mã Loại PN";
-            this.MLPN.Name = "MLPN";
-            this.MLPN.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MLPN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.MLPN.Width = 200;
+            this.MLPX.DataPropertyName = "MaLoaiPhieuXuat";
+            this.MLPX.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.MLPX.HeaderText = "Mã Loại PX";
+            this.MLPX.Name = "MLPX";
+            this.MLPX.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MLPX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.MLPX.Width = 200;
             // 
-            // MNCC
+            // MKH
             // 
-            this.MNCC.DataPropertyName = "MaNCC";
-            this.MNCC.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.MNCC.HeaderText = "Mã NCC";
-            this.MNCC.Name = "MNCC";
-            this.MNCC.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MNCC.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.MNCC.Width = 200;
+            this.MKH.DataPropertyName = "MaKhachHang";
+            this.MKH.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.MKH.HeaderText = "Mã Khách Hàng";
+            this.MKH.Name = "MKH";
+            this.MKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.MKH.Width = 200;
             // 
-            // NPN
-            // 
-            // 
-            // 
-            // 
-            this.NPN.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this.NPN.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NPN.DataPropertyName = "NgayPhieuNhap";
-            this.NPN.HeaderText = "Ngày Phiếu Nhập";
-            this.NPN.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // NPX
             // 
             // 
             // 
-            this.NPN.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            this.NPX.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this.NPX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NPX.DataPropertyName = "NgayPhieuXuat";
+            this.NPX.HeaderText = "Ngày Phiếu Xuất";
+            this.NPX.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             // 
             // 
             // 
-            this.NPN.MonthCalendar.BackgroundStyle.Class = "";
-            this.NPN.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NPX.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
-            this.NPN.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.NPN.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NPN.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.NPN.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.NPN.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            this.NPX.MonthCalendar.BackgroundStyle.Class = "";
+            this.NPX.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.NPN.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.NPN.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NPN.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.NPN.Name = "NPN";
+            this.NPX.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.NPX.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NPX.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.NPX.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.NPX.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.NPX.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.NPX.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NPX.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.NPX.Name = "NPX";
             // 
             // MT
             // 
@@ -547,44 +548,44 @@
             this._NgS.HeaderText = "Người Sửa";
             this._NgS.Name = "_NgS";
             // 
-            // bindingPhieuNhap
+            // bindingPhieuXuat
             // 
-            this.bindingPhieuNhap.AddNewItem = null;
-            this.bindingPhieuNhap.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.bindingPhieuNhap.CountItem = this.bindingNavigatorCountItem4;
-            this.bindingPhieuNhap.CountItemFormat = "của  {0}";
-            this.bindingPhieuNhap.DeleteItem = null;
-            this.bindingPhieuNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingPhieuXuat.AddNewItem = null;
+            this.bindingPhieuXuat.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.bindingPhieuXuat.CountItem = this.bindingNavigatorCountItem4;
+            this.bindingPhieuXuat.CountItemFormat = "của  {0}";
+            this.bindingPhieuXuat.DeleteItem = null;
+            this.bindingPhieuXuat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem4,
             this.bindingNavigatorMovePreviousItem4,
             this.bindingNavigatorSeparator12,
-            this.positionPhieuNhap,
+            this.positionPhieuXuat,
             this.bindingNavigatorCountItem4,
             this.bindingNavigatorSeparator13,
             this.bindingNavigatorMoveNextItem4,
             this.bindingNavigatorMoveLastItem4,
             this.bindingNavigatorSeparator14,
-            this.PN_Refresh,
+            this.PX_Refresh,
             this.toolStripSeparator24,
-            this.PN_Add,
+            this.PX_Add,
             this.toolStripSeparator25,
-            this.PN_Delete,
+            this.PX_Delete,
             this.toolStripSeparator26,
-            this.PN_Save,
+            this.PX_Save,
             this.toolStripSeparator27,
-            this.PN_Cancel,
+            this.PX_Cancel,
             this.toolStripSeparator28,
-            this.PN_Exit});
-            this.bindingPhieuNhap.Location = new System.Drawing.Point(0, 0);
-            this.bindingPhieuNhap.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
-            this.bindingPhieuNhap.MoveLastItem = this.bindingNavigatorMoveLastItem4;
-            this.bindingPhieuNhap.MoveNextItem = this.bindingNavigatorMoveNextItem4;
-            this.bindingPhieuNhap.MovePreviousItem = this.bindingNavigatorMovePreviousItem4;
-            this.bindingPhieuNhap.Name = "bindingPhieuNhap";
-            this.bindingPhieuNhap.PositionItem = this.positionPhieuNhap;
-            this.bindingPhieuNhap.Size = new System.Drawing.Size(1348, 25);
-            this.bindingPhieuNhap.TabIndex = 1;
-            this.bindingPhieuNhap.Text = "bindingNavigator1";
+            this.PX_Exit});
+            this.bindingPhieuXuat.Location = new System.Drawing.Point(0, 0);
+            this.bindingPhieuXuat.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
+            this.bindingPhieuXuat.MoveLastItem = this.bindingNavigatorMoveLastItem4;
+            this.bindingPhieuXuat.MoveNextItem = this.bindingNavigatorMoveNextItem4;
+            this.bindingPhieuXuat.MovePreviousItem = this.bindingNavigatorMovePreviousItem4;
+            this.bindingPhieuXuat.Name = "bindingPhieuXuat";
+            this.bindingPhieuXuat.PositionItem = this.positionPhieuXuat;
+            this.bindingPhieuXuat.Size = new System.Drawing.Size(1348, 25);
+            this.bindingPhieuXuat.TabIndex = 1;
+            this.bindingPhieuXuat.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem4
             // 
@@ -616,14 +617,14 @@
             this.bindingNavigatorSeparator12.Name = "bindingNavigatorSeparator12";
             this.bindingNavigatorSeparator12.Size = new System.Drawing.Size(6, 25);
             // 
-            // positionPhieuNhap
+            // positionPhieuXuat
             // 
-            this.positionPhieuNhap.AccessibleName = "Position";
-            this.positionPhieuNhap.AutoSize = false;
-            this.positionPhieuNhap.Name = "positionPhieuNhap";
-            this.positionPhieuNhap.Size = new System.Drawing.Size(50, 23);
-            this.positionPhieuNhap.Text = "0";
-            this.positionPhieuNhap.ToolTipText = "Current position";
+            this.positionPhieuXuat.AccessibleName = "Position";
+            this.positionPhieuXuat.AutoSize = false;
+            this.positionPhieuXuat.Name = "positionPhieuXuat";
+            this.positionPhieuXuat.Size = new System.Drawing.Size(50, 23);
+            this.positionPhieuXuat.Text = "0";
+            this.positionPhieuXuat.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator13
             // 
@@ -653,78 +654,84 @@
             this.bindingNavigatorSeparator14.Name = "bindingNavigatorSeparator14";
             this.bindingNavigatorSeparator14.Size = new System.Drawing.Size(6, 25);
             // 
-            // PN_Refresh
+            // PX_Refresh
             // 
-            this.PN_Refresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
-            this.PN_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Refresh.Name = "PN_Refresh";
-            this.PN_Refresh.Size = new System.Drawing.Size(66, 22);
-            this.PN_Refresh.Text = "&Refresh";
+            this.PX_Refresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
+            this.PX_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PX_Refresh.Name = "PX_Refresh";
+            this.PX_Refresh.Size = new System.Drawing.Size(66, 22);
+            this.PX_Refresh.Text = "&Refresh";
+            this.PX_Refresh.Click += new System.EventHandler(this.PX_Refresh_Click);
             // 
             // toolStripSeparator24
             // 
             this.toolStripSeparator24.Name = "toolStripSeparator24";
             this.toolStripSeparator24.Size = new System.Drawing.Size(6, 25);
             // 
-            // PN_Add
+            // PX_Add
             // 
-            this.PN_Add.Image = global::QuanLy_KeToan.Properties.Resources.add;
-            this.PN_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Add.Name = "PN_Add";
-            this.PN_Add.Size = new System.Drawing.Size(49, 22);
-            this.PN_Add.Text = "&Add";
+            this.PX_Add.Image = global::QuanLy_KeToan.Properties.Resources.add;
+            this.PX_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PX_Add.Name = "PX_Add";
+            this.PX_Add.Size = new System.Drawing.Size(49, 22);
+            this.PX_Add.Text = "&Add";
+            this.PX_Add.Click += new System.EventHandler(this.PX_Add_Click);
             // 
             // toolStripSeparator25
             // 
             this.toolStripSeparator25.Name = "toolStripSeparator25";
             this.toolStripSeparator25.Size = new System.Drawing.Size(6, 25);
             // 
-            // PN_Delete
+            // PX_Delete
             // 
-            this.PN_Delete.Image = global::QuanLy_KeToan.Properties.Resources.delete;
-            this.PN_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Delete.Name = "PN_Delete";
-            this.PN_Delete.Size = new System.Drawing.Size(60, 22);
-            this.PN_Delete.Text = "&Delete";
+            this.PX_Delete.Image = global::QuanLy_KeToan.Properties.Resources.delete;
+            this.PX_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PX_Delete.Name = "PX_Delete";
+            this.PX_Delete.Size = new System.Drawing.Size(60, 22);
+            this.PX_Delete.Text = "&Delete";
+            this.PX_Delete.Click += new System.EventHandler(this.PX_Delete_Click);
             // 
             // toolStripSeparator26
             // 
             this.toolStripSeparator26.Name = "toolStripSeparator26";
             this.toolStripSeparator26.Size = new System.Drawing.Size(6, 25);
             // 
-            // PN_Save
+            // PX_Save
             // 
-            this.PN_Save.Image = global::QuanLy_KeToan.Properties.Resources.save;
-            this.PN_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Save.Name = "PN_Save";
-            this.PN_Save.Size = new System.Drawing.Size(51, 22);
-            this.PN_Save.Text = "&Save";
+            this.PX_Save.Image = global::QuanLy_KeToan.Properties.Resources.save;
+            this.PX_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PX_Save.Name = "PX_Save";
+            this.PX_Save.Size = new System.Drawing.Size(51, 22);
+            this.PX_Save.Text = "&Save";
+            this.PX_Save.Click += new System.EventHandler(this.PX_Save_Click);
             // 
             // toolStripSeparator27
             // 
             this.toolStripSeparator27.Name = "toolStripSeparator27";
             this.toolStripSeparator27.Size = new System.Drawing.Size(6, 25);
             // 
-            // PN_Cancel
+            // PX_Cancel
             // 
-            this.PN_Cancel.Image = global::QuanLy_KeToan.Properties.Resources.bindingCancel;
-            this.PN_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Cancel.Name = "PN_Cancel";
-            this.PN_Cancel.Size = new System.Drawing.Size(63, 22);
-            this.PN_Cancel.Text = "&Cancel";
+            this.PX_Cancel.Image = global::QuanLy_KeToan.Properties.Resources.bindingCancel;
+            this.PX_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PX_Cancel.Name = "PX_Cancel";
+            this.PX_Cancel.Size = new System.Drawing.Size(63, 22);
+            this.PX_Cancel.Text = "&Cancel";
+            this.PX_Cancel.Click += new System.EventHandler(this.PX_Cancel_Click);
             // 
             // toolStripSeparator28
             // 
             this.toolStripSeparator28.Name = "toolStripSeparator28";
             this.toolStripSeparator28.Size = new System.Drawing.Size(6, 25);
             // 
-            // PN_Exit
+            // PX_Exit
             // 
-            this.PN_Exit.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
-            this.PN_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Exit.Name = "PN_Exit";
-            this.PN_Exit.Size = new System.Drawing.Size(45, 22);
-            this.PN_Exit.Text = "&Exit";
+            this.PX_Exit.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
+            this.PX_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PX_Exit.Name = "PX_Exit";
+            this.PX_Exit.Size = new System.Drawing.Size(45, 22);
+            this.PX_Exit.Text = "&Exit";
+            this.PX_Exit.Click += new System.EventHandler(this.PX_Exit_Click);
             // 
             // groupPanelLoaiPhieuXuat
             // 
@@ -734,9 +741,9 @@
             this.groupPanelLoaiPhieuXuat.Controls.Add(this.gridLoaiPhieuXuat);
             this.groupPanelLoaiPhieuXuat.Controls.Add(this.bindingLoaiPhieuXuat);
             this.groupPanelLoaiPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanelLoaiPhieuXuat.Location = new System.Drawing.Point(0, 0);
+            this.groupPanelLoaiPhieuXuat.Location = new System.Drawing.Point(258, 0);
             this.groupPanelLoaiPhieuXuat.Name = "groupPanelLoaiPhieuXuat";
-            this.groupPanelLoaiPhieuXuat.Size = new System.Drawing.Size(1354, 692);
+            this.groupPanelLoaiPhieuXuat.Size = new System.Drawing.Size(1096, 666);
             // 
             // 
             // 
@@ -786,19 +793,19 @@
             this.NgL,
             this.NS,
             this.NgS});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLoaiPhieuXuat.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLoaiPhieuXuat.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridLoaiPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridLoaiPhieuXuat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.gridLoaiPhieuXuat.Location = new System.Drawing.Point(0, 25);
             this.gridLoaiPhieuXuat.Name = "gridLoaiPhieuXuat";
-            this.gridLoaiPhieuXuat.Size = new System.Drawing.Size(1348, 622);
+            this.gridLoaiPhieuXuat.Size = new System.Drawing.Size(1090, 596);
             this.gridLoaiPhieuXuat.TabIndex = 0;
             // 
             // ColMLPX
@@ -931,7 +938,7 @@
             this.bindingLoaiPhieuXuat.MovePreviousItem = this.bindingNavigatorMovePreviousItem2;
             this.bindingLoaiPhieuXuat.Name = "bindingLoaiPhieuXuat";
             this.bindingLoaiPhieuXuat.PositionItem = this.positionLoaiPhieuXuat;
-            this.bindingLoaiPhieuXuat.Size = new System.Drawing.Size(1348, 25);
+            this.bindingLoaiPhieuXuat.Size = new System.Drawing.Size(1090, 25);
             this.bindingLoaiPhieuXuat.TabIndex = 1;
             // 
             // bindingNavigatorCountItem2
@@ -1088,9 +1095,9 @@
             this.groupPanelLoPhieuXuat.Controls.Add(this.gridLoPhieuXuat);
             this.groupPanelLoPhieuXuat.Controls.Add(this.bindingLoPhieuXuat);
             this.groupPanelLoPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanelLoPhieuXuat.Location = new System.Drawing.Point(258, 0);
+            this.groupPanelLoPhieuXuat.Location = new System.Drawing.Point(0, 0);
             this.groupPanelLoPhieuXuat.Name = "groupPanelLoPhieuXuat";
-            this.groupPanelLoPhieuXuat.Size = new System.Drawing.Size(1096, 666);
+            this.groupPanelLoPhieuXuat.Size = new System.Drawing.Size(1354, 692);
             // 
             // 
             // 
@@ -1145,7 +1152,7 @@
             this.gridLoPhieuXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridLoPhieuXuat.Location = new System.Drawing.Point(0, 25);
             this.gridLoPhieuXuat.Name = "gridLoPhieuXuat";
-            this.gridLoPhieuXuat.Size = new System.Drawing.Size(1090, 597);
+            this.gridLoPhieuXuat.Size = new System.Drawing.Size(1348, 623);
             this.gridLoPhieuXuat.TabIndex = 0;
             // 
             // ColMLX
@@ -1328,7 +1335,7 @@
             this.bindingLoPhieuXuat.MovePreviousItem = this.bindingNavigatorMovePreviousItem3;
             this.bindingLoPhieuXuat.Name = "bindingLoPhieuXuat";
             this.bindingLoPhieuXuat.PositionItem = this.positionLoPhieuXuat;
-            this.bindingLoPhieuXuat.Size = new System.Drawing.Size(1090, 25);
+            this.bindingLoPhieuXuat.Size = new System.Drawing.Size(1348, 25);
             this.bindingLoPhieuXuat.TabIndex = 1;
             // 
             // bindingNavigatorCountItem3
@@ -1475,7 +1482,6 @@
             this.LoPX_Exit.Name = "LoPX_Exit";
             this.LoPX_Exit.Size = new System.Drawing.Size(45, 22);
             this.LoPX_Exit.Text = "&Exit";
-            this.LoPX_Exit.Click += new System.EventHandler(this.LoPX_Exit_Click);
             // 
             // expandablePanelCauHinh
             // 
@@ -1649,11 +1655,11 @@
             // FrmQuanLyXuatKho
             // 
             this.ClientSize = new System.Drawing.Size(1354, 692);
-            this.Controls.Add(this.groupPanelLoPhieuXuat);
+            this.Controls.Add(this.groupPanelLoaiPhieuXuat);
             this.Controls.Add(this.navigationPaneThaoTac);
             this.Controls.Add(this.expandablePanelCauHinh);
-            this.Controls.Add(this.groupPanelLoaiPhieuXuat);
             this.Controls.Add(this.groupPanelPhieuXuat);
+            this.Controls.Add(this.groupPanelLoPhieuXuat);
             this.DoubleBuffered = true;
             this.Name = "FrmQuanLyXuatKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1664,10 +1670,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.advTreeLoXuat)).EndInit();
             this.groupPanelPhieuXuat.ResumeLayout(false);
             this.groupPanelPhieuXuat.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuNhap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuNhap)).EndInit();
-            this.bindingPhieuNhap.ResumeLayout(false);
-            this.bindingPhieuNhap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuXuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuXuat)).EndInit();
+            this.bindingPhieuXuat.ResumeLayout(false);
+            this.bindingPhieuXuat.PerformLayout();
             this.groupPanelLoaiPhieuXuat.ResumeLayout(false);
             this.groupPanelLoaiPhieuXuat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLoaiPhieuXuat)).EndInit();
@@ -1699,38 +1705,28 @@
         private DevComponents.DotNetBar.ElementStyle elementStyle1;
         private DevComponents.DotNetBar.ButtonItem btnThaotac;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanelPhieuXuat;
-        private DevComponents.DotNetBar.Controls.DataGridViewX gridPhieuNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MPN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MLN;
-        private System.Windows.Forms.DataGridViewComboBoxColumn MLPN;
-        private System.Windows.Forms.DataGridViewComboBoxColumn MNCC;
-        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NPN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MT;
-        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn _NL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _NgL;
-        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn _NS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _NgS;
-        private System.Windows.Forms.BindingNavigator bindingPhieuNhap;
+        private DevComponents.DotNetBar.Controls.DataGridViewX gridPhieuXuat;
+        private System.Windows.Forms.BindingNavigator bindingPhieuXuat;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem4;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator12;
-        private System.Windows.Forms.ToolStripTextBox positionPhieuNhap;
+        private System.Windows.Forms.ToolStripTextBox positionPhieuXuat;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator13;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem4;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator14;
-        private System.Windows.Forms.ToolStripButton PN_Refresh;
+        private System.Windows.Forms.ToolStripButton PX_Refresh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
-        private System.Windows.Forms.ToolStripButton PN_Add;
+        private System.Windows.Forms.ToolStripButton PX_Add;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator25;
-        private System.Windows.Forms.ToolStripButton PN_Delete;
+        private System.Windows.Forms.ToolStripButton PX_Delete;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator26;
-        private System.Windows.Forms.ToolStripButton PN_Save;
+        private System.Windows.Forms.ToolStripButton PX_Save;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator27;
-        private System.Windows.Forms.ToolStripButton PN_Cancel;
+        private System.Windows.Forms.ToolStripButton PX_Cancel;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator28;
-        private System.Windows.Forms.ToolStripButton PN_Exit;
+        private System.Windows.Forms.ToolStripButton PX_Exit;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanelLoaiPhieuXuat;
         private DevComponents.DotNetBar.Controls.DataGridViewX gridLoaiPhieuXuat;
         private System.Windows.Forms.BindingNavigator bindingLoaiPhieuXuat;
@@ -1798,5 +1794,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NguoiLap;
         private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NgaySua;
         private System.Windows.Forms.DataGridViewTextBoxColumn NguoiSua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MPX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MLX;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MLPX;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MKH;
+        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NPX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MT;
+        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn _NL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _NgL;
+        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn _NS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _NgS;
     }
 }

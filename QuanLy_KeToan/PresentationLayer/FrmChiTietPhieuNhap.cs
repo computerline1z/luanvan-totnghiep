@@ -101,6 +101,11 @@ namespace QuanLy_KeToan.PresentationLayer
                               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             PositionCTPN.Focus();
+                            if (gridChiTietPhieuNhap.CurrentRow.Cells["ColMH"].Value == null)
+                            {
+                                MessageBox.Show("Nhập thiếu thông tin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
                             string mahang = gridChiTietPhieuNhap.CurrentRow.Cells["ColMH"].Value.ToString();
                             string makhohang = gridChiTietPhieuNhap.CurrentRow.Cells["ColMKH"].Value.ToString();
                             int sl = (gridChiTietPhieuNhap.CurrentRow.Cells["ColSL"].Value != null ? System.Convert.ToInt16(gridChiTietPhieuNhap.CurrentRow.Cells["ColSL"].Value.ToString()) : 0);
