@@ -96,7 +96,6 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             {
                 PhieuNhap pn = QLKT.PhieuNhaps.Single(_pn => _pn.MaPhieuNhap == maphieunhap && _pn.MaLoNhap==malonhap);
                 pn.MaLoaiPhieuNhap = PN.MaLoaiPhieuNhap;
-                pn.MaLoNhap = PN.MaLoNhap;
                 pn.MaNCC = PN.MaNCC;
                 pn.NgayPhieuNhap = PN.NgayPhieuNhap;
                 pn.MoTa = PN.MoTa;

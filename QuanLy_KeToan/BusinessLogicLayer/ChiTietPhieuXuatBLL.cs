@@ -8,8 +8,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
 {
     class Chi_Tiet_Phieu_Xuat
     {
-        public string maphieuxuat { get; set; }
-        public string maloxuat { get; set; }
+        public string malohdban { get; set; }
+        public string mahdban { get; set; }
         public string mahang { get; set; }
         public string makhohang { get; set; }
         public int soluong { get; set; }
@@ -22,12 +22,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
     {
         QuanLy_KeToanDataContext QLKT = new QuanLy_KeToanDataContext();
 
-        public IQueryable LayMaHang(string maphieuxuat)
+        public IQueryable LayMaHang(string malohdban)
         {
             var sql = from hang in QLKT.Hangs
-                      from pn in QLKT.PhieuXuats
-                      from lpn in QLKT.LoPhieuXuats
-                      where hang.MaLoaiHang==lpn.MaLoaiHang && lpn.MaLoXuat==pn.MaLoXuat && pn.MaPhieuXuat == maphieuxuat
+                      from px in QLKT.PhieuXuats
+                      from lohdban in QLKT.LoHDBans
+                      where hang.MaLoaiHang==lohdban.MaLoaiHang && lohdban.MaLoHDBan==px.MaLoHDBan && px.MaLoHDBan == malohdban
                       select new
                       {
                           hang.MaHang,
@@ -35,32 +35,24 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       };
             return sql;
         }
-        public IQueryable LayKhoHang(string maphieuxuat)
+        public IQueryable LayKhoHang(string malohdban)
         {
             var sql = from kh in QLKT.KhoHangs
-                      from pn in QLKT.PhieuXuats
-                      from lpn in QLKT.LoPhieuXuats
-                      where pn.MaLoXuat==lpn.MaLoXuat && lpn.MaLoaiHang==kh.MaLoaiHang && pn.MaPhieuXuat == maphieuxuat
+                      from px in QLKT.ChiTietPhieuXuats
+                      from lohdban in QLKT.LoHDBans
+                      where (px.MaLoHDBan==lohdban.MaLoHDBan &&
+                        lohdban.MaLoaiHang==kh.MaLoaiHang && px.MaLoHDBan == malohdban)
                       select new { kh.MaKhoHang, kh.TenKhoHang, };
             return sql;
         }
-        public IQueryable LayMaKH(string maphieuxuat)
-        {
-            var sql = from kh in QLKT.KhoHangs
-                      from pn in QLKT.PhieuXuats
-                      from lpn in QLKT.LoPhieuXuats
-                      where pn.MaLoXuat == lpn.MaLoXuat && lpn.MaLoaiHang == kh.MaLoaiHang && pn.MaPhieuXuat == maphieuxuat
-                      select kh.MaKhoHang;
-            return sql;
-        }
-        public List<Chi_Tiet_Phieu_Xuat> LayChiTietPhieuXuatTheoMaPhieuXuat(string maphieuxuat)
+        public List<Chi_Tiet_Phieu_Xuat> LayChiTietPhieuXuatTheoMaPhieuXuat(string malohdban)
         {
             var sql = (from ctpx in QLKT.ChiTietPhieuXuats
-                       where ctpx.MaPhieuXuat == maphieuxuat
+                       where ctpx.MaLoHDBan == malohdban
                        select new Chi_Tiet_Phieu_Xuat
                        {
-                           maphieuxuat = ctpx.MaPhieuXuat,
-                           maloxuat=ctpx.MaLoXuat,
+                           malohdban = ctpx.MaLoHDBan,
+                           mahdban=ctpx.MaHDBan,
                            mahang = ctpx.MaHang,
                            makhohang = ctpx.MaKhoHang,
                            soluong = System.Convert.ToInt16(ctpx.SoLuong.Value != null ? ctpx.SoLuong : 0),
@@ -178,11 +170,10 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-
-        private bool KiemTraDulieu(string maphieuxuat,string maloxuat,string mahang)
+        private bool KiemTraDulieu(string malohban,string mahdban,string mahang)
         {
             var sql = from ctpx in QLKT.ChiTietPhieuXuats
-                      where ctpx.MaPhieuXuat == maphieuxuat && ctpx.MaLoXuat==maloxuat && ctpx.MaHang==mahang
+                      where ctpx.MaLoHDBan == malohban && ctpx.MaHDBan==mahdban && ctpx.MaHang==mahang
                       select ctpx;
             if (sql.Count() > 0)
                 return true;
@@ -191,9 +182,9 @@ namespace QuanLy_KeToan.BusinessLogicLayer
 
         //Code Thêm-Xóa-Sửa Chi tiết phiếu xuất
 
-        public bool ThemCTPX(string maphieuxuat,string maloxuat,string mahang, string makhohang, int soluong,DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
+        public bool ThemCTPX(string malohdban,string mahdban,string mahang, string makhohang, int soluong,DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
         {
-            if (KiemTraDulieu(maphieuxuat,maloxuat,mahang) == true)
+            if (KiemTraDulieu(malohdban,mahdban,mahang) == true)
             {
                 MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -201,8 +192,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             try
             {
                 ChiTietPhieuXuat CTPX = new ChiTietPhieuXuat();
-                CTPX.MaPhieuXuat = maphieuxuat;
-                CTPX.MaLoXuat = maloxuat;
+                CTPX.MaLoHDBan = malohdban;
+                CTPX.MaHDBan = mahdban;
                 CTPX.MaHang = mahang;
                 CTPX.MaKhoHang = makhohang;
                 CTPX.SoLuong = soluong;
@@ -221,11 +212,11 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return false;
             }
         }
-        public bool SuaCTPX(string maphieuxuat,string maloxuat,string mahang,ChiTietPhieuXuat CTPX)
+        public bool SuaCTPX(string malohdban,string mahdban,string mahang,ChiTietPhieuXuat CTPX)
         {
             try
             {
-                ChiTietPhieuXuat ctpx = QLKT.ChiTietPhieuXuats.Single(_ctpx => _ctpx.MaPhieuXuat == maphieuxuat && _ctpx.MaLoXuat==maloxuat && _ctpx.MaHang==mahang);
+                ChiTietPhieuXuat ctpx = QLKT.ChiTietPhieuXuats.Single(_ctpx => _ctpx.MaLoHDBan == malohdban && _ctpx.MaHDBan==mahdban && _ctpx.MaHang==mahang);
                 ctpx.MaKhoHang = CTPX.MaKhoHang;
                 ctpx.SoLuong = CTPX.SoLuong;
                 ctpx.NgayLap = CTPX.NgayLap;
@@ -243,12 +234,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             }
         }
 
-        public bool XoaCTPX(string maphieuxuat,string maloxuat,string mahang)
+        public bool XoaCTPX(string malohdban,string mahdban,string mahang)
         {
             try
             {
                 var delete = from ctpx in QLKT.ChiTietPhieuXuats
-                             where ctpx.MaPhieuXuat == maphieuxuat && ctpx.MaLoXuat==maloxuat && ctpx.MaHang==mahang
+                             where ctpx.MaLoHDBan == malohdban && ctpx.MaHDBan==mahdban && ctpx.MaHang==mahang
                              select ctpx;
                 if (delete.Count() > 0)
                 {

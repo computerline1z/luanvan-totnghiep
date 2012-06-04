@@ -26,15 +26,6 @@ namespace QuanLy_KeToan.PresentationLayer
             ColMH.DisplayMember = "TenHang";
             ColMH.ValueMember = "MaHang";
         }
-        private string LayKH()
-        {
-            string mkh = "";
-            foreach (var item in CTPXBLL.LayMaKH(maphieuxuat))
-            {
-                mkh = item.ToString();
-            }
-            return mkh;
-        }
         private void LayKhoHang(string maphieuxuat)
         {
             ColMKH.DataSource = CTPXBLL.LayKhoHang(maphieuxuat);
@@ -64,7 +55,6 @@ namespace QuanLy_KeToan.PresentationLayer
             {
                 gridChiTietPhieuXuat.CurrentRow.Cells["ColMPX"].Value = maphieuxuat;
                 gridChiTietPhieuXuat.CurrentRow.Cells["ColMLX"].Value = id_patch;
-                gridChiTietPhieuXuat.CurrentRow.Cells["ColMKH"].Value = LayKH();
             }
         }
 
@@ -201,7 +191,6 @@ namespace QuanLy_KeToan.PresentationLayer
             bindingCTPX.BindingSource.MoveLast();
             gridChiTietPhieuXuat.Rows[gridChiTietPhieuXuat.RowCount - 1].Cells["ColMPX"].Value = maphieuxuat;
             gridChiTietPhieuXuat.Rows[gridChiTietPhieuXuat.RowCount - 1].Cells["ColMLX"].Value = id_patch;
-            gridChiTietPhieuXuat.Rows[gridChiTietPhieuXuat.RowCount - 1].Cells["ColMKH"].Value = LayKH();
             gridChiTietPhieuXuat.Rows[gridChiTietPhieuXuat.RowCount - 1].Cells["ColMH"].ReadOnly = false;
         }
     }

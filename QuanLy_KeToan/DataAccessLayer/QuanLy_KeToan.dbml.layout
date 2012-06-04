@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 27.875" name="QuanLy_KeToan">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 32.875" name="QuanLy_KeToan">
   <DataContextMoniker Name="/QuanLy_KeToanDataContext" />
   <nestedChildShapes>
     <classShape Id="8bc67bd6-78e1-47d1-95d9-fa9c7513dbdc" absoluteBounds="0.75, 0.5, 2, 3.6939111328124996">
@@ -92,7 +92,7 @@
         <classShapeMoniker Id="fb96b1cd-c6ae-4094-beb6-bde435249514" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 2.65549967447917); (4.5 : 2.75); (4.05208133333333 : 2.75 : JumpStart); (3.88541466666667 : 2.75 : JumpEnd); (3.3125 : 2.75); (3.3125 : 9.54890055338542); (3.27083333333333 : 9.54890055338542 : JumpStart); (3.10416666666667 : 9.54890055338542 : JumpEnd); (2.875 : 9.54890055338542)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.5 : 2.65549967447917); (4.5 : 2.75); (4.05208133333333 : 2.75 : JumpStart); (3.88541466666667 : 2.75 : JumpEnd); (3.3125 : 2.75); (3.3125 : 9.54890055338542); (3.27083333333333 : 9.54890055338542 : JumpStart); (3.10416666666667 : 9.54890055338542 : JumpEnd); (2.875 : 9.54890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiHang/LoaiHang_KhoHang" />
       <nodes>
         <classShapeMoniker Id="913ae185-29d5-4add-9021-26edd12dfb8a" />
@@ -165,84 +165,31 @@
         <classShapeMoniker Id="bca348fc-5731-4903-80be-97c2c263512b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.875 : 10.1671028300781); (3 : 10.1671028300781); (3 : 13.90625); (3.10416666666667 : 13.90625 : JumpStart); (3.33333333333333 : 13.90625 : JumpEnd); (4.375 : 13.90625); (4.375 : 14)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.875 : 10.1671028300781); (3 : 10.1671028300781); (3 : 13.90625); (3.10416666666667 : 13.90625 : JumpStart); (3.39583333333333 : 13.90625 : JumpEnd); (4.375 : 13.90625); (4.375 : 14)]" fixedFrom="Algorithm" fixedTo="NotFixed">
       <AssociationMoniker Name="/QuanLy_KeToanDataContext/KhoHang/KhoHang_ChiTietPhieuNhap" />
       <nodes>
         <classShapeMoniker Id="1ed0298e-b4a3-4e72-a19e-fa2d161c65f9" />
         <classShapeMoniker Id="bca348fc-5731-4903-80be-97c2c263512b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(0.78125 : 4.1939111328125); (0.78125 : 15.6739005533854); (3.16666666666667 : 15.6739005533854 : JumpStart); (3.33333333333333 : 15.6739005533854 : JumpEnd); (3.375 : 15.6739005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(0.78125 : 4.1939111328125); (0.78125 : 15.7989005533854); (3.375 : 15.7989005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QuanLy_KeToanDataContext/Hang/Hang_ChiTietPhieuNhap" />
       <nodes>
         <classShapeMoniker Id="8bc67bd6-78e1-47d1-95d9-fa9c7513dbdc" />
         <classShapeMoniker Id="bca348fc-5731-4903-80be-97c2c263512b" />
       </nodes>
     </associationConnector>
-    <classShape Id="b7d425a9-f928-4bcf-aa30-c19d0cc165fe" absoluteBounds="0.875, 15.875, 2, 1.9631982421875">
+    <classShape Id="b7d425a9-f928-4bcf-aa30-c19d0cc165fe" absoluteBounds="0.875, 16.125, 2, 1.9631982421875">
       <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoaiPhieuXuat" />
       <nestedChildShapes>
-        <elementListCompartment Id="cbc361b7-da79-417e-b5ad-89416e14fe1b" absoluteBounds="0.89000000000000012, 16.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="cbc361b7-da79-417e-b5ad-89416e14fe1b" absoluteBounds="0.89000000000000012, 16.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="06ee6d8c-fd4a-4d34-b1cc-359f0bd60725" absoluteBounds="3.375, 16.875, 2, 2.3478011067708335">
-      <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoPhieuXuat" />
-      <nestedChildShapes>
-        <elementListCompartment Id="23cfcad7-1b15-454c-9b17-73a3a202e17d" absoluteBounds="3.39, 17.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(5.5 : 2.59242175140224); (6.1875 : 3.27992175140224); (6.1875 : 16.5); (5.75 : 16.5); (5.375 : 16.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiHang/LoaiHang_LoPhieuXuat" />
-      <nodes>
-        <classShapeMoniker Id="913ae185-29d5-4add-9021-26edd12dfb8a" />
-        <classShapeMoniker Id="06ee6d8c-fd4a-4d34-b1cc-359f0bd60725" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="c70ef120-7df4-4199-8e82-a7ac45c15d1b" absoluteBounds="3.375, 19.375, 2, 2.5401025390625">
-      <DataClassMoniker Name="/QuanLy_KeToanDataContext/ChiTietPhieuXuat" />
-      <nestedChildShapes>
-        <elementListCompartment Id="a908485e-185a-4d9e-a0f0-d20682f9fd3e" absoluteBounds="3.39, 19.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="db54f9a6-a404-47a4-829d-3fe4a205ba57" absoluteBounds="0.875, 18.25, 2, 2.7324039713541666">
-      <DataClassMoniker Name="/QuanLy_KeToanDataContext/PhieuXuat" />
-      <nestedChildShapes>
-        <elementListCompartment Id="63851b81-2be5-4e7d-b6a8-1a259583bfea" absoluteBounds="0.89000000000000012, 18.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(3.375 : 18.7364005533854); (3.33333333333333 : 18.7364005533854 : JumpStart); (3.16666666666667 : 18.7364005533854 : JumpEnd); (2.875 : 18.7364005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoPhieuXuat/LoPhieuXuat_PhieuXuat" />
-      <nodes>
-        <classShapeMoniker Id="06ee6d8c-fd4a-4d34-b1cc-359f0bd60725" />
-        <classShapeMoniker Id="db54f9a6-a404-47a4-829d-3fe4a205ba57" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(1.875 : 17.8381982421875); (1.875 : 18.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiPhieuXuat/LoaiPhieuXuat_PhieuXuat" />
-      <nodes>
-        <classShapeMoniker Id="b7d425a9-f928-4bcf-aa30-c19d0cc165fe" />
-        <classShapeMoniker Id="db54f9a6-a404-47a4-829d-3fe4a205ba57" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.875 : 20.1787019856771); (3.375 : 20.1787019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/PhieuXuat/PhieuXuat_ChiTietPhieuXuat" />
-      <nodes>
-        <classShapeMoniker Id="db54f9a6-a404-47a4-829d-3fe4a205ba57" />
-        <classShapeMoniker Id="c70ef120-7df4-4199-8e82-a7ac45c15d1b" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.875 : 10.1671028300781); (3.10416666666667 : 10.1671028300781 : JumpStart); (3.27083333333333 : 10.1671028300781 : JumpEnd); (3.3125 : 10.1671028300781); (3.3125 : 13.84375); (4.375 : 13.84375); (4.375 : 14)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.875 : 8.93069827669271); (3.25 : 8.93069827669271); (3.25 : 13.84375); (4.375 : 13.84375); (4.375 : 14)]" fixedFrom="Algorithm" fixedTo="NotFixed">
       <AssociationMoniker Name="/QuanLy_KeToanDataContext/KhoHang/KhoHang_ChiTietPhieuNhap1" />
       <nodes>
         <classShapeMoniker Id="1ed0298e-b4a3-4e72-a19e-fa2d161c65f9" />
         <classShapeMoniker Id="bca348fc-5731-4903-80be-97c2c263512b" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.875 : 8.93069827669271); (3.25 : 8.93069827669271); (3.25 : 19.28125); (4.375 : 19.28125); (4.375 : 19.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/KhoHang/KhoHang_ChiTietPhieuXuat" />
-      <nodes>
-        <classShapeMoniker Id="1ed0298e-b4a3-4e72-a19e-fa2d161c65f9" />
-        <classShapeMoniker Id="c70ef120-7df4-4199-8e82-a7ac45c15d1b" />
       </nodes>
     </associationConnector>
     <classShape Id="66ff964c-2f6c-4bb4-8329-6f01dbffd25c" absoluteBounds="0.875, 21.375, 2, 2.9247054036458331">
@@ -251,13 +198,6 @@
         <elementListCompartment Id="4d8570f0-3485-4e51-b53a-1325e67fb548" absoluteBounds="0.89, 21.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.875 : 21.375); (1.875 : 20.9824039713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/KhachHang/KhachHang_PhieuXuat" />
-      <nodes>
-        <classShapeMoniker Id="66ff964c-2f6c-4bb4-8329-6f01dbffd25c" />
-        <classShapeMoniker Id="db54f9a6-a404-47a4-829d-3fe4a205ba57" />
-      </nodes>
-    </associationConnector>
     <associationConnector edgePoints="[(0.876537461538462 : 8.03049967447917); (0.840175565098879 : 8.06686157091875 : JumpStart); (0.722324434901121 : 8.18471270111651 : JumpEnd); (0.5 : 8.40703713601763); (0.5 : 21); (0.875 : 21.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QuanLy_KeToanDataContext/TinhThanh/TinhThanh_KhachHang" />
       <nodes>
@@ -265,56 +205,188 @@
         <classShapeMoniker Id="66ff964c-2f6c-4bb4-8329-6f01dbffd25c" />
       </nodes>
     </associationConnector>
-    <classShape Id="b4b97af2-5c46-49f6-b278-a5c02b1c3356" absoluteBounds="3.375, 22.125, 2, 3.1170068359375">
-      <DataClassMoniker Name="/QuanLy_KeToanDataContext/HoaDonBan" />
-      <nestedChildShapes>
-        <elementListCompartment Id="aa6b13d1-cb22-40de-9790-2da9788a3d3a" absoluteBounds="3.39, 22.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="ee810748-ca4e-4ca1-8176-a9a4376a8363" absoluteBounds="0.875, 24.625, 2, 1.9631982421875">
       <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoaiHDBan" />
       <nestedChildShapes>
         <elementListCompartment Id="f5ec6433-f5e5-4ce0-9bcf-9cc59338656b" absoluteBounds="0.89000000000000012, 25.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.875 : 24.9335034179688); (3.375 : 24.9335034179688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiHDBan/LoaiHDBan_HoaDonBan" />
-      <nodes>
-        <classShapeMoniker Id="ee810748-ca4e-4ca1-8176-a9a4376a8363" />
-        <classShapeMoniker Id="b4b97af2-5c46-49f6-b278-a5c02b1c3356" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.875 : 23.2123527018229); (3.375 : 23.2123527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/KhachHang/KhachHang_HoaDonBan" />
-      <nodes>
-        <classShapeMoniker Id="66ff964c-2f6c-4bb4-8329-6f01dbffd25c" />
-        <classShapeMoniker Id="b4b97af2-5c46-49f6-b278-a5c02b1c3356" />
-      </nodes>
-    </associationConnector>
     <classShape Id="d06be1c6-0457-4e42-8439-c482ba3766ab" absoluteBounds="3.375, 25.5, 2, 2.1554996744791666">
       <DataClassMoniker Name="/QuanLy_KeToanDataContext/TyGiaNgoaiTe" />
       <nestedChildShapes>
         <elementListCompartment Id="3cfe7e2b-cfc6-458e-85a5-34fa9cb7a13a" absoluteBounds="3.39, 25.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.375 : 25.5); (4.375 : 25.2420068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <classShape Id="349b58a7-e68b-44ec-8860-1787acccde4d" absoluteBounds="0.875, 27.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoaiPhieuThu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0abdac0b-a9f6-420f-b2bb-a744ff609e3a" absoluteBounds="0.89000000000000012, 27.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c5ae1be-6e72-45db-8e0b-7d3f2d7d3b59" absoluteBounds="3.375, 27.875, 2, 3.5016097005208344">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/PhieuThu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="896f0742-94e6-4f00-84b2-aa4e17c8edf2" absoluteBounds="3.3899999999999997, 28.335, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 28.6690991210938); (3.375 : 28.6690991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiPhieuThu/LoaiPhieuThu_PhieuThu" />
+      <nodes>
+        <classShapeMoniker Id="349b58a7-e68b-44ec-8860-1787acccde4d" />
+        <classShapeMoniker Id="6c5ae1be-6e72-45db-8e0b-7d3f2d7d3b59" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e44034a2-b3f6-42bf-8830-76c1cf7fcce4" absoluteBounds="5.875, 27.75, 2, 2.15549967447917">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoPhieuThu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4df19170-437f-4595-aa40-c76304f8f074" absoluteBounds="5.89, 28.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 28.8902498372396); (5.375 : 28.8902498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoPhieuThu/LoPhieuThu_PhieuThu" />
+      <nodes>
+        <classShapeMoniker Id="e44034a2-b3f6-42bf-8830-76c1cf7fcce4" />
+        <classShapeMoniker Id="6c5ae1be-6e72-45db-8e0b-7d3f2d7d3b59" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="11b35fae-999a-474d-9097-f921afd5530f" absoluteBounds="4.625, 16.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoPhieuXuat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70d76fe5-88ef-4c37-834e-4347f800352b" absoluteBounds="4.64, 17.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af75fbc3-7a38-4851-aa68-8966b235a00d" absoluteBounds="5.75, 19.625, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoHDBan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58cf8dd9-9c96-427d-b068-5b80d079ad76" absoluteBounds="5.765, 20.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.1875005 : 19.625); (7.1875005 : 17.9527498372396); (6.625 : 17.9527498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoHDBan/LoHDBan_LoPhieuXuat" />
+      <nodes>
+        <classShapeMoniker Id="af75fbc3-7a38-4851-aa68-8966b235a00d" />
+        <classShapeMoniker Id="11b35fae-999a-474d-9097-f921afd5530f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.57774983723958); (7.50000275 : 1.57774983723958); (7.50000275 : 19.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiHang/LoaiHang_LoHDBan" />
+      <nodes>
+        <classShapeMoniker Id="913ae185-29d5-4add-9021-26edd12dfb8a" />
+        <classShapeMoniker Id="af75fbc3-7a38-4851-aa68-8966b235a00d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="92266d56-b769-40b5-872b-20100b18bbb8" absoluteBounds="3.375, 22.25, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/HoaDonBan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="947edb85-f969-4d98-813d-2b72743171ab" absoluteBounds="3.39, 22.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 24.8998527018229); (3.375 : 24.8998527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiHDBan/LoaiHDBan_HoaDonBan" />
+      <nodes>
+        <classShapeMoniker Id="ee810748-ca4e-4ca1-8176-a9a4376a8363" />
+        <classShapeMoniker Id="92266d56-b769-40b5-872b-20100b18bbb8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 22.1651025390625); (5.375 : 22.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoHDBan/LoHDBan_HoaDonBan" />
+      <nodes>
+        <classShapeMoniker Id="af75fbc3-7a38-4851-aa68-8966b235a00d" />
+        <classShapeMoniker Id="92266d56-b769-40b5-872b-20100b18bbb8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.375 : 25.5); (4.375 : 25.1747054036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QuanLy_KeToanDataContext/TyGiaNgoaiTe/TyGiaNgoaiTe_HoaDonBan" />
       <nodes>
         <classShapeMoniker Id="d06be1c6-0457-4e42-8439-c482ba3766ab" />
-        <classShapeMoniker Id="b4b97af2-5c46-49f6-b278-a5c02b1c3356" />
+        <classShapeMoniker Id="92266d56-b769-40b5-872b-20100b18bbb8" />
       </nodes>
     </associationConnector>
-    <classShape Id="121ab877-cb70-4a88-9939-e5ab9eccff1a" absoluteBounds="6.125, 22.375, 1.625, 2.3478011067708335">
-      <DataClassMoniker Name="/QuanLy_KeToanDataContext/LoHDBan" />
+    <classShape Id="35bf758b-a7ba-4bee-b598-538f233af586" absoluteBounds="0.875, 29.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/PhanQuyen" />
       <nestedChildShapes>
-        <elementListCompartment Id="8c6b00b4-a65e-44c4-84e1-9a6be76604ca" absoluteBounds="6.14, 22.835, 1.5950000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e6ed1654-5d7b-4561-9fca-fa2710209656" absoluteBounds="0.89000000000000012, 30.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.125 : 23.5489005533854); (5.375 : 23.5489005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoHDBan/LoHDBan_HoaDonBan" />
+    <associationConnector edgePoints="[(2.875 : 23.2748527018229); (3.375 : 23.2748527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/KhachHang/KhachHang_HoaDonBan" />
       <nodes>
-        <classShapeMoniker Id="121ab877-cb70-4a88-9939-e5ab9eccff1a" />
-        <classShapeMoniker Id="b4b97af2-5c46-49f6-b278-a5c02b1c3356" />
+        <classShapeMoniker Id="66ff964c-2f6c-4bb4-8329-6f01dbffd25c" />
+        <classShapeMoniker Id="92266d56-b769-40b5-872b-20100b18bbb8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3e03c645-ddfd-4786-80fe-32f6528e9fad" absoluteBounds="0.875, 18.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/PhieuXuat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccde90aa-6b09-4fce-90d3-7fb3279cdad5" absoluteBounds="0.89000000000000012, 18.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.40625 : 22.25); (3.40625 : 19.1402498372396); (2.875 : 19.1402498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/HoaDonBan/HoaDonBan_PhieuXuat" />
+      <nodes>
+        <classShapeMoniker Id="92266d56-b769-40b5-872b-20100b18bbb8" />
+        <classShapeMoniker Id="3e03c645-ddfd-4786-80fe-32f6528e9fad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.875 : 18.0881982421875); (1.875 : 18.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoaiPhieuXuat/LoaiPhieuXuat_PhieuXuat" />
+      <nodes>
+        <classShapeMoniker Id="b7d425a9-f928-4bcf-aa30-c19d0cc165fe" />
+        <classShapeMoniker Id="3e03c645-ddfd-4786-80fe-32f6528e9fad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.625 : 18.7027498372396); (3.39583333333333 : 18.7027498372396 : JumpStart); (3.22916666666667 : 18.7027498372396 : JumpEnd); (2.875 : 18.7027498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/LoPhieuXuat/LoPhieuXuat_PhieuXuat" />
+      <nodes>
+        <classShapeMoniker Id="11b35fae-999a-474d-9097-f921afd5530f" />
+        <classShapeMoniker Id="3e03c645-ddfd-4786-80fe-32f6528e9fad" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a484164d-b3ca-4e76-a2e8-e595e923abf1" absoluteBounds="3.5, 19.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/ChiTietPhieuXuat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a647c52e-9900-4ab5-8425-8146dff593f1" absoluteBounds="3.5149999999999997, 19.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 19.9864005533854); (3.32291666666667 : 19.9864005533854 : JumpStart); (3.48958333333333 : 19.9864005533854 : JumpEnd); (3.5 : 19.9864005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/PhieuXuat/PhieuXuat_ChiTietPhieuXuat" />
+      <nodes>
+        <classShapeMoniker Id="3e03c645-ddfd-4786-80fe-32f6528e9fad" />
+        <classShapeMoniker Id="a484164d-b3ca-4e76-a2e8-e595e923abf1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 10.4762039684245); (2.91666666666667 : 10.4762039684245 : JumpStart); (3.08333333333333 : 10.4762039684245 : JumpEnd); (3.10416666666667 : 10.4762039684245 : JumpStart); (3.27083333333333 : 10.4762039684245 : JumpEnd); (3.3125 : 10.4762039684245); (3.3125 : 19.1875); (4.5 : 19.1875); (4.5 : 19.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/KhoHang/KhoHang_ChiTietPhieuXuat" />
+      <nodes>
+        <classShapeMoniker Id="1ed0298e-b4a3-4e72-a19e-fa2d161c65f9" />
+        <classShapeMoniker Id="a484164d-b3ca-4e76-a2e8-e595e923abf1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="86e900b3-e2eb-4069-9e09-26fd4864891f" absoluteBounds="5.875, 22.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QuanLy_KeToanDataContext/ChiTietHDBan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fe064fe-342c-4d60-a42a-afe45c8b9172" absoluteBounds="5.8900000000000006, 22.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 23.6739005533854); (5.875 : 23.6739005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/HoaDonBan/HoaDonBan_ChiTietHDBan" />
+      <nodes>
+        <classShapeMoniker Id="92266d56-b769-40b5-872b-20100b18bbb8" />
+        <classShapeMoniker Id="86e900b3-e2eb-4069-9e09-26fd4864891f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.8750025); (3.22916666666667 : 2.8750025 : JumpStart); (3.39583333333333 : 2.8750025 : JumpEnd); (4.44791916666667 : 2.8750025 : JumpStart); (4.61458583333333 : 2.8750025 : JumpEnd); (7.41666941666667 : 2.8750025 : JumpStart); (7.58333608333333 : 2.8750025 : JumpEnd); (7.84375 : 2.8750025); (7.84375 : 22.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/Hang/Hang_ChiTietHDBan" />
+      <nodes>
+        <classShapeMoniker Id="8bc67bd6-78e1-47d1-95d9-fa9c7513dbdc" />
+        <classShapeMoniker Id="86e900b3-e2eb-4069-9e09-26fd4864891f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.828125 : 22.5); (7.828125 : 19.40625); (7.58333608333333 : 19.40625 : JumpStart); (7.41666941666667 : 19.40625 : JumpEnd); (7.27083383333333 : 19.40625 : JumpStart); (7.10416716666667 : 19.40625 : JumpEnd); (5.5 : 19.40625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLy_KeToanDataContext/ChiTietHDBan/ChiTietHDBan_ChiTietPhieuXuat" />
+      <nodes>
+        <classShapeMoniker Id="86e900b3-e2eb-4069-9e09-26fd4864891f" />
+        <classShapeMoniker Id="a484164d-b3ca-4e76-a2e8-e595e923abf1" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

@@ -116,6 +116,13 @@ namespace QuanLy_KeToan.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap duyet {
+            get {
+                object obj = ResourceManager.GetObject("duyet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
@@ -172,6 +179,13 @@ namespace QuanLy_KeToan.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap loaiphieuthu {
+            get {
+                object obj = ResourceManager.GetObject("loaiphieuthu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap loaiphieuxuat {
             get {
                 object obj = ResourceManager.GetObject("loaiphieuxuat", resourceCulture);
@@ -193,6 +207,13 @@ namespace QuanLy_KeToan.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap lophieuthu {
+            get {
+                object obj = ResourceManager.GetObject("lophieuthu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap lophieuxuat {
             get {
                 object obj = ResourceManager.GetObject("lophieuxuat", resourceCulture);
@@ -203,6 +224,13 @@ namespace QuanLy_KeToan.Properties {
         internal static System.Drawing.Bitmap lophieuxuat2 {
             get {
                 object obj = ResourceManager.GetObject("lophieuxuat2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap phieuthu {
+            get {
+                object obj = ResourceManager.GetObject("phieuthu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

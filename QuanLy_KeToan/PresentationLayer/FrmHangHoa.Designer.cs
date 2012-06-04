@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHangHoa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarManagerHangHoa = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -132,49 +132,6 @@
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.tabQuanLyHH = new DevComponents.DotNetBar.TabControl();
-            this.tabControlHH = new DevComponents.DotNetBar.TabControlPanel();
-            this.groupPanelHH = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.gridHangHoa = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.ColMaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaLoaiHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ColMaNCC = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ColTenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMoTaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDonViTinh = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ColVAT = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.ColThueNhapKhau = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.ColDonGia = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.ColGiamGia = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.ColHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingHangHoa = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.NvgRefresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.NvgThem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnXoaHang = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.NvgLuu = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.NvgHuy = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.NvgThoat = new System.Windows.Forms.ToolStripButton();
-            this.NvgIn = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.comboMaLoaiHang = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtTimKiem = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.tabItemHH = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupLoaiHH = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.gridLoaiHH = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -213,7 +170,50 @@
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStriptxtTenLoaiHang = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.tabItemLoaiHH = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlHH = new DevComponents.DotNetBar.TabControlPanel();
+            this.groupPanelHH = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.gridHangHoa = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ColMaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMaLoaiHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ColMaNCC = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ColTenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMoTaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDonViTinh = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ColVAT = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.ColThueNhapKhau = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.ColDonGia = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.ColGiamGia = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.ColHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingHangHoa = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.NvgRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.NvgThem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnXoaHang = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.NvgLuu = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.NvgHuy = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.NvgThoat = new System.Windows.Forms.ToolStripButton();
+            this.NvgIn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.comboMaLoaiHang = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtTimKiem = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tabItemHH = new DevComponents.DotNetBar.TabItem(this.components);
             this.elementStyle6 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle5 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle4 = new DevComponents.DotNetBar.ElementStyle();
@@ -258,16 +258,16 @@
             this.grbTimKiemThuong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabQuanLyHH)).BeginInit();
             this.tabQuanLyHH.SuspendLayout();
-            this.tabControlHH.SuspendLayout();
-            this.groupPanelHH.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHangHoa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingHangHoa)).BeginInit();
-            this.bindingHangHoa.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
             this.groupLoaiHH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLoaiHH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiHangHoa)).BeginInit();
             this.bindingLoaiHangHoa.SuspendLayout();
+            this.tabControlHH.SuspendLayout();
+            this.groupPanelHH.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHangHoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingHangHoa)).BeginInit();
+            this.bindingHangHoa.SuspendLayout();
             this.expandablePanelCauHinh.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -736,6 +736,7 @@
             // 
             // groupPanel4
             // 
+            this.groupPanel4.BackColor = System.Drawing.SystemColors.HighlightText;
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel4.Controls.Add(this.cmbDonViTinh);
@@ -1933,464 +1934,6 @@
             this.tabQuanLyHH.Tabs.Add(this.tabItemHH);
             this.tabQuanLyHH.Tabs.Add(this.tabItemLoaiHH);
             // 
-            // tabControlHH
-            // 
-            this.tabControlHH.Controls.Add(this.groupPanelHH);
-            this.tabControlHH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlHH.Location = new System.Drawing.Point(0, 26);
-            this.tabControlHH.Name = "tabControlHH";
-            this.tabControlHH.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlHH.Size = new System.Drawing.Size(1104, 640);
-            this.tabControlHH.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlHH.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlHH.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlHH.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlHH.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlHH.Style.GradientAngle = 90;
-            this.tabControlHH.TabIndex = 1;
-            this.tabControlHH.TabItem = this.tabItemHH;
-            // 
-            // groupPanelHH
-            // 
-            this.groupPanelHH.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanelHH.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanelHH.Controls.Add(this.gridHangHoa);
-            this.groupPanelHH.Controls.Add(this.bindingHangHoa);
-            this.groupPanelHH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanelHH.Location = new System.Drawing.Point(1, 1);
-            this.groupPanelHH.Name = "groupPanelHH";
-            this.groupPanelHH.Size = new System.Drawing.Size(1102, 638);
-            // 
-            // 
-            // 
-            this.groupPanelHH.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanelHH.Style.BackColorGradientAngle = 90;
-            this.groupPanelHH.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanelHH.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelHH.Style.BorderBottomWidth = 1;
-            this.groupPanelHH.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanelHH.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelHH.Style.BorderLeftWidth = 1;
-            this.groupPanelHH.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelHH.Style.BorderRightWidth = 1;
-            this.groupPanelHH.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelHH.Style.BorderTopWidth = 1;
-            this.groupPanelHH.Style.Class = "";
-            this.groupPanelHH.Style.CornerDiameter = 4;
-            this.groupPanelHH.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanelHH.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanelHH.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanelHH.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanelHH.StyleMouseDown.Class = "";
-            this.groupPanelHH.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanelHH.StyleMouseOver.Class = "";
-            this.groupPanelHH.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanelHH.TabIndex = 0;
-            this.groupPanelHH.TitleImage = global::QuanLy_KeToan.Properties.Resources.hang;
-            this.groupPanelHH.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
-            // 
-            // gridHangHoa
-            // 
-            this.gridHangHoa.AllowUserToAddRows = false;
-            this.gridHangHoa.AllowUserToOrderColumns = true;
-            this.gridHangHoa.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.gridHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColMaHang,
-            this.ColMaLoaiHang,
-            this.ColMaNCC,
-            this.ColTenHang,
-            this.ColMoTaHang,
-            this.ColDonViTinh,
-            this.ColVAT,
-            this.ColThueNhapKhau,
-            this.ColDonGia,
-            this.ColGiamGia,
-            this.ColHinh});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridHangHoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridHangHoa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.gridHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.gridHangHoa.Location = new System.Drawing.Point(0, 25);
-            this.gridHangHoa.Name = "gridHangHoa";
-            this.gridHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.gridHangHoa.Size = new System.Drawing.Size(1096, 575);
-            this.gridHangHoa.TabIndex = 3;
-            this.gridHangHoa.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridHangHoa_RowEnter);
-            // 
-            // ColMaHang
-            // 
-            this.ColMaHang.DataPropertyName = "MaHang";
-            this.ColMaHang.HeaderText = "Mã Hàng";
-            this.ColMaHang.Name = "ColMaHang";
-            this.ColMaHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColMaLoaiHang
-            // 
-            this.ColMaLoaiHang.DataPropertyName = "MaLoaiHang";
-            this.ColMaLoaiHang.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ColMaLoaiHang.HeaderText = "Mã LH";
-            this.ColMaLoaiHang.Name = "ColMaLoaiHang";
-            // 
-            // ColMaNCC
-            // 
-            this.ColMaNCC.DataPropertyName = "MaNCC";
-            this.ColMaNCC.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ColMaNCC.HeaderText = "Mã NCC";
-            this.ColMaNCC.Name = "ColMaNCC";
-            // 
-            // ColTenHang
-            // 
-            this.ColTenHang.DataPropertyName = "TenHang";
-            this.ColTenHang.HeaderText = "Tên Hàng";
-            this.ColTenHang.Name = "ColTenHang";
-            // 
-            // ColMoTaHang
-            // 
-            this.ColMoTaHang.DataPropertyName = "MoTaHang";
-            this.ColMoTaHang.HeaderText = "Mô Tả Hàng";
-            this.ColMoTaHang.Name = "ColMoTaHang";
-            this.ColMoTaHang.Width = 300;
-            // 
-            // ColDonViTinh
-            // 
-            this.ColDonViTinh.DataPropertyName = "MaDonViTinh";
-            this.ColDonViTinh.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ColDonViTinh.HeaderText = "Đơn Vị Tính";
-            this.ColDonViTinh.Name = "ColDonViTinh";
-            this.ColDonViTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColDonViTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ColVAT
-            // 
-            // 
-            // 
-            // 
-            this.ColVAT.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.ColVAT.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.ColVAT.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColVAT.BackgroundStyle.TextColor = System.Drawing.Color.Black;
-            this.ColVAT.DataPropertyName = "VAT";
-            this.ColVAT.HeaderText = "VAT";
-            this.ColVAT.Increment = 1D;
-            this.ColVAT.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.ColVAT.Name = "ColVAT";
-            this.ColVAT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColVAT.Width = 50;
-            // 
-            // ColThueNhapKhau
-            // 
-            // 
-            // 
-            // 
-            this.ColThueNhapKhau.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.ColThueNhapKhau.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.ColThueNhapKhau.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColThueNhapKhau.BackgroundStyle.TextColor = System.Drawing.Color.Black;
-            this.ColThueNhapKhau.DataPropertyName = "ThueNhapKhau";
-            this.ColThueNhapKhau.HeaderText = "Thuế N.Khẩu";
-            this.ColThueNhapKhau.Increment = 1D;
-            this.ColThueNhapKhau.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.ColThueNhapKhau.Name = "ColThueNhapKhau";
-            this.ColThueNhapKhau.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColDonGia
-            // 
-            // 
-            // 
-            // 
-            this.ColDonGia.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.ColDonGia.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.ColDonGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColDonGia.BackgroundStyle.TextColor = System.Drawing.Color.Black;
-            this.ColDonGia.DataPropertyName = "DonGia";
-            this.ColDonGia.HeaderText = "Đơn Giá";
-            this.ColDonGia.Increment = 1D;
-            this.ColDonGia.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.ColDonGia.Name = "ColDonGia";
-            // 
-            // ColGiamGia
-            // 
-            // 
-            // 
-            // 
-            this.ColGiamGia.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.ColGiamGia.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.ColGiamGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColGiamGia.BackgroundStyle.TextColor = System.Drawing.Color.Black;
-            this.ColGiamGia.DataPropertyName = "GiamGia";
-            this.ColGiamGia.HeaderText = "Giảm Giá";
-            this.ColGiamGia.Increment = 1D;
-            this.ColGiamGia.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.ColGiamGia.Name = "ColGiamGia";
-            this.ColGiamGia.Width = 50;
-            // 
-            // ColHinh
-            // 
-            this.ColHinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColHinh.DataPropertyName = "Hinh";
-            this.ColHinh.HeaderText = "Hình";
-            this.ColHinh.Name = "ColHinh";
-            this.ColHinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColHinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // bindingHangHoa
-            // 
-            this.bindingHangHoa.AddNewItem = null;
-            this.bindingHangHoa.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.bindingHangHoa.CountItem = this.bindingNavigatorCountItem;
-            this.bindingHangHoa.CountItemFormat = "của  {0}";
-            this.bindingHangHoa.DeleteItem = null;
-            this.bindingHangHoa.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.NvgRefresh,
-            this.toolStripSeparator3,
-            this.NvgThem,
-            this.toolStripSeparator1,
-            this.btnXoaHang,
-            this.toolStripSeparator2,
-            this.NvgLuu,
-            this.toolStripSeparator4,
-            this.NvgHuy,
-            this.toolStripSeparator5,
-            this.NvgThoat,
-            this.NvgIn,
-            this.toolStripSeparator6,
-            this.comboMaLoaiHang,
-            this.toolStripLabel2,
-            this.toolStripSeparator7,
-            this.txtTimKiem,
-            this.toolStripLabel1});
-            this.bindingHangHoa.Location = new System.Drawing.Point(0, 0);
-            this.bindingHangHoa.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingHangHoa.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingHangHoa.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingHangHoa.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingHangHoa.Name = "bindingHangHoa";
-            this.bindingHangHoa.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingHangHoa.Size = new System.Drawing.Size(1096, 25);
-            this.bindingHangHoa.TabIndex = 0;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(46, 22);
-            this.bindingNavigatorCountItem.Text = "của  {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // NvgRefresh
-            // 
-            this.NvgRefresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
-            this.NvgRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NvgRefresh.Name = "NvgRefresh";
-            this.NvgRefresh.Size = new System.Drawing.Size(66, 22);
-            this.NvgRefresh.Text = "Refresh";
-            this.NvgRefresh.Click += new System.EventHandler(this.NvgRefresh_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // NvgThem
-            // 
-            this.NvgThem.Image = global::QuanLy_KeToan.Properties.Resources.add;
-            this.NvgThem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NvgThem.Name = "NvgThem";
-            this.NvgThem.Size = new System.Drawing.Size(58, 22);
-            this.NvgThem.Text = "Thêm";
-            this.NvgThem.Click += new System.EventHandler(this.NvgThem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnXoaHang
-            // 
-            this.btnXoaHang.Image = global::QuanLy_KeToan.Properties.Resources.delete;
-            this.btnXoaHang.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnXoaHang.Name = "btnXoaHang";
-            this.btnXoaHang.Size = new System.Drawing.Size(47, 22);
-            this.btnXoaHang.Text = "Xóa";
-            this.btnXoaHang.Click += new System.EventHandler(this.btnXoaHang_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // NvgLuu
-            // 
-            this.NvgLuu.Image = global::QuanLy_KeToan.Properties.Resources.save;
-            this.NvgLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NvgLuu.Name = "NvgLuu";
-            this.NvgLuu.Size = new System.Drawing.Size(47, 22);
-            this.NvgLuu.Text = "Lưu";
-            this.NvgLuu.Click += new System.EventHandler(this.NvgLuu_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // NvgHuy
-            // 
-            this.NvgHuy.Image = global::QuanLy_KeToan.Properties.Resources.bindingCancel;
-            this.NvgHuy.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NvgHuy.Name = "NvgHuy";
-            this.NvgHuy.Size = new System.Drawing.Size(49, 22);
-            this.NvgHuy.Text = "Hủy";
-            this.NvgHuy.Click += new System.EventHandler(this.NvgHuy_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // NvgThoat
-            // 
-            this.NvgThoat.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
-            this.NvgThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NvgThoat.Name = "NvgThoat";
-            this.NvgThoat.Size = new System.Drawing.Size(58, 22);
-            this.NvgThoat.Text = "Thoát";
-            this.NvgThoat.Click += new System.EventHandler(this.NvgThoat_Click);
-            // 
-            // NvgIn
-            // 
-            this.NvgIn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.NvgIn.Image = ((System.Drawing.Image)(resources.GetObject("NvgIn.Image")));
-            this.NvgIn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NvgIn.Name = "NvgIn";
-            this.NvgIn.Size = new System.Drawing.Size(52, 22);
-            this.NvgIn.Text = "&Print";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // comboMaLoaiHang
-            // 
-            this.comboMaLoaiHang.Name = "comboMaLoaiHang";
-            this.comboMaLoaiHang.Size = new System.Drawing.Size(121, 25);
-            this.comboMaLoaiHang.SelectedIndexChanged += new System.EventHandler(this.comboMaLoaiHang_SelectedIndexChanged);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(97, 22);
-            this.toolStripLabel2.Text = "Mã Loại Hàng";
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(100, 25);
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(72, 22);
-            this.toolStripLabel1.Text = "Mã Hàng";
-            // 
-            // tabItemHH
-            // 
-            this.tabItemHH.AttachedControl = this.tabControlHH;
-            this.tabItemHH.Name = "tabItemHH";
-            this.tabItemHH.Text = "Hàng Hóa";
-            this.tabItemHH.Click += new System.EventHandler(this.tabItemHH_Click);
-            // 
             // tabControlPanel1
             // 
             this.tabControlPanel1.Controls.Add(this.groupLoaiHH);
@@ -2835,12 +2378,470 @@
             this.toolStripLabel5.Size = new System.Drawing.Size(100, 22);
             this.toolStripLabel5.Text = "Tên Loại Hàng";
             // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
             // tabItemLoaiHH
             // 
             this.tabItemLoaiHH.AttachedControl = this.tabControlPanel1;
             this.tabItemLoaiHH.Name = "tabItemLoaiHH";
             this.tabItemLoaiHH.Text = "Loại Hàng Hóa";
             this.tabItemLoaiHH.Click += new System.EventHandler(this.tabItemLoaiHH_Click);
+            // 
+            // tabControlHH
+            // 
+            this.tabControlHH.Controls.Add(this.groupPanelHH);
+            this.tabControlHH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlHH.Location = new System.Drawing.Point(0, 26);
+            this.tabControlHH.Name = "tabControlHH";
+            this.tabControlHH.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlHH.Size = new System.Drawing.Size(1104, 640);
+            this.tabControlHH.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlHH.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            this.tabControlHH.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlHH.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.tabControlHH.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlHH.Style.GradientAngle = 90;
+            this.tabControlHH.TabIndex = 1;
+            this.tabControlHH.TabItem = this.tabItemHH;
+            // 
+            // groupPanelHH
+            // 
+            this.groupPanelHH.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanelHH.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanelHH.Controls.Add(this.gridHangHoa);
+            this.groupPanelHH.Controls.Add(this.bindingHangHoa);
+            this.groupPanelHH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanelHH.Location = new System.Drawing.Point(1, 1);
+            this.groupPanelHH.Name = "groupPanelHH";
+            this.groupPanelHH.Size = new System.Drawing.Size(1102, 638);
+            // 
+            // 
+            // 
+            this.groupPanelHH.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanelHH.Style.BackColorGradientAngle = 90;
+            this.groupPanelHH.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanelHH.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelHH.Style.BorderBottomWidth = 1;
+            this.groupPanelHH.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanelHH.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelHH.Style.BorderLeftWidth = 1;
+            this.groupPanelHH.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelHH.Style.BorderRightWidth = 1;
+            this.groupPanelHH.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelHH.Style.BorderTopWidth = 1;
+            this.groupPanelHH.Style.Class = "";
+            this.groupPanelHH.Style.CornerDiameter = 4;
+            this.groupPanelHH.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanelHH.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanelHH.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanelHH.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanelHH.StyleMouseDown.Class = "";
+            this.groupPanelHH.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanelHH.StyleMouseOver.Class = "";
+            this.groupPanelHH.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanelHH.TabIndex = 0;
+            this.groupPanelHH.TitleImage = global::QuanLy_KeToan.Properties.Resources.hang;
+            this.groupPanelHH.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
+            // 
+            // gridHangHoa
+            // 
+            this.gridHangHoa.AllowUserToAddRows = false;
+            this.gridHangHoa.AllowUserToOrderColumns = true;
+            this.gridHangHoa.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.gridHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColMaHang,
+            this.ColMaLoaiHang,
+            this.ColMaNCC,
+            this.ColTenHang,
+            this.ColMoTaHang,
+            this.ColDonViTinh,
+            this.ColVAT,
+            this.ColThueNhapKhau,
+            this.ColDonGia,
+            this.ColGiamGia,
+            this.ColHinh});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridHangHoa.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridHangHoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridHangHoa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.gridHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.gridHangHoa.Location = new System.Drawing.Point(0, 25);
+            this.gridHangHoa.Name = "gridHangHoa";
+            this.gridHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.gridHangHoa.Size = new System.Drawing.Size(1096, 575);
+            this.gridHangHoa.TabIndex = 3;
+            this.gridHangHoa.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridHangHoa_RowEnter);
+            // 
+            // ColMaHang
+            // 
+            this.ColMaHang.DataPropertyName = "MaHang";
+            this.ColMaHang.HeaderText = "Mã Hàng";
+            this.ColMaHang.Name = "ColMaHang";
+            this.ColMaHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColMaLoaiHang
+            // 
+            this.ColMaLoaiHang.DataPropertyName = "MaLoaiHang";
+            this.ColMaLoaiHang.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ColMaLoaiHang.HeaderText = "Mã LH";
+            this.ColMaLoaiHang.Name = "ColMaLoaiHang";
+            // 
+            // ColMaNCC
+            // 
+            this.ColMaNCC.DataPropertyName = "MaNCC";
+            this.ColMaNCC.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ColMaNCC.HeaderText = "Mã NCC";
+            this.ColMaNCC.Name = "ColMaNCC";
+            // 
+            // ColTenHang
+            // 
+            this.ColTenHang.DataPropertyName = "TenHang";
+            this.ColTenHang.HeaderText = "Tên Hàng";
+            this.ColTenHang.Name = "ColTenHang";
+            // 
+            // ColMoTaHang
+            // 
+            this.ColMoTaHang.DataPropertyName = "MoTaHang";
+            this.ColMoTaHang.HeaderText = "Mô Tả Hàng";
+            this.ColMoTaHang.Name = "ColMoTaHang";
+            this.ColMoTaHang.Width = 300;
+            // 
+            // ColDonViTinh
+            // 
+            this.ColDonViTinh.DataPropertyName = "MaDonViTinh";
+            this.ColDonViTinh.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ColDonViTinh.HeaderText = "Đơn Vị Tính";
+            this.ColDonViTinh.Name = "ColDonViTinh";
+            this.ColDonViTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColDonViTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ColVAT
+            // 
+            // 
+            // 
+            // 
+            this.ColVAT.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.ColVAT.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.ColVAT.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColVAT.BackgroundStyle.TextColor = System.Drawing.Color.Black;
+            this.ColVAT.DataPropertyName = "VAT";
+            this.ColVAT.HeaderText = "VAT";
+            this.ColVAT.Increment = 1D;
+            this.ColVAT.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.ColVAT.Name = "ColVAT";
+            this.ColVAT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColVAT.Width = 50;
+            // 
+            // ColThueNhapKhau
+            // 
+            // 
+            // 
+            // 
+            this.ColThueNhapKhau.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.ColThueNhapKhau.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.ColThueNhapKhau.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColThueNhapKhau.BackgroundStyle.TextColor = System.Drawing.Color.Black;
+            this.ColThueNhapKhau.DataPropertyName = "ThueNhapKhau";
+            this.ColThueNhapKhau.HeaderText = "Thuế N.Khẩu";
+            this.ColThueNhapKhau.Increment = 1D;
+            this.ColThueNhapKhau.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.ColThueNhapKhau.Name = "ColThueNhapKhau";
+            this.ColThueNhapKhau.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColDonGia
+            // 
+            // 
+            // 
+            // 
+            this.ColDonGia.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.ColDonGia.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.ColDonGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColDonGia.BackgroundStyle.TextColor = System.Drawing.Color.Black;
+            this.ColDonGia.DataPropertyName = "DonGia";
+            this.ColDonGia.HeaderText = "Đơn Giá";
+            this.ColDonGia.Increment = 1D;
+            this.ColDonGia.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.ColDonGia.Name = "ColDonGia";
+            // 
+            // ColGiamGia
+            // 
+            // 
+            // 
+            // 
+            this.ColGiamGia.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.ColGiamGia.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.ColGiamGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColGiamGia.BackgroundStyle.TextColor = System.Drawing.Color.Black;
+            this.ColGiamGia.DataPropertyName = "GiamGia";
+            this.ColGiamGia.HeaderText = "Giảm Giá";
+            this.ColGiamGia.Increment = 1D;
+            this.ColGiamGia.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.ColGiamGia.Name = "ColGiamGia";
+            this.ColGiamGia.Width = 50;
+            // 
+            // ColHinh
+            // 
+            this.ColHinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColHinh.DataPropertyName = "Hinh";
+            this.ColHinh.HeaderText = "Hình";
+            this.ColHinh.Name = "ColHinh";
+            this.ColHinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColHinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // bindingHangHoa
+            // 
+            this.bindingHangHoa.AddNewItem = null;
+            this.bindingHangHoa.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.bindingHangHoa.CountItem = this.bindingNavigatorCountItem;
+            this.bindingHangHoa.CountItemFormat = "của  {0}";
+            this.bindingHangHoa.DeleteItem = null;
+            this.bindingHangHoa.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.NvgRefresh,
+            this.toolStripSeparator3,
+            this.NvgThem,
+            this.toolStripSeparator1,
+            this.btnXoaHang,
+            this.toolStripSeparator2,
+            this.NvgLuu,
+            this.toolStripSeparator4,
+            this.NvgHuy,
+            this.toolStripSeparator5,
+            this.NvgThoat,
+            this.NvgIn,
+            this.toolStripSeparator6,
+            this.comboMaLoaiHang,
+            this.toolStripLabel2,
+            this.toolStripSeparator7,
+            this.txtTimKiem,
+            this.toolStripLabel1});
+            this.bindingHangHoa.Location = new System.Drawing.Point(0, 0);
+            this.bindingHangHoa.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingHangHoa.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingHangHoa.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingHangHoa.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingHangHoa.Name = "bindingHangHoa";
+            this.bindingHangHoa.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingHangHoa.Size = new System.Drawing.Size(1096, 25);
+            this.bindingHangHoa.TabIndex = 0;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(46, 22);
+            this.bindingNavigatorCountItem.Text = "của  {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // NvgRefresh
+            // 
+            this.NvgRefresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
+            this.NvgRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NvgRefresh.Name = "NvgRefresh";
+            this.NvgRefresh.Size = new System.Drawing.Size(66, 22);
+            this.NvgRefresh.Text = "Refresh";
+            this.NvgRefresh.Click += new System.EventHandler(this.NvgRefresh_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // NvgThem
+            // 
+            this.NvgThem.Image = global::QuanLy_KeToan.Properties.Resources.add;
+            this.NvgThem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NvgThem.Name = "NvgThem";
+            this.NvgThem.Size = new System.Drawing.Size(58, 22);
+            this.NvgThem.Text = "Thêm";
+            this.NvgThem.Click += new System.EventHandler(this.NvgThem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnXoaHang
+            // 
+            this.btnXoaHang.Image = global::QuanLy_KeToan.Properties.Resources.delete;
+            this.btnXoaHang.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXoaHang.Name = "btnXoaHang";
+            this.btnXoaHang.Size = new System.Drawing.Size(47, 22);
+            this.btnXoaHang.Text = "Xóa";
+            this.btnXoaHang.Click += new System.EventHandler(this.btnXoaHang_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // NvgLuu
+            // 
+            this.NvgLuu.Image = global::QuanLy_KeToan.Properties.Resources.save;
+            this.NvgLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NvgLuu.Name = "NvgLuu";
+            this.NvgLuu.Size = new System.Drawing.Size(47, 22);
+            this.NvgLuu.Text = "Lưu";
+            this.NvgLuu.Click += new System.EventHandler(this.NvgLuu_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // NvgHuy
+            // 
+            this.NvgHuy.Image = global::QuanLy_KeToan.Properties.Resources.bindingCancel;
+            this.NvgHuy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NvgHuy.Name = "NvgHuy";
+            this.NvgHuy.Size = new System.Drawing.Size(49, 22);
+            this.NvgHuy.Text = "Hủy";
+            this.NvgHuy.Click += new System.EventHandler(this.NvgHuy_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // NvgThoat
+            // 
+            this.NvgThoat.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
+            this.NvgThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NvgThoat.Name = "NvgThoat";
+            this.NvgThoat.Size = new System.Drawing.Size(58, 22);
+            this.NvgThoat.Text = "Thoát";
+            this.NvgThoat.Click += new System.EventHandler(this.NvgThoat_Click);
+            // 
+            // NvgIn
+            // 
+            this.NvgIn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.NvgIn.Image = ((System.Drawing.Image)(resources.GetObject("NvgIn.Image")));
+            this.NvgIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NvgIn.Name = "NvgIn";
+            this.NvgIn.Size = new System.Drawing.Size(52, 22);
+            this.NvgIn.Text = "&Print";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // comboMaLoaiHang
+            // 
+            this.comboMaLoaiHang.Name = "comboMaLoaiHang";
+            this.comboMaLoaiHang.Size = new System.Drawing.Size(121, 25);
+            this.comboMaLoaiHang.SelectedIndexChanged += new System.EventHandler(this.comboMaLoaiHang_SelectedIndexChanged);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(97, 22);
+            this.toolStripLabel2.Text = "Mã Loại Hàng";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(100, 25);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(72, 22);
+            this.toolStripLabel1.Text = "Mã Hàng";
+            // 
+            // tabItemHH
+            // 
+            this.tabItemHH.AttachedControl = this.tabControlHH;
+            this.tabItemHH.Name = "tabItemHH";
+            this.tabItemHH.Text = "Hàng Hóa";
+            this.tabItemHH.Click += new System.EventHandler(this.tabItemHH_Click);
             // 
             // elementStyle6
             // 
@@ -3209,13 +3210,6 @@
             this.grbTimKiemThuong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabQuanLyHH)).EndInit();
             this.tabQuanLyHH.ResumeLayout(false);
-            this.tabControlHH.ResumeLayout(false);
-            this.groupPanelHH.ResumeLayout(false);
-            this.groupPanelHH.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHangHoa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingHangHoa)).EndInit();
-            this.bindingHangHoa.ResumeLayout(false);
-            this.bindingHangHoa.PerformLayout();
             this.tabControlPanel1.ResumeLayout(false);
             this.groupLoaiHH.ResumeLayout(false);
             this.groupLoaiHH.PerformLayout();
@@ -3223,6 +3217,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiHangHoa)).EndInit();
             this.bindingLoaiHangHoa.ResumeLayout(false);
             this.bindingLoaiHangHoa.PerformLayout();
+            this.tabControlHH.ResumeLayout(false);
+            this.groupPanelHH.ResumeLayout(false);
+            this.groupPanelHH.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridHangHoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingHangHoa)).EndInit();
+            this.bindingHangHoa.ResumeLayout(false);
+            this.bindingHangHoa.PerformLayout();
             this.expandablePanelCauHinh.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

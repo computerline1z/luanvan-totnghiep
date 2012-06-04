@@ -70,13 +70,13 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\ChiTietPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChiTietPhieuXuatBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoPhieuThuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiPhieuThuBLL.cs" />
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
-    <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhachHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhoChuaBLL.cs" />
     <Compile Include="BusinessLogicLayer\KhoHangBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiHangBLL.cs" />
-    <Compile Include="BusinessLogicLayer\LoaiHoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoPhieuNhapBLL.cs" />
@@ -86,17 +86,23 @@
     <Compile Include="BusinessLogicLayer\PhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhiexXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
+    <Compile Include="PresentationLayer\FrmKiemTraHoaDonBanXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmKiemTraHoaDonBanXuatKho.Designer.cs">
+      <DependentUpon>FrmKiemTraHoaDonBanXuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyThu.Designer.cs">
+      <DependentUpon>FrmQuanLyThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FrmChiTietPhieuXuat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\FrmChiTietPhieuXuat.Designer.cs">
       <DependentUpon>FrmChiTietPhieuXuat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\Copy of FrmChiTietPhieuNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Copy of FrmChiTietPhieuNhap.Designer.cs">
-      <DependentUpon>Copy of FrmChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FDangNhap.cs">
       <SubType>Form</SubType>
@@ -121,12 +127,6 @@
     </Compile>
     <Compile Include="PresentationLayer\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\FrmHoaDonBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\FrmHoaDonBan.designer.cs">
-      <DependentUpon>FrmHoaDonBan.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FrmKhachHang.cs">
       <SubType>Form</SubType>
@@ -168,11 +168,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PresentationLayer\FrmKiemTraHoaDonBanXuatKho.resx">
+      <DependentUpon>FrmKiemTraHoaDonBanXuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmQuanLyThu.resx">
+      <DependentUpon>FrmQuanLyThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmChiTietPhieuXuat.resx">
       <DependentUpon>FrmChiTietPhieuXuat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Copy of FrmChiTietPhieuNhap.resx">
-      <DependentUpon>Copy of FrmChiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
@@ -185,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FrmHoaDonBan.resx">
-      <DependentUpon>FrmHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmKhachHang.resx">
       <DependentUpon>FrmKhachHang.cs</DependentUpon>
@@ -336,6 +336,10 @@
     <None Include="Resources\lophieuxuat.png" />
     <None Include="Resources\lophieuxuat2.png" />
     <None Include="Resources\ctv.png" />
+    <None Include="Resources\loaiphieuthu.png" />
+    <None Include="Resources\phieuthu.png" />
+    <None Include="Resources\lophieuthu.png" />
+    <None Include="Resources\duyet.png" />
     <Content Include="Z_Document\ChuaXuLy.txt" />
     <Content Include="Z_Document\GhiChu.txt" />
     <None Include="Resources\khohang.png" />
