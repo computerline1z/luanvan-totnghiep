@@ -69,3 +69,6 @@ F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.Presentati
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.read.1448.tlog
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.write.2150.tlog
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmKiemTraHoaDonBanXuatKho.resources
+F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.read.900.tlog
+F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.read.928.tlog
+F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.read.934.tlog
