@@ -125,17 +125,17 @@ namespace QuanLy_KeToan.PresentationLayer
             NgS.ValueMember = "TenDangNhap";
             NgS.DisplayMember = "TenDangNhap";
             //Lô Phiếu Xuất
-            NguoiLap.DataSource = LPXBLL.LayNguoiLap();
+            NguoiLap.DataSource = LoPXBLL.LayNguoiLap();
             NguoiLap.ValueMember = "TenDangNhap";
             NguoiLap.DisplayMember = "TenDangNhap";
-            NguoiSua.DataSource = LPXBLL.LayNguoiLap();
+            NguoiSua.DataSource = LoPXBLL.LayNguoiLap();
             NguoiSua.ValueMember = "TenDangNhap";
             NguoiSua.DisplayMember = "TenDangNhap";
             //Phiếu Xuất
-            _NgL.DataSource = LPXBLL.LayNguoiLap();
+            _NgL.DataSource = PXBLL.LayNguoiLap();
             _NgL.ValueMember = "TenDangNhap";
             _NgL.DisplayMember = "TenDangNhap";
-            _NgS.DataSource = LPXBLL.LayNguoiLap();
+            _NgS.DataSource = PXBLL.LayNguoiLap();
             _NgS.ValueMember = "TenDangNhap";
             _NgS.DisplayMember = "TenDangNhap";
         }
@@ -171,11 +171,17 @@ namespace QuanLy_KeToan.PresentationLayer
             LoadComboboxColumnNguoiLap();
             LoadCmbNguoiLap();
             //Loại phiếu xuất
+            ToolBarEnableLoaiPhieuXuat(true);
+            SetControlEnable_LoaiPhieuXuat(true);
             LayDanhSachLoaiPX();
             //Lô phiếu xuất
+            ToolBarEnableLoPhieuXuat(true);
+            SetControlEnable_LoPhieuXuat(true);
             LoadMaLoHDban();
             LayDanhSachLoPX();
             //Phiếu Xuất
+            ToolBarEnablePhieuXuat(true);
+            SetControlEnable_PhieuXuat(true);
             LoadMaLoaiPX();
             LoadMaHDBan();
             if (gridPhieuXuat.RowCount == 0)
@@ -183,7 +189,6 @@ namespace QuanLy_KeToan.PresentationLayer
                 bindingPhieuXuat.Enabled = false;
             }
         }
-
         private void FrmQuanLyXuatKho_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (lpx_nhapluoi == 1 || lpx_nhaptay == 1 || lopx_nhapluoi == 1 || lopx_nhaptay == 1 || px_nhapluoi == 1 || px_nhaptay == 1)
@@ -460,9 +465,9 @@ namespace QuanLy_KeToan.PresentationLayer
                 txtMaLoaiPhieuXuat.Text = gridLoaiPhieuXuat.Rows[dong].Cells["ColMLPX"].Value.ToString();
                 txtTenLoaiPhieuXuat.Text = gridLoaiPhieuXuat.Rows[dong].Cells["ColTLPX"].Value.ToString();
                 LPX_dpNgayLap.Value = System.Convert.ToDateTime(gridLoaiPhieuXuat.Rows[dong].Cells["NL"].Value.ToString());
-                LPX_cmbNguoiLap.Text = gridLoaiPhieuXuat.Rows[dong].Cells["NgL"].Value.ToString();
+                LPX_cmbNguoiLap.Text = (gridLoaiPhieuXuat.Rows[dong].Cells["NgL"].Value == null ? "" : gridLoaiPhieuXuat.Rows[dong].Cells["NgL"].Value.ToString());
                 LPX_dpNgaySua.Value = System.Convert.ToDateTime(gridLoaiPhieuXuat.Rows[dong].Cells["NS"].Value.ToString());
-                LPX_cmbNguoiSua.Text = gridLoaiPhieuXuat.Rows[dong].Cells["NgS"].Value.ToString();
+                LPX_cmbNguoiSua.Text = (gridLoaiPhieuXuat.Rows[dong].Cells["NgS"].Value == null ? "" : gridLoaiPhieuXuat.Rows[dong].Cells["NgS"].Value.ToString());
             }
         }
         private void gridLoaiPhieuXuat_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -479,6 +484,7 @@ namespace QuanLy_KeToan.PresentationLayer
         private void btn_LPX_Sua_Click(object sender, EventArgs e)
         {
             SetControlEnable_LoaiPhieuXuat(false);
+            txtMaLoaiPhieuXuat.ReadOnly = true;
         }
         private void btn_LPX_Luu_Click(object sender, EventArgs e)
         {
@@ -639,11 +645,15 @@ namespace QuanLy_KeToan.PresentationLayer
                             LoPX.NguoiLap = (gridLoPhieuXuat.CurrentRow.Cells["NguoiLap"].Value != null ? gridLoPhieuXuat.CurrentRow.Cells["NguoiLap"].Value.ToString() : "");
                             LoPX.NgaySua = System.Convert.ToDateTime(gridLoPhieuXuat.CurrentRow.Cells["NgaySua"].Value.ToString());
                             LoPX.NguoiSua = (gridLoPhieuXuat.CurrentRow.Cells["NguoiSua"].Value != null ? gridLoPhieuXuat.CurrentRow.Cells["NguoiSua"].Value.ToString() : "");
-                            LoPXBLL.SuaLoPX(malohdban,LoPX);
+                            LoPXBLL.SuaLoPX(malohdban, LoPX);
                             LayDanhSachLoPX();
+                            ToolBarEnableLoPhieuXuat(true);
                         }
                         else
+                        {
+                            ToolBarEnableLoPhieuXuat(true);
                             return;
+                        }
                         break;
                     }
                 case 1://Thêm
@@ -660,7 +670,7 @@ namespace QuanLy_KeToan.PresentationLayer
                                 return;
                             }
                             string malohdban = gridLoPhieuXuat.CurrentRow.Cells["ColMLHDB"].Value.ToString();
-                            DateTime ngayloxuat= ngayloxuat = System.Convert.ToDateTime(gridLoPhieuXuat.CurrentRow.Cells["ColNLX"].Value);
+                            DateTime ngayloxuat= System.Convert.ToDateTime(gridLoPhieuXuat.CurrentRow.Cells["ColNLX"].Value);
                             string mota = (gridLoPhieuXuat.CurrentRow.Cells["ColMT"].Value != null ? gridLoPhieuXuat.CurrentRow.Cells["ColMT"].Value.ToString() : "");
                             DateTime ngaylap;
                             if (System.Convert.ToDateTime(gridLoPhieuXuat.CurrentRow.Cells["NgayLap"].Value) != temp)
@@ -783,6 +793,7 @@ namespace QuanLy_KeToan.PresentationLayer
         private void btn_LoPX_Sua_Click(object sender, EventArgs e)
         {
             SetControlEnable_LoPhieuXuat(false);
+            cmbMaLoHDBan.Enabled = false;
         }
         private void btn_LoPX_Luu_Click(object sender, EventArgs e)
         {
@@ -806,7 +817,10 @@ namespace QuanLy_KeToan.PresentationLayer
                             SetControlEnable_LoPhieuXuat(true);
                         }
                         else
+                        {
+                            SetControlEnable_LoPhieuXuat(true);
                             return;
+                        }
                         break;
                     }
                 case 1:
@@ -845,6 +859,7 @@ namespace QuanLy_KeToan.PresentationLayer
                             string nguoisua = LoPX_cmbNguoiSua.Text;
                             LoPXBLL.ThemLoPX(malohdban, ngayloxuat, mota, ngaylap, nguoilap, ngaysua, nguoisua);
                             LayDanhSachLoPX();
+                            SetControlEnable_LoPhieuXuat(true);
                             lopx_nhaptay = 0;
                         }
                         else
@@ -931,7 +946,7 @@ namespace QuanLy_KeToan.PresentationLayer
                 gridPhieuXuat.AllowUserToAddRows = true;
                 bindingPhieuXuat.BindingSource.MoveLast();
             }
-            gridPhieuXuat.CurrentRow.Cells["MLHDB"].Value = xuly_chuoi(advTreeLoXuat.SelectedNode.Text);
+            gridPhieuXuat.Rows[gridPhieuXuat.RowCount-1].Cells["MLHDB"].Value = xuly_chuoi(advTreeLoXuat.SelectedNode.Text);
         }
         private void PX_Delete_Click(object sender, EventArgs e)
         {
@@ -968,11 +983,15 @@ namespace QuanLy_KeToan.PresentationLayer
                             PX.NguoiLap = (gridPhieuXuat.CurrentRow.Cells["_NgL"].Value != null ? gridPhieuXuat.CurrentRow.Cells["_NgL"].Value.ToString() : "");
                             PX.NgaySua = System.Convert.ToDateTime(gridPhieuXuat.CurrentRow.Cells["_NS"].Value.ToString());
                             PX.NguoiSua = (gridPhieuXuat.CurrentRow.Cells["_NgS"].Value != null ? gridPhieuXuat.CurrentRow.Cells["_NgS"].Value.ToString() : "");
-                            PXBLL.SuaPX(malohdban,mahdban, PX);
+                            PXBLL.SuaPX(malohdban, mahdban, PX);
                             LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+                            ToolBarEnableLoaiPhieuXuat(true);
                         }
                         else
+                        {
+                            ToolBarEnableLoaiPhieuXuat(true);
                             return;
+                        }
                         break;
                     }
                 case 1://Thêm
@@ -1013,11 +1032,13 @@ namespace QuanLy_KeToan.PresentationLayer
                             string nguoisua = (gridPhieuXuat.CurrentRow.Cells["_NgS"].Value != null ? gridPhieuXuat.CurrentRow.Cells["_NgS"].Value.ToString() : "");
                             PXBLL.ThemPhieuXuat(maloaiphieuxuat, malohdban,mahdban,mota, ngaylap, nguoilap, ngaysua, nguoisua);
                             LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+                            ToolBarEnableLoaiPhieuXuat(true);
                             px_nhapluoi = 0;
                         }
                         else
                         {
                             px_nhapluoi = 0;
+                            ToolBarEnableLoaiPhieuXuat(true);
                             return;
                         }
 
@@ -1068,19 +1089,22 @@ namespace QuanLy_KeToan.PresentationLayer
                 {
                     gridPhieuXuat.CurrentRow.Cells["MLHDB"].Value = xuly_chuoi(advTreeLoXuat.SelectedNode.Text);
                 }
-                //string name = gridPhieuXuat.Columns[e.ColumnIndex].Name;
-                //if (name == "MPX")
-                //{
-                //    if (gridPhieuXuat.CurrentRow.Cells["MPX"].Value != null)
-                //    {
-                //        FrmChiTietPhieuXuat CTPX = new FrmChiTietPhieuXuat();
-                //        CTPX.maphieuxuat = gridPhieuXuat.CurrentRow.Cells["MPX"].Value.ToString();
-                //        CTPX.id_patch = xuly_chuoi(advTreeLoXuat.SelectedNode.Text);
-                //        CTPX.Show();
-                //    }
-                //    else
-                //        return;
-                //}
+                if (px_nhapluoi == 0 && px_nhaptay == 0)
+                {
+                    string name = gridPhieuXuat.Columns[e.ColumnIndex].Name;
+                    if (name == "MHDB")
+                    {
+                        if (gridPhieuXuat.CurrentRow.Cells["MHDB"].Value != null)
+                        {
+                            FrmChiTietPhieuXuat CTPX = new FrmChiTietPhieuXuat();
+                            CTPX.mahdban = gridPhieuXuat.CurrentRow.Cells["MHDB"].Value.ToString();
+                            CTPX.malohdb = gridPhieuXuat.CurrentRow.Cells["MLHDB"].Value.ToString();//xuly_chuoi(advTreeLoXuat.SelectedNode.Text);
+                            CTPX.Show();
+                        }
+                        else
+                            return;
+                    }
+                }
             }
         }
         //Xử lý phần nhập tay
@@ -1138,12 +1162,12 @@ namespace QuanLy_KeToan.PresentationLayer
             SetConTrolToNull_PhieuXuat();
             SetControlEnable_PhieuXuat(false);
         }
-
         private void btn_PX_Sua_Click(object sender, EventArgs e)
         {
             SetControlEnable_PhieuXuat(false);
+            PX_cmbMLHDB.Enabled = false;
+            PX_cmbMHDB.Enabled = false;
         }
-
         private void btn_PX_Luu_Click(object sender, EventArgs e)
         {
             switch (px_nhaptay)
@@ -1162,12 +1186,15 @@ namespace QuanLy_KeToan.PresentationLayer
                             PX.NguoiLap = PX_cmbNguoiLap.Text;
                             PX.NgaySua = PX_dpNgaySua.Value;
                             PX.NguoiSua = PX_cmbNguoiSua.Text;
-                            PXBLL.SuaPX(malohdban,mahdb,PX);
+                            PXBLL.SuaPX(malohdban, mahdb, PX);
                             LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
                             SetControlEnable_PhieuXuat(true);
                         }
                         else
+                        {
+                            SetControlEnable_PhieuXuat(true);
                             return;
+                        }
                         break;
                     }
                 case 1:
@@ -1207,6 +1234,7 @@ namespace QuanLy_KeToan.PresentationLayer
                             string nguoisua = PX_cmbNguoiSua.Text;
                             PXBLL.ThemPhieuXuat(maloaiphieuxuat,malohdban,mahdban, mota, ngaylap, nguoilap, ngaysua, nguoisua);
                             LayDSPhieuXuatTheoLo(xuly_chuoi(advTreeLoXuat.SelectedNode.Text));
+                            SetControlEnable_PhieuXuat(true);
                             px_nhaptay = 0;
                         }
                         else
@@ -1219,7 +1247,6 @@ namespace QuanLy_KeToan.PresentationLayer
                     }
             }
         }
-
         private void btn_PX_Huy_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Hủy thao tác?", "CANCEL",
