@@ -18,8 +18,8 @@
       <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="NguoiSua" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Hang_KhoChua" Member="KhoChuas" ThisKey="MaHang" OtherKey="MaHang" Type="KhoChua" Cardinality="One" />
-      <Association Name="Hang_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="MaHang" OtherKey="MaHang" Type="ChiTietPhieuNhap" Cardinality="One" />
       <Association Name="Hang_ChiTietHDBan" Member="ChiTietHDBans" ThisKey="MaHang" OtherKey="MaHang" Type="ChiTietHDBan" Cardinality="One" />
+      <Association Name="Hang_ChiTietHDMua" Member="ChiTietHDMuas" ThisKey="MaHang" OtherKey="MaHang" Type="ChiTietHDMua" Cardinality="One" />
       <Association Name="LoaiHang_Hang" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
       <Association Name="NhaCungCap_Hang" Member="NhaCungCap" ThisKey="MaNCC" OtherKey="MaNCC" Type="NhaCungCap" IsForeignKey="true" />
     </Type>
@@ -36,8 +36,8 @@
       <Association Name="LoaiHang_Hang" Member="Hangs" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="Hang" />
       <Association Name="LoaiHang_NhaCungCap" Member="NhaCungCaps" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="NhaCungCap" Cardinality="One" />
       <Association Name="LoaiHang_KhoHang" Member="KhoHangs" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="KhoHang" />
-      <Association Name="LoaiHang_LoPhieuNhap" Member="LoPhieuNhaps" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoPhieuNhap" Cardinality="One" />
       <Association Name="LoaiHang_LoHDBan" Member="LoHDBans" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoHDBan" />
+      <Association Name="LoaiHang_LoHDMua" Member="LoHDMuas" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoHDMua" />
     </Type>
   </Table>
   <Table Name="dbo.NhaCungCap" Member="NhaCungCaps">
@@ -55,7 +55,7 @@
       <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="NhaCungCap_Hang" Member="Hangs" ThisKey="MaNCC" OtherKey="MaNCC" Type="Hang" />
-      <Association Name="NhaCungCap_PhieuNhap" Member="PhieuNhaps" ThisKey="MaNCC" OtherKey="MaNCC" Type="PhieuNhap" />
+      <Association Name="NhaCungCap_HoaDonMua" Member="HoaDonMuas" ThisKey="MaNCC" OtherKey="MaNCC" Type="HoaDonMua" />
       <Association Name="LoaiHang_NhaCungCap" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
       <Association Name="TinhThanh_NhaCungCap" Member="TinhThanh" ThisKey="MaTinh" OtherKey="MaTinh" Type="TinhThanh" IsForeignKey="true" />
     </Type>
@@ -102,8 +102,6 @@
       <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="KhoHang_KhoChua" Member="KhoChuas" ThisKey="MaKhoHang" OtherKey="MaKhoHang" Type="KhoChua" Cardinality="One" />
-      <Association Name="KhoHang_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="MaKhoHang" OtherKey="MaKhoHang" Type="ChiTietPhieuNhap" />
-      <Association Name="KhoHang_ChiTietPhieuNhap1" Member="ChiTietPhieuNhaps1" ThisKey="MaKhoHang" OtherKey="MaKhoHang" Type="ChiTietPhieuNhap" />
       <Association Name="KhoHang_ChiTietPhieuXuat" Member="ChiTietPhieuXuats" ThisKey="MaKhoHang" OtherKey="MaKhoHang" Type="ChiTietPhieuXuat" />
       <Association Name="LoaiHang_KhoHang" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
     </Type>
@@ -119,66 +117,6 @@
       <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="KhoHang_KhoChua" Member="KhoHang" ThisKey="MaKhoHang" OtherKey="MaKhoHang" Type="KhoHang" IsForeignKey="true" />
       <Association Name="Hang_KhoChua" Member="Hang" ThisKey="MaHang" OtherKey="MaHang" Type="Hang" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LoaiPhieuNhap" Member="LoaiPhieuNhaps">
-    <Type Name="LoaiPhieuNhap">
-      <Column Name="MaLoaiPhieuNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenLoaiPhieuNhap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="LoaiPhieuNhap_PhieuNhap" Member="PhieuNhaps" ThisKey="MaLoaiPhieuNhap" OtherKey="MaLoaiPhieuNhap" Type="PhieuNhap" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PhieuNhap" Member="PhieuNhaps">
-    <Type Name="PhieuNhap">
-      <Column Name="MaPhieuNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaLoaiPhieuNhap" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="MaLoNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaNCC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="NgayPhieuNhap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="PhieuNhap_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="MaPhieuNhap,MaLoNhap" OtherKey="MaPhieuNhap,MaLoNhap" Type="ChiTietPhieuNhap" Cardinality="One" />
-      <Association Name="LoaiPhieuNhap_PhieuNhap" Member="LoaiPhieuNhap" ThisKey="MaLoaiPhieuNhap" OtherKey="MaLoaiPhieuNhap" Type="LoaiPhieuNhap" IsForeignKey="true" />
-      <Association Name="NhaCungCap_PhieuNhap" Member="NhaCungCap" ThisKey="MaNCC" OtherKey="MaNCC" Type="NhaCungCap" IsForeignKey="true" />
-      <Association Name="LoPhieuNhap_PhieuNhap" Member="LoPhieuNhap" ThisKey="MaLoNhap" OtherKey="MaLoNhap" Type="LoPhieuNhap" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LoPhieuNhap" Member="LoPhieuNhaps">
-    <Type Name="LoPhieuNhap">
-      <Column Name="MaLoNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaLoaiHang" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="NgayLoNhap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="LoPhieuNhap_PhieuNhap" Member="PhieuNhaps" ThisKey="MaLoNhap" OtherKey="MaLoNhap" Type="PhieuNhap" />
-      <Association Name="LoaiHang_LoPhieuNhap" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ChiTietPhieuNhap" Member="ChiTietPhieuNhaps">
-    <Type Name="ChiTietPhieuNhap">
-      <Column Name="MaPhieuNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaLoNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaHang" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaKhoHang" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
-      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="PhieuNhap_ChiTietPhieuNhap" Member="PhieuNhap" ThisKey="MaPhieuNhap,MaLoNhap" OtherKey="MaPhieuNhap,MaLoNhap" Type="PhieuNhap" IsForeignKey="true" />
-      <Association Name="KhoHang_ChiTietPhieuNhap" Member="KhoHang" ThisKey="MaKhoHang" OtherKey="MaKhoHang" Type="KhoHang" IsForeignKey="true" />
-      <Association Name="Hang_ChiTietPhieuNhap" Member="Hang" ThisKey="MaHang" OtherKey="MaHang" Type="Hang" IsForeignKey="true" />
-      <Association Name="KhoHang_ChiTietPhieuNhap1" Member="KhoHang1" ThisKey="MaKhoHang" OtherKey="MaKhoHang" Type="KhoHang" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.LoaiPhieuXuat" Member="LoaiPhieuXuats">
@@ -377,7 +315,7 @@
       <Column Name="MaLoHDBan" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaHDBan" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaHang" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SoLuong" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
@@ -385,6 +323,123 @@
       <Association Name="ChiTietHDBan_ChiTietPhieuXuat" Member="ChiTietPhieuXuats" ThisKey="MaLoHDBan,MaHDBan,MaHang" OtherKey="MaLoHDBan,MaHDBan,MaHang" Type="ChiTietPhieuXuat" Cardinality="One" />
       <Association Name="HoaDonBan_ChiTietHDBan" Member="HoaDonBan" ThisKey="MaLoHDBan,MaHDBan" OtherKey="MaLoHDBan,MaHDBan" Type="HoaDonBan" IsForeignKey="true" />
       <Association Name="Hang_ChiTietHDBan" Member="Hang" ThisKey="MaHang" OtherKey="MaHang" Type="Hang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiPhieuNhap" Member="LoaiPhieuNhaps">
+    <Type Name="LoaiPhieuNhap">
+      <Column Name="MaLoaiPhieuNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoaiPhieuNhap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LoaiPhieuNhap_PhieuNhap" Member="PhieuNhaps" ThisKey="MaLoaiPhieuNhap" OtherKey="MaLoaiPhieuNhap" Type="PhieuNhap" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoPhieuNhap" Member="LoPhieuNhaps">
+    <Type Name="LoPhieuNhap">
+      <Column Name="MaLoHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayLoNhap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LoPhieuNhap_PhieuNhap" Member="PhieuNhaps" ThisKey="MaLoHDMua" OtherKey="MaLoHDMua" Type="PhieuNhap" Cardinality="One" />
+      <Association Name="LoHDMua_LoPhieuNhap" Member="LoHDMua" ThisKey="MaLoHDMua" OtherKey="MaLoHDMua" Type="LoHDMua" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuNhap" Member="PhieuNhaps">
+    <Type Name="PhieuNhap">
+      <Column Name="MaLoaiPhieuNhap" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PhieuNhap_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="MaLoHDMua,MaHDMua" OtherKey="MaLoHDMua,MaHDMua" Type="ChiTietPhieuNhap" Cardinality="One" />
+      <Association Name="LoaiPhieuNhap_PhieuNhap" Member="LoaiPhieuNhap" ThisKey="MaLoaiPhieuNhap" OtherKey="MaLoaiPhieuNhap" Type="LoaiPhieuNhap" IsForeignKey="true" />
+      <Association Name="LoPhieuNhap_PhieuNhap" Member="LoPhieuNhap" ThisKey="MaLoHDMua" OtherKey="MaLoHDMua" Type="LoPhieuNhap" IsForeignKey="true" />
+      <Association Name="HoaDonMua_PhieuNhap" Member="HoaDonMua" ThisKey="MaLoHDMua,MaHDMua" OtherKey="MaLoHDMua,MaHDMua" Type="HoaDonMua" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietPhieuNhap" Member="ChiTietPhieuNhaps">
+    <Type Name="ChiTietPhieuNhap">
+      <Column Name="MaLoHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHang" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaKhoHang" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PhieuNhap_ChiTietPhieuNhap" Member="PhieuNhap" ThisKey="MaLoHDMua,MaHDMua" OtherKey="MaLoHDMua,MaHDMua" Type="PhieuNhap" IsForeignKey="true" />
+      <Association Name="ChiTietHDMua_ChiTietPhieuNhap" Member="ChiTietHDMua" ThisKey="MaLoHDMua,MaHDMua,MaHang" OtherKey="MaLoHDMua,MaHDMua,MaHang" Type="ChiTietHDMua" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HoaDonMua" Member="HoaDonMuas">
+    <Type Name="HoaDonMua">
+      <Column Name="MaLoaiHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaNCC" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaTienTe" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NgayHDMua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="HoaDonMua_ChiTietHDMua" Member="ChiTietHDMuas" ThisKey="MaLoHDMua,MaHDMua" OtherKey="MaLoHDMua,MaHDMua" Type="ChiTietHDMua" Cardinality="One" />
+      <Association Name="HoaDonMua_PhieuNhap" Member="PhieuNhaps" ThisKey="MaLoHDMua,MaHDMua" OtherKey="MaLoHDMua,MaHDMua" Type="PhieuNhap" Cardinality="One" />
+      <Association Name="LoHDMua_HoaDonMua" Member="LoHDMua" ThisKey="MaLoHDMua" OtherKey="MaLoHDMua" Type="LoHDMua" IsForeignKey="true" />
+      <Association Name="LoaiHDMua_HoaDonMua" Member="LoaiHDMua" ThisKey="MaLoaiHDMua" OtherKey="MaLoaiHDMua" Type="LoaiHDMua" IsForeignKey="true" />
+      <Association Name="NhaCungCap_HoaDonMua" Member="NhaCungCap" ThisKey="MaNCC" OtherKey="MaNCC" Type="NhaCungCap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoHDMua" Member="LoHDMuas">
+    <Type Name="LoHDMua">
+      <Column Name="MaLoHDMua" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaLoaiHang" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayLoHDMua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LoHDMua_HoaDonMua" Member="HoaDonMuas" ThisKey="MaLoHDMua" OtherKey="MaLoHDMua" Type="HoaDonMua" Cardinality="One" />
+      <Association Name="LoHDMua_LoPhieuNhap" Member="LoPhieuNhaps" ThisKey="MaLoHDMua" OtherKey="MaLoHDMua" Type="LoPhieuNhap" Cardinality="One" />
+      <Association Name="LoaiHang_LoHDMua" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaiHang" Type="LoaiHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiHDMua" Member="LoaiHDMuas">
+    <Type Name="LoaiHDMua">
+      <Column Name="MaLoaiHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoaiHDMua" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LoaiHDMua_HoaDonMua" Member="HoaDonMuas" ThisKey="MaLoaiHDMua" OtherKey="MaLoaiHDMua" Type="HoaDonMua" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietHDMua" Member="ChiTietHDMuas">
+    <Type Name="ChiTietHDMua">
+      <Column Name="MaLoHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHDMua" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHang" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiLap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySua" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NguoiSua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ChiTietHDMua_ChiTietPhieuNhap" Member="ChiTietPhieuNhaps" ThisKey="MaLoHDMua,MaHDMua,MaHang" OtherKey="MaLoHDMua,MaHDMua,MaHang" Type="ChiTietPhieuNhap" Cardinality="One" />
+      <Association Name="HoaDonMua_ChiTietHDMua" Member="HoaDonMua" ThisKey="MaLoHDMua,MaHDMua" OtherKey="MaLoHDMua,MaHDMua" Type="HoaDonMua" IsForeignKey="true" />
+      <Association Name="Hang_ChiTietHDMua" Member="Hang" ThisKey="MaHang" OtherKey="MaHang" Type="Hang" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
