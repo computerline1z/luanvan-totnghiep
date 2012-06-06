@@ -22,12 +22,24 @@ namespace QuanLy_KeToan.BusinessLogicLayer
     {
         QuanLy_KeToanDataContext QLKT = new QuanLy_KeToanDataContext();
 
-        public IQueryable LayMaHang(string malohdban)
+        //public IQueryable LayMaHang(string malohdban)
+        //{
+        //    var sql = from hang in QLKT.Hangs
+        //              from px in QLKT.PhieuXuats
+        //              from lohdban in QLKT.LoHDBans
+        //              where hang.MaLoaiHang==lohdban.MaLoaiHang && lohdban.MaLoHDBan==px.MaLoHDBan && px.MaLoHDBan == malohdban
+        //              select new
+        //              {
+        //                  hang.MaHang,
+        //                  hang.TenHang,
+        //              };
+        //    return sql;
+        //}
+        public IQueryable LayMaHang(string malohdban,string mahdban)
         {
             var sql = from hang in QLKT.Hangs
-                      from px in QLKT.PhieuXuats
-                      from lohdban in QLKT.LoHDBans
-                      where hang.MaLoaiHang==lohdban.MaLoaiHang && lohdban.MaLoHDBan==px.MaLoHDBan && px.MaLoHDBan == malohdban
+                      from cthdban in QLKT.ChiTietHDBans
+                      where cthdban.MaLoHDBan==malohdban && cthdban.MaHDBan==mahdban && cthdban.MaHang==hang.MaHang
                       select new
                       {
                           hang.MaHang,
@@ -35,20 +47,47 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       };
             return sql;
         }
+        public int LaySLHangTheoChiTietHDBan(string malohdban, string mahdban, string hang)
+        {
+            int sl = 0;
+            var sql = from cthdb in QLKT.ChiTietHDBans
+                      where cthdb.MaLoHDBan == malohdban && cthdb.MaHDBan == mahdban && cthdb.MaHang == hang
+                      select cthdb.SoLuong;
+            foreach (var item in sql)
+            {
+                sl = System.Convert.ToInt16(item.ToString());
+            }
+            return sl;
+        }
         public IQueryable LayKhoHang(string malohdban)
         {
             var sql = from kh in QLKT.KhoHangs
-                      from px in QLKT.ChiTietPhieuXuats
+                      from px in QLKT.PhieuXuats
                       from lohdban in QLKT.LoHDBans
-                      where (px.MaLoHDBan==lohdban.MaLoHDBan &&
-                        lohdban.MaLoaiHang==kh.MaLoaiHang && px.MaLoHDBan == malohdban)
-                      select new { kh.MaKhoHang, kh.TenKhoHang, };
+                      where (px.MaLoHDBan == lohdban.MaLoHDBan &&
+                        lohdban.MaLoaiHang == kh.MaLoaiHang && px.MaLoHDBan == malohdban)
+                      select new { kh.MaKhoHang, kh.TenKhoHang };
             return sql;
         }
-        public List<Chi_Tiet_Phieu_Xuat> LayChiTietPhieuXuatTheoMaPhieuXuat(string malohdban)
+        public string LayMaKhoHang(string malohdban)
+        {
+            string makhohang = "";
+            var sql = from kh in QLKT.KhoHangs
+                      from px in QLKT.PhieuXuats
+                      from lohdban in QLKT.LoHDBans
+                      where (px.MaLoHDBan == lohdban.MaLoHDBan &&
+                        lohdban.MaLoaiHang == kh.MaLoaiHang && px.MaLoHDBan == malohdban)
+                      select kh.MaKhoHang;
+            foreach (var item in sql)
+            {
+                makhohang = item.ToString();
+            }
+            return makhohang;
+        }
+        public List<Chi_Tiet_Phieu_Xuat> LayChiTietPhieuXuat(string malohdban,string mahdban)
         {
             var sql = (from ctpx in QLKT.ChiTietPhieuXuats
-                       where ctpx.MaLoHDBan == malohdban
+                       where (ctpx.MaLoHDBan == malohdban && ctpx.MaHDBan==mahdban)
                        select new Chi_Tiet_Phieu_Xuat
                        {
                            malohdban = ctpx.MaLoHDBan,
@@ -101,8 +140,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 khochua.SL = sl_khochua;
                 QLKT.SubmitChanges();
                 MessageBox.Show("Cập nhật số lượng: " + mahang + " vào kho chứa " + makhohang + " thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("Số lượng Hàng " + mahang + " giảm đi " + sl_ctpx.ToString() + Environment.NewLine +
-                                "Số lượng Hàng " + mahang + " hiện có " + sl_khochua.ToString());
+                MessageBox.Show("Số lượng Hàng " + mahang + " giảm đi: " + sl_ctpx.ToString() + Environment.NewLine +
+                                "Số lượng Hàng " + mahang + " hiện có: " + sl_khochua.ToString(), "Cập nhật kho chứa",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -110,7 +149,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        public void CapNhatLaiKhoChua(string mahang, string makhohang,int soluongmoi)
+        public void CapNhatLaiKhoChua(string mahang,int soluongmoi)
         {
             int sl_khochua = 0;
             var hang = from kc in QLKT.KhoChuas
@@ -144,13 +183,13 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 QLKT.SubmitChanges();
                 if (update > 0)
                     MessageBox.Show("Số lượng Hàng " + mahang + " xuất thêm khỏi kho: " + update.ToString() + Environment.NewLine +
-                                    "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString());
+                                    "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(),"Cập nhật lại kho chứa",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 else if (update == 0)
                     MessageBox.Show("Số lượng Hàng " + mahang + " giữ nguyên" + Environment.NewLine +
-                                    "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString());
+                                    "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(),"Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Số lượng Hàng " + mahang + " xuất ra giảm bớt: " + update.ToString() + Environment.NewLine +
-                                    "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString());
+                                    "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(),"Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (System.Exception ex)
             {
@@ -170,10 +209,10 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        private bool KiemTraDulieu(string malohban,string mahdban,string mahang)
+        private bool KiemTraDulieu(string malohdban,string mahdban,string mahang)
         {
             var sql = from ctpx in QLKT.ChiTietPhieuXuats
-                      where ctpx.MaLoHDBan == malohban && ctpx.MaHDBan==mahdban && ctpx.MaHang==mahang
+                      where ctpx.MaLoHDBan == malohdban && ctpx.MaHDBan==mahdban && ctpx.MaHang==mahang
                       select ctpx;
             if (sql.Count() > 0)
                 return true;
@@ -257,7 +296,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return false;
             }
         }
-        public void CapNhatLaiKhoChuaKhiXoaCTPX(string mahang,string makhohang, int soluong)
+        public void CapNhatLaiKhoChuaKhiXoaCTPX(string mahang, int soluong)
         {
             int sl_khochua = 0;
             var hang = from kc in QLKT.KhoChuas
@@ -277,14 +316,20 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 KhoChua khochua = QLKT.KhoChuas.Single(_kc => _kc.MaHang == mahang);
                 khochua.SL = sl_khochua;
                 QLKT.SubmitChanges();
-                MessageBox.Show("Số lượng Hàng " + mahang + "  được phục hồi lại " + soluong.ToString()+Environment.NewLine+
-                                "Số lượng Hàng hiện tại "+sl_khochua.ToString());
+                MessageBox.Show("Số lượng Hàng " + mahang + "  được phục hồi lại: " + soluong.ToString()+Environment.NewLine+
+                                "Số lượng Hàng hiện tại " + sl_khochua.ToString(),"Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+        public IQueryable LayNguoiLap()
+        {
+            var sql = from phanquyen in QLKT.PhanQuyens
+                      select new { phanquyen.TenDangNhap };
+            return sql;
         }
     }
 }

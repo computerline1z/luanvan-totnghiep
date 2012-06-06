@@ -9,11 +9,9 @@ namespace QuanLy_KeToan.BusinessLogicLayer
 {
     class Phieu_Nhap
     {
-        public string maphieunhap { get; set; }
         public string maloaiphieunhap { get; set; }
-        public string malonhap { get; set; }
-        public string mancc { get; set; }
-        public DateTime ngayphieunhap { get; set; }
+        public string malohdmua { get; set; }
+        public string mahdmua { get; set; }
         public string mota { get; set; }
         public DateTime ngaylap { get; set; }
         public string nguoilap { get; set; }
@@ -23,25 +21,15 @@ namespace QuanLy_KeToan.BusinessLogicLayer
     class PhieuNhapBLL
     {
         QuanLy_KeToanDataContext QLKT = new QuanLy_KeToanDataContext();
-        ////Lấy dữ liệu cho TreeView
-        public IQueryable LayMaPhieuNhap(string malonhap)
-        {
-            var sql = from pn in QLKT.PhieuNhaps
-                      where pn.MaLoNhap == malonhap
-                      select pn.MaPhieuNhap;
-            return sql;
-        }
-        public List<Phieu_Nhap> LayDSPhieuNhap(string malonhap)
+        public List<Phieu_Nhap> LayDSPhieuNhap(string malohdmua)
         {
             var sql = (from pn in QLKT.PhieuNhaps
-                      where pn.MaLoNhap == malonhap
+                      where pn.MaLoHDMua == malohdmua
                       select  new  Phieu_Nhap
                       {
-                         maphieunhap=pn.MaPhieuNhap,
                          maloaiphieunhap=pn.MaLoaiPhieuNhap,
-                         malonhap=pn.MaLoNhap,
-                         mancc=pn.MaNCC,
-                         ngayphieunhap = Convert.ToDateTime(pn.NgayPhieuNhap == null ? DateTime.Today : pn.NgayPhieuNhap),
+                         malohdmua=pn.MaLoHDMua,
+                         mahdmua=pn.MaHDMua,
                          mota=pn.MoTa,
                          ngaylap = Convert.ToDateTime(pn.NgayLap == null ? DateTime.Today : pn.NgayLap),
                          nguoilap = pn.NguoiLap,
@@ -51,18 +39,18 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       }).ToList<Phieu_Nhap>();
             return sql;
         }
-        private bool KiemTraDulieu(string maphieunhap,string malonhap)
+        private bool KiemTraDulieu(string malohdmua,string mahdmua)
         {
             var sql = from pn in QLKT.PhieuNhaps
-                      where pn.MaPhieuNhap == maphieunhap && pn.MaLoNhap==malonhap
+                      where pn.MaLoHDMua == malohdmua && pn.MaHDMua==mahdmua
                       select pn;
             if (sql.Count() > 0)
                 return true;
             else return false;
         }
-        public void ThemPhieuNhap(string maphieunhap, string maloaiphieunhap, string malonhap, string mancc, DateTime ngayphieunhap, string mota, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
+        public void ThemPhieuNhap(string maloaiphieunhap, string malohdmua, string mahdmua, string mota, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
         {
-            if (KiemTraDulieu(maphieunhap,malonhap) == true)
+            if (KiemTraDulieu(malohdmua, mahdmua) == true)
             {
                 MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -70,11 +58,9 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             try
             {
                 PhieuNhap PN = new PhieuNhap();
-                PN.MaPhieuNhap = maphieunhap;
                 PN.MaLoaiPhieuNhap = maloaiphieunhap;
-                PN.MaLoNhap = malonhap;
-                PN.MaNCC = mancc;
-                PN.NgayPhieuNhap = ngayphieunhap;
+                PN.MaLoHDMua = malohdmua;
+                PN.MaHDMua = mahdmua;
                 PN.MoTa = mota;
                 PN.NgayLap = ngaylap;
                 PN.NguoiLap = nguoilap;
@@ -90,14 +76,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        public void SuaPN(string maphieunhap,string malonhap,PhieuNhap PN)
+        public void SuaPN(string malohdmua,string mahdmua,PhieuNhap PN)
         {
             try
             {
-                PhieuNhap pn = QLKT.PhieuNhaps.Single(_pn => _pn.MaPhieuNhap == maphieunhap && _pn.MaLoNhap==malonhap);
+                PhieuNhap pn = QLKT.PhieuNhaps.Single(_pn => _pn.MaLoHDMua == malohdmua && _pn.MaHDMua==mahdmua);
                 pn.MaLoaiPhieuNhap = PN.MaLoaiPhieuNhap;
-                pn.MaNCC = PN.MaNCC;
-                pn.NgayPhieuNhap = PN.NgayPhieuNhap;
                 pn.MoTa = PN.MoTa;
                 pn.NgayLap = PN.NgayLap;
                 pn.NguoiLap = PN.NguoiLap;
@@ -112,19 +96,19 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        private bool KiemTraMaPhieuNhapChiTietPhieuNhap(string maphieunhap,string malonhap)
+        private bool KiemTraMaPhieuNhapChiTietPhieuNhap(string malohdmua,string mahdmua)
         {
             var sql = from ctpn in QLKT.ChiTietPhieuNhaps
-                      where ctpn.MaPhieuNhap == maphieunhap && ctpn.MaLoNhap==malonhap
+                      where ctpn.MaLoHDMua == malohdmua && ctpn.MaHDMua==mahdmua
                       select ctpn;
             if (sql.Count() > 0)
                 return true;
             else
                 return false;
         }
-        public void XoaPN(string maphieunhap,string malonhap)
+        public void XoaPN(string malohdmua,string mahdmua)
         {
-            if (KiemTraMaPhieuNhapChiTietPhieuNhap(maphieunhap,malonhap) == true)
+            if (KiemTraMaPhieuNhapChiTietPhieuNhap(malohdmua,mahdmua) == true)
             {
                 MessageBox.Show("Không được xóa dữ liệu này-Liên quan đến dữ liệu Chi Tiết Phiếu Nhập", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -132,7 +116,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             try
             {
                 var delete = from pn in QLKT.PhieuNhaps
-                             where pn.MaPhieuNhap == maphieunhap && pn.MaLoNhap==malonhap
+                             where pn.MaLoHDMua == malohdmua && pn.MaHDMua==mahdmua
                              select pn;
                 if (delete.Count() > 0)
                 {
@@ -157,36 +141,36 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       };
             return sql;
         }
-        //public IQueryable LayMaLoNhap()
-        //{
-        //    var sql = from ln in QLKT.LoPhieuNhaps
-        //              select new
-        //              {
-        //                  ln.MaLoNhap,
-        //              };
-        //    return sql;
-        //}
-        //public IQueryable LayMaNCC( string malonhap)
-        //{
-        //    var sql = from ncc in QLKT.NhaCungCaps
-        //              from lpn in QLKT.LoPhieuNhaps
-        //              from pn in QLKT.PhieuNhaps
-        //              where lpn.MaLoaiHang==ncc.MaLoaiHang && pn.MaLoNhap==lpn.MaLoNhap && pn.MaLoNhap==malonhap
-        //              select new
-        //              {
-        //                  ncc.MaNCC,
-        //                  ncc.TenNCC,
-        //              };
-        //    return sql;
-        //}
-        public IQueryable LayMaNCC()
+        public IQueryable LayLoHDMua()
         {
-            var sql = (from ncc in QLKT.NhaCungCaps
+            var sql = from lohdmua in QLKT.LoHDMuas
+                      select new { lohdmua.MaLoHDMua };
+            return sql;
+        }
+        public IQueryable LayMaHDMuaTheoLo(string malohdmua)
+        {
+            var sql = from hdmua in QLKT.HoaDonMuas
+
+                      where hdmua.MaLoHDMua == malohdmua
                       select new
                       {
-                          ncc.MaNCC,
-                          ncc.TenNCC,
-                      }).Distinct();
+                          hdmua.MaHDMua,
+                      };
+            return sql;
+        }
+        public IQueryable LayMaHDMua()
+        {
+            var sql = (from hdmua in QLKT.HoaDonMuas
+                       select new
+                       {
+                           hdmua.MaHDMua,
+                       }).Distinct();
+            return sql;
+        }
+        public IQueryable LayNguoiLap()
+        {
+            var sql = from phanquyen in QLKT.PhanQuyens
+                      select new { phanquyen.TenDangNhap };
             return sql;
         }
     }

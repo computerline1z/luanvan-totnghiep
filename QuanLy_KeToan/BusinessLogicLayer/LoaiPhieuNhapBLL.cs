@@ -49,7 +49,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         {
             if (KiemTraLoaiPhieuNhap(maloaiphieunhap) == true)
             {
-                MessageBox.Show("Đã tồn tại dữ liệu này trong csdl", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -123,6 +123,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        public IQueryable LayNguoiLap()
+        {
+            var sql = from phanquyen in QLKT.PhanQuyens
+                      select new { phanquyen.TenDangNhap };
+            return sql;
         }
     }
 }

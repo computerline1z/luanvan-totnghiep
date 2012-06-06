@@ -8,8 +8,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
 {
     class Chi_Tiet_Phieu_Nhap
     {
-        public string maphieunhap { get; set; }
-        public string malonhap { get; set; }
+        public string malohdmua { get; set; }
+        public string mahdmua { get; set; }
         public string mahang { get; set; }
         public string makhohang { get; set; }
         public int soluong { get; set; }
@@ -22,12 +22,11 @@ namespace QuanLy_KeToan.BusinessLogicLayer
     {
         QuanLy_KeToanDataContext QLKT = new QuanLy_KeToanDataContext();
 
-        public IQueryable LayMaHang(string maphieunhap)
+        public IQueryable LayMaHang(string malohdmua,string mahdmua)
         {
             var sql = from hang in QLKT.Hangs
-                      from pn in QLKT.PhieuNhaps
-                      from lpn in QLKT.LoPhieuNhaps
-                      where hang.MaLoaiHang==lpn.MaLoaiHang && lpn.MaLoNhap==pn.MaLoNhap && pn.MaPhieuNhap == maphieunhap
+                      from cthdmua in QLKT.ChiTietHDMuas
+                      where hang.MaHang==cthdmua.MaHang && cthdmua.MaLoHDMua ==malohdmua && cthdmua.MaHDMua==mahdmua
                       select new
                       {
                           hang.MaHang,
@@ -35,32 +34,51 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       };
             return sql;
         }
-        public IQueryable LayKhoHang(string maphieunhap)
+        public int LaySLHangTheoChiTietHDMua(string malohdmua, string mahdmua, string hang)
+        {
+            int sl = 0;
+            var sql = from cthdm in QLKT.ChiTietHDMuas
+                      where cthdm.MaLoHDMua == malohdmua && cthdm.MaHDMua == mahdmua && cthdm.MaHang == hang
+                      select cthdm.SoLuong;
+            foreach (var item in sql)
+            {
+                sl = System.Convert.ToInt16(item.ToString());
+            }
+            return sl;
+        }
+        public IQueryable LayKhoHang(string malohdmua)
         {
             var sql = from kh in QLKT.KhoHangs
                       from pn in QLKT.PhieuNhaps
-                      from lpn in QLKT.LoPhieuNhaps
-                      where pn.MaLoNhap==lpn.MaLoNhap && lpn.MaLoaiHang==kh.MaLoaiHang && pn.MaPhieuNhap == maphieunhap
+                      from lohdmua in QLKT.LoHDMuas
+                      where (pn.MaLoHDMua==lohdmua.MaLoHDMua &&
+                        lohdmua.MaLoaiHang==kh.MaLoaiHang && pn.MaLoHDMua == malohdmua)
                       select new { kh.MaKhoHang, kh.TenKhoHang, };
             return sql;
         }
-        public IQueryable LayMaKH(string maphieunhap)
+        public string LayMaKhoHang(string malohdmua)
         {
+            string makhohang = "";
             var sql = from kh in QLKT.KhoHangs
                       from pn in QLKT.PhieuNhaps
-                      from lpn in QLKT.LoPhieuNhaps
-                      where pn.MaLoNhap == lpn.MaLoNhap && lpn.MaLoaiHang == kh.MaLoaiHang && pn.MaPhieuNhap == maphieunhap
+                      from lohdmua in QLKT.LoHDMuas
+                      where (pn.MaLoHDMua == lohdmua.MaLoHDMua &&
+                        lohdmua.MaLoaiHang == kh.MaLoaiHang && pn.MaLoHDMua == malohdmua)
                       select kh.MaKhoHang;
-            return sql;
+            foreach (var item in sql)
+            {
+                makhohang = item.ToString();
+            }
+            return makhohang;
         }
-        public List<Chi_Tiet_Phieu_Nhap> LayChiTietPhieuNhapTheoMaPhieuNhap(string maphieunhap)
+        public List<Chi_Tiet_Phieu_Nhap> LayChiTietPhieuNhap(string malohdmua,string mahdmua)
         {
             var sql = (from ctpn in QLKT.ChiTietPhieuNhaps
-                       where ctpn.MaPhieuNhap == maphieunhap
+                       where (ctpn.MaLoHDMua == malohdmua && ctpn.MaHDMua == mahdmua)
                        select new Chi_Tiet_Phieu_Nhap
                        {
-                           maphieunhap = ctpn.MaPhieuNhap,
-                           malonhap=ctpn.MaLoNhap,
+                           malohdmua = ctpn.MaLoHDMua,
+                           mahdmua = ctpn.MaHDMua,
                            mahang = ctpn.MaHang,
                            makhohang = ctpn.MaKhoHang,
                            soluong = System.Convert.ToInt16(ctpn.SoLuong.Value != null ? ctpn.SoLuong : 0),
@@ -104,8 +122,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 khochua.SL = sl_khochua;
                 QLKT.SubmitChanges();
                 MessageBox.Show("Cập nhật số lượng: " + mahang + " vào kho chứa "+makhohang+" thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("Số lượng Hàng " + mahang + " tăng thêm " + sl_ctpn.ToString() + Environment.NewLine +
-                                "Số lượng Hàng " + mahang + " hiện có "+sl_khochua.ToString());
+                MessageBox.Show("Số lượng Hàng " + mahang + " tăng thêm: " + sl_ctpn.ToString() + Environment.NewLine +
+                                "Số lượng Hàng " + mahang + " hiện có: "+sl_khochua.ToString());
             }
             catch (Exception ex)
             {
@@ -113,7 +131,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        public void CapNhatLaiKhoChua(string mahang, string makhohang,int soluongmoi)
+        public void CapNhatLaiKhoChua(string mahang,int soluongmoi)
         {
             int sl_khochua = 0;
             var hang = from kc in QLKT.KhoChuas
@@ -149,7 +167,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                     MessageBox.Show("Số lượng Hàng " + mahang + " thêm tiếp vào kho: " + update.ToString()+Environment.NewLine+
                                     "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString());
                 else if (update == 0)
-                    MessageBox.Show("Số lượng Hàng " + mahang + " giữ nguyên"+Environment.NewLine+
+                    MessageBox.Show("Số lượng Hàng " + mahang + " giữ nguyên."+Environment.NewLine+
                                     "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString());
                 else
                     MessageBox.Show("Số lượng Hàng " + mahang + " thêm vào giảm bớt: " + update.ToString()+Environment.NewLine+
@@ -174,10 +192,10 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             }
         }
 
-        private bool KiemTraDulieu(string maphieunhap,string malonhap,string mahang)
+        private bool KiemTraDulieu(string malohdmua,string mahdmua,string mahang)
         {
             var sql = from ctpn in QLKT.ChiTietPhieuNhaps
-                      where ctpn.MaPhieuNhap == maphieunhap && ctpn.MaLoNhap==malonhap && ctpn.MaHang==mahang
+                      where ctpn.MaLoHDMua == malohdmua && ctpn.MaHDMua==mahdmua && ctpn.MaHang==mahang
                       select ctpn;
             if (sql.Count() > 0)
                 return true;
@@ -186,9 +204,9 @@ namespace QuanLy_KeToan.BusinessLogicLayer
 
         //Code Thêm-Xóa-Sửa Chi tiết phiếu nhập
 
-        public bool ThemCTPN(string maphieunhap,string malonhap,string mahang, string makhohang, int soluong,DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
+        public bool ThemCTPN(string malohdmua,string mahdmua,string mahang, string makhohang, int soluong,DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
         {
-            if (KiemTraDulieu(maphieunhap,malonhap,mahang) == true)
+            if (KiemTraDulieu(malohdmua,mahdmua,mahang) == true)
             {
                 MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -196,8 +214,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             try
             {
                 ChiTietPhieuNhap CTPN = new ChiTietPhieuNhap();
-                CTPN.MaPhieuNhap = maphieunhap;
-                CTPN.MaLoNhap = malonhap;
+                CTPN.MaLoHDMua = malohdmua;
+                CTPN.MaHDMua = mahdmua;
                 CTPN.MaHang = mahang;
                 CTPN.MaKhoHang = makhohang;
                 CTPN.SoLuong = soluong;
@@ -216,11 +234,11 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return false;
             }
         }
-        public bool SuaCTPN(string maphieunhap,string malonhap,string mahang,ChiTietPhieuNhap CTPN)
+        public bool SuaCTPN(string malohdmua,string mahdmua,string mahang,ChiTietPhieuNhap CTPN)
         {
             try
             {
-                ChiTietPhieuNhap ctpn = QLKT.ChiTietPhieuNhaps.Single(_ctpn => _ctpn.MaPhieuNhap == maphieunhap && _ctpn.MaLoNhap==malonhap && _ctpn.MaHang==mahang);
+                ChiTietPhieuNhap ctpn = QLKT.ChiTietPhieuNhaps.Single(_ctpn => _ctpn.MaLoHDMua == malohdmua && _ctpn.MaHDMua==mahdmua && _ctpn.MaHang==mahang);
                 ctpn.MaKhoHang = CTPN.MaKhoHang;
                 ctpn.SoLuong = CTPN.SoLuong;
                 ctpn.NgayLap = CTPN.NgayLap;
@@ -238,12 +256,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             }
         }
 
-        public bool XoaCTPN(string maphieunhap,string malonhap,string mahang)
+        public bool XoaCTPN(string malohdmua,string mahdmua,string mahang)
         {
             try
             {
                 var delete = from ctpn in QLKT.ChiTietPhieuNhaps
-                             where ctpn.MaPhieuNhap == maphieunhap && ctpn.MaLoNhap==malonhap && ctpn.MaHang==mahang
+                             where ctpn.MaLoHDMua == malohdmua && ctpn.MaHDMua==mahdmua && ctpn.MaHang==mahang
                              select ctpn;
                 if (delete.Count() > 0)
                 {
@@ -261,7 +279,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return false;
             }
         }
-        public void CapNhatLaiKhoChuaKhiXoaCTPN(string mahang,string makhohang, int soluong)
+        public void CapNhatLaiKhoChuaKhiXoaCTPN(string mahang, int soluong)
         {
             int sl_khochua = 0;
             var hang = from kc in QLKT.KhoChuas
@@ -288,6 +306,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+        public IQueryable LayNguoiLap()
+        {
+            var sql = from phanquyen in QLKT.PhanQuyens
+                      select new { phanquyen.TenDangNhap };
+            return sql;
         }
     }
 }

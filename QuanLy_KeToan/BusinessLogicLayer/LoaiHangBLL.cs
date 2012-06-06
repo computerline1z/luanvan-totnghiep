@@ -71,12 +71,20 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 MessageBox.Show("Bạn không thể xóa loại hàng này-Liên quan đến dữ liệu Hàng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            var ktr2=from ln in QLKT.LoPhieuNhaps
-                     where ln.MaLoaiHang==maloaihang
-                     select ln;
+            var ktr2=from lhdb in QLKT.LoHDBans
+                     where lhdb.MaLoaiHang==maloaihang
+                     select lhdb;
             if (ktr2.Count() > 0)
             {
-                MessageBox.Show("Bạn không thể xóa loại hàng này-Liên quan đến dữ liệu Lô Nhập Hàng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn không thể xóa loại hàng này-Liên quan đến dữ liệu Lô Hóa Đơn Bán", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var ktr3 = from lhdm in QLKT.LoHDMuas
+                       where lhdm.MaLoaiHang == maloaihang
+                       select lhdm;
+            if (ktr3.Count() > 0)
+            {
+                MessageBox.Show("Bạn không thể xóa loại hàng này-Liên quan đến dữ liệu Lô Hóa Đơn Mua", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
