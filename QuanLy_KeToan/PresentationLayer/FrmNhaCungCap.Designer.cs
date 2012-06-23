@@ -66,12 +66,6 @@
             this.txtMaNCC = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.lblMaKhachHang = new DevComponents.DotNetBar.LabelX();
-            this.panelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
-            this.advTreeTinhThanh = new DevComponents.AdvTree.AdvTree();
-            this.nodeTinhThanh = new DevComponents.AdvTree.Node();
-            this.nodeConnector2 = new DevComponents.AdvTree.NodeConnector();
-            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
-            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.panelDockContainer3 = new DevComponents.DotNetBar.PanelDockContainer();
             this.grbTimKiemThuong = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtRecords = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -84,6 +78,12 @@
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.cmbTimKiemMaTinhThanh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.panelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
+            this.advTreeTinhThanh = new DevComponents.AdvTree.AdvTree();
+            this.nodeTinhThanh = new DevComponents.AdvTree.Node();
+            this.nodeConnector2 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.dockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.dockContainerItem2 = new DevComponents.DotNetBar.DockContainerItem();
             this.dockContainerItem3 = new DevComponents.DotNetBar.DockContainerItem();
@@ -144,10 +144,10 @@
             this.groupSua.SuspendLayout();
             this.navigationPanePanel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
-            this.panelDockContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advTreeTinhThanh)).BeginInit();
             this.panelDockContainer3.SuspendLayout();
             this.grbTimKiemThuong.SuspendLayout();
+            this.panelDockContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTreeTinhThanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabQuanLyNCC)).BeginInit();
             this.tabQuanLyNCC.SuspendLayout();
             this.tabControlNCC.SuspendLayout();
@@ -211,9 +211,9 @@
             this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.bar1.AutoSyncBarCaption = true;
             this.bar1.CloseSingleTab = true;
-            this.bar1.Controls.Add(this.panelDockContainer2);
             this.bar1.Controls.Add(this.panelDockContainer1);
             this.bar1.Controls.Add(this.panelDockContainer3);
+            this.bar1.Controls.Add(this.panelDockContainer2);
             this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -223,13 +223,13 @@
             this.bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.SelectedDockTab = 1;
+            this.bar1.SelectedDockTab = 0;
             this.bar1.Size = new System.Drawing.Size(298, 692);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
-            this.bar1.Text = "Thao Tác";
+            this.bar1.Text = "Duyệt Theo Danh Mục";
             // 
             // panelDockContainer2
             // 
@@ -792,90 +792,6 @@
             this.lblMaKhachHang.TabIndex = 0;
             this.lblMaKhachHang.Text = "Mã Nhà Cung Cấp:";
             // 
-            // panelDockContainer1
-            // 
-            this.panelDockContainer1.Controls.Add(this.advTreeTinhThanh);
-            this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
-            this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(292, 641);
-            this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.panelDockContainer1.Style.GradientAngle = 90;
-            this.panelDockContainer1.TabIndex = 0;
-            // 
-            // advTreeTinhThanh
-            // 
-            this.advTreeTinhThanh.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
-            this.advTreeTinhThanh.AllowDrop = true;
-            this.advTreeTinhThanh.BackColor = System.Drawing.SystemColors.Window;
-            // 
-            // 
-            // 
-            this.advTreeTinhThanh.BackgroundStyle.Class = "TreeBorderKey";
-            this.advTreeTinhThanh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.advTreeTinhThanh.CellEdit = true;
-            this.advTreeTinhThanh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advTreeTinhThanh.GridColumnLines = false;
-            this.advTreeTinhThanh.GridLinesColor = System.Drawing.Color.DodgerBlue;
-            this.advTreeTinhThanh.HotTracking = true;
-            this.advTreeTinhThanh.Location = new System.Drawing.Point(0, 0);
-            this.advTreeTinhThanh.Name = "advTreeTinhThanh";
-            this.advTreeTinhThanh.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
-            this.nodeTinhThanh});
-            this.advTreeTinhThanh.NodesConnector = this.nodeConnector2;
-            this.advTreeTinhThanh.NodeStyle = this.elementStyle2;
-            this.advTreeTinhThanh.PathSeparator = ";";
-            this.advTreeTinhThanh.SelectionBoxStyle = DevComponents.AdvTree.eSelectionStyle.FullRowSelect;
-            this.advTreeTinhThanh.Size = new System.Drawing.Size(292, 641);
-            this.advTreeTinhThanh.Styles.Add(this.elementStyle1);
-            this.advTreeTinhThanh.Styles.Add(this.elementStyle2);
-            this.advTreeTinhThanh.TabIndex = 7;
-            this.advTreeTinhThanh.Text = "Tỉnh Thành";
-            this.advTreeTinhThanh.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTreeTinhThanh_AfterNodeSelect_1);
-            // 
-            // nodeTinhThanh
-            // 
-            this.nodeTinhThanh.Name = "nodeTinhThanh";
-            this.nodeTinhThanh.Text = "Tỉnh Thành";
-            // 
-            // nodeConnector2
-            // 
-            this.nodeConnector2.LineColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // elementStyle2
-            // 
-            this.elementStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
-            this.elementStyle2.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(120)))));
-            this.elementStyle2.BackColorGradientAngle = 90;
-            this.elementStyle2.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderBottomWidth = 1;
-            this.elementStyle2.BorderColor = System.Drawing.Color.DarkGray;
-            this.elementStyle2.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderLeftWidth = 1;
-            this.elementStyle2.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderRightWidth = 1;
-            this.elementStyle2.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderTopWidth = 1;
-            this.elementStyle2.Class = "";
-            this.elementStyle2.CornerDiameter = 4;
-            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle2.Description = "Orange";
-            this.elementStyle2.Name = "elementStyle2";
-            this.elementStyle2.PaddingBottom = 1;
-            this.elementStyle2.PaddingLeft = 1;
-            this.elementStyle2.PaddingRight = 1;
-            this.elementStyle2.PaddingTop = 1;
-            this.elementStyle2.TextColor = System.Drawing.Color.Black;
-            // 
-            // elementStyle1
-            // 
-            this.elementStyle1.Class = "";
-            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle1.Name = "elementStyle1";
-            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
             // panelDockContainer3
             // 
             this.panelDockContainer3.Controls.Add(this.grbTimKiemThuong);
@@ -1087,6 +1003,90 @@
             this.labelX12.Size = new System.Drawing.Size(58, 15);
             this.labelX12.TabIndex = 3;
             this.labelX12.Text = "Tỉnh Thành";
+            // 
+            // panelDockContainer1
+            // 
+            this.panelDockContainer1.Controls.Add(this.advTreeTinhThanh);
+            this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
+            this.panelDockContainer1.Name = "panelDockContainer1";
+            this.panelDockContainer1.Size = new System.Drawing.Size(292, 641);
+            this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.panelDockContainer1.Style.GradientAngle = 90;
+            this.panelDockContainer1.TabIndex = 0;
+            // 
+            // advTreeTinhThanh
+            // 
+            this.advTreeTinhThanh.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTreeTinhThanh.AllowDrop = true;
+            this.advTreeTinhThanh.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTreeTinhThanh.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTreeTinhThanh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTreeTinhThanh.CellEdit = true;
+            this.advTreeTinhThanh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advTreeTinhThanh.GridColumnLines = false;
+            this.advTreeTinhThanh.GridLinesColor = System.Drawing.Color.DodgerBlue;
+            this.advTreeTinhThanh.HotTracking = true;
+            this.advTreeTinhThanh.Location = new System.Drawing.Point(0, 0);
+            this.advTreeTinhThanh.Name = "advTreeTinhThanh";
+            this.advTreeTinhThanh.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
+            this.nodeTinhThanh});
+            this.advTreeTinhThanh.NodesConnector = this.nodeConnector2;
+            this.advTreeTinhThanh.NodeStyle = this.elementStyle2;
+            this.advTreeTinhThanh.PathSeparator = ";";
+            this.advTreeTinhThanh.SelectionBoxStyle = DevComponents.AdvTree.eSelectionStyle.FullRowSelect;
+            this.advTreeTinhThanh.Size = new System.Drawing.Size(292, 641);
+            this.advTreeTinhThanh.Styles.Add(this.elementStyle1);
+            this.advTreeTinhThanh.Styles.Add(this.elementStyle2);
+            this.advTreeTinhThanh.TabIndex = 7;
+            this.advTreeTinhThanh.Text = "Tỉnh Thành";
+            this.advTreeTinhThanh.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTreeTinhThanh_AfterNodeSelect_1);
+            // 
+            // nodeTinhThanh
+            // 
+            this.nodeTinhThanh.Name = "nodeTinhThanh";
+            this.nodeTinhThanh.Text = "Tỉnh Thành";
+            // 
+            // nodeConnector2
+            // 
+            this.nodeConnector2.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle2
+            // 
+            this.elementStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
+            this.elementStyle2.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(120)))));
+            this.elementStyle2.BackColorGradientAngle = 90;
+            this.elementStyle2.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderBottomWidth = 1;
+            this.elementStyle2.BorderColor = System.Drawing.Color.DarkGray;
+            this.elementStyle2.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderLeftWidth = 1;
+            this.elementStyle2.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderRightWidth = 1;
+            this.elementStyle2.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderTopWidth = 1;
+            this.elementStyle2.Class = "";
+            this.elementStyle2.CornerDiameter = 4;
+            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle2.Description = "Orange";
+            this.elementStyle2.Name = "elementStyle2";
+            this.elementStyle2.PaddingBottom = 1;
+            this.elementStyle2.PaddingLeft = 1;
+            this.elementStyle2.PaddingRight = 1;
+            this.elementStyle2.PaddingTop = 1;
+            this.elementStyle2.TextColor = System.Drawing.Color.Black;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.Class = "";
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // dockContainerItem1
             // 
@@ -1607,11 +1607,11 @@
             this.groupSua.ResumeLayout(false);
             this.navigationPanePanel1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
-            this.panelDockContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.advTreeTinhThanh)).EndInit();
             this.panelDockContainer3.ResumeLayout(false);
             this.grbTimKiemThuong.ResumeLayout(false);
             this.grbTimKiemThuong.PerformLayout();
+            this.panelDockContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTreeTinhThanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabQuanLyNCC)).EndInit();
             this.tabQuanLyNCC.ResumeLayout(false);
             this.tabControlNCC.ResumeLayout(false);

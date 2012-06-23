@@ -29,20 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyKhoHang));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyKhoHang));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.expandablePanelCauHinh = new DevComponents.DotNetBar.ExpandablePanel();
-            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonBlack = new DevComponents.DotNetBar.ButtonX();
-            this.buttonBlue = new DevComponents.DotNetBar.ButtonX();
-            this.buttonSilver = new DevComponents.DotNetBar.ButtonX();
-            this.colorPickerButton = new DevComponents.DotNetBar.ColorPickerButton();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.gridKhoHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.ColMaKhohang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,8 +129,6 @@
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txtTenHang = new System.Windows.Forms.ToolStripTextBox();
-            this.expandablePanelCauHinh.SuspendLayout();
-            this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridKhoHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingKhoHang)).BeginInit();
@@ -153,175 +144,6 @@
             this.bindingKhoChuaTimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
-            // expandablePanelCauHinh
-            // 
-            this.expandablePanelCauHinh.CanvasColor = System.Drawing.SystemColors.Control;
-            this.expandablePanelCauHinh.CollapseDirection = DevComponents.DotNetBar.eCollapseDirection.TopToBottom;
-            this.expandablePanelCauHinh.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.expandablePanelCauHinh.Controls.Add(this.groupPanel2);
-            this.expandablePanelCauHinh.Controls.Add(this.groupPanel1);
-            this.expandablePanelCauHinh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.expandablePanelCauHinh.Expanded = false;
-            this.expandablePanelCauHinh.ExpandedBounds = new System.Drawing.Rectangle(0, 612, 1354, 80);
-            this.expandablePanelCauHinh.Location = new System.Drawing.Point(0, 666);
-            this.expandablePanelCauHinh.Name = "expandablePanelCauHinh";
-            this.expandablePanelCauHinh.Size = new System.Drawing.Size(1354, 26);
-            this.expandablePanelCauHinh.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanelCauHinh.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.expandablePanelCauHinh.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.expandablePanelCauHinh.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.expandablePanelCauHinh.Style.GradientAngle = 90;
-            this.expandablePanelCauHinh.TabIndex = 12;
-            this.expandablePanelCauHinh.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanelCauHinh.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.expandablePanelCauHinh.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
-            this.expandablePanelCauHinh.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.expandablePanelCauHinh.TitleStyle.GradientAngle = 90;
-            this.expandablePanelCauHinh.TitleText = "<b>Cấu Hình Hệ Thống-Màn Hình Quản Lý Kho Hàng\r\n-CN08B </b>";
-            // 
-            // groupPanel2
-            // 
-            this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupPanel2.Location = new System.Drawing.Point(0, 26);
-            this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(436, 0);
-            // 
-            // 
-            // 
-            this.groupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel2.Style.BackColorGradientAngle = 90;
-            this.groupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderBottomWidth = 1;
-            this.groupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderLeftWidth = 1;
-            this.groupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderRightWidth = 1;
-            this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderTopWidth = 1;
-            this.groupPanel2.Style.Class = "";
-            this.groupPanel2.Style.CornerDiameter = 4;
-            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel2.StyleMouseDown.Class = "";
-            this.groupPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel2.StyleMouseOver.Class = "";
-            this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel2.TabIndex = 2;
-            this.groupPanel2.Text = "Thông Tin Hệ Thống";
-            this.groupPanel2.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
-            // 
-            // groupPanel1
-            // 
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.buttonBlack);
-            this.groupPanel1.Controls.Add(this.buttonBlue);
-            this.groupPanel1.Controls.Add(this.buttonSilver);
-            this.groupPanel1.Controls.Add(this.colorPickerButton);
-            this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupPanel1.Location = new System.Drawing.Point(1004, 26);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(350, 0);
-            // 
-            // 
-            // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.Class = "";
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseDown.Class = "";
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseOver.Class = "";
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 1;
-            this.groupPanel1.TitleImage = ((System.Drawing.Image)(resources.GetObject("groupPanel1.TitleImage")));
-            this.groupPanel1.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
-            // 
-            // buttonBlack
-            // 
-            this.buttonBlack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonBlack.BackColor = System.Drawing.Color.Black;
-            this.buttonBlack.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.buttonBlack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBlack.Location = new System.Drawing.Point(165, 3);
-            this.buttonBlack.Name = "buttonBlack";
-            this.buttonBlack.Size = new System.Drawing.Size(75, 23);
-            this.buttonBlack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonBlack.TabIndex = 3;
-            this.buttonBlack.Text = "Black";
-            // 
-            // buttonBlue
-            // 
-            this.buttonBlue.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonBlue.BackColor = System.Drawing.Color.Blue;
-            this.buttonBlue.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.buttonBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBlue.Location = new System.Drawing.Point(84, 3);
-            this.buttonBlue.Name = "buttonBlue";
-            this.buttonBlue.Size = new System.Drawing.Size(75, 23);
-            this.buttonBlue.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonBlue.TabIndex = 2;
-            this.buttonBlue.Text = "Blue";
-            // 
-            // buttonSilver
-            // 
-            this.buttonSilver.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonSilver.BackColor = System.Drawing.Color.Silver;
-            this.buttonSilver.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.buttonSilver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSilver.Location = new System.Drawing.Point(3, 3);
-            this.buttonSilver.Name = "buttonSilver";
-            this.buttonSilver.Size = new System.Drawing.Size(75, 23);
-            this.buttonSilver.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonSilver.TabIndex = 1;
-            this.buttonSilver.Text = "Silver";
-            // 
-            // colorPickerButton
-            // 
-            this.colorPickerButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.colorPickerButton.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.colorPickerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colorPickerButton.Image = ((System.Drawing.Image)(resources.GetObject("colorPickerButton.Image")));
-            this.colorPickerButton.Location = new System.Drawing.Point(247, 3);
-            this.colorPickerButton.Name = "colorPickerButton";
-            this.colorPickerButton.SelectedColorImageRectangle = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.colorPickerButton.Size = new System.Drawing.Size(94, 23);
-            this.colorPickerButton.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.colorPickerButton.TabIndex = 0;
-            this.colorPickerButton.Text = "Tùy Chỉnh";
-            // 
             // groupPanel3
             // 
             this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
@@ -334,7 +156,7 @@
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupPanel3.Location = new System.Drawing.Point(0, 0);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(605, 666);
+            this.groupPanel3.Size = new System.Drawing.Size(605, 692);
             // 
             // 
             // 
@@ -414,7 +236,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridKhoHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.gridKhoHang.Size = new System.Drawing.Size(599, 566);
+            this.gridKhoHang.Size = new System.Drawing.Size(599, 592);
             this.gridKhoHang.TabIndex = 1;
             this.gridKhoHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridKhoHang_CellClick);
             // 
@@ -742,7 +564,7 @@
             this.toolStripSeparator4,
             this.toolStripLabel5,
             this.cmbTenLoaiHang});
-            this.bindingKhoHangTimKiem.Location = new System.Drawing.Point(0, 591);
+            this.bindingKhoHangTimKiem.Location = new System.Drawing.Point(0, 617);
             this.bindingKhoHangTimKiem.MoveFirstItem = null;
             this.bindingKhoHangTimKiem.MoveLastItem = null;
             this.bindingKhoHangTimKiem.MoveNextItem = null;
@@ -796,7 +618,7 @@
             this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel4.Location = new System.Drawing.Point(605, 0);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(749, 666);
+            this.groupPanel4.Size = new System.Drawing.Size(749, 692);
             // 
             // 
             // 
@@ -858,7 +680,7 @@
             this.expandablePanelThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expandablePanelThongKe.Location = new System.Drawing.Point(713, 25);
             this.expandablePanelThongKe.Name = "expandablePanelThongKe";
-            this.expandablePanelThongKe.Size = new System.Drawing.Size(30, 567);
+            this.expandablePanelThongKe.Size = new System.Drawing.Size(30, 593);
             this.expandablePanelThongKe.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanelThongKe.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanelThongKe.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1114,7 +936,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridKhoChua.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.gridKhoChua.Size = new System.Drawing.Size(743, 567);
+            this.gridKhoChua.Size = new System.Drawing.Size(743, 593);
             this.gridKhoChua.TabIndex = 1;
             this.gridKhoChua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridKhoChua_CellClick);
             // 
@@ -1443,7 +1265,7 @@
             this.toolStripSeparator11,
             this.toolStripLabel4,
             this.txtTenHang});
-            this.bindingKhoChuaTimKiem.Location = new System.Drawing.Point(0, 592);
+            this.bindingKhoChuaTimKiem.Location = new System.Drawing.Point(0, 618);
             this.bindingKhoChuaTimKiem.MoveFirstItem = null;
             this.bindingKhoChuaTimKiem.MoveLastItem = null;
             this.bindingKhoChuaTimKiem.MoveNextItem = null;
@@ -1508,14 +1330,11 @@
             this.ClientSize = new System.Drawing.Size(1354, 692);
             this.Controls.Add(this.groupPanel4);
             this.Controls.Add(this.groupPanel3);
-            this.Controls.Add(this.expandablePanelCauHinh);
             this.DoubleBuffered = true;
             this.Name = "FrmQuanLyKhoHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuanLyKhoHang";
             this.Load += new System.EventHandler(this.FrmQuanLyKhoHang_Load);
-            this.expandablePanelCauHinh.ResumeLayout(false);
-            this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridKhoHang)).EndInit();
@@ -1542,13 +1361,6 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.ExpandablePanel expandablePanelCauHinh;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.ButtonX buttonBlack;
-        private DevComponents.DotNetBar.ButtonX buttonBlue;
-        private DevComponents.DotNetBar.ButtonX buttonSilver;
-        private DevComponents.DotNetBar.ColorPickerButton colorPickerButton;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.DataGridViewX gridKhoHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaKhohang;

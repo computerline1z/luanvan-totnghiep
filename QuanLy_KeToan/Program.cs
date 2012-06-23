@@ -13,9 +13,9 @@ namespace QuanLy_KeToan
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PresentationLayer.FrmQuanLyXuatKho());
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new PresentationLayer.FrmMain());
         }
     }
 }

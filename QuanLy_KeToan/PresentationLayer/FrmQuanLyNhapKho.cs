@@ -193,6 +193,13 @@ namespace QuanLy_KeToan.PresentationLayer
             {
                 bindingPhieuNhap.Enabled = false;
             }
+            //Hàm kiểm tra lưới có rỗng không
+            if (gridLoaiPhieuNhap.RowCount == 0)
+                SetControlEnable_LoaiPhieuNhap(true);
+            if (gridLoPhieuNhap.RowCount == 0)
+                SetControlEnable_LoPhieuNhap(true);
+            if (gridPhieuNhap.RowCount == 0)
+                SetControlEnable_PhieuNhap(true);
         }
         private void FrmQuanLyNhapKho_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -737,11 +744,10 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             this.Close();
         }
-        private void gridLoPhieuNhap_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        private void gridLoPhieuNhap_CellBeginEdit_1(object sender, DataGridViewCellCancelEventArgs e)
         {
             ToolBarEnableLoPhieuNhap();
         }
-
         private void gridLoPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
@@ -785,7 +791,7 @@ namespace QuanLy_KeToan.PresentationLayer
             {
                 cmbMaLoHDMua.Text = gridLoPhieuNhap.Rows[dong].Cells["ColMLHDM"].Value.ToString();
                 dpNgayLoNhap.Value = System.Convert.ToDateTime(gridLoPhieuNhap.Rows[dong].Cells["ColNLN"].Value.ToString());
-                txtMoTa.Text = gridLoPhieuNhap.Rows[dong].Cells["ColMT"].Value.ToString();
+                txtMoTa.Text = gridLoPhieuNhap.Rows[dong].Cells["ColMT"].Value==null?"":gridLoPhieuNhap.Rows[dong].Cells["ColMT"].Value.ToString();
                 LoPN_dpNgayLap.Value = System.Convert.ToDateTime(gridLoPhieuNhap.Rows[dong].Cells["NgayLap"].Value.ToString());
                 LoPN_cmbNguoiLap.Text = (gridLoPhieuNhap.Rows[dong].Cells["NguoiLap"].Value == null ? "" : gridLoPhieuNhap.Rows[dong].Cells["NguoiLap"].Value.ToString());
                 LoPN_dpNgaySua.Value = System.Convert.ToDateTime(gridLoPhieuNhap.Rows[dong].Cells["NgaySua"].Value.ToString());
@@ -1093,30 +1099,27 @@ namespace QuanLy_KeToan.PresentationLayer
             {
                 if (pn_nhapluoi == 1)
                 {
-                    gridPhieuNhap.CurrentRow.Cells["MLPN"].ReadOnly = false;
                     gridPhieuNhap.CurrentRow.Cells["MLHDM"].ReadOnly = false;
                     gridPhieuNhap.CurrentRow.Cells["MHDM"].ReadOnly = false;
                 }
                 else
                 {
-                    gridPhieuNhap.CurrentRow.Cells["MLPN"].ReadOnly = true;
                     gridPhieuNhap.CurrentRow.Cells["MLHDM"].ReadOnly = true;
                     gridPhieuNhap.CurrentRow.Cells["MHDM"].ReadOnly = true;
                 }
-                if (gridPhieuNhap.Columns[e.ColumnIndex].Name == "MLHDM")
+                if (e.ColumnIndex > -1 && gridPhieuNhap.Columns[e.ColumnIndex].Name == "MLHDM")
                 {
                     gridPhieuNhap.CurrentRow.Cells["MLHDM"].Value = xuly_chuoi(advTreeLoNhap.SelectedNode.Text);
                 }
                 if (pn_nhapluoi == 0 && pn_nhaptay == 0)
                 {
-                    string name = gridPhieuNhap.Columns[e.ColumnIndex].Name;
-                    if (name == "MHDM")
+                    if (e.ColumnIndex == -1)
                     {
                         if (gridPhieuNhap.CurrentRow.Cells["MHDM"].Value != null)
                         {
                             FrmChiTietPhieuNhap CTPN = new FrmChiTietPhieuNhap();
                             CTPN.mahdmua = gridPhieuNhap.CurrentRow.Cells["MHDM"].Value.ToString();
-                            CTPN.malohdmua = xuly_chuoi(advTreeLoNhap.SelectedNode.Text);
+                            CTPN.malohdmua = gridPhieuNhap.CurrentRow.Cells["MLHDM"].Value.ToString();
                             CTPN.Show();
                         }
                         else
@@ -1158,7 +1161,7 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             if (gridPhieuNhap.RowCount > 0 && pn_nhapluoi != 1)
             {
-                PN_cmbMLPN.Text = gridPhieuNhap.Rows[dong].Cells["MLPN"].Value.ToString();
+                PN_cmbMLPN.SelectedValue = gridPhieuNhap.Rows[dong].Cells["MLPN"].Value.ToString();
                 PN_cmbMLHDM.Text = gridPhieuNhap.Rows[dong].Cells["MLHDM"].Value.ToString();
                 PN_cmbMHDM.Text = gridPhieuNhap.Rows[dong].Cells["MHDM"].Value.ToString();
                 PN_txtMT.Text = gridPhieuNhap.Rows[dong].Cells["MT"].Value.ToString();
@@ -1198,7 +1201,7 @@ namespace QuanLy_KeToan.PresentationLayer
                               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             PhieuNhap PN = new PhieuNhap();
-                            string malohdban = PN_cmbMLHDM.Text;
+                            string malohdban = PN_cmbMLHDM.SelectedValue.ToString();
                             string mahdb = PN_cmbMHDM.Text;
                             PN.MaLoaiPhieuNhap = PN_cmbMLPN.Text;
                             PN.MoTa = PN_txtMT.Text;
@@ -1228,7 +1231,7 @@ namespace QuanLy_KeToan.PresentationLayer
                                 MessageBox.Show("Nhập thiếu thông tin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
-                            string maloaiphieuxuat = PN_cmbMLPN.Text;
+                            string maloaiphieuxuat = PN_cmbMLPN.SelectedValue.ToString();
                             string malohdban = PN_cmbMLHDM.Text;
                             string mahdban = PN_cmbMHDM.Text;
                             string mota = PN_txtMT.Text;

@@ -30,65 +30,45 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyNhapKho));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyNhapKho));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlNhapKho = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.groupPanelPhieuNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.gridPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MLPN = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.MLHDM = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.MHDM = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.MT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._NL = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this._NgL = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this._NS = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this._NgS = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.bindingPhieuNhap = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem4 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem4 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem4 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.positionPhieuNhap = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem4 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem4 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Refresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Add = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Delete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator26 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Save = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator27 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Cancel = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
-            this.PN_Exit = new System.Windows.Forms.ToolStripButton();
+            this.groupPanelLoaiPhieuNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.gridLoaiPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ColMLPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTLPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NL = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this.NgL = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.NS = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this.NgS = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.bindingLoaiPhieuNhap = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem2 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem2 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.positionLoaiPhieuNhap = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem2 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.LPN_Refresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.LPN_Add = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this.LPN_Delete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.LPN_Save = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.LPN_Cancel = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.LPN_Exit = new System.Windows.Forms.ToolStripButton();
             this.navigationPaneThaoTac = new DevComponents.DotNetBar.NavigationPane();
             this.navigationPanePanelThaoTac = new DevComponents.DotNetBar.NavigationPanePanel();
-            this.groupPhieuPhap = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.PN_txtMT = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX21 = new DevComponents.DotNetBar.LabelX();
-            this.PN_cmbMHDM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.PN_cmbMLHDM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX20 = new DevComponents.DotNetBar.LabelX();
-            this.PN_cmbMLPN = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.groupPanel6 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btn_PN_Huy = new DevComponents.DotNetBar.ButtonX();
-            this.btn_PN_Luu = new DevComponents.DotNetBar.ButtonX();
-            this.btn_PN_Sua = new DevComponents.DotNetBar.ButtonX();
-            this.btn_PN_Them = new DevComponents.DotNetBar.ButtonX();
-            this.labelX13 = new DevComponents.DotNetBar.LabelX();
-            this.PN_cmbNguoiSua = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.PN_dpNgaySua = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.PN_cmbNguoiLap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX15 = new DevComponents.DotNetBar.LabelX();
-            this.PN_dpNgayLap = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX16 = new DevComponents.DotNetBar.LabelX();
-            this.labelX17 = new DevComponents.DotNetBar.LabelX();
-            this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.groupLoaiPhieuNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btn_LPN_Huy = new DevComponents.DotNetBar.ButtonX();
@@ -127,6 +107,28 @@
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.groupPhieuPhap = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.PN_txtMT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX21 = new DevComponents.DotNetBar.LabelX();
+            this.PN_cmbMHDM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.PN_cmbMLHDM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX20 = new DevComponents.DotNetBar.LabelX();
+            this.PN_cmbMLPN = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.groupPanel6 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btn_PN_Huy = new DevComponents.DotNetBar.ButtonX();
+            this.btn_PN_Luu = new DevComponents.DotNetBar.ButtonX();
+            this.btn_PN_Sua = new DevComponents.DotNetBar.ButtonX();
+            this.btn_PN_Them = new DevComponents.DotNetBar.ButtonX();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
+            this.PN_cmbNguoiSua = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.PN_dpNgaySua = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.PN_cmbNguoiLap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX15 = new DevComponents.DotNetBar.LabelX();
+            this.PN_dpNgayLap = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX16 = new DevComponents.DotNetBar.LabelX();
+            this.labelX17 = new DevComponents.DotNetBar.LabelX();
+            this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.buttonItemThaoTac = new DevComponents.DotNetBar.ButtonItem();
             this.navigationPanePanelTimLKiem = new DevComponents.DotNetBar.NavigationPanePanel();
             this.buttonItemTim = new DevComponents.DotNetBar.ButtonItem();
@@ -137,6 +139,8 @@
             this.nodeLoPhieuNhap = new DevComponents.AdvTree.Node();
             this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
             this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
+            this.elementStyle3 = new DevComponents.DotNetBar.ElementStyle();
+            this.elementStyle4 = new DevComponents.DotNetBar.ElementStyle();
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.btnDuyetDanhMuc = new DevComponents.DotNetBar.ButtonItem();
             this.expandablePanelCauHinh = new DevComponents.DotNetBar.ExpandablePanel();
@@ -146,37 +150,8 @@
             this.buttonBlue = new DevComponents.DotNetBar.ButtonX();
             this.buttonSilver = new DevComponents.DotNetBar.ButtonX();
             this.colorPickerButton = new DevComponents.DotNetBar.ColorPickerButton();
-            this.groupPanelLoaiPhieuNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.gridLoaiPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.ColMLPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTLPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NL = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this.NgL = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.NS = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this.NgS = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.bindingLoaiPhieuNhap = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem2 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem2 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.positionLoaiPhieuNhap = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem2 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.LPN_Refresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.LPN_Add = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
-            this.LPN_Delete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.LPN_Save = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
-            this.LPN_Cancel = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
-            this.LPN_Exit = new System.Windows.Forms.ToolStripButton();
             this.groupPanelLoPhieuNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.gridLoPhieuNhap = new System.Windows.Forms.DataGridView();
+            this.gridLoPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.ColMLHDM = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
             this.ColNLN = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
             this.ColMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -205,20 +180,47 @@
             this.LoPN_Cancel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
             this.LoPN_Exit = new System.Windows.Forms.ToolStripButton();
+            this.groupPanelPhieuNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.gridPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MLPN = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.MLHDM = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.MHDM = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.MT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._NL = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this._NgL = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this._NS = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this._NgS = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.bindingPhieuNhap = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem4 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.positionPhieuNhap = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.PN_Refresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
+            this.PN_Add = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
+            this.PN_Delete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator26 = new System.Windows.Forms.ToolStripSeparator();
+            this.PN_Save = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator27 = new System.Windows.Forms.ToolStripSeparator();
+            this.PN_Cancel = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
+            this.PN_Exit = new System.Windows.Forms.ToolStripButton();
             this.tabItemNhapKho = new DevComponents.DotNetBar.TabItem(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlNhapKho)).BeginInit();
             this.tabControlNhapKho.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
-            this.groupPanelPhieuNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuNhap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuNhap)).BeginInit();
-            this.bindingPhieuNhap.SuspendLayout();
+            this.groupPanelLoaiPhieuNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLoaiPhieuNhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiPhieuNhap)).BeginInit();
+            this.bindingLoaiPhieuNhap.SuspendLayout();
             this.navigationPaneThaoTac.SuspendLayout();
             this.navigationPanePanelThaoTac.SuspendLayout();
-            this.groupPhieuPhap.SuspendLayout();
-            this.groupPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgaySua)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgayLap)).BeginInit();
             this.groupLoaiPhieuNhap.SuspendLayout();
             this.groupPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LPN_dpNgaySua)).BeginInit();
@@ -228,18 +230,22 @@
             this.groupPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoPN_dpNgaySua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoPN_dpNgayLap)).BeginInit();
+            this.groupPhieuPhap.SuspendLayout();
+            this.groupPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgaySua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgayLap)).BeginInit();
             this.navigationPanePanelDuyetDanhMuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advTreeLoNhap)).BeginInit();
             this.expandablePanelCauHinh.SuspendLayout();
             this.groupPanel1.SuspendLayout();
-            this.groupPanelLoaiPhieuNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLoaiPhieuNhap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiPhieuNhap)).BeginInit();
-            this.bindingLoaiPhieuNhap.SuspendLayout();
             this.groupPanelLoPhieuNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLoPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingLoPhieuNhap)).BeginInit();
             this.bindingLoPhieuNhap.SuspendLayout();
+            this.groupPanelPhieuNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuNhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuNhap)).BeginInit();
+            this.bindingPhieuNhap.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlNhapKho
@@ -261,11 +267,11 @@
             // 
             // tabControlPanel2
             // 
-            this.tabControlPanel2.Controls.Add(this.groupPanelPhieuNhap);
+            this.tabControlPanel2.Controls.Add(this.groupPanelLoaiPhieuNhap);
             this.tabControlPanel2.Controls.Add(this.navigationPaneThaoTac);
             this.tabControlPanel2.Controls.Add(this.expandablePanelCauHinh);
-            this.tabControlPanel2.Controls.Add(this.groupPanelLoaiPhieuNhap);
             this.tabControlPanel2.Controls.Add(this.groupPanelLoPhieuNhap);
+            this.tabControlPanel2.Controls.Add(this.groupPanelPhieuNhap);
             this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel2.Name = "tabControlPanel2";
@@ -281,427 +287,393 @@
             this.tabControlPanel2.TabIndex = 2;
             this.tabControlPanel2.TabItem = this.tabItemNhapKho;
             // 
-            // groupPanelPhieuNhap
+            // groupPanelLoaiPhieuNhap
             // 
-            this.groupPanelPhieuNhap.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanelPhieuNhap.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanelPhieuNhap.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanelPhieuNhap.Controls.Add(this.gridPhieuNhap);
-            this.groupPanelPhieuNhap.Controls.Add(this.bindingPhieuNhap);
-            this.groupPanelPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanelPhieuNhap.Location = new System.Drawing.Point(259, 1);
-            this.groupPanelPhieuNhap.Name = "groupPanelPhieuNhap";
-            this.groupPanelPhieuNhap.Size = new System.Drawing.Size(1094, 638);
-            // 
-            // 
-            // 
-            this.groupPanelPhieuNhap.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanelPhieuNhap.Style.BackColorGradientAngle = 90;
-            this.groupPanelPhieuNhap.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanelPhieuNhap.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelPhieuNhap.Style.BorderBottomWidth = 1;
-            this.groupPanelPhieuNhap.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanelPhieuNhap.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelPhieuNhap.Style.BorderLeftWidth = 1;
-            this.groupPanelPhieuNhap.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelPhieuNhap.Style.BorderRightWidth = 1;
-            this.groupPanelPhieuNhap.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelPhieuNhap.Style.BorderTopWidth = 1;
-            this.groupPanelPhieuNhap.Style.Class = "";
-            this.groupPanelPhieuNhap.Style.CornerDiameter = 4;
-            this.groupPanelPhieuNhap.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanelPhieuNhap.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanelPhieuNhap.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanelPhieuNhap.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            this.groupPanelLoaiPhieuNhap.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanelLoaiPhieuNhap.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanelLoaiPhieuNhap.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanelLoaiPhieuNhap.Controls.Add(this.gridLoaiPhieuNhap);
+            this.groupPanelLoaiPhieuNhap.Controls.Add(this.bindingLoaiPhieuNhap);
+            this.groupPanelLoaiPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanelLoaiPhieuNhap.Location = new System.Drawing.Point(259, 1);
+            this.groupPanelLoaiPhieuNhap.Name = "groupPanelLoaiPhieuNhap";
+            this.groupPanelLoaiPhieuNhap.Size = new System.Drawing.Size(1094, 638);
             // 
             // 
             // 
-            this.groupPanelPhieuNhap.StyleMouseDown.Class = "";
-            this.groupPanelPhieuNhap.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanelLoaiPhieuNhap.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanelLoaiPhieuNhap.Style.BackColorGradientAngle = 90;
+            this.groupPanelLoaiPhieuNhap.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanelLoaiPhieuNhap.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelLoaiPhieuNhap.Style.BorderBottomWidth = 1;
+            this.groupPanelLoaiPhieuNhap.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanelLoaiPhieuNhap.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelLoaiPhieuNhap.Style.BorderLeftWidth = 1;
+            this.groupPanelLoaiPhieuNhap.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelLoaiPhieuNhap.Style.BorderRightWidth = 1;
+            this.groupPanelLoaiPhieuNhap.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelLoaiPhieuNhap.Style.BorderTopWidth = 1;
+            this.groupPanelLoaiPhieuNhap.Style.Class = "";
+            this.groupPanelLoaiPhieuNhap.Style.CornerDiameter = 4;
+            this.groupPanelLoaiPhieuNhap.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanelLoaiPhieuNhap.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanelLoaiPhieuNhap.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanelLoaiPhieuNhap.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
             // 
-            this.groupPanelPhieuNhap.StyleMouseOver.Class = "";
-            this.groupPanelPhieuNhap.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanelPhieuNhap.TabIndex = 2;
-            this.groupPanelPhieuNhap.Text = "Phiếu Nhập";
-            this.groupPanelPhieuNhap.TitleImage = global::QuanLy_KeToan.Properties.Resources.receipt;
-            this.groupPanelPhieuNhap.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
+            this.groupPanelLoaiPhieuNhap.StyleMouseDown.Class = "";
+            this.groupPanelLoaiPhieuNhap.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // gridPhieuNhap
             // 
-            this.gridPhieuNhap.AllowUserToAddRows = false;
-            this.gridPhieuNhap.AllowUserToOrderColumns = true;
-            this.gridPhieuNhap.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.gridPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MLPN,
-            this.MLHDM,
-            this.MHDM,
-            this.MT,
-            this._NL,
-            this._NgL,
-            this._NS,
-            this._NgS});
+            // 
+            this.groupPanelLoaiPhieuNhap.StyleMouseOver.Class = "";
+            this.groupPanelLoaiPhieuNhap.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanelLoaiPhieuNhap.TabIndex = 1;
+            this.groupPanelLoaiPhieuNhap.Text = "Loại Phiếu Nhập";
+            this.groupPanelLoaiPhieuNhap.TitleImage = global::QuanLy_KeToan.Properties.Resources.Loaiphieunhap;
+            this.groupPanelLoaiPhieuNhap.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
+            // 
+            // gridLoaiPhieuNhap
+            // 
+            this.gridLoaiPhieuNhap.AllowUserToAddRows = false;
+            this.gridLoaiPhieuNhap.AllowUserToOrderColumns = true;
+            this.gridLoaiPhieuNhap.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPhieuNhap.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.gridPhieuNhap.Location = new System.Drawing.Point(0, 25);
-            this.gridPhieuNhap.Name = "gridPhieuNhap";
-            this.gridPhieuNhap.Size = new System.Drawing.Size(1088, 566);
-            this.gridPhieuNhap.TabIndex = 0;
-            this.gridPhieuNhap.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.gridPhieuNhap_CellBeginEdit);
-            this.gridPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPhieuNhap_CellClick);
-            this.gridPhieuNhap.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPhieuNhap_RowEnter);
-            // 
-            // MLPN
-            // 
-            this.MLPN.DataPropertyName = "MaLoaiPhieuNhap";
-            this.MLPN.DropDownHeight = 106;
-            this.MLPN.DropDownWidth = 121;
-            this.MLPN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MLPN.HeaderText = "Mã Loại PN";
-            this.MLPN.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MLPN.IntegralHeight = false;
-            this.MLPN.ItemHeight = 15;
-            this.MLPN.Name = "MLPN";
-            this.MLPN.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MLPN.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MLPN.Width = 200;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridLoaiPhieuNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridLoaiPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridLoaiPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColMLPN,
+            this.ColTLPN,
+            this.NL,
+            this.NgL,
+            this.NS,
+            this.NgS});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLoaiPhieuNhap.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridLoaiPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridLoaiPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.gridLoaiPhieuNhap.Location = new System.Drawing.Point(0, 25);
+            this.gridLoaiPhieuNhap.Name = "gridLoaiPhieuNhap";
+            this.gridLoaiPhieuNhap.Size = new System.Drawing.Size(1088, 568);
+            this.gridLoaiPhieuNhap.TabIndex = 0;
+            this.gridLoaiPhieuNhap.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.gridLoaiPhieuNhap_CellBeginEdit);
+            this.gridLoaiPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLoaiPhieuNhap_CellClick);
+            this.gridLoaiPhieuNhap.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLoaiPhieuNhap_RowEnter);
             // 
-            // MLHDM
+            // ColMLPN
             // 
-            this.MLHDM.DataPropertyName = "MaLoHDMua";
-            this.MLHDM.DropDownHeight = 106;
-            this.MLHDM.DropDownWidth = 121;
-            this.MLHDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MLHDM.HeaderText = "Mã Lô HĐMua";
-            this.MLHDM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MLHDM.IntegralHeight = false;
-            this.MLHDM.ItemHeight = 15;
-            this.MLHDM.Name = "MLHDM";
-            this.MLHDM.ReadOnly = true;
-            this.MLHDM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MLHDM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ColMLPN.DataPropertyName = "MaLoaiPhieuNhap";
+            this.ColMLPN.HeaderText = "Mã Loại PN";
+            this.ColMLPN.Name = "ColMLPN";
             // 
-            // MHDM
+            // ColTLPN
             // 
-            this.MHDM.DataPropertyName = "MaHDMua";
-            this.MHDM.DropDownHeight = 106;
-            this.MHDM.DropDownWidth = 121;
-            this.MHDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MHDM.HeaderText = "Mã HĐMua";
-            this.MHDM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MHDM.IntegralHeight = false;
-            this.MHDM.ItemHeight = 15;
-            this.MHDM.Name = "MHDM";
-            this.MHDM.ReadOnly = true;
-            this.MHDM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MHDM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ColTLPN.DataPropertyName = "TenLoaiPhieuNhap";
+            this.ColTLPN.HeaderText = "Tên Loại PN";
+            this.ColTLPN.Name = "ColTLPN";
+            this.ColTLPN.Width = 200;
             // 
-            // MT
+            // NL
             // 
-            this.MT.DataPropertyName = "MoTa";
-            this.MT.HeaderText = "Mô Tả";
-            this.MT.Name = "MT";
-            this.MT.Width = 200;
             // 
-            // _NL
             // 
             // 
+            this.NL.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this.NL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NL.DataPropertyName = "NgayLap";
+            this.NL.HeaderText = "Ngày Lập";
+            this.NL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             // 
             // 
-            this._NL.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this._NL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this._NL.DataPropertyName = "NgayLap";
-            this._NL.HeaderText = "Ngày Lập";
-            this._NL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             // 
+            this.NL.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
             // 
-            this._NL.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
+            this.NL.MonthCalendar.BackgroundStyle.Class = "";
+            this.NL.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
-            this._NL.MonthCalendar.BackgroundStyle.Class = "";
-            this._NL.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            this.NL.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.NL.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NL.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.NL.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.NL.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
             // 
-            this._NL.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this._NL.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this._NL.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this._NL.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this._NL.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
-            // 
-            // 
-            this._NL.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this._NL.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this._NL.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this._NL.Name = "_NL";
-            // 
-            // _NgL
-            // 
-            this._NgL.DataPropertyName = "NguoiLap";
-            this._NgL.DropDownHeight = 106;
-            this._NgL.DropDownWidth = 121;
-            this._NgL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._NgL.HeaderText = "Người Lập";
-            this._NgL.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this._NgL.IntegralHeight = false;
-            this._NgL.ItemHeight = 15;
-            this._NgL.Name = "_NgL";
-            this._NgL.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this._NgL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // _NS
-            // 
-            // 
-            // 
-            // 
-            this._NS.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this._NS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this._NS.DataPropertyName = "NgaySua";
-            this._NS.HeaderText = "Ngày Sửa";
-            this._NS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            // 
-            // 
-            // 
-            this._NS.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this._NS.MonthCalendar.BackgroundStyle.Class = "";
-            this._NS.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this._NS.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this._NS.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this._NS.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this._NS.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this._NS.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this._NS.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this._NS.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this._NS.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this._NS.Name = "_NS";
-            // 
-            // _NgS
-            // 
-            this._NgS.DataPropertyName = "NguoiSua";
-            this._NgS.DropDownHeight = 106;
-            this._NgS.DropDownWidth = 121;
-            this._NgS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._NgS.HeaderText = "Người Sửa";
-            this._NgS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this._NgS.IntegralHeight = false;
-            this._NgS.ItemHeight = 15;
-            this._NgS.Name = "_NgS";
-            this._NgS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this._NgS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // bindingPhieuNhap
-            // 
-            this.bindingPhieuNhap.AddNewItem = null;
-            this.bindingPhieuNhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bindingPhieuNhap.CountItem = this.bindingNavigatorCountItem4;
-            this.bindingPhieuNhap.CountItemFormat = "của  {0}";
-            this.bindingPhieuNhap.DeleteItem = null;
-            this.bindingPhieuNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem4,
-            this.bindingNavigatorMovePreviousItem4,
-            this.bindingNavigatorSeparator12,
-            this.positionPhieuNhap,
-            this.bindingNavigatorCountItem4,
-            this.bindingNavigatorSeparator13,
-            this.bindingNavigatorMoveNextItem4,
-            this.bindingNavigatorMoveLastItem4,
-            this.bindingNavigatorSeparator14,
-            this.PN_Refresh,
-            this.toolStripSeparator24,
-            this.PN_Add,
-            this.toolStripSeparator25,
-            this.PN_Delete,
-            this.toolStripSeparator26,
-            this.PN_Save,
-            this.toolStripSeparator27,
-            this.PN_Cancel,
-            this.toolStripSeparator28,
-            this.PN_Exit});
-            this.bindingPhieuNhap.Location = new System.Drawing.Point(0, 0);
-            this.bindingPhieuNhap.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
-            this.bindingPhieuNhap.MoveLastItem = this.bindingNavigatorMoveLastItem4;
-            this.bindingPhieuNhap.MoveNextItem = this.bindingNavigatorMoveNextItem4;
-            this.bindingPhieuNhap.MovePreviousItem = this.bindingNavigatorMovePreviousItem4;
-            this.bindingPhieuNhap.Name = "bindingPhieuNhap";
-            this.bindingPhieuNhap.PositionItem = this.positionPhieuNhap;
-            this.bindingPhieuNhap.Size = new System.Drawing.Size(1088, 25);
-            this.bindingPhieuNhap.TabIndex = 1;
-            this.bindingPhieuNhap.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem4
-            // 
-            this.bindingNavigatorCountItem4.Name = "bindingNavigatorCountItem4";
-            this.bindingNavigatorCountItem4.Size = new System.Drawing.Size(46, 22);
-            this.bindingNavigatorCountItem4.Text = "của  {0}";
-            this.bindingNavigatorCountItem4.ToolTipText = "Total number of items";
+            this.NL.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.NL.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NL.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.NL.Name = "NL";
             // 
-            // bindingNavigatorMoveFirstItem4
-            // 
-            this.bindingNavigatorMoveFirstItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem4.Image")));
-            this.bindingNavigatorMoveFirstItem4.Name = "bindingNavigatorMoveFirstItem4";
-            this.bindingNavigatorMoveFirstItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem4.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem4.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem4
-            // 
-            this.bindingNavigatorMovePreviousItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem4.Image")));
-            this.bindingNavigatorMovePreviousItem4.Name = "bindingNavigatorMovePreviousItem4";
-            this.bindingNavigatorMovePreviousItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem4.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem4.Text = "Move previous";
+            // NgL
             // 
-            // bindingNavigatorSeparator12
+            this.NgL.DataPropertyName = "NguoiLap";
+            this.NgL.DropDownHeight = 106;
+            this.NgL.DropDownWidth = 121;
+            this.NgL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NgL.HeaderText = "Người Lập";
+            this.NgL.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NgL.IntegralHeight = false;
+            this.NgL.ItemHeight = 15;
+            this.NgL.Name = "NgL";
+            this.NgL.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NgL.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
-            this.bindingNavigatorSeparator12.Name = "bindingNavigatorSeparator12";
-            this.bindingNavigatorSeparator12.Size = new System.Drawing.Size(6, 25);
+            // NS
             // 
-            // positionPhieuNhap
-            // 
-            this.positionPhieuNhap.AccessibleName = "Position";
-            this.positionPhieuNhap.AutoSize = false;
-            this.positionPhieuNhap.Name = "positionPhieuNhap";
-            this.positionPhieuNhap.Size = new System.Drawing.Size(50, 23);
-            this.positionPhieuNhap.Text = "0";
-            this.positionPhieuNhap.ToolTipText = "Current position";
+            // 
             // 
-            // bindingNavigatorSeparator13
             // 
-            this.bindingNavigatorSeparator13.Name = "bindingNavigatorSeparator13";
-            this.bindingNavigatorSeparator13.Size = new System.Drawing.Size(6, 25);
+            this.NS.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this.NS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NS.DataPropertyName = "NgaySua";
+            this.NS.HeaderText = "Ngày Sửa";
+            this.NS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // 
+            // 
+            // 
+            this.NS.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.NS.MonthCalendar.BackgroundStyle.Class = "";
+            this.NS.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.NS.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.NS.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NS.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.NS.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.NS.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.NS.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.NS.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NS.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.NS.Name = "NS";
+            // 
+            // NgS
+            // 
+            this.NgS.DataPropertyName = "NguoiSua";
+            this.NgS.DropDownHeight = 106;
+            this.NgS.DropDownWidth = 121;
+            this.NgS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NgS.HeaderText = "Người Sửa";
+            this.NgS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NgS.IntegralHeight = false;
+            this.NgS.ItemHeight = 15;
+            this.NgS.Name = "NgS";
+            this.NgS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NgS.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // bindingLoaiPhieuNhap
+            // 
+            this.bindingLoaiPhieuNhap.AddNewItem = null;
+            this.bindingLoaiPhieuNhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bindingLoaiPhieuNhap.CountItem = this.bindingNavigatorCountItem2;
+            this.bindingLoaiPhieuNhap.CountItemFormat = "của {0}";
+            this.bindingLoaiPhieuNhap.DeleteItem = null;
+            this.bindingLoaiPhieuNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem2,
+            this.bindingNavigatorMovePreviousItem2,
+            this.bindingNavigatorSeparator6,
+            this.positionLoaiPhieuNhap,
+            this.bindingNavigatorCountItem2,
+            this.bindingNavigatorSeparator7,
+            this.bindingNavigatorMoveNextItem2,
+            this.bindingNavigatorMoveLastItem2,
+            this.bindingNavigatorSeparator8,
+            this.LPN_Refresh,
+            this.toolStripSeparator14,
+            this.LPN_Add,
+            this.toolStripSeparator15,
+            this.LPN_Delete,
+            this.toolStripSeparator16,
+            this.LPN_Save,
+            this.toolStripSeparator17,
+            this.LPN_Cancel,
+            this.toolStripSeparator18,
+            this.LPN_Exit});
+            this.bindingLoaiPhieuNhap.Location = new System.Drawing.Point(0, 0);
+            this.bindingLoaiPhieuNhap.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
+            this.bindingLoaiPhieuNhap.MoveLastItem = this.bindingNavigatorMoveLastItem2;
+            this.bindingLoaiPhieuNhap.MoveNextItem = this.bindingNavigatorMoveNextItem2;
+            this.bindingLoaiPhieuNhap.MovePreviousItem = this.bindingNavigatorMovePreviousItem2;
+            this.bindingLoaiPhieuNhap.Name = "bindingLoaiPhieuNhap";
+            this.bindingLoaiPhieuNhap.PositionItem = this.positionLoaiPhieuNhap;
+            this.bindingLoaiPhieuNhap.Size = new System.Drawing.Size(1088, 25);
+            this.bindingLoaiPhieuNhap.TabIndex = 1;
+            // 
+            // bindingNavigatorCountItem2
+            // 
+            this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem2";
+            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem2.Text = "của {0}";
+            this.bindingNavigatorCountItem2.ToolTipText = "Total number of items";
             // 
-            // bindingNavigatorMoveNextItem4
+            // bindingNavigatorMoveFirstItem2
+            // 
+            this.bindingNavigatorMoveFirstItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem2.Image")));
+            this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem2";
+            this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem2.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem2
+            // 
+            this.bindingNavigatorMovePreviousItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem2.Image")));
+            this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem2";
+            this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem2.Text = "Move previous";
             // 
-            this.bindingNavigatorMoveNextItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem4.Image")));
-            this.bindingNavigatorMoveNextItem4.Name = "bindingNavigatorMoveNextItem4";
-            this.bindingNavigatorMoveNextItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem4.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem4.Text = "Move next";
+            // bindingNavigatorSeparator6
             // 
-            // bindingNavigatorMoveLastItem4
+            this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
+            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
-            this.bindingNavigatorMoveLastItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem4.Image")));
-            this.bindingNavigatorMoveLastItem4.Name = "bindingNavigatorMoveLastItem4";
-            this.bindingNavigatorMoveLastItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem4.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem4.Text = "Move last";
+            // positionLoaiPhieuNhap
+            // 
+            this.positionLoaiPhieuNhap.AccessibleName = "Position";
+            this.positionLoaiPhieuNhap.AutoSize = false;
+            this.positionLoaiPhieuNhap.Name = "positionLoaiPhieuNhap";
+            this.positionLoaiPhieuNhap.Size = new System.Drawing.Size(50, 23);
+            this.positionLoaiPhieuNhap.Text = "0";
+            this.positionLoaiPhieuNhap.ToolTipText = "Current position";
             // 
-            // bindingNavigatorSeparator14
+            // bindingNavigatorSeparator7
             // 
-            this.bindingNavigatorSeparator14.Name = "bindingNavigatorSeparator14";
-            this.bindingNavigatorSeparator14.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator7";
+            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
-            // PN_Refresh
+            // bindingNavigatorMoveNextItem2
             // 
-            this.PN_Refresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
-            this.PN_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Refresh.Name = "PN_Refresh";
-            this.PN_Refresh.Size = new System.Drawing.Size(66, 22);
-            this.PN_Refresh.Text = "&Refresh";
-            this.PN_Refresh.Click += new System.EventHandler(this.PN_Refresh_Click);
+            this.bindingNavigatorMoveNextItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem2.Image")));
+            this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem2";
+            this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem2.Text = "Move next";
             // 
-            // toolStripSeparator24
+            // bindingNavigatorMoveLastItem2
             // 
-            this.toolStripSeparator24.Name = "toolStripSeparator24";
-            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorMoveLastItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem2.Image")));
+            this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem2";
+            this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem2.Text = "Move last";
             // 
-            // PN_Add
+            // bindingNavigatorSeparator8
             // 
-            this.PN_Add.Image = ((System.Drawing.Image)(resources.GetObject("PN_Add.Image")));
-            this.PN_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Add.Name = "PN_Add";
-            this.PN_Add.Size = new System.Drawing.Size(49, 22);
-            this.PN_Add.Text = "&Add";
-            this.PN_Add.Click += new System.EventHandler(this.PN_Add_Click);
+            this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
+            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator25
+            // LPN_Refresh
             // 
-            this.toolStripSeparator25.Name = "toolStripSeparator25";
-            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 25);
+            this.LPN_Refresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
+            this.LPN_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LPN_Refresh.Name = "LPN_Refresh";
+            this.LPN_Refresh.Size = new System.Drawing.Size(66, 22);
+            this.LPN_Refresh.Text = "&Refresh";
+            this.LPN_Refresh.Click += new System.EventHandler(this.LPN_Refresh_Click);
             // 
-            // PN_Delete
+            // toolStripSeparator14
             // 
-            this.PN_Delete.Image = global::QuanLy_KeToan.Properties.Resources.delete;
-            this.PN_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Delete.Name = "PN_Delete";
-            this.PN_Delete.Size = new System.Drawing.Size(60, 22);
-            this.PN_Delete.Text = "&Delete";
-            this.PN_Delete.Click += new System.EventHandler(this.PN_Delete_Click);
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator26
+            // LPN_Add
             // 
-            this.toolStripSeparator26.Name = "toolStripSeparator26";
-            this.toolStripSeparator26.Size = new System.Drawing.Size(6, 25);
+            this.LPN_Add.Image = ((System.Drawing.Image)(resources.GetObject("LPN_Add.Image")));
+            this.LPN_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LPN_Add.Name = "LPN_Add";
+            this.LPN_Add.Size = new System.Drawing.Size(49, 22);
+            this.LPN_Add.Text = "&Add";
+            this.LPN_Add.Click += new System.EventHandler(this.LPN_Add_Click);
             // 
-            // PN_Save
+            // toolStripSeparator15
             // 
-            this.PN_Save.Image = ((System.Drawing.Image)(resources.GetObject("PN_Save.Image")));
-            this.PN_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Save.Name = "PN_Save";
-            this.PN_Save.Size = new System.Drawing.Size(51, 22);
-            this.PN_Save.Text = "&Save";
-            this.PN_Save.Click += new System.EventHandler(this.PN_Save_Click);
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator27
+            // LPN_Delete
             // 
-            this.toolStripSeparator27.Name = "toolStripSeparator27";
-            this.toolStripSeparator27.Size = new System.Drawing.Size(6, 25);
+            this.LPN_Delete.Image = global::QuanLy_KeToan.Properties.Resources.delete;
+            this.LPN_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LPN_Delete.Name = "LPN_Delete";
+            this.LPN_Delete.Size = new System.Drawing.Size(60, 22);
+            this.LPN_Delete.Text = "&Delete";
+            this.LPN_Delete.Click += new System.EventHandler(this.LPN_Delete_Click);
             // 
-            // PN_Cancel
+            // toolStripSeparator16
             // 
-            this.PN_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("PN_Cancel.Image")));
-            this.PN_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Cancel.Name = "PN_Cancel";
-            this.PN_Cancel.Size = new System.Drawing.Size(63, 22);
-            this.PN_Cancel.Text = "&Cancel";
-            this.PN_Cancel.Click += new System.EventHandler(this.PN_Cancel_Click);
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator28
+            // LPN_Save
             // 
-            this.toolStripSeparator28.Name = "toolStripSeparator28";
-            this.toolStripSeparator28.Size = new System.Drawing.Size(6, 25);
+            this.LPN_Save.Image = ((System.Drawing.Image)(resources.GetObject("LPN_Save.Image")));
+            this.LPN_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LPN_Save.Name = "LPN_Save";
+            this.LPN_Save.Size = new System.Drawing.Size(51, 22);
+            this.LPN_Save.Text = "&Save";
+            this.LPN_Save.Click += new System.EventHandler(this.LPN_Save_Click);
             // 
-            // PN_Exit
+            // toolStripSeparator17
             // 
-            this.PN_Exit.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
-            this.PN_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PN_Exit.Name = "PN_Exit";
-            this.PN_Exit.Size = new System.Drawing.Size(45, 22);
-            this.PN_Exit.Text = "&Exit";
-            this.PN_Exit.Click += new System.EventHandler(this.PN_Exit_Click);
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
+            // 
+            // LPN_Cancel
+            // 
+            this.LPN_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("LPN_Cancel.Image")));
+            this.LPN_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LPN_Cancel.Name = "LPN_Cancel";
+            this.LPN_Cancel.Size = new System.Drawing.Size(63, 22);
+            this.LPN_Cancel.Text = "&Cancel";
+            this.LPN_Cancel.Click += new System.EventHandler(this.LPN_Cancel_Click);
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
+            // 
+            // LPN_Exit
+            // 
+            this.LPN_Exit.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
+            this.LPN_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LPN_Exit.Name = "LPN_Exit";
+            this.LPN_Exit.Size = new System.Drawing.Size(45, 22);
+            this.LPN_Exit.Text = "&Exit";
+            this.LPN_Exit.Click += new System.EventHandler(this.LPN_Exit_Click);
             // 
             // navigationPaneThaoTac
             // 
             this.navigationPaneThaoTac.CanCollapse = true;
-            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanelThaoTac);
-            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanelTimLKiem);
             this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanelDuyetDanhMuc);
+            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanelTimLKiem);
+            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanelThaoTac);
             this.navigationPaneThaoTac.Dock = System.Windows.Forms.DockStyle.Left;
             this.navigationPaneThaoTac.ItemPaddingBottom = 2;
             this.navigationPaneThaoTac.ItemPaddingTop = 2;
@@ -734,477 +706,25 @@
             this.navigationPaneThaoTac.TitlePanel.Style.GradientAngle = 90;
             this.navigationPaneThaoTac.TitlePanel.Style.MarginLeft = 4;
             this.navigationPaneThaoTac.TitlePanel.TabIndex = 0;
-            this.navigationPaneThaoTac.TitlePanel.Text = "THAO TÁC";
+            this.navigationPaneThaoTac.TitlePanel.Text = "DUYỆT DANH MỤC";
             // 
             // navigationPanePanelThaoTac
             // 
             this.navigationPanePanelThaoTac.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.navigationPanePanelThaoTac.Controls.Add(this.groupPhieuPhap);
             this.navigationPanePanelThaoTac.Controls.Add(this.groupLoaiPhieuNhap);
             this.navigationPanePanelThaoTac.Controls.Add(this.groupLoPhieuNhap);
+            this.navigationPanePanelThaoTac.Controls.Add(this.groupPhieuPhap);
             this.navigationPanePanelThaoTac.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanelThaoTac.Location = new System.Drawing.Point(1, 25);
+            this.navigationPanePanelThaoTac.Location = new System.Drawing.Point(1, 1);
             this.navigationPanePanelThaoTac.Name = "navigationPanePanelThaoTac";
             this.navigationPanePanelThaoTac.ParentItem = this.buttonItemThaoTac;
-            this.navigationPanePanelThaoTac.Size = new System.Drawing.Size(256, 499);
+            this.navigationPanePanelThaoTac.Size = new System.Drawing.Size(256, 636);
             this.navigationPanePanelThaoTac.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanelThaoTac.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanelThaoTac.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.navigationPanePanelThaoTac.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.navigationPanePanelThaoTac.Style.GradientAngle = 90;
             this.navigationPanePanelThaoTac.TabIndex = 3;
-            // 
-            // groupPhieuPhap
-            // 
-            this.groupPhieuPhap.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPhieuPhap.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPhieuPhap.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Yellow;
-            this.groupPhieuPhap.Controls.Add(this.PN_txtMT);
-            this.groupPhieuPhap.Controls.Add(this.labelX21);
-            this.groupPhieuPhap.Controls.Add(this.PN_cmbMHDM);
-            this.groupPhieuPhap.Controls.Add(this.PN_cmbMLHDM);
-            this.groupPhieuPhap.Controls.Add(this.labelX20);
-            this.groupPhieuPhap.Controls.Add(this.PN_cmbMLPN);
-            this.groupPhieuPhap.Controls.Add(this.groupPanel6);
-            this.groupPhieuPhap.Controls.Add(this.labelX13);
-            this.groupPhieuPhap.Controls.Add(this.PN_cmbNguoiSua);
-            this.groupPhieuPhap.Controls.Add(this.PN_dpNgaySua);
-            this.groupPhieuPhap.Controls.Add(this.labelX14);
-            this.groupPhieuPhap.Controls.Add(this.PN_cmbNguoiLap);
-            this.groupPhieuPhap.Controls.Add(this.labelX15);
-            this.groupPhieuPhap.Controls.Add(this.PN_dpNgayLap);
-            this.groupPhieuPhap.Controls.Add(this.labelX16);
-            this.groupPhieuPhap.Controls.Add(this.labelX17);
-            this.groupPhieuPhap.Controls.Add(this.labelX18);
-            this.groupPhieuPhap.Location = new System.Drawing.Point(0, 0);
-            this.groupPhieuPhap.Name = "groupPhieuPhap";
-            this.groupPhieuPhap.Size = new System.Drawing.Size(254, 496);
-            // 
-            // 
-            // 
-            this.groupPhieuPhap.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(178)))));
-            this.groupPhieuPhap.Style.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(217)))), ((int)(((byte)(69)))));
-            this.groupPhieuPhap.Style.BackColorGradientAngle = 90;
-            this.groupPhieuPhap.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPhieuPhap.Style.BorderBottomWidth = 1;
-            this.groupPhieuPhap.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(147)))), ((int)(((byte)(17)))));
-            this.groupPhieuPhap.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPhieuPhap.Style.BorderLeftWidth = 1;
-            this.groupPhieuPhap.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPhieuPhap.Style.BorderRightWidth = 1;
-            this.groupPhieuPhap.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPhieuPhap.Style.BorderTopWidth = 1;
-            this.groupPhieuPhap.Style.Class = "";
-            this.groupPhieuPhap.Style.CornerDiameter = 4;
-            this.groupPhieuPhap.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPhieuPhap.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPhieuPhap.Style.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(0)))));
-            this.groupPhieuPhap.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPhieuPhap.StyleMouseDown.Class = "";
-            this.groupPhieuPhap.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPhieuPhap.StyleMouseOver.Class = "";
-            this.groupPhieuPhap.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPhieuPhap.TabIndex = 3;
-            this.groupPhieuPhap.Text = "Thêm/Sửa Phiếu Nhập";
-            // 
-            // PN_txtMT
-            // 
-            // 
-            // 
-            // 
-            this.PN_txtMT.Border.Class = "TextBoxBorder";
-            this.PN_txtMT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_txtMT.FocusHighlightEnabled = true;
-            this.PN_txtMT.Location = new System.Drawing.Point(59, 133);
-            this.PN_txtMT.Multiline = true;
-            this.PN_txtMT.Name = "PN_txtMT";
-            this.PN_txtMT.Size = new System.Drawing.Size(184, 63);
-            this.PN_txtMT.TabIndex = 21;
-            // 
-            // labelX21
-            // 
-            this.labelX21.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX21.BackgroundStyle.Class = "";
-            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX21.Location = new System.Drawing.Point(-1, 133);
-            this.labelX21.Name = "labelX21";
-            this.labelX21.Size = new System.Drawing.Size(36, 15);
-            this.labelX21.TabIndex = 20;
-            this.labelX21.Text = "<b>Mô Tả:</b>";
-            // 
-            // PN_cmbMHDM
-            // 
-            this.PN_cmbMHDM.DisplayMember = "Text";
-            this.PN_cmbMHDM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.PN_cmbMHDM.FocusHighlightEnabled = true;
-            this.PN_cmbMHDM.FormattingEnabled = true;
-            this.PN_cmbMHDM.ItemHeight = 14;
-            this.PN_cmbMHDM.Location = new System.Drawing.Point(108, 90);
-            this.PN_cmbMHDM.Name = "PN_cmbMHDM";
-            this.PN_cmbMHDM.Size = new System.Drawing.Size(137, 20);
-            this.PN_cmbMHDM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PN_cmbMHDM.TabIndex = 19;
-            // 
-            // PN_cmbMLHDM
-            // 
-            this.PN_cmbMLHDM.DisplayMember = "Text";
-            this.PN_cmbMLHDM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.PN_cmbMLHDM.FocusHighlightEnabled = true;
-            this.PN_cmbMLHDM.FormattingEnabled = true;
-            this.PN_cmbMLHDM.ItemHeight = 14;
-            this.PN_cmbMLHDM.Location = new System.Drawing.Point(108, 56);
-            this.PN_cmbMLHDM.Name = "PN_cmbMLHDM";
-            this.PN_cmbMLHDM.Size = new System.Drawing.Size(137, 20);
-            this.PN_cmbMLHDM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PN_cmbMLHDM.TabIndex = 18;
-            this.PN_cmbMLHDM.SelectedIndexChanged += new System.EventHandler(this.PN_cmbMLHDM_SelectedIndexChanged);
-            // 
-            // labelX20
-            // 
-            this.labelX20.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX20.BackgroundStyle.Class = "";
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Location = new System.Drawing.Point(-1, 95);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(65, 15);
-            this.labelX20.TabIndex = 17;
-            this.labelX20.Text = "<b>Mã HĐ Mua:</b>";
-            // 
-            // PN_cmbMLPN
-            // 
-            this.PN_cmbMLPN.DisplayMember = "Text";
-            this.PN_cmbMLPN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.PN_cmbMLPN.FocusHighlightEnabled = true;
-            this.PN_cmbMLPN.FormattingEnabled = true;
-            this.PN_cmbMLPN.ItemHeight = 14;
-            this.PN_cmbMLPN.Location = new System.Drawing.Point(108, 18);
-            this.PN_cmbMLPN.Name = "PN_cmbMLPN";
-            this.PN_cmbMLPN.Size = new System.Drawing.Size(137, 20);
-            this.PN_cmbMLPN.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PN_cmbMLPN.TabIndex = 16;
-            // 
-            // groupPanel6
-            // 
-            this.groupPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel6.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel6.Controls.Add(this.btn_PN_Huy);
-            this.groupPanel6.Controls.Add(this.btn_PN_Luu);
-            this.groupPanel6.Controls.Add(this.btn_PN_Sua);
-            this.groupPanel6.Controls.Add(this.btn_PN_Them);
-            this.groupPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel6.Location = new System.Drawing.Point(0, 426);
-            this.groupPanel6.Name = "groupPanel6";
-            this.groupPanel6.Size = new System.Drawing.Size(248, 49);
-            // 
-            // 
-            // 
-            this.groupPanel6.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel6.Style.BackColorGradientAngle = 90;
-            this.groupPanel6.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel6.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderBottomWidth = 1;
-            this.groupPanel6.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel6.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderLeftWidth = 1;
-            this.groupPanel6.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderRightWidth = 1;
-            this.groupPanel6.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel6.Style.BorderTopWidth = 1;
-            this.groupPanel6.Style.Class = "";
-            this.groupPanel6.Style.CornerDiameter = 4;
-            this.groupPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel6.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel6.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel6.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel6.StyleMouseDown.Class = "";
-            this.groupPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel6.StyleMouseOver.Class = "";
-            this.groupPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel6.TabIndex = 15;
-            this.groupPanel6.Text = "ToolBar Edit";
-            // 
-            // btn_PN_Huy
-            // 
-            this.btn_PN_Huy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_PN_Huy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_PN_Huy.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Huy.Image")));
-            this.btn_PN_Huy.Location = new System.Drawing.Point(186, 3);
-            this.btn_PN_Huy.Name = "btn_PN_Huy";
-            this.btn_PN_Huy.Size = new System.Drawing.Size(56, 23);
-            this.btn_PN_Huy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_PN_Huy.TabIndex = 13;
-            this.btn_PN_Huy.Text = "Hủy";
-            this.btn_PN_Huy.Click += new System.EventHandler(this.btn_PN_Huy_Click);
-            // 
-            // btn_PN_Luu
-            // 
-            this.btn_PN_Luu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_PN_Luu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_PN_Luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Luu.Image")));
-            this.btn_PN_Luu.Location = new System.Drawing.Point(124, 3);
-            this.btn_PN_Luu.Name = "btn_PN_Luu";
-            this.btn_PN_Luu.Size = new System.Drawing.Size(56, 23);
-            this.btn_PN_Luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_PN_Luu.TabIndex = 12;
-            this.btn_PN_Luu.Text = "Lưu";
-            this.btn_PN_Luu.Click += new System.EventHandler(this.btn_PN_Luu_Click);
-            // 
-            // btn_PN_Sua
-            // 
-            this.btn_PN_Sua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_PN_Sua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_PN_Sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Sua.Image")));
-            this.btn_PN_Sua.Location = new System.Drawing.Point(62, 3);
-            this.btn_PN_Sua.Name = "btn_PN_Sua";
-            this.btn_PN_Sua.Size = new System.Drawing.Size(56, 23);
-            this.btn_PN_Sua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_PN_Sua.TabIndex = 11;
-            this.btn_PN_Sua.Text = "Sửa";
-            this.btn_PN_Sua.Click += new System.EventHandler(this.btn_PN_Sua_Click);
-            // 
-            // btn_PN_Them
-            // 
-            this.btn_PN_Them.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_PN_Them.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_PN_Them.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Them.Image")));
-            this.btn_PN_Them.Location = new System.Drawing.Point(0, 3);
-            this.btn_PN_Them.Name = "btn_PN_Them";
-            this.btn_PN_Them.Size = new System.Drawing.Size(56, 23);
-            this.btn_PN_Them.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_PN_Them.TabIndex = 10;
-            this.btn_PN_Them.Text = "Thêm";
-            this.btn_PN_Them.Click += new System.EventHandler(this.btn_PN_Them_Click);
-            // 
-            // labelX13
-            // 
-            this.labelX13.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.Class = "";
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Location = new System.Drawing.Point(-2, 350);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(57, 15);
-            this.labelX13.TabIndex = 11;
-            this.labelX13.Text = "<b>Người Sửa:</b>";
-            // 
-            // PN_cmbNguoiSua
-            // 
-            this.PN_cmbNguoiSua.DisplayMember = "Text";
-            this.PN_cmbNguoiSua.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.PN_cmbNguoiSua.FocusHighlightEnabled = true;
-            this.PN_cmbNguoiSua.FormattingEnabled = true;
-            this.PN_cmbNguoiSua.ItemHeight = 14;
-            this.PN_cmbNguoiSua.Location = new System.Drawing.Point(109, 345);
-            this.PN_cmbNguoiSua.Name = "PN_cmbNguoiSua";
-            this.PN_cmbNguoiSua.Size = new System.Drawing.Size(135, 20);
-            this.PN_cmbNguoiSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PN_cmbNguoiSua.TabIndex = 10;
-            // 
-            // PN_dpNgaySua
-            // 
-            // 
-            // 
-            // 
-            this.PN_dpNgaySua.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.PN_dpNgaySua.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgaySua.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.PN_dpNgaySua.ButtonDropDown.Visible = true;
-            this.PN_dpNgaySua.FocusHighlightEnabled = true;
-            this.PN_dpNgaySua.IsPopupCalendarOpen = false;
-            this.PN_dpNgaySua.Location = new System.Drawing.Point(109, 293);
-            // 
-            // 
-            // 
-            this.PN_dpNgaySua.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.PN_dpNgaySua.MonthCalendar.BackgroundStyle.Class = "";
-            this.PN_dpNgaySua.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgaySua.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgaySua.MonthCalendar.DisplayMonth = new System.DateTime(2012, 6, 1, 0, 0, 0, 0);
-            this.PN_dpNgaySua.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.PN_dpNgaySua.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgaySua.MonthCalendar.TodayButtonVisible = true;
-            this.PN_dpNgaySua.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.PN_dpNgaySua.Name = "PN_dpNgaySua";
-            this.PN_dpNgaySua.Size = new System.Drawing.Size(135, 20);
-            this.PN_dpNgaySua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PN_dpNgaySua.TabIndex = 9;
-            // 
-            // labelX14
-            // 
-            this.labelX14.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.Class = "";
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.Location = new System.Drawing.Point(-1, 298);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(54, 15);
-            this.labelX14.TabIndex = 8;
-            this.labelX14.Text = "<b>Ngày Sửa:</b>";
-            // 
-            // PN_cmbNguoiLap
-            // 
-            this.PN_cmbNguoiLap.DisplayMember = "Text";
-            this.PN_cmbNguoiLap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.PN_cmbNguoiLap.FocusHighlightEnabled = true;
-            this.PN_cmbNguoiLap.FormattingEnabled = true;
-            this.PN_cmbNguoiLap.ItemHeight = 14;
-            this.PN_cmbNguoiLap.Location = new System.Drawing.Point(109, 250);
-            this.PN_cmbNguoiLap.Name = "PN_cmbNguoiLap";
-            this.PN_cmbNguoiLap.Size = new System.Drawing.Size(135, 20);
-            this.PN_cmbNguoiLap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PN_cmbNguoiLap.TabIndex = 7;
-            // 
-            // labelX15
-            // 
-            this.labelX15.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.Class = "";
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Location = new System.Drawing.Point(-1, 255);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(56, 15);
-            this.labelX15.TabIndex = 6;
-            this.labelX15.Text = "<b>Người Lập:</b>";
-            // 
-            // PN_dpNgayLap
-            // 
-            // 
-            // 
-            // 
-            this.PN_dpNgayLap.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.PN_dpNgayLap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgayLap.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.PN_dpNgayLap.ButtonDropDown.Visible = true;
-            this.PN_dpNgayLap.FocusHighlightEnabled = true;
-            this.PN_dpNgayLap.IsPopupCalendarOpen = false;
-            this.PN_dpNgayLap.Location = new System.Drawing.Point(109, 207);
-            // 
-            // 
-            // 
-            this.PN_dpNgayLap.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.PN_dpNgayLap.MonthCalendar.BackgroundStyle.Class = "";
-            this.PN_dpNgayLap.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgayLap.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgayLap.MonthCalendar.DisplayMonth = new System.DateTime(2012, 6, 1, 0, 0, 0, 0);
-            this.PN_dpNgayLap.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.PN_dpNgayLap.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.PN_dpNgayLap.MonthCalendar.TodayButtonVisible = true;
-            this.PN_dpNgayLap.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.PN_dpNgayLap.Name = "PN_dpNgayLap";
-            this.PN_dpNgayLap.Size = new System.Drawing.Size(135, 20);
-            this.PN_dpNgayLap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PN_dpNgayLap.TabIndex = 5;
-            // 
-            // labelX16
-            // 
-            this.labelX16.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX16.BackgroundStyle.Class = "";
-            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX16.Location = new System.Drawing.Point(-1, 212);
-            this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(53, 15);
-            this.labelX16.TabIndex = 2;
-            this.labelX16.Text = "<b>Ngày Lập:</b>";
-            // 
-            // labelX17
-            // 
-            this.labelX17.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX17.BackgroundStyle.Class = "";
-            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX17.Location = new System.Drawing.Point(-1, 61);
-            this.labelX17.Name = "labelX17";
-            this.labelX17.Size = new System.Drawing.Size(81, 15);
-            this.labelX17.TabIndex = 1;
-            this.labelX17.Text = "<b>Mã Lô HĐ Mua:</b>";
-            // 
-            // labelX18
-            // 
-            this.labelX18.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX18.BackgroundStyle.Class = "";
-            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX18.Location = new System.Drawing.Point(0, 23);
-            this.labelX18.Name = "labelX18";
-            this.labelX18.Size = new System.Drawing.Size(108, 15);
-            this.labelX18.TabIndex = 0;
-            this.labelX18.Text = "<b>Mã Loại Phiếu Nhập:</b>";
             // 
             // groupLoaiPhieuNhap
             // 
@@ -1318,7 +838,7 @@
             this.btn_LPN_Huy.Size = new System.Drawing.Size(56, 23);
             this.btn_LPN_Huy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_LPN_Huy.TabIndex = 13;
-            this.btn_LPN_Huy.Text = "Hủy";
+            this.btn_LPN_Huy.Text = "&Hủy";
             this.btn_LPN_Huy.Click += new System.EventHandler(this.btn_LPN_Huy_Click);
             // 
             // btn_LPN_Luu
@@ -1331,7 +851,7 @@
             this.btn_LPN_Luu.Size = new System.Drawing.Size(56, 23);
             this.btn_LPN_Luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_LPN_Luu.TabIndex = 12;
-            this.btn_LPN_Luu.Text = "Lưu";
+            this.btn_LPN_Luu.Text = "&Lưu";
             this.btn_LPN_Luu.Click += new System.EventHandler(this.btn_LPN_Luu_Click);
             // 
             // btn_LPN_Sua
@@ -1344,7 +864,7 @@
             this.btn_LPN_Sua.Size = new System.Drawing.Size(56, 23);
             this.btn_LPN_Sua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_LPN_Sua.TabIndex = 11;
-            this.btn_LPN_Sua.Text = "Sửa";
+            this.btn_LPN_Sua.Text = "&Sửa";
             this.btn_LPN_Sua.Click += new System.EventHandler(this.btn_LPN_Sua_Click);
             // 
             // btn_LPN_Them
@@ -1357,7 +877,7 @@
             this.btn_LPN_Them.Size = new System.Drawing.Size(56, 23);
             this.btn_LPN_Them.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_LPN_Them.TabIndex = 10;
-            this.btn_LPN_Them.Text = "Thêm";
+            this.btn_LPN_Them.Text = "&Thêm";
             this.btn_LPN_Them.Click += new System.EventHandler(this.btn_LPN_Them_Click);
             // 
             // labelX6
@@ -2058,10 +1578,461 @@
             this.labelX12.TabIndex = 0;
             this.labelX12.Text = "<b>Mã Lô HĐMua:</b>";
             // 
+            // groupPhieuPhap
+            // 
+            this.groupPhieuPhap.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPhieuPhap.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPhieuPhap.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Yellow;
+            this.groupPhieuPhap.Controls.Add(this.PN_txtMT);
+            this.groupPhieuPhap.Controls.Add(this.labelX21);
+            this.groupPhieuPhap.Controls.Add(this.PN_cmbMHDM);
+            this.groupPhieuPhap.Controls.Add(this.PN_cmbMLHDM);
+            this.groupPhieuPhap.Controls.Add(this.labelX20);
+            this.groupPhieuPhap.Controls.Add(this.PN_cmbMLPN);
+            this.groupPhieuPhap.Controls.Add(this.groupPanel6);
+            this.groupPhieuPhap.Controls.Add(this.labelX13);
+            this.groupPhieuPhap.Controls.Add(this.PN_cmbNguoiSua);
+            this.groupPhieuPhap.Controls.Add(this.PN_dpNgaySua);
+            this.groupPhieuPhap.Controls.Add(this.labelX14);
+            this.groupPhieuPhap.Controls.Add(this.PN_cmbNguoiLap);
+            this.groupPhieuPhap.Controls.Add(this.labelX15);
+            this.groupPhieuPhap.Controls.Add(this.PN_dpNgayLap);
+            this.groupPhieuPhap.Controls.Add(this.labelX16);
+            this.groupPhieuPhap.Controls.Add(this.labelX17);
+            this.groupPhieuPhap.Controls.Add(this.labelX18);
+            this.groupPhieuPhap.Location = new System.Drawing.Point(0, 0);
+            this.groupPhieuPhap.Name = "groupPhieuPhap";
+            this.groupPhieuPhap.Size = new System.Drawing.Size(254, 496);
+            // 
+            // 
+            // 
+            this.groupPhieuPhap.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(178)))));
+            this.groupPhieuPhap.Style.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(217)))), ((int)(((byte)(69)))));
+            this.groupPhieuPhap.Style.BackColorGradientAngle = 90;
+            this.groupPhieuPhap.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPhieuPhap.Style.BorderBottomWidth = 1;
+            this.groupPhieuPhap.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(147)))), ((int)(((byte)(17)))));
+            this.groupPhieuPhap.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPhieuPhap.Style.BorderLeftWidth = 1;
+            this.groupPhieuPhap.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPhieuPhap.Style.BorderRightWidth = 1;
+            this.groupPhieuPhap.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPhieuPhap.Style.BorderTopWidth = 1;
+            this.groupPhieuPhap.Style.Class = "";
+            this.groupPhieuPhap.Style.CornerDiameter = 4;
+            this.groupPhieuPhap.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPhieuPhap.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPhieuPhap.Style.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(0)))));
+            this.groupPhieuPhap.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPhieuPhap.StyleMouseDown.Class = "";
+            this.groupPhieuPhap.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPhieuPhap.StyleMouseOver.Class = "";
+            this.groupPhieuPhap.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPhieuPhap.TabIndex = 3;
+            this.groupPhieuPhap.Text = "Thêm/Sửa Phiếu Nhập";
+            // 
+            // PN_txtMT
+            // 
+            // 
+            // 
+            // 
+            this.PN_txtMT.Border.Class = "TextBoxBorder";
+            this.PN_txtMT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_txtMT.FocusHighlightEnabled = true;
+            this.PN_txtMT.Location = new System.Drawing.Point(59, 133);
+            this.PN_txtMT.Multiline = true;
+            this.PN_txtMT.Name = "PN_txtMT";
+            this.PN_txtMT.Size = new System.Drawing.Size(184, 63);
+            this.PN_txtMT.TabIndex = 21;
+            // 
+            // labelX21
+            // 
+            this.labelX21.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX21.BackgroundStyle.Class = "";
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX21.Location = new System.Drawing.Point(-1, 133);
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Size = new System.Drawing.Size(36, 15);
+            this.labelX21.TabIndex = 20;
+            this.labelX21.Text = "<b>Mô Tả:</b>";
+            // 
+            // PN_cmbMHDM
+            // 
+            this.PN_cmbMHDM.DisplayMember = "Text";
+            this.PN_cmbMHDM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PN_cmbMHDM.FocusHighlightEnabled = true;
+            this.PN_cmbMHDM.FormattingEnabled = true;
+            this.PN_cmbMHDM.ItemHeight = 14;
+            this.PN_cmbMHDM.Location = new System.Drawing.Point(108, 90);
+            this.PN_cmbMHDM.Name = "PN_cmbMHDM";
+            this.PN_cmbMHDM.Size = new System.Drawing.Size(137, 20);
+            this.PN_cmbMHDM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PN_cmbMHDM.TabIndex = 19;
+            // 
+            // PN_cmbMLHDM
+            // 
+            this.PN_cmbMLHDM.DisplayMember = "Text";
+            this.PN_cmbMLHDM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PN_cmbMLHDM.FocusHighlightEnabled = true;
+            this.PN_cmbMLHDM.FormattingEnabled = true;
+            this.PN_cmbMLHDM.ItemHeight = 14;
+            this.PN_cmbMLHDM.Location = new System.Drawing.Point(108, 56);
+            this.PN_cmbMLHDM.Name = "PN_cmbMLHDM";
+            this.PN_cmbMLHDM.Size = new System.Drawing.Size(137, 20);
+            this.PN_cmbMLHDM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PN_cmbMLHDM.TabIndex = 18;
+            this.PN_cmbMLHDM.SelectedIndexChanged += new System.EventHandler(this.PN_cmbMLHDM_SelectedIndexChanged);
+            // 
+            // labelX20
+            // 
+            this.labelX20.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.Class = "";
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX20.Location = new System.Drawing.Point(-1, 95);
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Size = new System.Drawing.Size(65, 15);
+            this.labelX20.TabIndex = 17;
+            this.labelX20.Text = "<b>Mã HĐ Mua:</b>";
+            // 
+            // PN_cmbMLPN
+            // 
+            this.PN_cmbMLPN.DisplayMember = "Text";
+            this.PN_cmbMLPN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PN_cmbMLPN.FocusHighlightEnabled = true;
+            this.PN_cmbMLPN.FormattingEnabled = true;
+            this.PN_cmbMLPN.ItemHeight = 14;
+            this.PN_cmbMLPN.Location = new System.Drawing.Point(108, 18);
+            this.PN_cmbMLPN.Name = "PN_cmbMLPN";
+            this.PN_cmbMLPN.Size = new System.Drawing.Size(137, 20);
+            this.PN_cmbMLPN.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PN_cmbMLPN.TabIndex = 16;
+            // 
+            // groupPanel6
+            // 
+            this.groupPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel6.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel6.Controls.Add(this.btn_PN_Huy);
+            this.groupPanel6.Controls.Add(this.btn_PN_Luu);
+            this.groupPanel6.Controls.Add(this.btn_PN_Sua);
+            this.groupPanel6.Controls.Add(this.btn_PN_Them);
+            this.groupPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupPanel6.Location = new System.Drawing.Point(0, 426);
+            this.groupPanel6.Name = "groupPanel6";
+            this.groupPanel6.Size = new System.Drawing.Size(248, 49);
+            // 
+            // 
+            // 
+            this.groupPanel6.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel6.Style.BackColorGradientAngle = 90;
+            this.groupPanel6.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel6.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel6.Style.BorderBottomWidth = 1;
+            this.groupPanel6.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel6.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel6.Style.BorderLeftWidth = 1;
+            this.groupPanel6.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel6.Style.BorderRightWidth = 1;
+            this.groupPanel6.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel6.Style.BorderTopWidth = 1;
+            this.groupPanel6.Style.Class = "";
+            this.groupPanel6.Style.CornerDiameter = 4;
+            this.groupPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel6.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel6.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel6.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel6.StyleMouseDown.Class = "";
+            this.groupPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel6.StyleMouseOver.Class = "";
+            this.groupPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel6.TabIndex = 15;
+            this.groupPanel6.Text = "ToolBar Edit";
+            // 
+            // btn_PN_Huy
+            // 
+            this.btn_PN_Huy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_PN_Huy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_PN_Huy.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Huy.Image")));
+            this.btn_PN_Huy.Location = new System.Drawing.Point(186, 3);
+            this.btn_PN_Huy.Name = "btn_PN_Huy";
+            this.btn_PN_Huy.Size = new System.Drawing.Size(56, 23);
+            this.btn_PN_Huy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_PN_Huy.TabIndex = 13;
+            this.btn_PN_Huy.Text = "Hủy";
+            this.btn_PN_Huy.Click += new System.EventHandler(this.btn_PN_Huy_Click);
+            // 
+            // btn_PN_Luu
+            // 
+            this.btn_PN_Luu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_PN_Luu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_PN_Luu.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Luu.Image")));
+            this.btn_PN_Luu.Location = new System.Drawing.Point(124, 3);
+            this.btn_PN_Luu.Name = "btn_PN_Luu";
+            this.btn_PN_Luu.Size = new System.Drawing.Size(56, 23);
+            this.btn_PN_Luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_PN_Luu.TabIndex = 12;
+            this.btn_PN_Luu.Text = "Lưu";
+            this.btn_PN_Luu.Click += new System.EventHandler(this.btn_PN_Luu_Click);
+            // 
+            // btn_PN_Sua
+            // 
+            this.btn_PN_Sua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_PN_Sua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_PN_Sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Sua.Image")));
+            this.btn_PN_Sua.Location = new System.Drawing.Point(62, 3);
+            this.btn_PN_Sua.Name = "btn_PN_Sua";
+            this.btn_PN_Sua.Size = new System.Drawing.Size(56, 23);
+            this.btn_PN_Sua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_PN_Sua.TabIndex = 11;
+            this.btn_PN_Sua.Text = "Sửa";
+            this.btn_PN_Sua.Click += new System.EventHandler(this.btn_PN_Sua_Click);
+            // 
+            // btn_PN_Them
+            // 
+            this.btn_PN_Them.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_PN_Them.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_PN_Them.Image = ((System.Drawing.Image)(resources.GetObject("btn_PN_Them.Image")));
+            this.btn_PN_Them.Location = new System.Drawing.Point(0, 3);
+            this.btn_PN_Them.Name = "btn_PN_Them";
+            this.btn_PN_Them.Size = new System.Drawing.Size(56, 23);
+            this.btn_PN_Them.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_PN_Them.TabIndex = 10;
+            this.btn_PN_Them.Text = "Thêm";
+            this.btn_PN_Them.Click += new System.EventHandler(this.btn_PN_Them_Click);
+            // 
+            // labelX13
+            // 
+            this.labelX13.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.Class = "";
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.Location = new System.Drawing.Point(-2, 350);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(57, 15);
+            this.labelX13.TabIndex = 11;
+            this.labelX13.Text = "<b>Người Sửa:</b>";
+            // 
+            // PN_cmbNguoiSua
+            // 
+            this.PN_cmbNguoiSua.DisplayMember = "Text";
+            this.PN_cmbNguoiSua.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PN_cmbNguoiSua.FocusHighlightEnabled = true;
+            this.PN_cmbNguoiSua.FormattingEnabled = true;
+            this.PN_cmbNguoiSua.ItemHeight = 14;
+            this.PN_cmbNguoiSua.Location = new System.Drawing.Point(109, 345);
+            this.PN_cmbNguoiSua.Name = "PN_cmbNguoiSua";
+            this.PN_cmbNguoiSua.Size = new System.Drawing.Size(135, 20);
+            this.PN_cmbNguoiSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PN_cmbNguoiSua.TabIndex = 10;
+            // 
+            // PN_dpNgaySua
+            // 
+            // 
+            // 
+            // 
+            this.PN_dpNgaySua.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.PN_dpNgaySua.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgaySua.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.PN_dpNgaySua.ButtonDropDown.Visible = true;
+            this.PN_dpNgaySua.FocusHighlightEnabled = true;
+            this.PN_dpNgaySua.IsPopupCalendarOpen = false;
+            this.PN_dpNgaySua.Location = new System.Drawing.Point(109, 293);
+            // 
+            // 
+            // 
+            this.PN_dpNgaySua.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.PN_dpNgaySua.MonthCalendar.BackgroundStyle.Class = "";
+            this.PN_dpNgaySua.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgaySua.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.PN_dpNgaySua.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgaySua.MonthCalendar.DisplayMonth = new System.DateTime(2012, 6, 1, 0, 0, 0, 0);
+            this.PN_dpNgaySua.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.PN_dpNgaySua.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.PN_dpNgaySua.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgaySua.MonthCalendar.TodayButtonVisible = true;
+            this.PN_dpNgaySua.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.PN_dpNgaySua.Name = "PN_dpNgaySua";
+            this.PN_dpNgaySua.Size = new System.Drawing.Size(135, 20);
+            this.PN_dpNgaySua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PN_dpNgaySua.TabIndex = 9;
+            // 
+            // labelX14
+            // 
+            this.labelX14.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX14.BackgroundStyle.Class = "";
+            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX14.Location = new System.Drawing.Point(-1, 298);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.Size = new System.Drawing.Size(54, 15);
+            this.labelX14.TabIndex = 8;
+            this.labelX14.Text = "<b>Ngày Sửa:</b>";
+            // 
+            // PN_cmbNguoiLap
+            // 
+            this.PN_cmbNguoiLap.DisplayMember = "Text";
+            this.PN_cmbNguoiLap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PN_cmbNguoiLap.FocusHighlightEnabled = true;
+            this.PN_cmbNguoiLap.FormattingEnabled = true;
+            this.PN_cmbNguoiLap.ItemHeight = 14;
+            this.PN_cmbNguoiLap.Location = new System.Drawing.Point(109, 250);
+            this.PN_cmbNguoiLap.Name = "PN_cmbNguoiLap";
+            this.PN_cmbNguoiLap.Size = new System.Drawing.Size(135, 20);
+            this.PN_cmbNguoiLap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PN_cmbNguoiLap.TabIndex = 7;
+            // 
+            // labelX15
+            // 
+            this.labelX15.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.Class = "";
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.Location = new System.Drawing.Point(-1, 255);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(56, 15);
+            this.labelX15.TabIndex = 6;
+            this.labelX15.Text = "<b>Người Lập:</b>";
+            // 
+            // PN_dpNgayLap
+            // 
+            // 
+            // 
+            // 
+            this.PN_dpNgayLap.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.PN_dpNgayLap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgayLap.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.PN_dpNgayLap.ButtonDropDown.Visible = true;
+            this.PN_dpNgayLap.FocusHighlightEnabled = true;
+            this.PN_dpNgayLap.IsPopupCalendarOpen = false;
+            this.PN_dpNgayLap.Location = new System.Drawing.Point(109, 207);
+            // 
+            // 
+            // 
+            this.PN_dpNgayLap.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.PN_dpNgayLap.MonthCalendar.BackgroundStyle.Class = "";
+            this.PN_dpNgayLap.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgayLap.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.PN_dpNgayLap.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgayLap.MonthCalendar.DisplayMonth = new System.DateTime(2012, 6, 1, 0, 0, 0, 0);
+            this.PN_dpNgayLap.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.PN_dpNgayLap.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.PN_dpNgayLap.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PN_dpNgayLap.MonthCalendar.TodayButtonVisible = true;
+            this.PN_dpNgayLap.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.PN_dpNgayLap.Name = "PN_dpNgayLap";
+            this.PN_dpNgayLap.Size = new System.Drawing.Size(135, 20);
+            this.PN_dpNgayLap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PN_dpNgayLap.TabIndex = 5;
+            // 
+            // labelX16
+            // 
+            this.labelX16.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX16.BackgroundStyle.Class = "";
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.Location = new System.Drawing.Point(-1, 212);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(53, 15);
+            this.labelX16.TabIndex = 2;
+            this.labelX16.Text = "<b>Ngày Lập:</b>";
+            // 
+            // labelX17
+            // 
+            this.labelX17.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.Class = "";
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX17.Location = new System.Drawing.Point(-1, 61);
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Size = new System.Drawing.Size(81, 15);
+            this.labelX17.TabIndex = 1;
+            this.labelX17.Text = "<b>Mã Lô HĐ Mua:</b>";
+            // 
+            // labelX18
+            // 
+            this.labelX18.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX18.BackgroundStyle.Class = "";
+            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX18.Location = new System.Drawing.Point(0, 23);
+            this.labelX18.Name = "labelX18";
+            this.labelX18.Size = new System.Drawing.Size(108, 15);
+            this.labelX18.TabIndex = 0;
+            this.labelX18.Text = "<b>Mã Loại Phiếu Nhập:</b>";
+            // 
             // buttonItemThaoTac
             // 
             this.buttonItemThaoTac.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemThaoTac.Checked = true;
             this.buttonItemThaoTac.Image = global::QuanLy_KeToan.Properties.Resources.edit;
             this.buttonItemThaoTac.Name = "buttonItemThaoTac";
             this.buttonItemThaoTac.OptionGroup = "navBar";
@@ -2095,10 +2066,10 @@
             this.navigationPanePanelDuyetDanhMuc.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.navigationPanePanelDuyetDanhMuc.Controls.Add(this.advTreeLoNhap);
             this.navigationPanePanelDuyetDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanelDuyetDanhMuc.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanelDuyetDanhMuc.Location = new System.Drawing.Point(1, 25);
             this.navigationPanePanelDuyetDanhMuc.Name = "navigationPanePanelDuyetDanhMuc";
             this.navigationPanePanelDuyetDanhMuc.ParentItem = this.btnDuyetDanhMuc;
-            this.navigationPanePanelDuyetDanhMuc.Size = new System.Drawing.Size(256, 523);
+            this.navigationPanePanelDuyetDanhMuc.Size = new System.Drawing.Size(256, 499);
             this.navigationPanePanelDuyetDanhMuc.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanelDuyetDanhMuc.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanelDuyetDanhMuc.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -2116,7 +2087,6 @@
             // 
             this.advTreeLoNhap.BackgroundStyle.Class = "TreeBorderKey";
             this.advTreeLoNhap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.advTreeLoNhap.CellEdit = true;
             this.advTreeLoNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advTreeLoNhap.GridLinesColor = System.Drawing.Color.DodgerBlue;
             this.advTreeLoNhap.HotTracking = true;
@@ -2126,11 +2096,14 @@
             this.root_node});
             this.advTreeLoNhap.NodesConnector = this.nodeConnector1;
             this.advTreeLoNhap.NodeStyle = this.elementStyle2;
+            this.advTreeLoNhap.NodeStyleMouseOver = this.elementStyle3;
+            this.advTreeLoNhap.NodeStyleSelected = this.elementStyle4;
             this.advTreeLoNhap.PathSeparator = ";";
-            this.advTreeLoNhap.SelectionBoxStyle = DevComponents.AdvTree.eSelectionStyle.FullRowSelect;
-            this.advTreeLoNhap.Size = new System.Drawing.Size(256, 523);
+            this.advTreeLoNhap.Size = new System.Drawing.Size(256, 499);
             this.advTreeLoNhap.Styles.Add(this.elementStyle1);
             this.advTreeLoNhap.Styles.Add(this.elementStyle2);
+            this.advTreeLoNhap.Styles.Add(this.elementStyle3);
+            this.advTreeLoNhap.Styles.Add(this.elementStyle4);
             this.advTreeLoNhap.TabIndex = 0;
             this.advTreeLoNhap.Text = "advTree1";
             this.advTreeLoNhap.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTreeLoNhap_AfterNodeSelect);
@@ -2188,6 +2161,56 @@
             this.elementStyle2.PaddingTop = 1;
             this.elementStyle2.TextColor = System.Drawing.Color.Black;
             // 
+            // elementStyle3
+            // 
+            this.elementStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(230)))), ((int)(((byte)(247)))));
+            this.elementStyle3.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(168)))), ((int)(((byte)(228)))));
+            this.elementStyle3.BackColorGradientAngle = 90;
+            this.elementStyle3.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderBottomWidth = 1;
+            this.elementStyle3.BorderColor = System.Drawing.Color.DarkGray;
+            this.elementStyle3.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderLeftWidth = 1;
+            this.elementStyle3.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderRightWidth = 1;
+            this.elementStyle3.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderTopWidth = 1;
+            this.elementStyle3.Class = "";
+            this.elementStyle3.CornerDiameter = 4;
+            this.elementStyle3.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle3.Description = "Blue";
+            this.elementStyle3.Name = "elementStyle3";
+            this.elementStyle3.PaddingBottom = 1;
+            this.elementStyle3.PaddingLeft = 1;
+            this.elementStyle3.PaddingRight = 1;
+            this.elementStyle3.PaddingTop = 1;
+            this.elementStyle3.TextColor = System.Drawing.Color.Black;
+            // 
+            // elementStyle4
+            // 
+            this.elementStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
+            this.elementStyle4.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(149)))), ((int)(((byte)(151)))));
+            this.elementStyle4.BackColorGradientAngle = 90;
+            this.elementStyle4.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderBottomWidth = 1;
+            this.elementStyle4.BorderColor = System.Drawing.Color.DarkGray;
+            this.elementStyle4.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderLeftWidth = 1;
+            this.elementStyle4.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderRightWidth = 1;
+            this.elementStyle4.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderTopWidth = 1;
+            this.elementStyle4.Class = "";
+            this.elementStyle4.CornerDiameter = 4;
+            this.elementStyle4.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle4.Description = "Red";
+            this.elementStyle4.Name = "elementStyle4";
+            this.elementStyle4.PaddingBottom = 1;
+            this.elementStyle4.PaddingLeft = 1;
+            this.elementStyle4.PaddingRight = 1;
+            this.elementStyle4.PaddingTop = 1;
+            this.elementStyle4.TextColor = System.Drawing.Color.Black;
+            // 
             // elementStyle1
             // 
             this.elementStyle1.Class = "";
@@ -2198,6 +2221,7 @@
             // btnDuyetDanhMuc
             // 
             this.btnDuyetDanhMuc.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnDuyetDanhMuc.Checked = true;
             this.btnDuyetDanhMuc.Image = global::QuanLy_KeToan.Properties.Resources.duyet;
             this.btnDuyetDanhMuc.Name = "btnDuyetDanhMuc";
             this.btnDuyetDanhMuc.OptionGroup = "navBar";
@@ -2372,379 +2396,6 @@
             this.colorPickerButton.TabIndex = 0;
             this.colorPickerButton.Text = "Tùy Chỉnh";
             // 
-            // groupPanelLoaiPhieuNhap
-            // 
-            this.groupPanelLoaiPhieuNhap.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanelLoaiPhieuNhap.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanelLoaiPhieuNhap.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanelLoaiPhieuNhap.Controls.Add(this.gridLoaiPhieuNhap);
-            this.groupPanelLoaiPhieuNhap.Controls.Add(this.bindingLoaiPhieuNhap);
-            this.groupPanelLoaiPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanelLoaiPhieuNhap.Location = new System.Drawing.Point(1, 1);
-            this.groupPanelLoaiPhieuNhap.Name = "groupPanelLoaiPhieuNhap";
-            this.groupPanelLoaiPhieuNhap.Size = new System.Drawing.Size(1352, 664);
-            // 
-            // 
-            // 
-            this.groupPanelLoaiPhieuNhap.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanelLoaiPhieuNhap.Style.BackColorGradientAngle = 90;
-            this.groupPanelLoaiPhieuNhap.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanelLoaiPhieuNhap.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelLoaiPhieuNhap.Style.BorderBottomWidth = 1;
-            this.groupPanelLoaiPhieuNhap.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanelLoaiPhieuNhap.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelLoaiPhieuNhap.Style.BorderLeftWidth = 1;
-            this.groupPanelLoaiPhieuNhap.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelLoaiPhieuNhap.Style.BorderRightWidth = 1;
-            this.groupPanelLoaiPhieuNhap.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanelLoaiPhieuNhap.Style.BorderTopWidth = 1;
-            this.groupPanelLoaiPhieuNhap.Style.Class = "";
-            this.groupPanelLoaiPhieuNhap.Style.CornerDiameter = 4;
-            this.groupPanelLoaiPhieuNhap.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanelLoaiPhieuNhap.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanelLoaiPhieuNhap.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanelLoaiPhieuNhap.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanelLoaiPhieuNhap.StyleMouseDown.Class = "";
-            this.groupPanelLoaiPhieuNhap.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanelLoaiPhieuNhap.StyleMouseOver.Class = "";
-            this.groupPanelLoaiPhieuNhap.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanelLoaiPhieuNhap.TabIndex = 1;
-            this.groupPanelLoaiPhieuNhap.Text = "Loại Phiếu Nhập";
-            this.groupPanelLoaiPhieuNhap.TitleImage = global::QuanLy_KeToan.Properties.Resources.Loaiphieunhap;
-            this.groupPanelLoaiPhieuNhap.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
-            // 
-            // gridLoaiPhieuNhap
-            // 
-            this.gridLoaiPhieuNhap.AllowUserToAddRows = false;
-            this.gridLoaiPhieuNhap.AllowUserToOrderColumns = true;
-            this.gridLoaiPhieuNhap.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.gridLoaiPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridLoaiPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColMLPN,
-            this.ColTLPN,
-            this.NL,
-            this.NgL,
-            this.NS,
-            this.NgS});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLoaiPhieuNhap.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridLoaiPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridLoaiPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.gridLoaiPhieuNhap.Location = new System.Drawing.Point(0, 25);
-            this.gridLoaiPhieuNhap.Name = "gridLoaiPhieuNhap";
-            this.gridLoaiPhieuNhap.Size = new System.Drawing.Size(1346, 594);
-            this.gridLoaiPhieuNhap.TabIndex = 0;
-            this.gridLoaiPhieuNhap.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.gridLoaiPhieuNhap_CellBeginEdit);
-            this.gridLoaiPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLoaiPhieuNhap_CellClick);
-            this.gridLoaiPhieuNhap.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLoaiPhieuNhap_RowEnter);
-            // 
-            // ColMLPN
-            // 
-            this.ColMLPN.DataPropertyName = "MaLoaiPhieuNhap";
-            this.ColMLPN.HeaderText = "Mã Loại PN";
-            this.ColMLPN.Name = "ColMLPN";
-            // 
-            // ColTLPN
-            // 
-            this.ColTLPN.DataPropertyName = "TenLoaiPhieuNhap";
-            this.ColTLPN.HeaderText = "Tên Loại PN";
-            this.ColTLPN.Name = "ColTLPN";
-            this.ColTLPN.Width = 200;
-            // 
-            // NL
-            // 
-            // 
-            // 
-            // 
-            this.NL.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this.NL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NL.DataPropertyName = "NgayLap";
-            this.NL.HeaderText = "Ngày Lập";
-            this.NL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            // 
-            // 
-            // 
-            this.NL.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NL.MonthCalendar.BackgroundStyle.Class = "";
-            this.NL.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.NL.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.NL.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NL.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.NL.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.NL.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NL.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.NL.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NL.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.NL.Name = "NL";
-            // 
-            // NgL
-            // 
-            this.NgL.DataPropertyName = "NguoiLap";
-            this.NgL.DropDownHeight = 106;
-            this.NgL.DropDownWidth = 121;
-            this.NgL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NgL.HeaderText = "Người Lập";
-            this.NgL.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NgL.IntegralHeight = false;
-            this.NgL.ItemHeight = 15;
-            this.NgL.Name = "NgL";
-            this.NgL.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NgL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // NS
-            // 
-            // 
-            // 
-            // 
-            this.NS.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this.NS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NS.DataPropertyName = "NgaySua";
-            this.NS.HeaderText = "Ngày Sửa";
-            this.NS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            // 
-            // 
-            // 
-            this.NS.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NS.MonthCalendar.BackgroundStyle.Class = "";
-            this.NS.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.NS.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.NS.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NS.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.NS.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.NS.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NS.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.NS.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NS.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.NS.Name = "NS";
-            // 
-            // NgS
-            // 
-            this.NgS.DataPropertyName = "NguoiSua";
-            this.NgS.DropDownHeight = 106;
-            this.NgS.DropDownWidth = 121;
-            this.NgS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NgS.HeaderText = "Người Sửa";
-            this.NgS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NgS.IntegralHeight = false;
-            this.NgS.ItemHeight = 15;
-            this.NgS.Name = "NgS";
-            this.NgS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NgS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // bindingLoaiPhieuNhap
-            // 
-            this.bindingLoaiPhieuNhap.AddNewItem = null;
-            this.bindingLoaiPhieuNhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bindingLoaiPhieuNhap.CountItem = this.bindingNavigatorCountItem2;
-            this.bindingLoaiPhieuNhap.CountItemFormat = "của {0}";
-            this.bindingLoaiPhieuNhap.DeleteItem = null;
-            this.bindingLoaiPhieuNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem2,
-            this.bindingNavigatorMovePreviousItem2,
-            this.bindingNavigatorSeparator6,
-            this.positionLoaiPhieuNhap,
-            this.bindingNavigatorCountItem2,
-            this.bindingNavigatorSeparator7,
-            this.bindingNavigatorMoveNextItem2,
-            this.bindingNavigatorMoveLastItem2,
-            this.bindingNavigatorSeparator8,
-            this.LPN_Refresh,
-            this.toolStripSeparator14,
-            this.LPN_Add,
-            this.toolStripSeparator15,
-            this.LPN_Delete,
-            this.toolStripSeparator16,
-            this.LPN_Save,
-            this.toolStripSeparator17,
-            this.LPN_Cancel,
-            this.toolStripSeparator18,
-            this.LPN_Exit});
-            this.bindingLoaiPhieuNhap.Location = new System.Drawing.Point(0, 0);
-            this.bindingLoaiPhieuNhap.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
-            this.bindingLoaiPhieuNhap.MoveLastItem = this.bindingNavigatorMoveLastItem2;
-            this.bindingLoaiPhieuNhap.MoveNextItem = this.bindingNavigatorMoveNextItem2;
-            this.bindingLoaiPhieuNhap.MovePreviousItem = this.bindingNavigatorMovePreviousItem2;
-            this.bindingLoaiPhieuNhap.Name = "bindingLoaiPhieuNhap";
-            this.bindingLoaiPhieuNhap.PositionItem = this.positionLoaiPhieuNhap;
-            this.bindingLoaiPhieuNhap.Size = new System.Drawing.Size(1346, 25);
-            this.bindingLoaiPhieuNhap.TabIndex = 1;
-            // 
-            // bindingNavigatorCountItem2
-            // 
-            this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem2";
-            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem2.Text = "của {0}";
-            this.bindingNavigatorCountItem2.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMoveFirstItem2
-            // 
-            this.bindingNavigatorMoveFirstItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem2.Image")));
-            this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem2";
-            this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem2.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem2
-            // 
-            this.bindingNavigatorMovePreviousItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem2.Image")));
-            this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem2";
-            this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem2.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator6
-            // 
-            this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
-            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // positionLoaiPhieuNhap
-            // 
-            this.positionLoaiPhieuNhap.AccessibleName = "Position";
-            this.positionLoaiPhieuNhap.AutoSize = false;
-            this.positionLoaiPhieuNhap.Name = "positionLoaiPhieuNhap";
-            this.positionLoaiPhieuNhap.Size = new System.Drawing.Size(50, 23);
-            this.positionLoaiPhieuNhap.Text = "0";
-            this.positionLoaiPhieuNhap.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator7
-            // 
-            this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator7";
-            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem2
-            // 
-            this.bindingNavigatorMoveNextItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem2.Image")));
-            this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem2";
-            this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem2.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem2
-            // 
-            this.bindingNavigatorMoveLastItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem2.Image")));
-            this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem2";
-            this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem2.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator8
-            // 
-            this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
-            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 25);
-            // 
-            // LPN_Refresh
-            // 
-            this.LPN_Refresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
-            this.LPN_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LPN_Refresh.Name = "LPN_Refresh";
-            this.LPN_Refresh.Size = new System.Drawing.Size(66, 22);
-            this.LPN_Refresh.Text = "&Refresh";
-            this.LPN_Refresh.Click += new System.EventHandler(this.LPN_Refresh_Click);
-            // 
-            // toolStripSeparator14
-            // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
-            // 
-            // LPN_Add
-            // 
-            this.LPN_Add.Image = ((System.Drawing.Image)(resources.GetObject("LPN_Add.Image")));
-            this.LPN_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LPN_Add.Name = "LPN_Add";
-            this.LPN_Add.Size = new System.Drawing.Size(49, 22);
-            this.LPN_Add.Text = "&Add";
-            this.LPN_Add.Click += new System.EventHandler(this.LPN_Add_Click);
-            // 
-            // toolStripSeparator15
-            // 
-            this.toolStripSeparator15.Name = "toolStripSeparator15";
-            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 25);
-            // 
-            // LPN_Delete
-            // 
-            this.LPN_Delete.Image = global::QuanLy_KeToan.Properties.Resources.delete;
-            this.LPN_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LPN_Delete.Name = "LPN_Delete";
-            this.LPN_Delete.Size = new System.Drawing.Size(60, 22);
-            this.LPN_Delete.Text = "&Delete";
-            this.LPN_Delete.Click += new System.EventHandler(this.LPN_Delete_Click);
-            // 
-            // toolStripSeparator16
-            // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
-            // 
-            // LPN_Save
-            // 
-            this.LPN_Save.Image = ((System.Drawing.Image)(resources.GetObject("LPN_Save.Image")));
-            this.LPN_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LPN_Save.Name = "LPN_Save";
-            this.LPN_Save.Size = new System.Drawing.Size(51, 22);
-            this.LPN_Save.Text = "&Save";
-            this.LPN_Save.Click += new System.EventHandler(this.LPN_Save_Click);
-            // 
-            // toolStripSeparator17
-            // 
-            this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
-            // 
-            // LPN_Cancel
-            // 
-            this.LPN_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("LPN_Cancel.Image")));
-            this.LPN_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LPN_Cancel.Name = "LPN_Cancel";
-            this.LPN_Cancel.Size = new System.Drawing.Size(63, 22);
-            this.LPN_Cancel.Text = "&Cancel";
-            this.LPN_Cancel.Click += new System.EventHandler(this.LPN_Cancel_Click);
-            // 
-            // toolStripSeparator18
-            // 
-            this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
-            // 
-            // LPN_Exit
-            // 
-            this.LPN_Exit.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
-            this.LPN_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LPN_Exit.Name = "LPN_Exit";
-            this.LPN_Exit.Size = new System.Drawing.Size(45, 22);
-            this.LPN_Exit.Text = "&Exit";
-            this.LPN_Exit.Click += new System.EventHandler(this.LPN_Exit_Click);
-            // 
             // groupPanelLoPhieuNhap
             // 
             this.groupPanelLoPhieuNhap.BackColor = System.Drawing.Color.Transparent;
@@ -2794,9 +2445,15 @@
             // 
             // gridLoPhieuNhap
             // 
-            this.gridLoPhieuNhap.AllowUserToAddRows = false;
-            this.gridLoPhieuNhap.AllowUserToOrderColumns = true;
             this.gridLoPhieuNhap.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridLoPhieuNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridLoPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLoPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColMLHDM,
@@ -2806,36 +2463,48 @@
             this.NguoiLap,
             this.NgaySua,
             this.NguoiSua});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLoPhieuNhap.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridLoPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridLoPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.gridLoPhieuNhap.Location = new System.Drawing.Point(0, 25);
             this.gridLoPhieuNhap.Name = "gridLoPhieuNhap";
             this.gridLoPhieuNhap.Size = new System.Drawing.Size(1346, 595);
-            this.gridLoPhieuNhap.TabIndex = 0;
-            this.gridLoPhieuNhap.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.gridLoPhieuNhap_CellBeginEdit);
+            this.gridLoPhieuNhap.TabIndex = 2;
+            this.gridLoPhieuNhap.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.gridLoPhieuNhap_CellBeginEdit_1);
             this.gridLoPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLoPhieuNhap_CellClick);
             this.gridLoPhieuNhap.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLoPhieuNhap_RowEnter);
             // 
             // ColMLHDM
             // 
             this.ColMLHDM.DataPropertyName = "MaLoHDMua";
+            this.ColMLHDM.DisplayMember = "Text";
             this.ColMLHDM.DropDownHeight = 106;
             this.ColMLHDM.DropDownWidth = 121;
             this.ColMLHDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ColMLHDM.HeaderText = "Mã Lô HĐMua";
+            this.ColMLHDM.HeaderText = "Mã Lô HĐ Mua";
             this.ColMLHDM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ColMLHDM.IntegralHeight = false;
             this.ColMLHDM.ItemHeight = 15;
             this.ColMLHDM.Name = "ColMLHDM";
-            this.ColMLHDM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColMLHDM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ColMLHDM.Width = 130;
             // 
             // ColNLN
             // 
             // 
             // 
             // 
+            this.ColNLN.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
             this.ColNLN.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
             this.ColNLN.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ColNLN.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
             this.ColNLN.DataPropertyName = "NgayLoNhap";
             this.ColNLN.HeaderText = "Ngày Lô Nhập";
             this.ColNLN.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
@@ -2853,7 +2522,7 @@
             // 
             this.ColNLN.MonthCalendar.CommandsBackgroundStyle.Class = "";
             this.ColNLN.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ColNLN.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.ColNLN.MonthCalendar.DisplayMonth = new System.DateTime(2012, 6, 1, 0, 0, 0, 0);
             this.ColNLN.MonthCalendar.MarkedDates = new System.DateTime[0];
             this.ColNLN.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
@@ -2863,21 +2532,24 @@
             this.ColNLN.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ColNLN.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.ColNLN.Name = "ColNLN";
+            this.ColNLN.Width = 130;
             // 
             // ColMT
             // 
             this.ColMT.DataPropertyName = "MoTa";
             this.ColMT.HeaderText = "Mô Tả";
             this.ColMT.Name = "ColMT";
-            this.ColMT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMT.Width = 300;
             // 
             // NgayLap
             // 
             // 
             // 
             // 
+            this.NgayLap.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
             this.NgayLap.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
             this.NgayLap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgayLap.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
             this.NgayLap.DataPropertyName = "NgayLap";
             this.NgayLap.HeaderText = "Ngày Lập";
             this.NgayLap.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
@@ -2895,7 +2567,7 @@
             // 
             this.NgayLap.MonthCalendar.CommandsBackgroundStyle.Class = "";
             this.NgayLap.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgayLap.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.NgayLap.MonthCalendar.DisplayMonth = new System.DateTime(2012, 6, 1, 0, 0, 0, 0);
             this.NgayLap.MonthCalendar.MarkedDates = new System.DateTime[0];
             this.NgayLap.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
@@ -2909,6 +2581,7 @@
             // NguoiLap
             // 
             this.NguoiLap.DataPropertyName = "NguoiLap";
+            this.NguoiLap.DisplayMember = "Text";
             this.NguoiLap.DropDownHeight = 106;
             this.NguoiLap.DropDownWidth = 121;
             this.NguoiLap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2917,7 +2590,6 @@
             this.NguoiLap.IntegralHeight = false;
             this.NguoiLap.ItemHeight = 15;
             this.NguoiLap.Name = "NguoiLap";
-            this.NguoiLap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.NguoiLap.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // NgaySua
@@ -2925,8 +2597,10 @@
             // 
             // 
             // 
+            this.NgaySua.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
             this.NgaySua.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
             this.NgaySua.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgaySua.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
             this.NgaySua.DataPropertyName = "NgaySua";
             this.NgaySua.HeaderText = "Ngày Sửa";
             this.NgaySua.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
@@ -2944,7 +2618,7 @@
             // 
             this.NgaySua.MonthCalendar.CommandsBackgroundStyle.Class = "";
             this.NgaySua.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgaySua.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.NgaySua.MonthCalendar.DisplayMonth = new System.DateTime(2012, 6, 1, 0, 0, 0, 0);
             this.NgaySua.MonthCalendar.MarkedDates = new System.DateTime[0];
             this.NgaySua.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
@@ -2958,6 +2632,7 @@
             // NguoiSua
             // 
             this.NguoiSua.DataPropertyName = "NguoiSua";
+            this.NguoiSua.DisplayMember = "Text";
             this.NguoiSua.DropDownHeight = 106;
             this.NguoiSua.DropDownWidth = 121;
             this.NguoiSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2966,7 +2641,6 @@
             this.NguoiSua.IntegralHeight = false;
             this.NguoiSua.ItemHeight = 15;
             this.NguoiSua.Name = "NguoiSua";
-            this.NguoiSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.NguoiSua.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // bindingLoPhieuNhap
@@ -3153,6 +2827,430 @@
             this.LoPN_Exit.Text = "&Exit";
             this.LoPN_Exit.Click += new System.EventHandler(this.LoPN_Exit_Click);
             // 
+            // groupPanelPhieuNhap
+            // 
+            this.groupPanelPhieuNhap.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanelPhieuNhap.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanelPhieuNhap.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanelPhieuNhap.Controls.Add(this.gridPhieuNhap);
+            this.groupPanelPhieuNhap.Controls.Add(this.bindingPhieuNhap);
+            this.groupPanelPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanelPhieuNhap.Location = new System.Drawing.Point(1, 1);
+            this.groupPanelPhieuNhap.Name = "groupPanelPhieuNhap";
+            this.groupPanelPhieuNhap.Size = new System.Drawing.Size(1352, 664);
+            // 
+            // 
+            // 
+            this.groupPanelPhieuNhap.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanelPhieuNhap.Style.BackColorGradientAngle = 90;
+            this.groupPanelPhieuNhap.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanelPhieuNhap.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelPhieuNhap.Style.BorderBottomWidth = 1;
+            this.groupPanelPhieuNhap.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanelPhieuNhap.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelPhieuNhap.Style.BorderLeftWidth = 1;
+            this.groupPanelPhieuNhap.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelPhieuNhap.Style.BorderRightWidth = 1;
+            this.groupPanelPhieuNhap.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelPhieuNhap.Style.BorderTopWidth = 1;
+            this.groupPanelPhieuNhap.Style.Class = "";
+            this.groupPanelPhieuNhap.Style.CornerDiameter = 4;
+            this.groupPanelPhieuNhap.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanelPhieuNhap.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanelPhieuNhap.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanelPhieuNhap.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanelPhieuNhap.StyleMouseDown.Class = "";
+            this.groupPanelPhieuNhap.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanelPhieuNhap.StyleMouseOver.Class = "";
+            this.groupPanelPhieuNhap.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanelPhieuNhap.TabIndex = 2;
+            this.groupPanelPhieuNhap.Text = "Phiếu Nhập";
+            this.groupPanelPhieuNhap.TitleImage = global::QuanLy_KeToan.Properties.Resources.receipt;
+            this.groupPanelPhieuNhap.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
+            // 
+            // gridPhieuNhap
+            // 
+            this.gridPhieuNhap.AllowUserToAddRows = false;
+            this.gridPhieuNhap.AllowUserToOrderColumns = true;
+            this.gridPhieuNhap.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPhieuNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gridPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MLPN,
+            this.MLHDM,
+            this.MHDM,
+            this.MT,
+            this._NL,
+            this._NgL,
+            this._NS,
+            this._NgS});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPhieuNhap.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gridPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.gridPhieuNhap.Location = new System.Drawing.Point(0, 25);
+            this.gridPhieuNhap.Name = "gridPhieuNhap";
+            this.gridPhieuNhap.Size = new System.Drawing.Size(1346, 592);
+            this.gridPhieuNhap.TabIndex = 0;
+            this.gridPhieuNhap.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.gridPhieuNhap_CellBeginEdit);
+            this.gridPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPhieuNhap_CellClick);
+            this.gridPhieuNhap.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPhieuNhap_RowEnter);
+            // 
+            // MLPN
+            // 
+            this.MLPN.DataPropertyName = "MaLoaiPhieuNhap";
+            this.MLPN.DropDownHeight = 106;
+            this.MLPN.DropDownWidth = 121;
+            this.MLPN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MLPN.HeaderText = "Mã Loại PN";
+            this.MLPN.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MLPN.IntegralHeight = false;
+            this.MLPN.ItemHeight = 15;
+            this.MLPN.Name = "MLPN";
+            this.MLPN.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MLPN.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MLPN.Width = 200;
+            // 
+            // MLHDM
+            // 
+            this.MLHDM.DataPropertyName = "MaLoHDMua";
+            this.MLHDM.DropDownHeight = 106;
+            this.MLHDM.DropDownWidth = 121;
+            this.MLHDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MLHDM.HeaderText = "Mã Lô HĐMua";
+            this.MLHDM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MLHDM.IntegralHeight = false;
+            this.MLHDM.ItemHeight = 15;
+            this.MLHDM.Name = "MLHDM";
+            this.MLHDM.ReadOnly = true;
+            this.MLHDM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MLHDM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MLHDM.Width = 130;
+            // 
+            // MHDM
+            // 
+            this.MHDM.DataPropertyName = "MaHDMua";
+            this.MHDM.DropDownHeight = 106;
+            this.MHDM.DropDownWidth = 121;
+            this.MHDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MHDM.HeaderText = "Mã HĐMua";
+            this.MHDM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MHDM.IntegralHeight = false;
+            this.MHDM.ItemHeight = 15;
+            this.MHDM.Name = "MHDM";
+            this.MHDM.ReadOnly = true;
+            this.MHDM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MHDM.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // MT
+            // 
+            this.MT.DataPropertyName = "MoTa";
+            this.MT.HeaderText = "Mô Tả";
+            this.MT.Name = "MT";
+            this.MT.Width = 200;
+            // 
+            // _NL
+            // 
+            // 
+            // 
+            // 
+            this._NL.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this._NL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this._NL.DataPropertyName = "NgayLap";
+            this._NL.HeaderText = "Ngày Lập";
+            this._NL.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // 
+            // 
+            // 
+            this._NL.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this._NL.MonthCalendar.BackgroundStyle.Class = "";
+            this._NL.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this._NL.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this._NL.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this._NL.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this._NL.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this._NL.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this._NL.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this._NL.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this._NL.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this._NL.Name = "_NL";
+            // 
+            // _NgL
+            // 
+            this._NgL.DataPropertyName = "NguoiLap";
+            this._NgL.DropDownHeight = 106;
+            this._NgL.DropDownWidth = 121;
+            this._NgL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._NgL.HeaderText = "Người Lập";
+            this._NgL.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this._NgL.IntegralHeight = false;
+            this._NgL.ItemHeight = 15;
+            this._NgL.Name = "_NgL";
+            this._NgL.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._NgL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // _NS
+            // 
+            // 
+            // 
+            // 
+            this._NS.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this._NS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this._NS.DataPropertyName = "NgaySua";
+            this._NS.HeaderText = "Ngày Sửa";
+            this._NS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // 
+            // 
+            // 
+            this._NS.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this._NS.MonthCalendar.BackgroundStyle.Class = "";
+            this._NS.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this._NS.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this._NS.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this._NS.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this._NS.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this._NS.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this._NS.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this._NS.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this._NS.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this._NS.Name = "_NS";
+            // 
+            // _NgS
+            // 
+            this._NgS.DataPropertyName = "NguoiSua";
+            this._NgS.DropDownHeight = 106;
+            this._NgS.DropDownWidth = 121;
+            this._NgS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._NgS.HeaderText = "Người Sửa";
+            this._NgS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this._NgS.IntegralHeight = false;
+            this._NgS.ItemHeight = 15;
+            this._NgS.Name = "_NgS";
+            this._NgS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._NgS.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // bindingPhieuNhap
+            // 
+            this.bindingPhieuNhap.AddNewItem = null;
+            this.bindingPhieuNhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bindingPhieuNhap.CountItem = this.bindingNavigatorCountItem4;
+            this.bindingPhieuNhap.CountItemFormat = "của  {0}";
+            this.bindingPhieuNhap.DeleteItem = null;
+            this.bindingPhieuNhap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem4,
+            this.bindingNavigatorMovePreviousItem4,
+            this.bindingNavigatorSeparator12,
+            this.positionPhieuNhap,
+            this.bindingNavigatorCountItem4,
+            this.bindingNavigatorSeparator13,
+            this.bindingNavigatorMoveNextItem4,
+            this.bindingNavigatorMoveLastItem4,
+            this.bindingNavigatorSeparator14,
+            this.PN_Refresh,
+            this.toolStripSeparator24,
+            this.PN_Add,
+            this.toolStripSeparator25,
+            this.PN_Delete,
+            this.toolStripSeparator26,
+            this.PN_Save,
+            this.toolStripSeparator27,
+            this.PN_Cancel,
+            this.toolStripSeparator28,
+            this.PN_Exit});
+            this.bindingPhieuNhap.Location = new System.Drawing.Point(0, 0);
+            this.bindingPhieuNhap.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
+            this.bindingPhieuNhap.MoveLastItem = this.bindingNavigatorMoveLastItem4;
+            this.bindingPhieuNhap.MoveNextItem = this.bindingNavigatorMoveNextItem4;
+            this.bindingPhieuNhap.MovePreviousItem = this.bindingNavigatorMovePreviousItem4;
+            this.bindingPhieuNhap.Name = "bindingPhieuNhap";
+            this.bindingPhieuNhap.PositionItem = this.positionPhieuNhap;
+            this.bindingPhieuNhap.Size = new System.Drawing.Size(1346, 25);
+            this.bindingPhieuNhap.TabIndex = 1;
+            this.bindingPhieuNhap.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem4
+            // 
+            this.bindingNavigatorCountItem4.Name = "bindingNavigatorCountItem4";
+            this.bindingNavigatorCountItem4.Size = new System.Drawing.Size(46, 22);
+            this.bindingNavigatorCountItem4.Text = "của  {0}";
+            this.bindingNavigatorCountItem4.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorMoveFirstItem4
+            // 
+            this.bindingNavigatorMoveFirstItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem4.Image")));
+            this.bindingNavigatorMoveFirstItem4.Name = "bindingNavigatorMoveFirstItem4";
+            this.bindingNavigatorMoveFirstItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem4.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem4
+            // 
+            this.bindingNavigatorMovePreviousItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem4.Image")));
+            this.bindingNavigatorMovePreviousItem4.Name = "bindingNavigatorMovePreviousItem4";
+            this.bindingNavigatorMovePreviousItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem4.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator12
+            // 
+            this.bindingNavigatorSeparator12.Name = "bindingNavigatorSeparator12";
+            this.bindingNavigatorSeparator12.Size = new System.Drawing.Size(6, 25);
+            // 
+            // positionPhieuNhap
+            // 
+            this.positionPhieuNhap.AccessibleName = "Position";
+            this.positionPhieuNhap.AutoSize = false;
+            this.positionPhieuNhap.Name = "positionPhieuNhap";
+            this.positionPhieuNhap.Size = new System.Drawing.Size(50, 23);
+            this.positionPhieuNhap.Text = "0";
+            this.positionPhieuNhap.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator13
+            // 
+            this.bindingNavigatorSeparator13.Name = "bindingNavigatorSeparator13";
+            this.bindingNavigatorSeparator13.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem4
+            // 
+            this.bindingNavigatorMoveNextItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem4.Image")));
+            this.bindingNavigatorMoveNextItem4.Name = "bindingNavigatorMoveNextItem4";
+            this.bindingNavigatorMoveNextItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem4.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem4
+            // 
+            this.bindingNavigatorMoveLastItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem4.Image")));
+            this.bindingNavigatorMoveLastItem4.Name = "bindingNavigatorMoveLastItem4";
+            this.bindingNavigatorMoveLastItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem4.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator14
+            // 
+            this.bindingNavigatorSeparator14.Name = "bindingNavigatorSeparator14";
+            this.bindingNavigatorSeparator14.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PN_Refresh
+            // 
+            this.PN_Refresh.Image = global::QuanLy_KeToan.Properties.Resources.refresh;
+            this.PN_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PN_Refresh.Name = "PN_Refresh";
+            this.PN_Refresh.Size = new System.Drawing.Size(66, 22);
+            this.PN_Refresh.Text = "&Refresh";
+            this.PN_Refresh.Click += new System.EventHandler(this.PN_Refresh_Click);
+            // 
+            // toolStripSeparator24
+            // 
+            this.toolStripSeparator24.Name = "toolStripSeparator24";
+            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PN_Add
+            // 
+            this.PN_Add.Image = ((System.Drawing.Image)(resources.GetObject("PN_Add.Image")));
+            this.PN_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PN_Add.Name = "PN_Add";
+            this.PN_Add.Size = new System.Drawing.Size(49, 22);
+            this.PN_Add.Text = "&Add";
+            this.PN_Add.Click += new System.EventHandler(this.PN_Add_Click);
+            // 
+            // toolStripSeparator25
+            // 
+            this.toolStripSeparator25.Name = "toolStripSeparator25";
+            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PN_Delete
+            // 
+            this.PN_Delete.Image = global::QuanLy_KeToan.Properties.Resources.delete;
+            this.PN_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PN_Delete.Name = "PN_Delete";
+            this.PN_Delete.Size = new System.Drawing.Size(60, 22);
+            this.PN_Delete.Text = "&Delete";
+            this.PN_Delete.Click += new System.EventHandler(this.PN_Delete_Click);
+            // 
+            // toolStripSeparator26
+            // 
+            this.toolStripSeparator26.Name = "toolStripSeparator26";
+            this.toolStripSeparator26.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PN_Save
+            // 
+            this.PN_Save.Image = ((System.Drawing.Image)(resources.GetObject("PN_Save.Image")));
+            this.PN_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PN_Save.Name = "PN_Save";
+            this.PN_Save.Size = new System.Drawing.Size(51, 22);
+            this.PN_Save.Text = "&Save";
+            this.PN_Save.Click += new System.EventHandler(this.PN_Save_Click);
+            // 
+            // toolStripSeparator27
+            // 
+            this.toolStripSeparator27.Name = "toolStripSeparator27";
+            this.toolStripSeparator27.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PN_Cancel
+            // 
+            this.PN_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("PN_Cancel.Image")));
+            this.PN_Cancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PN_Cancel.Name = "PN_Cancel";
+            this.PN_Cancel.Size = new System.Drawing.Size(63, 22);
+            this.PN_Cancel.Text = "&Cancel";
+            this.PN_Cancel.Click += new System.EventHandler(this.PN_Cancel_Click);
+            // 
+            // toolStripSeparator28
+            // 
+            this.toolStripSeparator28.Name = "toolStripSeparator28";
+            this.toolStripSeparator28.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PN_Exit
+            // 
+            this.PN_Exit.Image = global::QuanLy_KeToan.Properties.Resources.thoat;
+            this.PN_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PN_Exit.Name = "PN_Exit";
+            this.PN_Exit.Size = new System.Drawing.Size(45, 22);
+            this.PN_Exit.Text = "&Exit";
+            this.PN_Exit.Click += new System.EventHandler(this.PN_Exit_Click);
+            // 
             // tabItemNhapKho
             // 
             this.tabItemNhapKho.AttachedControl = this.tabControlPanel2;
@@ -3173,19 +3271,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlNhapKho)).EndInit();
             this.tabControlNhapKho.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
-            this.groupPanelPhieuNhap.ResumeLayout(false);
-            this.groupPanelPhieuNhap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuNhap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuNhap)).EndInit();
-            this.bindingPhieuNhap.ResumeLayout(false);
-            this.bindingPhieuNhap.PerformLayout();
+            this.groupPanelLoaiPhieuNhap.ResumeLayout(false);
+            this.groupPanelLoaiPhieuNhap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLoaiPhieuNhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiPhieuNhap)).EndInit();
+            this.bindingLoaiPhieuNhap.ResumeLayout(false);
+            this.bindingLoaiPhieuNhap.PerformLayout();
             this.navigationPaneThaoTac.ResumeLayout(false);
             this.navigationPanePanelThaoTac.ResumeLayout(false);
-            this.groupPhieuPhap.ResumeLayout(false);
-            this.groupPhieuPhap.PerformLayout();
-            this.groupPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgaySua)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgayLap)).EndInit();
             this.groupLoaiPhieuNhap.ResumeLayout(false);
             this.groupLoaiPhieuNhap.PerformLayout();
             this.groupPanel5.ResumeLayout(false);
@@ -3197,22 +3290,27 @@
             this.groupPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LoPN_dpNgaySua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoPN_dpNgayLap)).EndInit();
+            this.groupPhieuPhap.ResumeLayout(false);
+            this.groupPhieuPhap.PerformLayout();
+            this.groupPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgaySua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgayLap)).EndInit();
             this.navigationPanePanelDuyetDanhMuc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.advTreeLoNhap)).EndInit();
             this.expandablePanelCauHinh.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
-            this.groupPanelLoaiPhieuNhap.ResumeLayout(false);
-            this.groupPanelLoaiPhieuNhap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLoaiPhieuNhap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiPhieuNhap)).EndInit();
-            this.bindingLoaiPhieuNhap.ResumeLayout(false);
-            this.bindingLoaiPhieuNhap.PerformLayout();
             this.groupPanelLoPhieuNhap.ResumeLayout(false);
             this.groupPanelLoPhieuNhap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLoPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingLoPhieuNhap)).EndInit();
             this.bindingLoPhieuNhap.ResumeLayout(false);
             this.bindingLoPhieuNhap.PerformLayout();
+            this.groupPanelPhieuNhap.ResumeLayout(false);
+            this.groupPanelPhieuNhap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPhieuNhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPhieuNhap)).EndInit();
+            this.bindingPhieuNhap.ResumeLayout(false);
+            this.bindingPhieuNhap.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3256,7 +3354,6 @@
         private System.Windows.Forms.ToolStripButton LPN_Cancel;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
         private System.Windows.Forms.ToolStripButton LPN_Exit;
-        private System.Windows.Forms.DataGridView gridLoPhieuNhap;
         private System.Windows.Forms.BindingNavigator bindingLoPhieuNhap;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem3;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem3;
@@ -3372,6 +3469,16 @@
         private DevComponents.DotNetBar.LabelX labelX16;
         private DevComponents.DotNetBar.LabelX labelX17;
         private DevComponents.DotNetBar.LabelX labelX18;
+        private DevComponents.DotNetBar.ElementStyle elementStyle3;
+        private DevComponents.DotNetBar.ElementStyle elementStyle4;
+        private DevComponents.DotNetBar.Controls.DataGridViewX gridLoPhieuNhap;
+        private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn ColMLHDM;
+        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn ColNLN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMT;
+        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NgayLap;
+        private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn NguoiLap;
+        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NgaySua;
+        private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn NguoiSua;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMLPN;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTLPN;
         private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NL;
@@ -3386,12 +3493,5 @@
         private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn _NgL;
         private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn _NS;
         private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn _NgS;
-        private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn ColMLHDM;
-        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn ColNLN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMT;
-        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NgayLap;
-        private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn NguoiLap;
-        private DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn NgaySua;
-        private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn NguoiSua;
     }
 }

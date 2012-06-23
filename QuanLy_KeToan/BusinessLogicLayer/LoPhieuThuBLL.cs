@@ -9,8 +9,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
 {
     class Lo_Phieu_Thu
     {
-        public string malothu { get; set; }
-        public DateTime ngaythu { get; set; }
+        public string malohdban { get; set; }
+        public DateTime ngaylothu { get; set; }
         public string mota { get; set; }
         public DateTime ngaylap { get; set; }
         public string nguoilap { get; set; }
@@ -24,17 +24,23 @@ namespace QuanLy_KeToan.BusinessLogicLayer
         public IQueryable LayDanhSachMaLoThu()
         {
             var sql = from lothu in QLKT.LoPhieuThus
-                     select new {lothu.MaLoThu,lothu.NgayThu.Value.Date,lothu.MoTa,};
+                     select new {lothu.MaLoHDBan,lothu.NgayLoThu.Value.Date,lothu.MoTa,};
             return sql;
         }
-
+        //Lấy mã lô hóa đơn cho combobox
+        public IQueryable LayMaLoHDBan()
+        {
+            var sql = from lohdban in QLKT.LoHDBans
+                      select new { lohdban.MaLoHDBan };
+            return sql;
+        }
         public List<Lo_Phieu_Thu> LayDanhSachLoPhieuThu()
         {
             var sql = (from lpt in QLKT.LoPhieuThus
                        select new Lo_Phieu_Thu
                        {
-                           malothu = lpt.MaLoThu,
-                           ngaythu = Convert.ToDateTime(lpt.NgayThu),
+                           malohdban = lpt.MaLoHDBan,
+                           ngaylothu = Convert.ToDateTime(lpt.NgayLoThu),
                            mota = lpt.MoTa,
                            ngaylap = Convert.ToDateTime(lpt.NgayLap == null ? DateTime.Today : lpt.NgayLap),
                            nguoilap = lpt.NguoiLap,
@@ -43,19 +49,19 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                        }).ToList<Lo_Phieu_Thu>();
             return sql;
         }
-        private bool KiemTraDulieu(string malothu)
+        private bool KiemTraDulieu(string malohdban)
         {
             var sql=from lpt in QLKT.LoPhieuThus
-                    where lpt.MaLoThu==malothu
+                    where lpt.MaLoHDBan==malohdban
                     select lpt;
             if (sql.Count() > 0)
                 return true;
             else return false;
         }
         //Thêm-xóa-sửa
-        public void ThemLoPT(string malothu,DateTime ngaythu, string mota, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
+        public void ThemLoPT(string malohdban,DateTime ngaylothu, string mota, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
         {
-            if (KiemTraDulieu(malothu) == true)
+            if (KiemTraDulieu(malohdban) == true)
             {
                 MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -63,8 +69,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             try
             {
                 LoPhieuThu LPT = new LoPhieuThu();
-                LPT.MaLoThu = malothu;
-                LPT.NgayThu = ngaythu;
+                LPT.MaLoHDBan = malohdban;
+                LPT.NgayLoThu = ngaylothu;
                 LPT.MoTa = mota;
                 LPT.NgayLap = ngaylap;
                 LPT.NguoiLap = nguoilap;
@@ -80,12 +86,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return;
             }
         }
-        public void SuaLoPT(string malothu,LoPhieuThu LPT)
+        public void SuaLoPT(string malohdban,LoPhieuThu LPT)
         {
             try
             {
-                LoPhieuThu lpt = QLKT.LoPhieuThus.Single(_lpt => _lpt.MaLoThu == malothu);
-                lpt.NgayThu = LPT.NgayThu;
+                LoPhieuThu lpt = QLKT.LoPhieuThus.Single(_lpt => _lpt.MaLoHDBan== malohdban);
+                lpt.NgayLoThu = LPT.NgayLoThu;
                 lpt.MoTa = LPT.MoTa;
                 lpt.NgayLap = LPT.NgayLap;
                 lpt.NguoiLap = LPT.NguoiLap;
@@ -101,10 +107,10 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             }
         }
 
-        private bool KiemTraLoPhieuThuTrongPhieuThu(string malothu)
+        private bool KiemTraLoPhieuThuTrongPhieuThu(string malohdban)
         {
             var sql = from lpt in QLKT.PhieuThus
-                      where lpt.MaLoThu == malothu
+                      where lpt.MaLoHDBan == malohdban
                       select lpt;
             if (sql.Count() > 0)
                 return true;
@@ -112,9 +118,9 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 return false;
         }
 
-        public void XoaLPT(string malothu)
+        public void XoaLPT(string malohdban)
         {
-            if (KiemTraLoPhieuThuTrongPhieuThu(malothu) == true)
+            if (KiemTraLoPhieuThuTrongPhieuThu(malohdban) == true)
             {
                 MessageBox.Show("Không được xóa dữ liệu này-Liên quan đến dữ liệu Phiếu Nhập", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -122,7 +128,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             try
             {
                 var delete = from lpt in QLKT.LoPhieuThus
-                             where lpt.MaLoThu == malothu
+                             where lpt.MaLoHDBan == malohdban
                              select lpt;
                 if (delete.Count() > 0)
                 {
@@ -135,6 +141,12 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        public IQueryable LayNguoiLap()
+        {
+            var sql = from phanquyen in QLKT.PhanQuyens
+                      select new { phanquyen.TenDangNhap };
+            return sql;
         }
     }
 }

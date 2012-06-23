@@ -141,6 +141,18 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       };
             return sql;
         }
+        public string LayMaLoaiPXTheoTen(string tenloaipx)
+        {
+            string maloaipx = "";
+            var sql = from lpx in QLKT.LoaiPhieuXuats
+                      where lpx.TenLoaiPhieuXuat == tenloaipx
+                      select lpx.MaLoaiPhieuXuat;
+            foreach (var items in sql)
+            {
+                maloaipx = items.ToString();
+            }
+            return maloaipx;
+        }
         public IQueryable LayLoHDBan()
         {
             var sql = from lohdban in QLKT.LoHDBans

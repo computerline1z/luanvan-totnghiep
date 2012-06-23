@@ -64,7 +64,12 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             LoadHang(malohdmua,mahdmua);
             LoadKhoHang();
+            LoadNguoiLap();
             LayDanhSachChiTietPhieuNhap(malohdmua,mahdmua);
+            if (gridChiTietPhieuNhap.RowCount == 0)
+            {
+                SetControlEnable_CTPN(true);
+            }
         }
         //Xử lý nhập lưới
         int ctpn_nhapluoi = 0;
@@ -204,7 +209,7 @@ namespace QuanLy_KeToan.PresentationLayer
         }
         private void gridChiTietPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
+            if (e.RowIndex > -1 && e.ColumnIndex>-1)
             {
                 if (ctpn_nhapluoi == 1)
                 {
@@ -408,6 +413,44 @@ namespace QuanLy_KeToan.PresentationLayer
                 return;
             }
         }
-
+        //Thoát chương trình bằng ESC
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+                OnKeyPress(new KeyPressEventArgs((Char)Keys.Escape));
+            if (keyData == Keys.Delete)
+                OnKeyPress(new KeyPressEventArgs((Char)Keys.Delete));
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        private void XoaGridByButton()
+        {
+            if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string mahang = gridChiTietPhieuNhap.CurrentRow.Cells["ColMH"].Value.ToString();
+                int sl = System.Convert.ToInt16(gridChiTietPhieuNhap.CurrentRow.Cells["ColSL"].Value);
+                bool xoa = CTPNBLL.XoaCTPN(malohdmua, mahdmua, mahang);
+                LayDanhSachChiTietPhieuNhap(malohdmua, mahdmua);
+                if (xoa == true)
+                {
+                    CTPNBLL.CapNhatLaiKhoChuaKhiXoaCTPN(mahang, sl);
+                }
+            }
+        }
+        private void FrmChiTietPhieuNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                if (MessageBox.Show("Thoát khỏi chương trình không?", "Exit",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.Dispose();
+                }
+            }
+            if (e.KeyChar == (char)Keys.Delete)
+            {
+                XoaGridByButton();
+            }
+        }
     }
 }

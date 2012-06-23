@@ -49,22 +49,6 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                        }).ToList<Kho_Chua>();
             return sql;
         }
-        public List<Kho_Chua> LayDanhSachKhoChuaTheoMaKho(string makho)
-        {
-            var sql = (from khochua in QLKT.KhoChuas
-                       where khochua.MaKhoHang==makho
-                       select new Kho_Chua
-                       {
-                           makhohang = khochua.MaKhoHang,
-                           mahang = khochua.MaHang,
-                           sl = System.Convert.ToInt16(khochua.SL),
-                           ngaylap = Convert.ToDateTime(khochua.NgayLap == null ? DateTime.Today : khochua.NgayLap),
-                           nguoilap = khochua.NguoiLap,
-                           ngaysua = Convert.ToDateTime(khochua.NgaySua == null ? DateTime.Today : khochua.NgaySua),
-                           nguoisua = khochua.NguoiSua,
-                       }).ToList<Kho_Chua>();
-            return sql;
-        }
         public List<Kho_Chua> LayDanhSachKhoChuaTheoMaHang(string mahang)
         {
             var sql = (from khochua in QLKT.KhoChuas

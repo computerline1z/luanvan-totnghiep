@@ -66,6 +66,10 @@ namespace QuanLy_KeToan.PresentationLayer
             LoadKhoHang();
             LoadNguoiLap();
             LayDanhSachChiTietPhieuXuat(malohdb,mahdban);
+            if (gridChiTietPhieuXuat.RowCount == 0)
+            {
+                SetControlEnable_CTPX(true);
+            }
         }
         //Xử lý nhập lưới
         int ctpx_nhapluoi = 0;
@@ -79,7 +83,7 @@ namespace QuanLy_KeToan.PresentationLayer
         }
         private void gridChiTietPhieuXuat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
+            if (e.RowIndex > -1 && e.ColumnIndex>-1)
             {
                 if (ctpx_nhapluoi == 1)
                 {
@@ -285,7 +289,7 @@ namespace QuanLy_KeToan.PresentationLayer
             {
                 txtMLHDB.Text = gridChiTietPhieuXuat.Rows[dong].Cells["ColMLHDB"].Value.ToString();
                 txtMHDB.Text = gridChiTietPhieuXuat.Rows[dong].Cells["ColMHDB"].Value.ToString();
-                cmbMH.Text = gridChiTietPhieuXuat.Rows[dong].Cells["ColMH"].Value.ToString();
+                cmbMH.SelectedValue = gridChiTietPhieuXuat.Rows[dong].Cells["ColMH"].Value.ToString();
                 txtMKH.Text = gridChiTietPhieuXuat.Rows[dong].Cells["ColMKH"].Value.ToString();
                 intSL.Value = System.Convert.ToInt16(gridChiTietPhieuXuat.Rows[dong].Cells["ColSL"].Value.ToString());
                 dpNL.Value = System.Convert.ToDateTime(gridChiTietPhieuXuat.Rows[dong].Cells["ColNL"].Value.ToString());
@@ -322,7 +326,7 @@ namespace QuanLy_KeToan.PresentationLayer
                               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             ChiTietPhieuXuat CTPX = new ChiTietPhieuXuat();
-                            string mahang = cmbMH.Text;
+                            string mahang = cmbMH.SelectedValue.ToString();
                             string makhohang = txtMKH.Text;
                             CTPX.MaKhoHang = makhohang;
                             CTPX.SoLuong = intSL.Value;
@@ -357,7 +361,7 @@ namespace QuanLy_KeToan.PresentationLayer
                             }
                             string malohdban = txtMLHDB.Text;
                             string mahdban = txtMHDB.Text;
-                            string mahang = cmbMH.Text;
+                            string mahang = cmbMH.SelectedValue.ToString();
                             string makh = txtMKH.Text;
                             int sl = intSL.Value;
                             DateTime ngaylap;
@@ -399,7 +403,6 @@ namespace QuanLy_KeToan.PresentationLayer
                     }
             }
         }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Hủy thao tác?", "CANCEL",
@@ -413,6 +416,45 @@ namespace QuanLy_KeToan.PresentationLayer
             {
                 ctpx_nhaptay = 0;
                 return;
+            }
+        }
+        //Thoát chương trình bằng ESC
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+                OnKeyPress(new KeyPressEventArgs((Char)Keys.Escape));
+            if (keyData == Keys.Delete)
+                OnKeyPress(new KeyPressEventArgs((Char)Keys.Delete));
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        private void XoaGridByButton()
+        {
+            if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string mahang = gridChiTietPhieuXuat.CurrentRow.Cells["ColMH"].Value.ToString();
+                int sl = System.Convert.ToInt16(gridChiTietPhieuXuat.CurrentRow.Cells["ColSL"].Value);
+                bool xoa = CTPXBLL.XoaCTPX(malohdb, mahdban, mahang);
+                LayDanhSachChiTietPhieuXuat(malohdb, mahdban);
+                if (xoa == true)
+                {
+                    CTPXBLL.CapNhatLaiKhoChuaKhiXoaCTPX(mahang, sl);
+                }
+            }
+        }
+        private void FrmChiTietPhieuXuat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                if (MessageBox.Show("Thoát khỏi chương trình không?", "Exit",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.Dispose();
+                }
+            }
+            if (e.KeyChar == (char)Keys.Delete)
+            {
+                XoaGridByButton();
             }
         }
 

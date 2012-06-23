@@ -68,8 +68,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\ChiTietHoaDonBanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChiTietHoaDonMuaBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChiTietPhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChiTietPhieuXuatBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChiTietPhieuThuBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ChiTietPhieuChiBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\HoaDonMuaBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KetSoXuatNhapKhoBLL.cs" />
+    <Compile Include="BusinessLogicLayer\KetSoThuChiBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiHoaDonBanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiHoaDonMuaBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoHoaDonBanBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoHoaDonMuaBLL.cs" />
+    <Compile Include="BusinessLogicLayer\PhieuChiBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoPhieuChiBLL.cs" />
+    <Compile Include="BusinessLogicLayer\LoaiPhieuChiBLL.cs" />
+    <Compile Include="BusinessLogicLayer\PhieuThuBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoPhieuThuBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuThuBLL.cs" />
     <Compile Include="BusinessLogicLayer\HangBLL.cs" />
@@ -86,11 +102,83 @@
     <Compile Include="BusinessLogicLayer\PhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhiexXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
+    <Compile Include="PresentationLayer\FormCho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FormCho.designer.cs">
+      <DependentUpon>FormCho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietHoaDonBan.designer.cs">
+      <DependentUpon>FrmChiTietHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietHoaDonMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietHoaDonMua.designer.cs">
+      <DependentUpon>FrmChiTietHoaDonMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmKetSoXuatNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmKetSoXuatNhapKho.Designer.cs">
+      <DependentUpon>FrmKetSoXuatNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietKetSoThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietKetSoThu.Designer.cs">
+      <DependentUpon>FrmChiTietKetSoThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietPhieuChi.Designer.cs">
+      <DependentUpon>FrmChiTietPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmKetSoThuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmKetSoThuChi.Designer.cs">
+      <DependentUpon>FrmKetSoThuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyChi.Designer.cs">
+      <DependentUpon>FrmQuanLyChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmChiTietPhieuThu.Designer.cs">
+      <DependentUpon>FrmChiTietPhieuThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FrmKiemTraHoaDonBanXuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\FrmKiemTraHoaDonBanXuatKho.Designer.cs">
       <DependentUpon>FrmKiemTraHoaDonBanXuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyHoaDonBan.designer.cs">
+      <DependentUpon>FrmQuanLyHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyHoaDonMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmQuanLyHoaDonMua.designer.cs">
+      <DependentUpon>FrmQuanLyHoaDonMua.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FrmQuanLyThu.cs">
       <SubType>Form</SubType>
@@ -168,8 +256,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PresentationLayer\FormCho.resx">
+      <DependentUpon>FormCho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmChiTietHoaDonBan.resx">
+      <DependentUpon>FrmChiTietHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmChiTietHoaDonMua.resx">
+      <DependentUpon>FrmChiTietHoaDonMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmKetSoXuatNhapKho.resx">
+      <DependentUpon>FrmKetSoXuatNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmChiTietKetSoThu.resx">
+      <DependentUpon>FrmChiTietKetSoThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmChiTietPhieuChi.resx">
+      <DependentUpon>FrmChiTietPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmKetSoThuChi.resx">
+      <DependentUpon>FrmKetSoThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmQuanLyChi.resx">
+      <DependentUpon>FrmQuanLyChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmChiTietPhieuThu.resx">
+      <DependentUpon>FrmChiTietPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmKiemTraHoaDonBanXuatKho.resx">
       <DependentUpon>FrmKiemTraHoaDonBanXuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmQuanLyHoaDonBan.resx">
+      <DependentUpon>FrmQuanLyHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmQuanLyHoaDonMua.resx">
+      <DependentUpon>FrmQuanLyHoaDonMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmQuanLyThu.resx">
       <DependentUpon>FrmQuanLyThu.cs</DependentUpon>
@@ -215,6 +339,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="bin\Debug\QuanLy_KeToan.exe.config" />
+    <None Include="bin\Debug\QuanLy_KeToan.vshost.exe.config" />
     <None Include="DataAccessLayer\QuanLy_KeToan.dbml.layout">
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
     </None>
@@ -319,6 +445,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppData\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\country.png" />
@@ -340,6 +467,200 @@
     <None Include="Resources\phieuthu.png" />
     <None Include="Resources\lophieuthu.png" />
     <None Include="Resources\duyet.png" />
+    <Content Include="bin\Debug\DevComponents.DotNetBar2.dll" />
+    <Content Include="bin\Debug\hang.ico" />
+    <Content Include="bin\Debug\Hang\4GB DDR3 1333 Kingston.jpg" />
+    <Content Include="bin\Debug\Hang\8GB DDR3 1333 Kingston.jpg" />
+    <Content Include="bin\Debug\Hang\ACER  %28002%29 250.gif" />
+    <Content Include="bin\Debug\Hang\Acer  Aod257.jpg" />
+    <Content Include="bin\Debug\Hang\ACER  AOD270.jpg" />
+    <Content Include="bin\Debug\Hang\Acer  SP A101-16G.jpg" />
+    <Content Include="bin\Debug\Hang\Acer  SP A101-8G.jpg" />
+    <Content Include="bin\Debug\Hang\ACER-AO722-C6CGrr.jpg" />
+    <Content Include="bin\Debug\Hang\Amazon Kindle Fire 7.0.jpg" />
+    <Content Include="bin\Debug\Hang\Archos  70IT - 250GB.jpg" />
+    <Content Include="bin\Debug\Hang\Aria A6380.jpg" />
+    <Content Include="bin\Debug\Hang\Arnova 10 G2.jpg" />
+    <Content Include="bin\Debug\Hang\Arnova 8 G2.jpg" />
+    <Content Include="bin\Debug\Hang\Aspire %28003%29 4352.jpg" />
+    <Content Include="bin\Debug\Hang\Aspire %28044%29 4349 - B814.jpg" />
+    <Content Include="bin\Debug\Hang\Aspire %28044%29 4349.jpg" />
+    <Content Include="bin\Debug\Hang\Asus Eee Pad Transformer TF_101.jpg" />
+    <Content Include="bin\Debug\Hang\Asus K43E -  VX725 %28Nâu%29.jpg" />
+    <Content Include="bin\Debug\Hang\Asus K43SD -  VX227 -VX228.jpg" />
+    <Content Include="bin\Debug\Hang\Asus K43SJ - VX728 %28Đen%29.jpg" />
+    <Content Include="bin\Debug\Hang\Asus K43SJ -VX723-VX724.jpg" />
+    <Content Include="bin\Debug\Hang\Asus X101CH.jpg" />
+    <Content Include="bin\Debug\Hang\Compaq CQ 43 - 301TU.jpg" />
+    <Content Include="bin\Debug\Hang\Compaq CQ 43 - 400TU.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron  14R - I41325W7B_2350.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron  N4110 U561114.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 13Z - N311Z H1Zi32330L13HDM2H320 Ultra Portable.jpeg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 14 %28Đen%29 N4050 - KXJXJ3.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 14 N4050.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 14R  N4110  5982J - 2450M.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 14Z - N411Z 4RD5H_2330M - 4GB.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 15  N5050 639DG_2350M2G.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 15  N5110  2X3RT_2330M.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 15  N5110  2X3RT_2350M.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 15  N5110  i5_2450M.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 15 N5050 -  639DG4.jpg" />
+    <Content Include="bin\Debug\Hang\Dell Inspiron 15 N5050 - 639DG3.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 15R  N5110  i7_2670.jpg" />
+    <Content Include="bin\Debug\Hang\DELL Inspiron 15R N5110 -  2X3RT9.jpg" />
+    <Content Include="bin\Debug\Hang\Dell Inspiron M102z - 1122.jpg" />
+    <Content Include="bin\Debug\Hang\Dell Inspiron M4040 - 88W2T2.jpg" />
+    <Content Include="bin\Debug\Hang\DELL VOSTRO  V1450N - AVN 2G.jpg" />
+    <Content Include="bin\Debug\Hang\DELL VOSTRO 1440 - 26T4P1.jpg" />
+    <Content Include="bin\Debug\Hang\Dell.jpg" />
+    <Content Include="bin\Debug\Hang\Desire Z  A7272.jpg" />
+    <Content Include="bin\Debug\Hang\Eee Pad Silder SL101.jpg" />
+    <Content Include="bin\Debug\Hang\Hp  Elitebook 2530p - Nk738av1 %28Xám%29.jpg" />
+    <Content Include="bin\Debug\Hang\HP  MINI 110-3713TU %28#%29 %28LV829PA%29.jpg" />
+    <Content Include="bin\Debug\Hang\HP  PAVILION %28#%29 DM1 - 3016AU.jpg" />
+    <Content Include="bin\Debug\Hang\HP  Pavilion %28#%29 DM1 - 3205AU.jpg" />
+    <Content Include="bin\Debug\Hang\HP  Pavilion %28#%29 DM1 - 4000AU.jpg" />
+    <Content Include="bin\Debug\Hang\HP  Pavilion %28#%29 DV4 - 3001TX.jpg" />
+    <Content Include="bin\Debug\Hang\HP  PAVILION %28#%29 G4 - 1024AX %28QG380PA%29.jpg" />
+    <Content Include="bin\Debug\Hang\IPAD2  16G Wifi+3G %28Đen,Trắng%29.jpg" />
+    <Content Include="bin\Debug\Hang\IPAD2 16G Wifi %28Trắng%29.jpg" />
+    <Content Include="bin\Debug\Hang\IPAD2 32G Wifi %28Trắng%29.jpg" />
+    <Content Include="bin\Debug\Hang\IPAD2 32G Wifi+3G %28Đen,Trắng%29.jpg" />
+    <Content Include="bin\Debug\Hang\IPAD2 64G Wifi %28Đen%29.jpg" />
+    <Content Include="bin\Debug\Hang\IPAD2 64G Wifi+3G %28Đen,Trắng%29.jpg" />
+    <Content Include="bin\Debug\Hang\Iphone phiên bản 4 màu trắng 16G.jpg" />
+    <Content Include="bin\Debug\Hang\Iphone phiên bản 4 màu trắng 32G.jpg" />
+    <Content Include="bin\Debug\Hang\Iphone phiên bản 4 màu đen 16G.jpg" />
+    <Content Include="bin\Debug\Hang\Iphone phiên bản 4 màu đen 32G.jpg" />
+    <Content Include="bin\Debug\Hang\Ktouch 610I đen.jpg" />
+    <Content Include="bin\Debug\Hang\Ktouch B100 trắng.jpg" />
+    <Content Include="bin\Debug\Hang\Ktouch C201 đen.jpg" />
+    <Content Include="bin\Debug\Hang\Ktouch H234.jpg" />
+    <Content Include="bin\Debug\Hang\Ktouch H330.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo A125.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo A180.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo A200.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo A336.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo A339.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo B460 - 7718.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo B460 - 7722.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo B470e - 3326.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo G470_6934.jpg" />
+    <Content Include="bin\Debug\Hang\Lenovo S10_3 %2859321969%29.jpg" />
+    <Content Include="bin\Debug\Hang\LG A155.jpg" />
+    <Content Include="bin\Debug\Hang\LG A165.jpg" />
+    <Content Include="bin\Debug\Hang\LG A180.jpg" />
+    <Content Include="bin\Debug\Hang\LG A230.jpg" />
+    <Content Include="bin\Debug\Hang\LG A290.jpg" />
+    <Content Include="bin\Debug\Hang\Mobell M100.jpg" />
+    <Content Include="bin\Debug\Hang\Mobell M110.jpg" />
+    <Content Include="bin\Debug\Hang\Mobell M115.jpg" />
+    <Content Include="bin\Debug\Hang\Mobell M116.jpg" />
+    <Content Include="bin\Debug\Hang\Mobell M118.jpg" />
+    <Content Include="bin\Debug\Hang\Mobistar %4068.jpg" />
+    <Content Include="bin\Debug\Hang\Mobistar %4083.jpg" />
+    <Content Include="bin\Debug\Hang\Mobistar %4085.jpg" />
+    <Content Include="bin\Debug\Hang\Mobistar %4095.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bảng JoyPad 72.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bảng JoyPad 73.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bảng JoyPad 81.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bảng JoyPad C71.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bảng JoyPad C81.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bộ Intel  i3_2100.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bộ Intel  i5_2500.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bộ Intel  i_2100 Basic.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bộ Intel 66250.jpg" />
+    <Content Include="bin\Debug\Hang\Máy tính bộ Intel 77250.jpg" />
+    <Content Include="bin\Debug\Hang\New IPAD 16G Wifi + 4G.jpg" />
+    <Content Include="bin\Debug\Hang\New IPAD 32G Wifi + 4G.jpg" />
+    <Content Include="bin\Debug\Hang\New IPAD 64G Wifi + 4G.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia 1280.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia 2370.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia 6303i.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia 6600.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia 701.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia 7230.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia C101.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia C2.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia C3.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia C503.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia C506.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia C6.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia C7.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia E5.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia E6.jpg" />
+    <Content Include="bin\Debug\Hang\Nokia N101.jpg" />
+    <Content Include="bin\Debug\Hang\PhiLips Xenium X100.jpg" />
+    <Content Include="bin\Debug\Hang\PhiLips Xenium X116.jpg" />
+    <Content Include="bin\Debug\Hang\PhiLips Xenium X501.jpg" />
+    <Content Include="bin\Debug\Hang\PhiLips Xenium X503.jpg" />
+    <Content Include="bin\Debug\Hang\PhiLips Xenium X520.jpg" />
+    <Content Include="bin\Debug\Hang\Pin LapTop Dell.jpg" />
+    <Content Include="bin\Debug\Hang\Pin LapTop HP 01.jpg" />
+    <Content Include="bin\Debug\Hang\Pin LapTop HP.jpg" />
+    <Content Include="bin\Debug\Hang\Pin LapTop Sony.jpg" />
+    <Content Include="bin\Debug\Hang\Q-Mobile 110.jpg" />
+    <Content Include="bin\Debug\Hang\Q-Mobile 113.jpg" />
+    <Content Include="bin\Debug\Hang\Q-Mobile 128.png" />
+    <Content Include="bin\Debug\Hang\Q-Mobile 213.jpg" />
+    <Content Include="bin\Debug\Hang\Sam Sung 1050.jpg" />
+    <Content Include="bin\Debug\Hang\Sam Sung 1081T.jpg" />
+    <Content Include="bin\Debug\Hang\Sam Sung B3210.jpg" />
+    <Content Include="bin\Debug\Hang\Sam Sung B3310.jpg" />
+    <Content Include="bin\Debug\Hang\Sam Sung S5550.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung Galaxy Tab-10.1 wifi+3G.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NC   N108 - P01VN %28Đen%29-P02VN %28Đỏ%29.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NC   N108 - P03VN %28Đen%29-P04VN %28Đỏ%29.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NC 213 - A01VN %28Đen%29.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NP300E4Z - A03VN.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NP300E4Z - A06VN -A07VN.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NP300E4Z - S02VN.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NP300E4Z - S03VN.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NP300E4Z-A08VN-A09VN.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NP300V4Z - A03VN.jpg" />
+    <Content Include="bin\Debug\Hang\SamSung NP300V4Z - S02VN.jpg" />
+    <Content Include="bin\Debug\Hang\Smart F3188.jpg" />
+    <Content Include="bin\Debug\Hang\Sony VPC - SA 3A GX %28ĐEN%29.jpg" />
+    <Content Include="bin\Debug\Hang\Sony VPC - SB 31 FX %28Đen%29.jpg" />
+    <Content Include="bin\Debug\Hang\Sony VPC - SB 3A FX.jpg" />
+    <Content Include="bin\Debug\Hang\Sony VPC - SC 1A FM %28Bạc%29.jpg" />
+    <Content Include="bin\Debug\Hang\Sony VPC - SE 1A FX %28Đen%29.jpg" />
+    <Content Include="bin\Debug\Hang\Toshiba C640 - 1081U.jpg" />
+    <Content Include="bin\Debug\Hang\Toshiba C640 - 1082U.jpg" />
+    <Content Include="bin\Debug\Hang\Toshiba C665 - 1003U.jpg" />
+    <Content Include="bin\Debug\Hang\ToShiBa L735 - 1096UR %28Đỏ%29.jpg" />
+    <Content Include="bin\Debug\Hang\Toshiba L740 - 1222U.jpg" />
+    <Content Include="bin\Debug\Hang\Toshiba M645 - 1009X.jpg" />
+    <Content Include="bin\Debug\Hang\ToShiBa R830 - 2047U.jpg" />
+    <Content Include="bin\Debug\Hang\ToShiBa R840 - 2032X.jpg" />
+    <Content Include="bin\Debug\Hang\ToShiBa R840 - 2037X.jpg" />
+    <Content Include="bin\Debug\Hang\Wildfire A3333 .jpg" />
+    <Content Include="bin\Debug\Hang\Đĩa cứng Laptop 01.jpg" />
+    <Content Include="bin\Debug\Hang\Đĩa cứng Laptop.jpg" />
+    <Content Include="bin\Debug\QuanLy_KeToan.exe" />
+    <Content Include="bin\Debug\QuanLy_KeToan.pdb" />
+    <Content Include="bin\Debug\QuanLy_KeToan.vshost.exe" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\line 2.png" />
+    <None Include="Resources\laptop.png" />
+    <None Include="Resources\_factory.png" />
+    <None Include="Resources\nhap.png" />
+    <None Include="Resources\xuat.png" />
+    <None Include="Resources\numbers-black-icon.png" />
+    <None Include="Resources\thu.png" />
+    <None Include="Resources\chi.png" />
+    <None Include="Resources\kstc.png" />
+    <None Include="Resources\nhacungcap.png" />
+    <None Include="Resources\khachhang.png" />
+    <None Include="Resources\earth-icon.png" />
+    <None Include="Resources\money-icon.png" />
+    <None Include="Resources\HDMua.png" />
+    <None Include="Resources\HDBan.png" />
+    <None Include="Resources\phanquyen.png" />
+    <None Include="Resources\gnome-color-browser.png" />
+    <None Include="Resources\help-icon.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\logout.png" />
     <Content Include="Z_Document\ChuaXuLy.txt" />
     <Content Include="Z_Document\GhiChu.txt" />
     <None Include="Resources\khohang.png" />

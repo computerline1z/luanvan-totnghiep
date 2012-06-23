@@ -360,7 +360,7 @@ namespace QuanLy_KeToan.PresentationLayer
         {
             LayDanhSachHang();
             BindingSource bds = new BindingSource();
-            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaKho(cmbKhoChua.ComboBox.SelectedValue.ToString());
+            bds.DataSource = KCBLL.LayDanhSachKhoChuaTheoMaKhoHang(cmbKhoChua.ComboBox.SelectedValue.ToString());
             bindingKhoChua.BindingSource = bds;
             gridKhoChua.DataSource = bds;
             gridKhoChua.AllowUserToAddRows = false;
