@@ -32,6 +32,15 @@
             DevComponents.DotNetBar.StyleManager styleManagerQuanLyKeToan;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.ribbonControlQuanLyKeToan = new DevComponents.DotNetBar.RibbonControl();
+            this.ribbonPanelDanhMucChung = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar14 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonBar13 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonBar12 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonBar11 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnKhachHang = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonKetSo = new DevComponents.DotNetBar.RibbonBar();
             this.btnKSNX = new DevComponents.DotNetBar.ButtonItem();
@@ -59,15 +68,6 @@
             this.btnQLChi = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonQLThu = new DevComponents.DotNetBar.RibbonBar();
             this.btnQLThu = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanelDanhMucChung = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar14 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar13 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar12 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar11 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnKhachHang = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar20 = new DevComponents.DotNetBar.RibbonBar();
             this.btnLogOut = new DevComponents.DotNetBar.ButtonItem();
@@ -106,10 +106,10 @@
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             styleManagerQuanLyKeToan = new DevComponents.DotNetBar.StyleManager(this.components);
             this.ribbonControlQuanLyKeToan.SuspendLayout();
+            this.ribbonPanelDanhMucChung.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
-            this.ribbonPanelDanhMucChung.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,6 +162,270 @@
             this.ribbonControlQuanLyKeToan.TabGroupHeight = 14;
             this.ribbonControlQuanLyKeToan.TabIndex = 0;
             this.ribbonControlQuanLyKeToan.TitleText = "<b>PHẦN MỀM QUẢN LÝ KẾ TOÁN</b>";
+            // 
+            // ribbonPanelDanhMucChung
+            // 
+            this.ribbonPanelDanhMucChung.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar14);
+            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar13);
+            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar12);
+            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar11);
+            this.ribbonPanelDanhMucChung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanelDanhMucChung.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanelDanhMucChung.Name = "ribbonPanelDanhMucChung";
+            this.ribbonPanelDanhMucChung.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanelDanhMucChung.Size = new System.Drawing.Size(781, 111);
+            // 
+            // 
+            // 
+            this.ribbonPanelDanhMucChung.Style.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ribbonPanelDanhMucChung.Style.BackColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.ribbonPanelDanhMucChung.Style.Class = "";
+            this.ribbonPanelDanhMucChung.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanelDanhMucChung.StyleMouseDown.Class = "";
+            this.ribbonPanelDanhMucChung.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanelDanhMucChung.StyleMouseOver.Class = "";
+            this.ribbonPanelDanhMucChung.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanelDanhMucChung.TabIndex = 3;
+            // 
+            // ribbonBar14
+            // 
+            this.ribbonBar14.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar14.BackgroundMouseOverStyle.Class = "";
+            this.ribbonBar14.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar14.BackgroundStyle.Class = "";
+            this.ribbonBar14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar14.ContainerControlProcessDialogKey = true;
+            this.ribbonBar14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar14.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
+            this.ribbonBar14.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem16});
+            this.ribbonBar14.Location = new System.Drawing.Point(423, 0);
+            this.ribbonBar14.Name = "ribbonBar14";
+            this.ribbonBar14.Size = new System.Drawing.Size(140, 108);
+            this.ribbonBar14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar14.TabIndex = 3;
+            this.ribbonBar14.Text = "Quản Lý Ngoại Tệ";
+            // 
+            // 
+            // 
+            this.ribbonBar14.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ribbonBar14.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
+            this.ribbonBar14.TitleStyle.Class = "";
+            this.ribbonBar14.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar14.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar14.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar14.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // 
+            // 
+            this.ribbonBar14.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
+            this.ribbonBar14.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
+            this.ribbonBar14.TitleStyleMouseOver.Class = "";
+            this.ribbonBar14.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar14.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar14.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar14.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBar14.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // buttonItem16
+            // 
+            this.buttonItem16.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.buttonItem16.FixedSize = new System.Drawing.Size(140, 108);
+            this.buttonItem16.FontBold = true;
+            this.buttonItem16.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem16.Image")));
+            this.buttonItem16.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
+            this.buttonItem16.Name = "buttonItem16";
+            this.buttonItem16.ShowSubItems = false;
+            this.buttonItem16.SubItemsExpandWidth = 14;
+            this.buttonItem16.Text = "<b>Tỷ Giá Ngoại Tệ</b>";
+            // 
+            // ribbonBar13
+            // 
+            this.ribbonBar13.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar13.BackgroundMouseOverStyle.Class = "";
+            this.ribbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar13.BackgroundStyle.Class = "";
+            this.ribbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar13.ContainerControlProcessDialogKey = true;
+            this.ribbonBar13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar13.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
+            this.ribbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem15});
+            this.ribbonBar13.Location = new System.Drawing.Point(283, 0);
+            this.ribbonBar13.Name = "ribbonBar13";
+            this.ribbonBar13.Size = new System.Drawing.Size(140, 108);
+            this.ribbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar13.TabIndex = 2;
+            this.ribbonBar13.Text = "Quản Lý Địa Điểm";
+            // 
+            // 
+            // 
+            this.ribbonBar13.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ribbonBar13.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
+            this.ribbonBar13.TitleStyle.Class = "";
+            this.ribbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar13.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar13.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar13.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // 
+            // 
+            this.ribbonBar13.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
+            this.ribbonBar13.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
+            this.ribbonBar13.TitleStyleMouseOver.Class = "";
+            this.ribbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar13.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar13.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar13.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBar13.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // buttonItem15
+            // 
+            this.buttonItem15.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.buttonItem15.FixedSize = new System.Drawing.Size(140, 108);
+            this.buttonItem15.FontBold = true;
+            this.buttonItem15.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem15.Image")));
+            this.buttonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
+            this.buttonItem15.Name = "buttonItem15";
+            this.buttonItem15.ShowSubItems = false;
+            this.buttonItem15.SubItemsExpandWidth = 14;
+            this.buttonItem15.Text = "<b>Nước-Tỉnh Thành</b>";
+            // 
+            // ribbonBar12
+            // 
+            this.ribbonBar12.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar12.BackgroundMouseOverStyle.Class = "";
+            this.ribbonBar12.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar12.BackgroundStyle.Class = "";
+            this.ribbonBar12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar12.ContainerControlProcessDialogKey = true;
+            this.ribbonBar12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar12.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
+            this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem14});
+            this.ribbonBar12.Location = new System.Drawing.Point(143, 0);
+            this.ribbonBar12.Name = "ribbonBar12";
+            this.ribbonBar12.Size = new System.Drawing.Size(140, 108);
+            this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar12.TabIndex = 1;
+            this.ribbonBar12.Text = "Quản Lý Nhà Cung Cấp";
+            // 
+            // 
+            // 
+            this.ribbonBar12.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ribbonBar12.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
+            this.ribbonBar12.TitleStyle.Class = "";
+            this.ribbonBar12.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar12.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar12.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar12.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // 
+            // 
+            this.ribbonBar12.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
+            this.ribbonBar12.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
+            this.ribbonBar12.TitleStyleMouseOver.Class = "";
+            this.ribbonBar12.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar12.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar12.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar12.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBar12.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // buttonItem14
+            // 
+            this.buttonItem14.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.buttonItem14.FixedSize = new System.Drawing.Size(140, 108);
+            this.buttonItem14.FontBold = true;
+            this.buttonItem14.Image = global::QuanLy_KeToan.Properties.Resources.nhacungcap1;
+            this.buttonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
+            this.buttonItem14.Name = "buttonItem14";
+            this.buttonItem14.ShowSubItems = false;
+            this.buttonItem14.SubItemsExpandWidth = 14;
+            this.buttonItem14.Text = "<b>Nhà Cung Cấp</b>";
+            // 
+            // ribbonBar11
+            // 
+            this.ribbonBar11.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar11.BackgroundMouseOverStyle.Class = "";
+            this.ribbonBar11.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar11.BackgroundStyle.Class = "";
+            this.ribbonBar11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar11.ContainerControlProcessDialogKey = true;
+            this.ribbonBar11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar11.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
+            this.ribbonBar11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnKhachHang});
+            this.ribbonBar11.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar11.Name = "ribbonBar11";
+            this.ribbonBar11.Size = new System.Drawing.Size(140, 108);
+            this.ribbonBar11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar11.TabIndex = 0;
+            this.ribbonBar11.Text = "Quản Lý Khách Hàng";
+            // 
+            // 
+            // 
+            this.ribbonBar11.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ribbonBar11.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
+            this.ribbonBar11.TitleStyle.Class = "";
+            this.ribbonBar11.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar11.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar11.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar11.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // 
+            // 
+            this.ribbonBar11.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
+            this.ribbonBar11.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
+            this.ribbonBar11.TitleStyleMouseOver.Class = "";
+            this.ribbonBar11.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar11.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar11.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.ribbonBar11.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
+            this.ribbonBar11.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnKhachHang.FixedSize = new System.Drawing.Size(140, 108);
+            this.btnKhachHang.FontBold = true;
+            this.btnKhachHang.Image = global::QuanLy_KeToan.Properties.Resources.khachhang;
+            this.btnKhachHang.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.ShowSubItems = false;
+            this.btnKhachHang.SubItemsExpandWidth = 14;
+            this.btnKhachHang.Text = "<b>Khách Hàng</b>";
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // ribbonPanel1
             // 
@@ -904,270 +1168,6 @@
             this.btnQLThu.Tooltip = "Quản Lý Thu Tiền";
             this.btnQLThu.Click += new System.EventHandler(this.btnQLThu_Click);
             // 
-            // ribbonPanelDanhMucChung
-            // 
-            this.ribbonPanelDanhMucChung.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar14);
-            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar13);
-            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar12);
-            this.ribbonPanelDanhMucChung.Controls.Add(this.ribbonBar11);
-            this.ribbonPanelDanhMucChung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanelDanhMucChung.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanelDanhMucChung.Name = "ribbonPanelDanhMucChung";
-            this.ribbonPanelDanhMucChung.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanelDanhMucChung.Size = new System.Drawing.Size(781, 111);
-            // 
-            // 
-            // 
-            this.ribbonPanelDanhMucChung.Style.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ribbonPanelDanhMucChung.Style.BackColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.ribbonPanelDanhMucChung.Style.Class = "";
-            this.ribbonPanelDanhMucChung.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanelDanhMucChung.StyleMouseDown.Class = "";
-            this.ribbonPanelDanhMucChung.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanelDanhMucChung.StyleMouseOver.Class = "";
-            this.ribbonPanelDanhMucChung.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanelDanhMucChung.TabIndex = 3;
-            // 
-            // ribbonBar14
-            // 
-            this.ribbonBar14.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar14.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar14.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar14.BackgroundStyle.Class = "";
-            this.ribbonBar14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar14.ContainerControlProcessDialogKey = true;
-            this.ribbonBar14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar14.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
-            this.ribbonBar14.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem16});
-            this.ribbonBar14.Location = new System.Drawing.Point(423, 0);
-            this.ribbonBar14.Name = "ribbonBar14";
-            this.ribbonBar14.Size = new System.Drawing.Size(140, 108);
-            this.ribbonBar14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar14.TabIndex = 3;
-            this.ribbonBar14.Text = "Quản Lý Ngoại Tệ";
-            // 
-            // 
-            // 
-            this.ribbonBar14.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ribbonBar14.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
-            this.ribbonBar14.TitleStyle.Class = "";
-            this.ribbonBar14.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar14.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar14.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar14.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // 
-            // 
-            this.ribbonBar14.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
-            this.ribbonBar14.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
-            this.ribbonBar14.TitleStyleMouseOver.Class = "";
-            this.ribbonBar14.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar14.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar14.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar14.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
-            this.ribbonBar14.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // buttonItem16
-            // 
-            this.buttonItem16.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonItem16.FixedSize = new System.Drawing.Size(140, 108);
-            this.buttonItem16.FontBold = true;
-            this.buttonItem16.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem16.Image")));
-            this.buttonItem16.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
-            this.buttonItem16.Name = "buttonItem16";
-            this.buttonItem16.ShowSubItems = false;
-            this.buttonItem16.SubItemsExpandWidth = 14;
-            this.buttonItem16.Text = "<b>Tỷ Giá Ngoại Tệ</b>";
-            // 
-            // ribbonBar13
-            // 
-            this.ribbonBar13.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar13.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar13.BackgroundStyle.Class = "";
-            this.ribbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar13.ContainerControlProcessDialogKey = true;
-            this.ribbonBar13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar13.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
-            this.ribbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem15});
-            this.ribbonBar13.Location = new System.Drawing.Point(283, 0);
-            this.ribbonBar13.Name = "ribbonBar13";
-            this.ribbonBar13.Size = new System.Drawing.Size(140, 108);
-            this.ribbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar13.TabIndex = 2;
-            this.ribbonBar13.Text = "Quản Lý Địa Điểm";
-            // 
-            // 
-            // 
-            this.ribbonBar13.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ribbonBar13.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
-            this.ribbonBar13.TitleStyle.Class = "";
-            this.ribbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar13.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar13.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar13.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // 
-            // 
-            this.ribbonBar13.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
-            this.ribbonBar13.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
-            this.ribbonBar13.TitleStyleMouseOver.Class = "";
-            this.ribbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar13.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar13.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar13.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
-            this.ribbonBar13.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // buttonItem15
-            // 
-            this.buttonItem15.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonItem15.FixedSize = new System.Drawing.Size(140, 108);
-            this.buttonItem15.FontBold = true;
-            this.buttonItem15.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem15.Image")));
-            this.buttonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
-            this.buttonItem15.Name = "buttonItem15";
-            this.buttonItem15.ShowSubItems = false;
-            this.buttonItem15.SubItemsExpandWidth = 14;
-            this.buttonItem15.Text = "<b>Nước-Tỉnh Thành</b>";
-            // 
-            // ribbonBar12
-            // 
-            this.ribbonBar12.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar12.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar12.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar12.BackgroundStyle.Class = "";
-            this.ribbonBar12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar12.ContainerControlProcessDialogKey = true;
-            this.ribbonBar12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar12.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
-            this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem14});
-            this.ribbonBar12.Location = new System.Drawing.Point(143, 0);
-            this.ribbonBar12.Name = "ribbonBar12";
-            this.ribbonBar12.Size = new System.Drawing.Size(140, 108);
-            this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar12.TabIndex = 1;
-            this.ribbonBar12.Text = "Quản Lý Nhà Cung Cấp";
-            // 
-            // 
-            // 
-            this.ribbonBar12.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ribbonBar12.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
-            this.ribbonBar12.TitleStyle.Class = "";
-            this.ribbonBar12.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar12.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar12.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar12.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // 
-            // 
-            this.ribbonBar12.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
-            this.ribbonBar12.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
-            this.ribbonBar12.TitleStyleMouseOver.Class = "";
-            this.ribbonBar12.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar12.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar12.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar12.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
-            this.ribbonBar12.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // buttonItem14
-            // 
-            this.buttonItem14.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonItem14.FixedSize = new System.Drawing.Size(140, 108);
-            this.buttonItem14.FontBold = true;
-            this.buttonItem14.Image = global::QuanLy_KeToan.Properties.Resources.nhacungcap1;
-            this.buttonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
-            this.buttonItem14.Name = "buttonItem14";
-            this.buttonItem14.ShowSubItems = false;
-            this.buttonItem14.SubItemsExpandWidth = 14;
-            this.buttonItem14.Text = "<b>Nhà Cung Cấp</b>";
-            // 
-            // ribbonBar11
-            // 
-            this.ribbonBar11.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar11.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar11.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar11.BackgroundStyle.Class = "";
-            this.ribbonBar11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar11.ContainerControlProcessDialogKey = true;
-            this.ribbonBar11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar11.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
-            this.ribbonBar11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnKhachHang});
-            this.ribbonBar11.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar11.Name = "ribbonBar11";
-            this.ribbonBar11.Size = new System.Drawing.Size(140, 108);
-            this.ribbonBar11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar11.TabIndex = 0;
-            this.ribbonBar11.Text = "Quản Lý Khách Hàng";
-            // 
-            // 
-            // 
-            this.ribbonBar11.TitleStyle.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ribbonBar11.TitleStyle.BackColor2 = System.Drawing.Color.Cyan;
-            this.ribbonBar11.TitleStyle.Class = "";
-            this.ribbonBar11.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar11.TitleStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar11.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar11.TitleStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // 
-            // 
-            this.ribbonBar11.TitleStyleMouseOver.BackColor = System.Drawing.Color.Orange;
-            this.ribbonBar11.TitleStyleMouseOver.BackColor2 = System.Drawing.Color.Yellow;
-            this.ribbonBar11.TitleStyleMouseOver.Class = "";
-            this.ribbonBar11.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar11.TitleStyleMouseOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar11.TitleStyleMouseOver.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.ribbonBar11.TitleStyleMouseOver.TextColor = System.Drawing.SystemColors.ControlText;
-            this.ribbonBar11.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // btnKhachHang
-            // 
-            this.btnKhachHang.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnKhachHang.FixedSize = new System.Drawing.Size(140, 108);
-            this.btnKhachHang.FontBold = true;
-            this.btnKhachHang.Image = global::QuanLy_KeToan.Properties.Resources.khachhang;
-            this.btnKhachHang.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.ShowSubItems = false;
-            this.btnKhachHang.SubItemsExpandWidth = 14;
-            this.btnKhachHang.Text = "<b>Khách Hàng</b>";
-            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
-            // 
             // ribbonPanel5
             // 
             this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1736,10 +1736,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ribbonControlQuanLyKeToan.ResumeLayout(false);
             this.ribbonControlQuanLyKeToan.PerformLayout();
+            this.ribbonPanelDanhMucChung.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
-            this.ribbonPanelDanhMucChung.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
