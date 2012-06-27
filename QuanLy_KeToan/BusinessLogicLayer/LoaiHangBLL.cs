@@ -157,5 +157,19 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                             }).ToList<LoaiHangHoa>();
             return loaihang;
         }
+        //Lấy Danh Sách Người Lập cho ColNguoiLap
+        public IQueryable LayDanhSachNguoiLap()
+        {
+            var nguoilap = from phanquyen in QLKT.PhanQuyens
+                           select new { phanquyen.TenDangNhap };
+            return nguoilap.Distinct();
+        }
+        //Lấy Danh Sách Người Sửa cho ColNguoiSua
+        public IQueryable LayDanhSachNguoiSua()
+        {
+            var nguoisua = from phanquyen in QLKT.PhanQuyens
+                           select new { phanquyen.TenDangNhap };
+            return nguoisua.Distinct();
+        }
     }
 }

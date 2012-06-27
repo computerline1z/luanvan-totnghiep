@@ -176,25 +176,42 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             {
                 month = System.Convert.ToInt16(items.Thang);
             }
-            if ((thang == 1 && month == 0) || (thang == month + 1))
-                return true;
-            else
-                return false;
-        }
-        public bool LuuThem(int thang, int nam, decimal sodudauki, decimal tongtienthu, decimal tongtienchi, decimal soducuoiki, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
-        {
-            if (KiemTraThangNamKSTC(thang, nam) == false)
+            int kt_thang = 0;
+            if (thang == 1)
             {
-                MessageBox.Show("Dữ liệu kết sổ Tháng " + (thang-1).ToString() + "/" + nam.ToString() + " chưa có.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                var kt = from kstc in QLKT.KetSoThuChis
+                         where kstc.Nam == nam - 1
+                         orderby kstc.Thang ascending
+                         select new { kstc.Thang };
+                
+                foreach (var item in kt)
+                {
+                    kt_thang = System.Convert.ToInt16(item.Thang);
+                }
+            }
+            if ((thang == 1 && kt_thang == 12)||(thang!=1 && thang == month + 1))
+            {
+                return true;
             }
             else
             {
-                if (KiemTraDulieu(thang, nam) == true)
-                {
-                    MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
+                if(thang==1 && kt_thang!=12)
+                     MessageBox.Show("Dữ liệu kết sổ tháng 12 năm " + (nam - 1).ToString() + " chưa có!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if(thang!=1 && thang!=month+1)
+                    MessageBox.Show("Dữ liệu kết sổ Tháng " + (thang-1).ToString() + "/" + nam.ToString() + " chưa có.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+        }
+        public bool LuuThem(int thang, int nam, decimal sodudauki, decimal tongtienthu, decimal tongtienchi, decimal soducuoiki, DateTime ngaylap, string nguoilap, DateTime ngaysua, string nguoisua)
+        {
+            if (KiemTraDulieu(thang, nam) == true)
+            {
+                MessageBox.Show("Đã tồn tại dữ liệu này trong CSDL", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (KiemTraThangNamKSTC(thang, nam) == true)
+            {
+               
                 try
                 {
                     KetSoThuChi KSTC = new KetSoThuChi();
@@ -218,6 +235,8 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                     return false;
                 }
             }
+            else
+                return false;
         }
         public bool XoaKSTC(int nam, ToolStripProgressBar pb)
         {

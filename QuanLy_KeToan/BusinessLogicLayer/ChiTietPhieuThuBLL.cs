@@ -57,7 +57,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                            malohdban = CTPT.MaLoHDBan,
                            mahdban=CTPT.MaHDBan,
                            mahang = CTPT.MaHang,
-                           tienthu = TinhGiaTriTheoChiTietHDBan(malohdban,mahdban,CTPT.MaHang),
+                           tienthu = System.Convert.ToDecimal(CTPT.TienThu),//TinhGiaTriTheoChiTietHDBan(malohdban,mahdban,CTPT.MaHang),
                            ngaylap = Convert.ToDateTime(CTPT.NgayLap == null ? DateTime.Today : CTPT.NgayLap),
                            nguoilap = CTPT.NguoiLap,
                            ngaysua = Convert.ToDateTime(CTPT.NgaySua == null ? DateTime.Today : CTPT.NgaySua),
@@ -117,7 +117,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 CTPT.NgaySua = CTPhieuThu.NgaySua;
                 CTPT.NguoiSua = CTPhieuThu.NguoiSua;
                 QLKT.SubmitChanges();
-                MessageBox.Show("Lưu thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhật chi tiết phiếu thu thành công !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex)

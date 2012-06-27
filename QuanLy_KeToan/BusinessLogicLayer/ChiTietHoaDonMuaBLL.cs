@@ -117,7 +117,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 cthdmua.NgaySua = CTHDMua.NgaySua;
                 cthdmua.NguoiSua = CTHDMua.NguoiSua;
                 QLKT.SubmitChanges();
-                MessageBox.Show("Lưu thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công thông tin Chi tiết hóa đơn mua!", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex)
@@ -185,7 +185,85 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                       select new { phanquyen.TenDangNhap };
             return sql;
         }
- 
+        //Cập nhật chi tiết phiếu xuất khi thay đổi chi tiết hóa đơn bán
+        public bool CapNhatLaiCTPNKhiThayDoiCTHDM(string malohdmua, string mahdmua, string mahang, int sl)
+        {
+            var ctpn = from _ctpn in QLKT.ChiTietPhieuNhaps
+                       where _ctpn.MaLoHDMua == malohdmua && _ctpn.MaHDMua == mahdmua && _ctpn.MaHang == mahang
+                       select _ctpn.SoLuong;
+            if (ctpn.Count() > 0)
+            {
+                int _sl = 0;
+                foreach (var item in ctpn)
+                {
+                    _sl = System.Convert.ToInt16(item);
+                }
+                int sl_khochua = 0;
+                var hang = from kc in QLKT.KhoChuas
+                           where kc.MaHang == mahang
+                           select kc.SL;
+                if (hang.Count() > 0)
+                {
+                    foreach (var item in hang)
+                    {
+                        sl_khochua = System.Convert.ToInt16(item);
+                    }
+                }
+                int update = sl - _sl;
+                sl_khochua += update;
+                //Cập nhật chi tiết phiếu xuất
+                try
+                {
+                    ChiTietPhieuNhap chitietpn = QLKT.ChiTietPhieuNhaps.Single(_chitietpn => _chitietpn.MaLoHDMua==malohdmua && _chitietpn.MaHDMua==mahdmua && _chitietpn.MaHang == mahang);
+                    chitietpn.SoLuong = sl;
+                    QLKT.SubmitChanges();
+                    if (update > 0)
+                        MessageBox.Show("Số lượng Hàng " + mahang + " nhập thêm vào kho: " + update.ToString() + Environment.NewLine +
+                                        "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else if (update == 0)
+                        MessageBox.Show("Số lượng Hàng " + mahang + " giữ nguyên" + Environment.NewLine +
+                                        "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Số lượng Hàng " + mahang + " trả ra khỏi kho: " + (-update).ToString() + Environment.NewLine +
+                                        "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                //Cập nhật kho chứa
+                try
+                {
+                    KhoChua khochua = QLKT.KhoChuas.Single(_kc => _kc.MaHang == mahang);
+                    khochua.SL = sl_khochua;
+                    QLKT.SubmitChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+                return false;
+        }
+        public void CapNhatCTPCKhiThayDoiCTHDM(string malohdmua, string mahdmua, string mahang)
+        {
+            try
+            {
+                ChiTietPhieuChiBLL CTPCBLL = new ChiTietPhieuChiBLL();
+                ChiTietPhieuChi CTPC = QLKT.ChiTietPhieuChis.Single(_CTPC => _CTPC.MaLoHDMua == malohdmua && _CTPC.MaHDMua == mahdmua && _CTPC.MaHang == mahang);
+                CTPC.TienChi = CTPCBLL.TinhGiaTriTheoChiTietHDMua(malohdmua, mahdmua, mahang);
+                QLKT.SubmitChanges();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
     
 }

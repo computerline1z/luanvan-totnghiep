@@ -57,7 +57,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                            malohdmua = CTPC.MaLoHDMua,
                            mahdmua=CTPC.MaHDMua,
                            mahang = CTPC.MaHang,
-                           tienchi = TinhGiaTriTheoChiTietHDMua(malohdmua,mahdmua,CTPC.MaHang),
+                           tienchi = System.Convert.ToDecimal(CTPC.TienChi),//TinhGiaTriTheoChiTietHDMua(malohdmua,mahdmua,CTPC.MaHang),
                            ngaylap = Convert.ToDateTime(CTPC.NgayLap == null ? DateTime.Today : CTPC.NgayLap),
                            nguoilap = CTPC.NguoiLap,
                            ngaysua = Convert.ToDateTime(CTPC.NgaySua == null ? DateTime.Today : CTPC.NgaySua),

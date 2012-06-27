@@ -119,7 +119,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 cthdban.NgaySua = CTHDBan.NgaySua;
                 cthdban.NguoiSua = CTHDBan.NguoiSua;
                 QLKT.SubmitChanges();
-                MessageBox.Show("Lưu thành công 1 record !", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công thông tin Chi tiết hóa đơn bán!", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex)
@@ -189,7 +189,7 @@ namespace QuanLy_KeToan.BusinessLogicLayer
             return sql;
         }
         //Cập nhật chi tiết phiếu xuất khi thay đổi chi tiết hóa đơn bán
-        public void CapNhatLaiCTPXKhiThayDoiCTHDB(string malohdban, string mahdban, string mahang,int sl)
+        public bool CapNhatLaiCTPXKhiThayDoiCTHDB(string malohdban, string mahdban, string mahang,int sl)
         {
             var ctpx = from _ctpx in QLKT.ChiTietPhieuXuats
                        where _ctpx.MaLoHDBan == malohdban && _ctpx.MaHDBan == mahdban && _ctpx.MaHang == mahang
@@ -201,63 +201,78 @@ namespace QuanLy_KeToan.BusinessLogicLayer
                 {
                     _sl = System.Convert.ToInt16(item);
                 }
-                if (_sl != sl)
+                int sl_khochua = 0;
+                var hang = from kc in QLKT.KhoChuas
+                            where kc.MaHang == mahang
+                            select kc.SL;
+                if (hang.Count() > 0)
                 {
-                    int sl_khochua = 0;
-                    var hang = from kc in QLKT.KhoChuas
-                               where kc.MaHang == mahang
-                               select kc.SL;
-                    if (hang.Count() > 0)
+                    foreach (var item in hang)
                     {
-                        foreach (var item in hang)
-                        {
-                            sl_khochua = System.Convert.ToInt16(item);
-                        }
-                    }
-                    int update = sl - _sl;
-                    if (update > sl_khochua)
-                    {
-                        MessageBox.Show("Số lượng Hàng trong kho không đủ để xuất ra thêm", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    else
-                    {
-                        sl_khochua -= update;
-                        //Cập nhật chi tiết phiếu xuất
-                        try
-                        {
-                            ChiTietPhieuXuat chitietpx = QLKT.ChiTietPhieuXuats.Single(_chitietpx => _chitietpx.MaHang == mahang);
-                            chitietpx.SoLuong = sl;
-                            QLKT.SubmitChanges();
-                            if (update > 0)
-                                MessageBox.Show("Số lượng Hàng " + mahang + " xuất thêm khỏi kho: " + update.ToString() + Environment.NewLine +
-                                                "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else if (update == 0)
-                                MessageBox.Show("Số lượng Hàng " + mahang + " giữ nguyên" + Environment.NewLine +
-                                                "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else
-                                MessageBox.Show("Số lượng Hàng " + mahang + " trả lại vào kho: " + (-update).ToString() + Environment.NewLine +
-                                                "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        catch (System.Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        //Cập nhật kho chứa
-                        try
-                        {
-                            KhoChua khochua = QLKT.KhoChuas.Single(_kc => _kc.MaHang == mahang);
-                            khochua.SL = sl_khochua;
-                            QLKT.SubmitChanges();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
+                        sl_khochua = System.Convert.ToInt16(item);
                     }
                 }
+                int update = sl - _sl;
+                if (update > sl_khochua)
+                {
+                    MessageBox.Show("Số lượng Hàng trong kho không đủ để xuất ra thêm", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                else
+                {
+                    sl_khochua -= update;
+                    //Cập nhật chi tiết phiếu xuất
+                    try
+                    {
+                        ChiTietPhieuXuat chitietpx = QLKT.ChiTietPhieuXuats.Single(_chitietpx => _chitietpx.MaLoHDBan==malohdban && _chitietpx.MaHDBan==mahdban && _chitietpx.MaHang == mahang);
+                        chitietpx.SoLuong = sl;
+                        QLKT.SubmitChanges();
+                        if (update > 0)
+                            MessageBox.Show("Số lượng Hàng " + mahang + " xuất thêm khỏi kho: " + update.ToString() + Environment.NewLine +
+                                            "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else if (update == 0)
+                            MessageBox.Show("Số lượng Hàng " + mahang + " giữ nguyên" + Environment.NewLine +
+                                            "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            MessageBox.Show("Số lượng Hàng " + mahang + " trả lại vào kho: " + (-update).ToString() + Environment.NewLine +
+                                            "Số lượng Hàng " + mahang + " hiện tại là:" + sl_khochua.ToString(), "Cập nhật lại kho chứa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    //Cập nhật kho chứa
+                    try
+                    {
+                        KhoChua khochua = QLKT.KhoChuas.Single(_kc => _kc.MaHang == mahang);
+                        khochua.SL = sl_khochua;
+                        QLKT.SubmitChanges();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            else
+                return false;
+        }
+        public void CapNhatCTPTKhiThayDoiCTHDB(string malohdban,string mahdban,string mahang)
+        {
+            try
+            {
+                ChiTietPhieuThuBLL CTPTBLL = new ChiTietPhieuThuBLL();
+                ChiTietPhieuThu CTPT = QLKT.ChiTietPhieuThus.Single(_CTPT => _CTPT.MaLoHDBan == malohdban && _CTPT.MaHDBan == mahdban && _CTPT.MaHang == mahang);
+                CTPT.TienThu = CTPTBLL.TinhGiaTriTheoChiTietHDBan(malohdban, mahdban, mahang);
+                QLKT.SubmitChanges();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
     }
