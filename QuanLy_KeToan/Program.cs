@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using QuanLy_KeToan.PresentationLayer;
 
 namespace QuanLy_KeToan
 {
@@ -15,7 +16,7 @@ namespace QuanLy_KeToan
         {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new PresentationLayer.FrmMain());
+                Application.Run(new FrmDangNhap());
         }
     }
 }
