@@ -52,7 +52,6 @@ F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.pdb
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.exe
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\bin\Debug\QuanLy_KeToan.pdb
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\ResolveAssemblyReference.cache
-F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.FDangNhap.resources
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmChiTietPhieuNhap.resources
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmDanhMucChung.resources
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmHangHoa.resources
@@ -100,3 +99,5 @@ F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.read.15
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.write.1500.tlog
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.write.1532.tlog
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FormCho.resources
+F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmPhanQuyen.resources
+F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.FrmDangNhap.resources
