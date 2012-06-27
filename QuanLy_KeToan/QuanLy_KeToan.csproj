@@ -74,6 +74,7 @@
     <Compile Include="BusinessLogicLayer\ChiTietPhieuXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChiTietPhieuThuBLL.cs" />
     <Compile Include="BusinessLogicLayer\ChiTietPhieuChiBLL.cs" />
+    <Compile Include="BusinessLogicLayer\DangNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\HoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\HoaDonMuaBLL.cs" />
     <Compile Include="BusinessLogicLayer\KetSoXuatNhapKhoBLL.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="BusinessLogicLayer\LoaiHoaDonMuaBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoHoaDonBanBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoHoaDonMuaBLL.cs" />
+    <Compile Include="BusinessLogicLayer\PhanQuyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhieuChiBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoPhieuChiBLL.cs" />
     <Compile Include="BusinessLogicLayer\LoaiPhieuChiBLL.cs" />
@@ -102,6 +104,12 @@
     <Compile Include="BusinessLogicLayer\PhieuNhapBLL.cs" />
     <Compile Include="BusinessLogicLayer\PhiexXuatBLL.cs" />
     <Compile Include="BusinessLogicLayer\TinhThanhBLL.cs" />
+    <Compile Include="PresentationLayer\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FormCho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +158,12 @@
     <Compile Include="PresentationLayer\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\FrmPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FrmPhanQuyen.Designer.cs">
+      <DependentUpon>FrmPhanQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FrmQuanLyChi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,11 +206,11 @@
     <Compile Include="PresentationLayer\FrmChiTietPhieuXuat.Designer.cs">
       <DependentUpon>FrmChiTietPhieuXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\FDangNhap.cs">
+    <Compile Include="PresentationLayer\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\FDangNhap.Designer.cs">
-      <DependentUpon>FDangNhap.cs</DependentUpon>
+    <Compile Include="PresentationLayer\FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FrmChiTietPhieuNhap.cs">
       <SubType>Form</SubType>
@@ -256,6 +270,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLy_KeToan.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PresentationLayer\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FormCho.resx">
       <DependentUpon>FormCho.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +297,9 @@
     <EmbeddedResource Include="PresentationLayer\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\FrmPhanQuyen.resx">
+      <DependentUpon>FrmPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmQuanLyChi.resx">
       <DependentUpon>FrmQuanLyChi.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,8 +321,8 @@
     <EmbeddedResource Include="PresentationLayer\FrmChiTietPhieuXuat.resx">
       <DependentUpon>FrmChiTietPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FDangNhap.resx">
-      <DependentUpon>FDangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FrmChiTietPhieuNhap.resx">
       <DependentUpon>FrmChiTietPhieuNhap.cs</DependentUpon>
@@ -661,6 +681,8 @@
     <None Include="Resources\help-icon.png" />
     <None Include="Resources\about.png" />
     <None Include="Resources\logout.png" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\user.png" />
     <Content Include="Z_Document\ChuaXuLy.txt" />
     <Content Include="Z_Document\GhiChu.txt" />
     <None Include="Resources\khohang.png" />
