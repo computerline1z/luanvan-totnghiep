@@ -115,7 +115,6 @@ namespace QuanLy_KeToan.PresentationLayer
             }
             gridChiTietHDMua.Rows[gridChiTietHDMua.RowCount - 1].Cells["ColMLHDM"].Value = malohdm;
             gridChiTietHDMua.Rows[gridChiTietHDMua.RowCount - 1].Cells["ColMHDM"].Value = mahdmua;
-
         }
         private void Delete_Click(object sender, EventArgs e)
         {
@@ -149,11 +148,14 @@ namespace QuanLy_KeToan.PresentationLayer
                             CTHDMua.NguoiLap = (gridChiTietHDMua.CurrentRow.Cells["ColNgL"].Value != null ? gridChiTietHDMua.CurrentRow.Cells["ColNgL"].Value.ToString() : "");
                             CTHDMua.NgaySua = System.Convert.ToDateTime(gridChiTietHDMua.CurrentRow.Cells["ColNS"].Value.ToString());
                             CTHDMua.NguoiSua = (gridChiTietHDMua.CurrentRow.Cells["ColNgS"].Value != null ? gridChiTietHDMua.CurrentRow.Cells["ColNgS"].Value.ToString() : "");
-                            bool sua = CTHDMuaBLL.SuaCTHDMua(malohdm, mahdmua, mahang, CTHDMua);
+                            bool capnhat = CTHDMuaBLL.CapNhatLaiCTPNKhiThayDoiCTHDM(malohdm, mahdmua, mahang, sl);
+                            if (capnhat == true)
+                            {
+                                CTHDMuaBLL.SuaCTHDMua(malohdm, mahdmua, mahang, CTHDMua);
+                                CTHDMuaBLL.CapNhatCTPCKhiThayDoiCTHDM(malohdm, mahdmua, mahang);
+                            }
                             LayDanhSachChiTietHDMua(malohdm, mahdmua);
                             ToolBarEnableChiTietHDMua(true);
-                            if (sua == true)
-                                MessageBox.Show("Cập nhật thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {

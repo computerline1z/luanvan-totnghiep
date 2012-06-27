@@ -132,5 +132,26 @@ namespace QuanLy_KeToan.PresentationLayer
             FRMKH.Show();
             formThread.Abort();
         }
+
+        private void btnNCC_Click(object sender, EventArgs e)
+        {
+            formThread = new Thread(Runwait);
+            formThread.SetApartmentState(ApartmentState.STA);
+            formThread.Start();
+            FrmNhaCungCap FrmNCC = new FrmNhaCungCap();
+            FrmNCC.Show();
+            formThread.Abort();
+        }
+
+        private void btnPhanQuyen_Click(object sender, EventArgs e)
+        {
+            FrmPhanQuyen FrmPQ = new FrmPhanQuyen();
+            FrmPQ.Show();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

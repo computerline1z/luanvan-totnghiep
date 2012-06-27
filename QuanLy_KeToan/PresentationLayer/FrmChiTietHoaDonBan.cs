@@ -149,9 +149,13 @@ namespace QuanLy_KeToan.PresentationLayer
                             CTHDBan.NguoiLap = (gridChiTietHDBan.CurrentRow.Cells["ColNgL"].Value != null ? gridChiTietHDBan.CurrentRow.Cells["ColNgL"].Value.ToString() : "");
                             CTHDBan.NgaySua = System.Convert.ToDateTime(gridChiTietHDBan.CurrentRow.Cells["ColNS"].Value.ToString());
                             CTHDBan.NguoiSua = (gridChiTietHDBan.CurrentRow.Cells["ColNgS"].Value != null ? gridChiTietHDBan.CurrentRow.Cells["ColNgS"].Value.ToString() : "");
-                            bool sua = CTHDBanBLL.SuaCTHDBan(malohdb, mahdban, mahang, CTHDBan);
-                            if (sua == true)
-                               CTHDBanBLL.CapNhatLaiCTPXKhiThayDoiCTHDB(malohdb, mahdban, mahang, sl);
+                            MessageBox.Show("Kiểm tra lại thông tin kho chứa trước khi cập nhật hóa đơn bán", "Kiểm tra", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            bool capnhat=CTHDBanBLL.CapNhatLaiCTPXKhiThayDoiCTHDB(malohdb, mahdban, mahang, sl);
+                            if (capnhat == true)
+                            {
+                                CTHDBanBLL.SuaCTHDBan(malohdb, mahdban, mahang, CTHDBan);
+                                CTHDBanBLL.CapNhatCTPTKhiThayDoiCTHDB(malohdb, mahdban, mahang);
+                            }
                             LayDanhSachChiTietHDBan(malohdb, mahdban);
                             ToolBarEnableChiTietHDBan(true);
                         }

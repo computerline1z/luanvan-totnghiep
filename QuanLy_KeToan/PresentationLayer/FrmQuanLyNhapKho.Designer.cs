@@ -68,6 +68,19 @@
             this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
             this.LPN_Exit = new System.Windows.Forms.ToolStripButton();
             this.navigationPaneThaoTac = new DevComponents.DotNetBar.NavigationPane();
+            this.navigationPanePanelDuyetDanhMuc = new DevComponents.DotNetBar.NavigationPanePanel();
+            this.advTreeLoNhap = new DevComponents.AdvTree.AdvTree();
+            this.root_node = new DevComponents.AdvTree.Node();
+            this.nodeLoaiPhieuNhap = new DevComponents.AdvTree.Node();
+            this.nodeLoPhieuNhap = new DevComponents.AdvTree.Node();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
+            this.elementStyle3 = new DevComponents.DotNetBar.ElementStyle();
+            this.elementStyle4 = new DevComponents.DotNetBar.ElementStyle();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
+            this.btnDuyetDanhMuc = new DevComponents.DotNetBar.ButtonItem();
+            this.navigationPanePanelTimLKiem = new DevComponents.DotNetBar.NavigationPanePanel();
+            this.buttonItemTim = new DevComponents.DotNetBar.ButtonItem();
             this.navigationPanePanelThaoTac = new DevComponents.DotNetBar.NavigationPanePanel();
             this.groupLoaiPhieuNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -130,19 +143,6 @@
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.buttonItemThaoTac = new DevComponents.DotNetBar.ButtonItem();
-            this.navigationPanePanelTimLKiem = new DevComponents.DotNetBar.NavigationPanePanel();
-            this.buttonItemTim = new DevComponents.DotNetBar.ButtonItem();
-            this.navigationPanePanelDuyetDanhMuc = new DevComponents.DotNetBar.NavigationPanePanel();
-            this.advTreeLoNhap = new DevComponents.AdvTree.AdvTree();
-            this.root_node = new DevComponents.AdvTree.Node();
-            this.nodeLoaiPhieuNhap = new DevComponents.AdvTree.Node();
-            this.nodeLoPhieuNhap = new DevComponents.AdvTree.Node();
-            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
-            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
-            this.elementStyle3 = new DevComponents.DotNetBar.ElementStyle();
-            this.elementStyle4 = new DevComponents.DotNetBar.ElementStyle();
-            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
-            this.btnDuyetDanhMuc = new DevComponents.DotNetBar.ButtonItem();
             this.expandablePanelCauHinh = new DevComponents.DotNetBar.ExpandablePanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -220,6 +220,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingLoaiPhieuNhap)).BeginInit();
             this.bindingLoaiPhieuNhap.SuspendLayout();
             this.navigationPaneThaoTac.SuspendLayout();
+            this.navigationPanePanelDuyetDanhMuc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTreeLoNhap)).BeginInit();
             this.navigationPanePanelThaoTac.SuspendLayout();
             this.groupLoaiPhieuNhap.SuspendLayout();
             this.groupPanel5.SuspendLayout();
@@ -234,8 +236,6 @@
             this.groupPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgaySua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgayLap)).BeginInit();
-            this.navigationPanePanelDuyetDanhMuc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advTreeLoNhap)).BeginInit();
             this.expandablePanelCauHinh.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.groupPanelLoPhieuNhap.SuspendLayout();
@@ -708,6 +708,195 @@
             this.navigationPaneThaoTac.TitlePanel.TabIndex = 0;
             this.navigationPaneThaoTac.TitlePanel.Text = "DUYỆT DANH MỤC";
             // 
+            // navigationPanePanelDuyetDanhMuc
+            // 
+            this.navigationPanePanelDuyetDanhMuc.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.navigationPanePanelDuyetDanhMuc.Controls.Add(this.advTreeLoNhap);
+            this.navigationPanePanelDuyetDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationPanePanelDuyetDanhMuc.Location = new System.Drawing.Point(1, 25);
+            this.navigationPanePanelDuyetDanhMuc.Name = "navigationPanePanelDuyetDanhMuc";
+            this.navigationPanePanelDuyetDanhMuc.ParentItem = this.btnDuyetDanhMuc;
+            this.navigationPanePanelDuyetDanhMuc.Size = new System.Drawing.Size(256, 499);
+            this.navigationPanePanelDuyetDanhMuc.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.navigationPanePanelDuyetDanhMuc.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.navigationPanePanelDuyetDanhMuc.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.navigationPanePanelDuyetDanhMuc.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.navigationPanePanelDuyetDanhMuc.Style.GradientAngle = 90;
+            this.navigationPanePanelDuyetDanhMuc.TabIndex = 2;
+            // 
+            // advTreeLoNhap
+            // 
+            this.advTreeLoNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTreeLoNhap.AllowDrop = true;
+            this.advTreeLoNhap.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTreeLoNhap.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTreeLoNhap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTreeLoNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advTreeLoNhap.GridLinesColor = System.Drawing.Color.DodgerBlue;
+            this.advTreeLoNhap.HotTracking = true;
+            this.advTreeLoNhap.Location = new System.Drawing.Point(0, 0);
+            this.advTreeLoNhap.Name = "advTreeLoNhap";
+            this.advTreeLoNhap.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
+            this.root_node});
+            this.advTreeLoNhap.NodesConnector = this.nodeConnector1;
+            this.advTreeLoNhap.NodeStyle = this.elementStyle2;
+            this.advTreeLoNhap.NodeStyleMouseOver = this.elementStyle3;
+            this.advTreeLoNhap.NodeStyleSelected = this.elementStyle4;
+            this.advTreeLoNhap.PathSeparator = ";";
+            this.advTreeLoNhap.Size = new System.Drawing.Size(256, 499);
+            this.advTreeLoNhap.Styles.Add(this.elementStyle1);
+            this.advTreeLoNhap.Styles.Add(this.elementStyle2);
+            this.advTreeLoNhap.Styles.Add(this.elementStyle3);
+            this.advTreeLoNhap.Styles.Add(this.elementStyle4);
+            this.advTreeLoNhap.TabIndex = 0;
+            this.advTreeLoNhap.Text = "advTree1";
+            this.advTreeLoNhap.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTreeLoNhap_AfterNodeSelect);
+            // 
+            // root_node
+            // 
+            this.root_node.Expanded = true;
+            this.root_node.Image = global::QuanLy_KeToan.Properties.Resources.khohang;
+            this.root_node.Name = "root_node";
+            this.root_node.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
+            this.nodeLoaiPhieuNhap,
+            this.nodeLoPhieuNhap});
+            this.root_node.Text = "Kho Hàng";
+            // 
+            // nodeLoaiPhieuNhap
+            // 
+            this.nodeLoaiPhieuNhap.Expanded = true;
+            this.nodeLoaiPhieuNhap.Image = global::QuanLy_KeToan.Properties.Resources.Loaiphieunhap;
+            this.nodeLoaiPhieuNhap.Name = "nodeLoaiPhieuNhap";
+            this.nodeLoaiPhieuNhap.Text = "Loại Phiếu Nhập";
+            // 
+            // nodeLoPhieuNhap
+            // 
+            this.nodeLoPhieuNhap.Expanded = true;
+            this.nodeLoPhieuNhap.Image = global::QuanLy_KeToan.Properties.Resources.Lophieunhap;
+            this.nodeLoPhieuNhap.Name = "nodeLoPhieuNhap";
+            this.nodeLoPhieuNhap.Text = "Lô Phiếu Nhập";
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle2
+            // 
+            this.elementStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
+            this.elementStyle2.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(120)))));
+            this.elementStyle2.BackColorGradientAngle = 90;
+            this.elementStyle2.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderBottomWidth = 1;
+            this.elementStyle2.BorderColor = System.Drawing.Color.DarkGray;
+            this.elementStyle2.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderLeftWidth = 1;
+            this.elementStyle2.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderRightWidth = 1;
+            this.elementStyle2.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle2.BorderTopWidth = 1;
+            this.elementStyle2.Class = "";
+            this.elementStyle2.CornerDiameter = 4;
+            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle2.Description = "Orange";
+            this.elementStyle2.Name = "elementStyle2";
+            this.elementStyle2.PaddingBottom = 1;
+            this.elementStyle2.PaddingLeft = 1;
+            this.elementStyle2.PaddingRight = 1;
+            this.elementStyle2.PaddingTop = 1;
+            this.elementStyle2.TextColor = System.Drawing.Color.Black;
+            // 
+            // elementStyle3
+            // 
+            this.elementStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(230)))), ((int)(((byte)(247)))));
+            this.elementStyle3.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(168)))), ((int)(((byte)(228)))));
+            this.elementStyle3.BackColorGradientAngle = 90;
+            this.elementStyle3.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderBottomWidth = 1;
+            this.elementStyle3.BorderColor = System.Drawing.Color.DarkGray;
+            this.elementStyle3.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderLeftWidth = 1;
+            this.elementStyle3.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderRightWidth = 1;
+            this.elementStyle3.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle3.BorderTopWidth = 1;
+            this.elementStyle3.Class = "";
+            this.elementStyle3.CornerDiameter = 4;
+            this.elementStyle3.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle3.Description = "Blue";
+            this.elementStyle3.Name = "elementStyle3";
+            this.elementStyle3.PaddingBottom = 1;
+            this.elementStyle3.PaddingLeft = 1;
+            this.elementStyle3.PaddingRight = 1;
+            this.elementStyle3.PaddingTop = 1;
+            this.elementStyle3.TextColor = System.Drawing.Color.Black;
+            // 
+            // elementStyle4
+            // 
+            this.elementStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
+            this.elementStyle4.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(149)))), ((int)(((byte)(151)))));
+            this.elementStyle4.BackColorGradientAngle = 90;
+            this.elementStyle4.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderBottomWidth = 1;
+            this.elementStyle4.BorderColor = System.Drawing.Color.DarkGray;
+            this.elementStyle4.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderLeftWidth = 1;
+            this.elementStyle4.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderRightWidth = 1;
+            this.elementStyle4.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.elementStyle4.BorderTopWidth = 1;
+            this.elementStyle4.Class = "";
+            this.elementStyle4.CornerDiameter = 4;
+            this.elementStyle4.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle4.Description = "Red";
+            this.elementStyle4.Name = "elementStyle4";
+            this.elementStyle4.PaddingBottom = 1;
+            this.elementStyle4.PaddingLeft = 1;
+            this.elementStyle4.PaddingRight = 1;
+            this.elementStyle4.PaddingTop = 1;
+            this.elementStyle4.TextColor = System.Drawing.Color.Black;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.Class = "";
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // btnDuyetDanhMuc
+            // 
+            this.btnDuyetDanhMuc.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnDuyetDanhMuc.Checked = true;
+            this.btnDuyetDanhMuc.Image = global::QuanLy_KeToan.Properties.Resources.duyet;
+            this.btnDuyetDanhMuc.Name = "btnDuyetDanhMuc";
+            this.btnDuyetDanhMuc.OptionGroup = "navBar";
+            this.btnDuyetDanhMuc.Text = "DUYỆT DANH MỤC";
+            // 
+            // navigationPanePanelTimLKiem
+            // 
+            this.navigationPanePanelTimLKiem.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.navigationPanePanelTimLKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationPanePanelTimLKiem.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanelTimLKiem.Name = "navigationPanePanelTimLKiem";
+            this.navigationPanePanelTimLKiem.ParentItem = this.buttonItemTim;
+            this.navigationPanePanelTimLKiem.Size = new System.Drawing.Size(256, 523);
+            this.navigationPanePanelTimLKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.navigationPanePanelTimLKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.navigationPanePanelTimLKiem.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.navigationPanePanelTimLKiem.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.navigationPanePanelTimLKiem.Style.GradientAngle = 90;
+            this.navigationPanePanelTimLKiem.TabIndex = 4;
+            // 
+            // buttonItemTim
+            // 
+            this.buttonItemTim.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItemTim.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
+            this.buttonItemTim.Name = "buttonItemTim";
+            this.buttonItemTim.OptionGroup = "navBar";
+            this.buttonItemTim.Text = "TÌM KIẾM";
+            // 
             // navigationPanePanelThaoTac
             // 
             this.navigationPanePanelThaoTac.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -718,7 +907,7 @@
             this.navigationPanePanelThaoTac.Location = new System.Drawing.Point(1, 1);
             this.navigationPanePanelThaoTac.Name = "navigationPanePanelThaoTac";
             this.navigationPanePanelThaoTac.ParentItem = this.buttonItemThaoTac;
-            this.navigationPanePanelThaoTac.Size = new System.Drawing.Size(256, 636);
+            this.navigationPanePanelThaoTac.Size = new System.Drawing.Size(256, 523);
             this.navigationPanePanelThaoTac.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanelThaoTac.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanelThaoTac.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -2038,195 +2227,6 @@
             this.buttonItemThaoTac.OptionGroup = "navBar";
             this.buttonItemThaoTac.Text = "THAO TÁC";
             // 
-            // navigationPanePanelTimLKiem
-            // 
-            this.navigationPanePanelTimLKiem.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.navigationPanePanelTimLKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanelTimLKiem.Location = new System.Drawing.Point(1, 1);
-            this.navigationPanePanelTimLKiem.Name = "navigationPanePanelTimLKiem";
-            this.navigationPanePanelTimLKiem.ParentItem = this.buttonItemTim;
-            this.navigationPanePanelTimLKiem.Size = new System.Drawing.Size(256, 523);
-            this.navigationPanePanelTimLKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.navigationPanePanelTimLKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.navigationPanePanelTimLKiem.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.navigationPanePanelTimLKiem.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.navigationPanePanelTimLKiem.Style.GradientAngle = 90;
-            this.navigationPanePanelTimLKiem.TabIndex = 4;
-            // 
-            // buttonItemTim
-            // 
-            this.buttonItemTim.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemTim.Image = global::QuanLy_KeToan.Properties.Resources.search_icon;
-            this.buttonItemTim.Name = "buttonItemTim";
-            this.buttonItemTim.OptionGroup = "navBar";
-            this.buttonItemTim.Text = "TÌM KIẾM";
-            // 
-            // navigationPanePanelDuyetDanhMuc
-            // 
-            this.navigationPanePanelDuyetDanhMuc.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.navigationPanePanelDuyetDanhMuc.Controls.Add(this.advTreeLoNhap);
-            this.navigationPanePanelDuyetDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanelDuyetDanhMuc.Location = new System.Drawing.Point(1, 25);
-            this.navigationPanePanelDuyetDanhMuc.Name = "navigationPanePanelDuyetDanhMuc";
-            this.navigationPanePanelDuyetDanhMuc.ParentItem = this.btnDuyetDanhMuc;
-            this.navigationPanePanelDuyetDanhMuc.Size = new System.Drawing.Size(256, 499);
-            this.navigationPanePanelDuyetDanhMuc.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.navigationPanePanelDuyetDanhMuc.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.navigationPanePanelDuyetDanhMuc.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.navigationPanePanelDuyetDanhMuc.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.navigationPanePanelDuyetDanhMuc.Style.GradientAngle = 90;
-            this.navigationPanePanelDuyetDanhMuc.TabIndex = 2;
-            // 
-            // advTreeLoNhap
-            // 
-            this.advTreeLoNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
-            this.advTreeLoNhap.AllowDrop = true;
-            this.advTreeLoNhap.BackColor = System.Drawing.SystemColors.Window;
-            // 
-            // 
-            // 
-            this.advTreeLoNhap.BackgroundStyle.Class = "TreeBorderKey";
-            this.advTreeLoNhap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.advTreeLoNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advTreeLoNhap.GridLinesColor = System.Drawing.Color.DodgerBlue;
-            this.advTreeLoNhap.HotTracking = true;
-            this.advTreeLoNhap.Location = new System.Drawing.Point(0, 0);
-            this.advTreeLoNhap.Name = "advTreeLoNhap";
-            this.advTreeLoNhap.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
-            this.root_node});
-            this.advTreeLoNhap.NodesConnector = this.nodeConnector1;
-            this.advTreeLoNhap.NodeStyle = this.elementStyle2;
-            this.advTreeLoNhap.NodeStyleMouseOver = this.elementStyle3;
-            this.advTreeLoNhap.NodeStyleSelected = this.elementStyle4;
-            this.advTreeLoNhap.PathSeparator = ";";
-            this.advTreeLoNhap.Size = new System.Drawing.Size(256, 499);
-            this.advTreeLoNhap.Styles.Add(this.elementStyle1);
-            this.advTreeLoNhap.Styles.Add(this.elementStyle2);
-            this.advTreeLoNhap.Styles.Add(this.elementStyle3);
-            this.advTreeLoNhap.Styles.Add(this.elementStyle4);
-            this.advTreeLoNhap.TabIndex = 0;
-            this.advTreeLoNhap.Text = "advTree1";
-            this.advTreeLoNhap.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTreeLoNhap_AfterNodeSelect);
-            // 
-            // root_node
-            // 
-            this.root_node.Expanded = true;
-            this.root_node.Image = global::QuanLy_KeToan.Properties.Resources.khohang;
-            this.root_node.Name = "root_node";
-            this.root_node.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
-            this.nodeLoaiPhieuNhap,
-            this.nodeLoPhieuNhap});
-            this.root_node.Text = "Kho Hàng";
-            // 
-            // nodeLoaiPhieuNhap
-            // 
-            this.nodeLoaiPhieuNhap.Expanded = true;
-            this.nodeLoaiPhieuNhap.Image = global::QuanLy_KeToan.Properties.Resources.Loaiphieunhap;
-            this.nodeLoaiPhieuNhap.Name = "nodeLoaiPhieuNhap";
-            this.nodeLoaiPhieuNhap.Text = "Loại Phiếu Nhập";
-            // 
-            // nodeLoPhieuNhap
-            // 
-            this.nodeLoPhieuNhap.Expanded = true;
-            this.nodeLoPhieuNhap.Image = global::QuanLy_KeToan.Properties.Resources.Lophieunhap;
-            this.nodeLoPhieuNhap.Name = "nodeLoPhieuNhap";
-            this.nodeLoPhieuNhap.Text = "Lô Phiếu Nhập";
-            // 
-            // nodeConnector1
-            // 
-            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // elementStyle2
-            // 
-            this.elementStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
-            this.elementStyle2.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(176)))), ((int)(((byte)(120)))));
-            this.elementStyle2.BackColorGradientAngle = 90;
-            this.elementStyle2.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderBottomWidth = 1;
-            this.elementStyle2.BorderColor = System.Drawing.Color.DarkGray;
-            this.elementStyle2.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderLeftWidth = 1;
-            this.elementStyle2.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderRightWidth = 1;
-            this.elementStyle2.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle2.BorderTopWidth = 1;
-            this.elementStyle2.Class = "";
-            this.elementStyle2.CornerDiameter = 4;
-            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle2.Description = "Orange";
-            this.elementStyle2.Name = "elementStyle2";
-            this.elementStyle2.PaddingBottom = 1;
-            this.elementStyle2.PaddingLeft = 1;
-            this.elementStyle2.PaddingRight = 1;
-            this.elementStyle2.PaddingTop = 1;
-            this.elementStyle2.TextColor = System.Drawing.Color.Black;
-            // 
-            // elementStyle3
-            // 
-            this.elementStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(230)))), ((int)(((byte)(247)))));
-            this.elementStyle3.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(168)))), ((int)(((byte)(228)))));
-            this.elementStyle3.BackColorGradientAngle = 90;
-            this.elementStyle3.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle3.BorderBottomWidth = 1;
-            this.elementStyle3.BorderColor = System.Drawing.Color.DarkGray;
-            this.elementStyle3.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle3.BorderLeftWidth = 1;
-            this.elementStyle3.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle3.BorderRightWidth = 1;
-            this.elementStyle3.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle3.BorderTopWidth = 1;
-            this.elementStyle3.Class = "";
-            this.elementStyle3.CornerDiameter = 4;
-            this.elementStyle3.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle3.Description = "Blue";
-            this.elementStyle3.Name = "elementStyle3";
-            this.elementStyle3.PaddingBottom = 1;
-            this.elementStyle3.PaddingLeft = 1;
-            this.elementStyle3.PaddingRight = 1;
-            this.elementStyle3.PaddingTop = 1;
-            this.elementStyle3.TextColor = System.Drawing.Color.Black;
-            // 
-            // elementStyle4
-            // 
-            this.elementStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
-            this.elementStyle4.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(149)))), ((int)(((byte)(151)))));
-            this.elementStyle4.BackColorGradientAngle = 90;
-            this.elementStyle4.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle4.BorderBottomWidth = 1;
-            this.elementStyle4.BorderColor = System.Drawing.Color.DarkGray;
-            this.elementStyle4.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle4.BorderLeftWidth = 1;
-            this.elementStyle4.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle4.BorderRightWidth = 1;
-            this.elementStyle4.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.elementStyle4.BorderTopWidth = 1;
-            this.elementStyle4.Class = "";
-            this.elementStyle4.CornerDiameter = 4;
-            this.elementStyle4.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle4.Description = "Red";
-            this.elementStyle4.Name = "elementStyle4";
-            this.elementStyle4.PaddingBottom = 1;
-            this.elementStyle4.PaddingLeft = 1;
-            this.elementStyle4.PaddingRight = 1;
-            this.elementStyle4.PaddingTop = 1;
-            this.elementStyle4.TextColor = System.Drawing.Color.Black;
-            // 
-            // elementStyle1
-            // 
-            this.elementStyle1.Class = "";
-            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle1.Name = "elementStyle1";
-            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // btnDuyetDanhMuc
-            // 
-            this.btnDuyetDanhMuc.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnDuyetDanhMuc.Checked = true;
-            this.btnDuyetDanhMuc.Image = global::QuanLy_KeToan.Properties.Resources.duyet;
-            this.btnDuyetDanhMuc.Name = "btnDuyetDanhMuc";
-            this.btnDuyetDanhMuc.OptionGroup = "navBar";
-            this.btnDuyetDanhMuc.Text = "DUYỆT DANH MỤC";
-            // 
             // expandablePanelCauHinh
             // 
             this.expandablePanelCauHinh.CanvasColor = System.Drawing.SystemColors.Control;
@@ -3278,6 +3278,8 @@
             this.bindingLoaiPhieuNhap.ResumeLayout(false);
             this.bindingLoaiPhieuNhap.PerformLayout();
             this.navigationPaneThaoTac.ResumeLayout(false);
+            this.navigationPanePanelDuyetDanhMuc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTreeLoNhap)).EndInit();
             this.navigationPanePanelThaoTac.ResumeLayout(false);
             this.groupLoaiPhieuNhap.ResumeLayout(false);
             this.groupLoaiPhieuNhap.PerformLayout();
@@ -3295,8 +3297,6 @@
             this.groupPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgaySua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PN_dpNgayLap)).EndInit();
-            this.navigationPanePanelDuyetDanhMuc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.advTreeLoNhap)).EndInit();
             this.expandablePanelCauHinh.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanelLoPhieuNhap.ResumeLayout(false);

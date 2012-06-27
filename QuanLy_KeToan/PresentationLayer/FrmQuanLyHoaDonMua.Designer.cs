@@ -256,9 +256,9 @@
             // navigationPaneThaoTac
             // 
             this.navigationPaneThaoTac.CanCollapse = true;
-            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanel2);
-            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanel3);
             this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanel1);
+            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanel3);
+            this.navigationPaneThaoTac.Controls.Add(this.navigationPanePanel2);
             this.navigationPaneThaoTac.Dock = System.Windows.Forms.DockStyle.Left;
             this.navigationPaneThaoTac.ItemPaddingBottom = 2;
             this.navigationPaneThaoTac.ItemPaddingTop = 2;
@@ -291,7 +291,7 @@
             this.navigationPaneThaoTac.TitlePanel.Style.GradientAngle = 90;
             this.navigationPaneThaoTac.TitlePanel.Style.MarginLeft = 4;
             this.navigationPaneThaoTac.TitlePanel.TabIndex = 0;
-            this.navigationPaneThaoTac.TitlePanel.Text = "THAO TÁC";
+            this.navigationPaneThaoTac.TitlePanel.Text = "DUYỆT DANH MỤC";
             // 
             // navigationPanePanel2
             // 
@@ -300,10 +300,10 @@
             this.navigationPanePanel2.Controls.Add(this.groupLoHDMua);
             this.navigationPanePanel2.Controls.Add(this.groupLoaiHDMua);
             this.navigationPanePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanel2.Location = new System.Drawing.Point(1, 25);
+            this.navigationPanePanel2.Location = new System.Drawing.Point(1, 1);
             this.navigationPanePanel2.Name = "navigationPanePanel2";
             this.navigationPanePanel2.ParentItem = this.btnThaoTac;
-            this.navigationPanePanel2.Size = new System.Drawing.Size(256, 553);
+            this.navigationPanePanel2.Size = new System.Drawing.Size(256, 690);
             this.navigationPanePanel2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanel2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -1693,7 +1693,6 @@
             // btnThaoTac
             // 
             this.btnThaoTac.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnThaoTac.Checked = true;
             this.btnThaoTac.Image = global::QuanLy_KeToan.Properties.Resources.edit;
             this.btnThaoTac.Name = "btnThaoTac";
             this.btnThaoTac.OptionGroup = "navBar";
@@ -1729,10 +1728,10 @@
             this.navigationPanePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.navigationPanePanel1.Controls.Add(this.advTreeHDMua);
             this.navigationPanePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanel1.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanel1.Location = new System.Drawing.Point(1, 25);
             this.navigationPanePanel1.Name = "navigationPanePanel1";
             this.navigationPanePanel1.ParentItem = this.btnDuyet;
-            this.navigationPanePanel1.Size = new System.Drawing.Size(256, 577);
+            this.navigationPanePanel1.Size = new System.Drawing.Size(256, 553);
             this.navigationPanePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanel1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -1762,7 +1761,7 @@
             this.advTreeHDMua.NodeStyleMouseOver = this.elementStyle3;
             this.advTreeHDMua.NodeStyleSelected = this.elementStyle4;
             this.advTreeHDMua.PathSeparator = ";";
-            this.advTreeHDMua.Size = new System.Drawing.Size(256, 577);
+            this.advTreeHDMua.Size = new System.Drawing.Size(256, 553);
             this.advTreeHDMua.Styles.Add(this.elementStyle1);
             this.advTreeHDMua.Styles.Add(this.elementStyle2);
             this.advTreeHDMua.Styles.Add(this.elementStyle3);
@@ -1883,6 +1882,7 @@
             // btnDuyet
             // 
             this.btnDuyet.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnDuyet.Checked = true;
             this.btnDuyet.Image = global::QuanLy_KeToan.Properties.Resources.duyet;
             this.btnDuyet.Name = "btnDuyet";
             this.btnDuyet.OptionGroup = "navBar";

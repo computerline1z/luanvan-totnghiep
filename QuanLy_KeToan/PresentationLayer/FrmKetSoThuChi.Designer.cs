@@ -123,6 +123,16 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.gridKetSoThuChi = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Thang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.Nam = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.SoDuDauKi = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.TongTienThu = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.TongTienChi = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.SoDuCuoiKi = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.NgayLap = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this.NguoiLap = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.NgaySua = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
+            this.NguoiSua = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
             this.bindingKetSoThuChi = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem4 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem4 = new System.Windows.Forms.ToolStripButton();
@@ -149,16 +159,6 @@
             this.KSTC_Cancel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
             this.KSTC_Exit = new System.Windows.Forms.ToolStripButton();
-            this.Thang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.Nam = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.SoDuDauKi = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.TongTienThu = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.TongTienChi = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.SoDuCuoiKi = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.NgayLap = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this.NguoiLap = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.NgaySua = new DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn();
-            this.NguoiSua = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
             this.dockSite1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.bar1.SuspendLayout();
@@ -1647,6 +1647,220 @@
             this.gridKetSoThuChi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridKetSoThuChi_CellClick);
             this.gridKetSoThuChi.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridKetSoThuChi_RowEnter);
             // 
+            // Thang
+            // 
+            this.Thang.DataPropertyName = "Thang";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Thang.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Thang.DisplayMember = "Text";
+            this.Thang.DropDownHeight = 106;
+            this.Thang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Thang.DropDownWidth = 121;
+            this.Thang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Thang.HeaderText = "Tháng";
+            this.Thang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Thang.IntegralHeight = false;
+            this.Thang.ItemHeight = 13;
+            this.Thang.Name = "Thang";
+            this.Thang.ReadOnly = true;
+            this.Thang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Thang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Thang.Width = 50;
+            // 
+            // Nam
+            // 
+            this.Nam.DataPropertyName = "Nam";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Nam.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Nam.DisplayMember = "Text";
+            this.Nam.DropDownHeight = 106;
+            this.Nam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Nam.DropDownWidth = 121;
+            this.Nam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Nam.HeaderText = "Năm";
+            this.Nam.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Nam.IntegralHeight = false;
+            this.Nam.ItemHeight = 13;
+            this.Nam.Name = "Nam";
+            this.Nam.ReadOnly = true;
+            this.Nam.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Nam.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Nam.Width = 50;
+            // 
+            // SoDuDauKi
+            // 
+            // 
+            // 
+            // 
+            this.SoDuDauKi.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.SoDuDauKi.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.SoDuDauKi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SoDuDauKi.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.SoDuDauKi.DataPropertyName = "SoDuDauKi";
+            this.SoDuDauKi.HeaderText = "Số Dư Đầu Tháng";
+            this.SoDuDauKi.Increment = 1D;
+            this.SoDuDauKi.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.SoDuDauKi.Name = "SoDuDauKi";
+            this.SoDuDauKi.ReadOnly = true;
+            this.SoDuDauKi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SoDuDauKi.Width = 120;
+            // 
+            // TongTienThu
+            // 
+            // 
+            // 
+            // 
+            this.TongTienThu.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.TongTienThu.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.TongTienThu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TongTienThu.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.TongTienThu.DataPropertyName = "TongTienThu";
+            this.TongTienThu.HeaderText = "Tổng Tiền Thu";
+            this.TongTienThu.Increment = 1D;
+            this.TongTienThu.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.TongTienThu.Name = "TongTienThu";
+            this.TongTienThu.ReadOnly = true;
+            this.TongTienThu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TongTienThu.Width = 120;
+            // 
+            // TongTienChi
+            // 
+            // 
+            // 
+            // 
+            this.TongTienChi.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.TongTienChi.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.TongTienChi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TongTienChi.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.TongTienChi.DataPropertyName = "TongTienChi";
+            this.TongTienChi.HeaderText = "Tổng Tiền Chi";
+            this.TongTienChi.Increment = 1D;
+            this.TongTienChi.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.TongTienChi.Name = "TongTienChi";
+            this.TongTienChi.ReadOnly = true;
+            this.TongTienChi.Width = 120;
+            // 
+            // SoDuCuoiKi
+            // 
+            // 
+            // 
+            // 
+            this.SoDuCuoiKi.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.SoDuCuoiKi.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.SoDuCuoiKi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SoDuCuoiKi.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.SoDuCuoiKi.DataPropertyName = "SoDuCuoiKi";
+            this.SoDuCuoiKi.HeaderText = "Số Dư Cuối Tháng";
+            this.SoDuCuoiKi.Increment = 1D;
+            this.SoDuCuoiKi.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.SoDuCuoiKi.Name = "SoDuCuoiKi";
+            this.SoDuCuoiKi.ReadOnly = true;
+            this.SoDuCuoiKi.Width = 120;
+            // 
+            // NgayLap
+            // 
+            // 
+            // 
+            // 
+            this.NgayLap.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.NgayLap.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this.NgayLap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgayLap.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.NgayLap.DataPropertyName = "NgayLap";
+            this.NgayLap.HeaderText = "Ngày Lập";
+            this.NgayLap.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // 
+            // 
+            // 
+            this.NgayLap.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.NgayLap.MonthCalendar.BackgroundStyle.Class = "";
+            this.NgayLap.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.NgayLap.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.NgayLap.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgayLap.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.NgayLap.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.NgayLap.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.NgayLap.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.NgayLap.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgayLap.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.NgayLap.Name = "NgayLap";
+            // 
+            // NguoiLap
+            // 
+            this.NguoiLap.DataPropertyName = "NguoiLap";
+            this.NguoiLap.DisplayMember = "Text";
+            this.NguoiLap.DropDownHeight = 106;
+            this.NguoiLap.DropDownWidth = 121;
+            this.NguoiLap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NguoiLap.HeaderText = "Người Lập";
+            this.NguoiLap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NguoiLap.IntegralHeight = false;
+            this.NguoiLap.ItemHeight = 15;
+            this.NguoiLap.Name = "NguoiLap";
+            this.NguoiLap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NguoiLap.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // NgaySua
+            // 
+            // 
+            // 
+            // 
+            this.NgaySua.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.NgaySua.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
+            this.NgaySua.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgaySua.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.NgaySua.DataPropertyName = "NgaySua";
+            this.NgaySua.HeaderText = "Ngày Sửa";
+            this.NgaySua.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            // 
+            // 
+            // 
+            this.NgaySua.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.NgaySua.MonthCalendar.BackgroundStyle.Class = "";
+            this.NgaySua.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.NgaySua.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.NgaySua.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgaySua.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
+            this.NgaySua.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.NgaySua.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.NgaySua.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.NgaySua.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NgaySua.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.NgaySua.Name = "NgaySua";
+            // 
+            // NguoiSua
+            // 
+            this.NguoiSua.DataPropertyName = "NguoiSua";
+            this.NguoiSua.DisplayMember = "Text";
+            this.NguoiSua.DropDownHeight = 106;
+            this.NguoiSua.DropDownWidth = 121;
+            this.NguoiSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NguoiSua.HeaderText = "Người Sửa";
+            this.NguoiSua.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NguoiSua.IntegralHeight = false;
+            this.NguoiSua.ItemHeight = 15;
+            this.NguoiSua.Name = "NguoiSua";
+            this.NguoiSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NguoiSua.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
             // bindingKetSoThuChi
             // 
             this.bindingKetSoThuChi.AddNewItem = null;
@@ -1867,220 +2081,6 @@
             this.KSTC_Exit.Size = new System.Drawing.Size(45, 22);
             this.KSTC_Exit.Text = "&Exit";
             this.KSTC_Exit.Click += new System.EventHandler(this.KSTC_Exit_Click);
-            // 
-            // Thang
-            // 
-            this.Thang.DataPropertyName = "Thang";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Thang.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Thang.DisplayMember = "Text";
-            this.Thang.DropDownHeight = 106;
-            this.Thang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Thang.DropDownWidth = 121;
-            this.Thang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Thang.HeaderText = "Tháng";
-            this.Thang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Thang.IntegralHeight = false;
-            this.Thang.ItemHeight = 13;
-            this.Thang.Name = "Thang";
-            this.Thang.ReadOnly = true;
-            this.Thang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Thang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Thang.Width = 50;
-            // 
-            // Nam
-            // 
-            this.Nam.DataPropertyName = "Nam";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Nam.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Nam.DisplayMember = "Text";
-            this.Nam.DropDownHeight = 106;
-            this.Nam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Nam.DropDownWidth = 121;
-            this.Nam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Nam.HeaderText = "Năm";
-            this.Nam.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Nam.IntegralHeight = false;
-            this.Nam.ItemHeight = 13;
-            this.Nam.Name = "Nam";
-            this.Nam.ReadOnly = true;
-            this.Nam.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Nam.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Nam.Width = 50;
-            // 
-            // SoDuDauKi
-            // 
-            // 
-            // 
-            // 
-            this.SoDuDauKi.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.SoDuDauKi.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.SoDuDauKi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SoDuDauKi.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.SoDuDauKi.DataPropertyName = "SoDuDauKi";
-            this.SoDuDauKi.HeaderText = "Số Dư Đầu Tháng";
-            this.SoDuDauKi.Increment = 1D;
-            this.SoDuDauKi.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.SoDuDauKi.Name = "SoDuDauKi";
-            this.SoDuDauKi.ReadOnly = true;
-            this.SoDuDauKi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SoDuDauKi.Width = 120;
-            // 
-            // TongTienThu
-            // 
-            // 
-            // 
-            // 
-            this.TongTienThu.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.TongTienThu.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.TongTienThu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TongTienThu.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.TongTienThu.DataPropertyName = "TongTienThu";
-            this.TongTienThu.HeaderText = "Tổng Tiền Thu";
-            this.TongTienThu.Increment = 1D;
-            this.TongTienThu.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.TongTienThu.Name = "TongTienThu";
-            this.TongTienThu.ReadOnly = true;
-            this.TongTienThu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TongTienThu.Width = 120;
-            // 
-            // TongTienChi
-            // 
-            // 
-            // 
-            // 
-            this.TongTienChi.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.TongTienChi.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.TongTienChi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TongTienChi.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.TongTienChi.DataPropertyName = "TongTienChi";
-            this.TongTienChi.HeaderText = "Tổng Tiền Chi";
-            this.TongTienChi.Increment = 1D;
-            this.TongTienChi.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.TongTienChi.Name = "TongTienChi";
-            this.TongTienChi.ReadOnly = true;
-            this.TongTienChi.Width = 120;
-            // 
-            // SoDuCuoiKi
-            // 
-            // 
-            // 
-            // 
-            this.SoDuCuoiKi.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.SoDuCuoiKi.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.SoDuCuoiKi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SoDuCuoiKi.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.SoDuCuoiKi.DataPropertyName = "SoDuCuoiKi";
-            this.SoDuCuoiKi.HeaderText = "Số Dư Cuối Tháng";
-            this.SoDuCuoiKi.Increment = 1D;
-            this.SoDuCuoiKi.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.SoDuCuoiKi.Name = "SoDuCuoiKi";
-            this.SoDuCuoiKi.ReadOnly = true;
-            this.SoDuCuoiKi.Width = 120;
-            // 
-            // NgayLap
-            // 
-            // 
-            // 
-            // 
-            this.NgayLap.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.NgayLap.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this.NgayLap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgayLap.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.NgayLap.DataPropertyName = "NgayLap";
-            this.NgayLap.HeaderText = "Ngày Lập";
-            this.NgayLap.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            // 
-            // 
-            // 
-            this.NgayLap.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NgayLap.MonthCalendar.BackgroundStyle.Class = "";
-            this.NgayLap.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.NgayLap.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.NgayLap.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgayLap.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.NgayLap.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.NgayLap.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NgayLap.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.NgayLap.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgayLap.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.NgayLap.Name = "NgayLap";
-            // 
-            // NguoiLap
-            // 
-            this.NguoiLap.DataPropertyName = "NguoiLap";
-            this.NguoiLap.DisplayMember = "Text";
-            this.NguoiLap.DropDownHeight = 106;
-            this.NguoiLap.DropDownWidth = 121;
-            this.NguoiLap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NguoiLap.HeaderText = "Người Lập";
-            this.NguoiLap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NguoiLap.IntegralHeight = false;
-            this.NguoiLap.ItemHeight = 15;
-            this.NguoiLap.Name = "NguoiLap";
-            this.NguoiLap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NguoiLap.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // NgaySua
-            // 
-            // 
-            // 
-            // 
-            this.NgaySua.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.NgaySua.BackgroundStyle.Class = "DataGridViewDateTimeBorder";
-            this.NgaySua.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgaySua.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.NgaySua.DataPropertyName = "NgaySua";
-            this.NgaySua.HeaderText = "Ngày Sửa";
-            this.NgaySua.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            // 
-            // 
-            // 
-            this.NgaySua.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NgaySua.MonthCalendar.BackgroundStyle.Class = "";
-            this.NgaySua.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.NgaySua.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.NgaySua.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgaySua.MonthCalendar.DisplayMonth = new System.DateTime(2012, 4, 1, 0, 0, 0, 0);
-            this.NgaySua.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.NgaySua.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.NgaySua.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.NgaySua.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.NgaySua.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.NgaySua.Name = "NgaySua";
-            // 
-            // NguoiSua
-            // 
-            this.NguoiSua.DataPropertyName = "NguoiSua";
-            this.NguoiSua.DisplayMember = "Text";
-            this.NguoiSua.DropDownHeight = 106;
-            this.NguoiSua.DropDownWidth = 121;
-            this.NguoiSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NguoiSua.HeaderText = "Người Sửa";
-            this.NguoiSua.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NguoiSua.IntegralHeight = false;
-            this.NguoiSua.ItemHeight = 15;
-            this.NguoiSua.Name = "NguoiSua";
-            this.NguoiSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NguoiSua.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // FrmKetSoThuChi
             // 

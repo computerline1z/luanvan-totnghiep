@@ -419,7 +419,6 @@ private int xoa = 0;
             }
             else
             {
-
                 lpc_nhapluoi = 0;
                 return;
             }
@@ -447,8 +446,8 @@ private int xoa = 0;
         
         private void SetConTrolToNull_LoaiPhieuChi()
         {
-            LPC_txtMaLoaiPhieuChi.Clear();
-            LPC_txtTenLoaiPhieuChi.Clear();
+            LPC_txtMaLoaiPhieuChi.Text="";
+            LPC_txtTenLoaiPhieuChi.Text = "" ;
             LPC_dpNgayLap.Value = DateTime.Now;
             LPC_cmbNguoiLap.Text = "";
             LPC_dpNgaySua.Value = DateTime.Now;
@@ -460,8 +459,8 @@ private int xoa = 0;
             btnThem.Enabled = status;
             btnLuu.Enabled = !status;
             btnHuy.Enabled = !status;
-            LPC_txtMaLoaiPhieuChi.ReadOnly = status;
-            LPC_txtTenLoaiPhieuChi.ReadOnly = status;
+            LPC_txtMaLoaiPhieuChi.Enabled = !status;
+            LPC_txtTenLoaiPhieuChi.Enabled = !status;
             LPC_dpNgayLap.Enabled = !status;
             LPC_cmbNguoiLap.Enabled = !status;
             LPC_dpNgaySua.Enabled = !status;
@@ -474,9 +473,9 @@ private int xoa = 0;
                 LPC_txtMaLoaiPhieuChi.Text = gridLoaiPhieuChi.Rows[dong].Cells["ColMLPC"].Value.ToString();
                 LPC_txtTenLoaiPhieuChi.Text = gridLoaiPhieuChi.Rows[dong].Cells["ColTLPC"].Value.ToString();
                 LPC_dpNgayLap.Value = System.Convert.ToDateTime(gridLoaiPhieuChi.Rows[dong].Cells["ColNL"].Value.ToString());
-                LPC_cmbNguoiLap.Text = gridLoaiPhieuChi.Rows[dong].Cells["ColNgL"].Value.ToString();
+                LPC_cmbNguoiLap.Text = gridLoaiPhieuChi.Rows[dong].Cells["ColNgL"].Value==null?"":gridLoaiPhieuChi.Rows[dong].Cells["ColNgL"].Value.ToString();
                 LPC_dpNgaySua.Value = System.Convert.ToDateTime(gridLoaiPhieuChi.Rows[dong].Cells["ColNS"].Value.ToString());
-                LPC_cmbNguoiSua.Text = gridLoaiPhieuChi.Rows[dong].Cells["ColNgS"].Value.ToString();
+                LPC_cmbNguoiSua.Text = gridLoaiPhieuChi.Rows[dong].Cells["ColNgS"].Value==null?"":gridLoaiPhieuChi.Rows[dong].Cells["ColNgS"].Value.ToString();
             }
         }
         private void gridLoaiPhieuChi_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -493,7 +492,7 @@ private int xoa = 0;
         private void btnSua_Click(object sender, EventArgs e)
         {
             SetControlEnable_LoaiPhieuChi(false);
-            LPC_txtMaLoaiPhieuChi.ReadOnly = true;
+            LPC_txtMaLoaiPhieuChi.Enabled = false;
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -771,7 +770,7 @@ private int xoa = 0;
         {
             cmbMaLoHDMua.Text = "";
             dpNgayChi.Value = DateTime.Now;
-            txtMota.Clear();
+            txtMota.Text = "";
             dpNgayLap.Value = DateTime.Now;
             comboNguoiLap.Text = "";
             dpNgaySua.Value = DateTime.Now;
@@ -785,7 +784,7 @@ private int xoa = 0;
             btn_LPC_Huy.Enabled = !status;
             cmbMaLoHDMua.Enabled = !status;
             dpNgayChi.Enabled = !status;
-            txtMota.ReadOnly = status;
+            txtMota.Enabled = !status;
             dpNgayLap.Enabled = !status;
             comboNguoiLap.Enabled = !status;
             dpNgaySua.Enabled = !status;
@@ -799,9 +798,9 @@ private int xoa = 0;
                 dpNgayChi.Value = System.Convert.ToDateTime(gridLoPhieuChi.Rows[dong].Cells["ColNLC"].Value.ToString());
                 txtMota.Text = gridLoPhieuChi.Rows[dong].Cells["ColMT"].Value.ToString();
                 dpNgayLap.Value = System.Convert.ToDateTime(gridLoPhieuChi.Rows[dong].Cells["NgayLap"].Value.ToString());
-                comboNguoiLap.Text = gridLoPhieuChi.Rows[dong].Cells["NguoiLap"].Value.ToString();
+                comboNguoiLap.Text = gridLoPhieuChi.Rows[dong].Cells["NguoiLap"].Value==null?"":gridLoPhieuChi.Rows[dong].Cells["NguoiLap"].Value.ToString();
                 dpNgaySua.Value = System.Convert.ToDateTime(gridLoPhieuChi.Rows[dong].Cells["NgaySua"].Value.ToString());
-                comboNguoiSua.Text = gridLoPhieuChi.Rows[dong].Cells["NguoiSua"].Value.ToString();
+                comboNguoiSua.Text = gridLoPhieuChi.Rows[dong].Cells["NguoiSua"].Value==null?"":gridLoPhieuChi.Rows[dong].Cells["NguoiSua"].Value.ToString();
             }
         }
         private void gridLoPhieuChi_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -834,9 +833,9 @@ private int xoa = 0;
                             LoPC.NgayLoChi = dpNgayChi.Value;
                             LoPC.MoTa = txtMota.Text;
                             LoPC.NgayLap = dpNgayLap.Value;
-                            LoPC.NguoiLap = comboNguoiLap.SelectedValue.ToString();
-                            LoPC.NgaySua = dpNgaySua.Value;//System.Convert.ToDateTime(gridLoaiPhieuChi.CurrentRow.Cells["ColNS"].Value.ToString());
-                            LoPC.NguoiSua = comboNguoiSua.SelectedValue.ToString();
+                            LoPC.NguoiLap = comboNguoiLap.Text==""?"":comboNguoiLap.SelectedValue.ToString();
+                            LoPC.NgaySua = dpNgaySua.Value;
+                            LoPC.NguoiSua = comboNguoiSua.Text == "" ? "" : comboNguoiSua.SelectedValue.ToString();
                             LoPCBLL.SuaLoPC(malohdmua, LoPC);
                             LayDanhSachLoPC();
                             SetControlEnable_LoPhieuChi(true);
@@ -881,8 +880,8 @@ private int xoa = 0;
                             {
                                 ngaysua = DateTime.Now.Date;
                             }
-                            string nguoilap = comboNguoiLap.Text;
-                            string nguoisua = comboNguoiSua.Text;
+                            string nguoilap = comboNguoiLap.Text == "" ? "" : comboNguoiLap.SelectedValue.ToString();
+                            string nguoisua = comboNguoiSua.Text == "" ? "" : comboNguoiSua.SelectedValue.ToString();
                             LoPCBLL.ThemLoPC(malohdmua, ngaychi, mota, ngaylap, nguoilap, ngaysua, nguoisua);
                             LayDanhSachLoPC();
                             SetControlEnable_LoPhieuChi(true);
@@ -1143,7 +1142,7 @@ private int xoa = 0;
             PC_cmbMLPC.Text = "";
             PC_cmbMLHDM.Text = "";
             PC_cmbMHDM.Text = "";
-            PC_txtMT.Clear();
+            PC_txtMT.Text="";
             PC_dpNgayLap.Value = DateTime.Now;
             PC_cmbNguoiLap.Text = "";
             PC_dpNgaySua.Value = DateTime.Now;
@@ -1158,7 +1157,7 @@ private int xoa = 0;
             PC_cmbMLPC.Enabled = !status;
             PC_cmbMLHDM.Enabled = !status;
             PC_cmbMHDM.Enabled = !status;
-            PC_txtMT.ReadOnly = status;
+            PC_txtMT.Enabled = !status;
             PC_dpNgayLap.Enabled = !status;
             PC_cmbNguoiLap.Enabled = !status;
             PC_dpNgaySua.Enabled = !status;
@@ -1173,9 +1172,9 @@ private int xoa = 0;
                 PC_cmbMHDM.Text = gridPhieuChi.Rows[dong].Cells["MHDM"].Value.ToString();
                 PC_txtMT.Text = gridPhieuChi.Rows[dong].Cells["MT"].Value.ToString();
                 PC_dpNgayLap.Value = System.Convert.ToDateTime(gridPhieuChi.Rows[dong].Cells["_NL"].Value.ToString());
-                PC_cmbNguoiLap.Text = gridPhieuChi.Rows[dong].Cells["_NgL"].Value.ToString();
+                PC_cmbNguoiLap.Text = gridPhieuChi.Rows[dong].Cells["_NgL"].Value==null?"":gridPhieuChi.Rows[dong].Cells["_NgL"].Value.ToString();
                 PC_dpNgaySua.Value = System.Convert.ToDateTime(gridPhieuChi.Rows[dong].Cells["_NS"].Value.ToString());
-                PC_cmbNguoiSua.Text = gridPhieuChi.Rows[dong].Cells["_NgS"].Value.ToString();
+                PC_cmbNguoiSua.Text = gridPhieuChi.Rows[dong].Cells["_NgS"].Value==null?"":gridPhieuChi.Rows[dong].Cells["_NgS"].Value.ToString();
             }
         }
         private void gridPhieuChi_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -1212,9 +1211,9 @@ private int xoa = 0;
                             PT.MaLoaiPhieuChi = PC_cmbMLPC.SelectedValue.ToString();
                             PT.MoTa = PC_txtMT.Text;
                             PT.NgayLap = PC_dpNgayLap.Value;
-                            PT.NguoiLap = PC_cmbNguoiLap.Text;
+                            PT.NguoiLap = PC_cmbNguoiLap.Text==""?"":PC_cmbNguoiLap.SelectedValue.ToString();
                             PT.NgaySua = PC_dpNgaySua.Value;
-                            PT.NguoiSua = PC_cmbNguoiSua.Text;
+                            PT.NguoiSua = PC_cmbNguoiSua.Text==""?"":PC_cmbNguoiSua.SelectedValue.ToString();
                             PCBLL.SuaPC(malohdmua, mahdmua, PT);
                             LayDSPhieuChiTheoLo(xuly_chuoi(advTreeLoChi.SelectedNode.Text));
                             SetControlEnable_PhieuChi(true);
@@ -1259,8 +1258,8 @@ private int xoa = 0;
                             {
                                 ngaysua = DateTime.Now.Date;
                             }
-                            string nguoilap = PC_cmbNguoiLap.Text;
-                            string nguoisua = PC_cmbNguoiSua.Text;
+                            string nguoilap = PC_cmbNguoiLap.Text == "" ? "" : PC_cmbNguoiLap.SelectedValue.ToString();
+                            string nguoisua = PC_cmbNguoiSua.Text == "" ? "" : PC_cmbNguoiSua.SelectedValue.ToString();
                             PCBLL.ThemPhieuChi(maloaiphieuchi, malohdmua, mahdmua, mota, ngaylap, nguoilap, ngaysua, nguoisua);
                             LayDSPhieuChiTheoLo(xuly_chuoi(advTreeLoChi.SelectedNode.Text));
                             SetControlEnable_PhieuChi(true);
