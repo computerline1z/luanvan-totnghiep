@@ -101,3 +101,4 @@ F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\GenerateResource.write.1
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FormCho.resources
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.FrmPhanQuyen.resources
 F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.FrmDangNhap.resources
+F:\Luan Van Tot Nghiep\QLKT\QuanLy_KeToan\obj\x86\Debug\QuanLy_KeToan.PresentationLayer.AboutBox1.resources
